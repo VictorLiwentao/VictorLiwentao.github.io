@@ -29,19 +29,34 @@ h2{font-size:clamp(26px,3vw,34px)}
 h3{font-size:19px;letter-spacing:-.01em}
 .band{padding-block:clamp(28px,4vw,56px);padding-inline:max(5vw,16px)}
 .wrap{max-width:1240px;margin:0 auto}
-.hero{background:var(--card);color:#fff}
+.hero{background:var(--card);color:#fff;padding-bottom:0}
 .hero a{color:#fff}
-.hgrid{display:grid;gap:28px 56px;align-items:end}
-.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.45;margin:16px 0 0;max-width:62ch;color:#fbeaea}
-.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;margin:0}
-.stats div{border-top:1px solid rgba(255,255,255,.35);padding-top:10px}
-.stats dt{font:600 clamp(28px,3.2vw,38px)/1 "Source Serif 4",Georgia,serif;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.stats dd{margin:6px 0 0;font-size:14px;color:#f6dcdc}
-nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-nav.jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid rgba(255,255,255,.45);border-radius:22px;text-decoration:none;font-weight:600;transition:background .2s,color .2s}
+.hkick{font:700 13px/1.3 "Source Sans 3",sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#f1c4c4;margin:0 0 16px}
+.hero h1{font-size:clamp(34px,4.3vw,60px);line-height:1.04;max-width:20ch}
+.lead{font-size:clamp(17px,1.5vw,20px);line-height:1.5;margin:18px 0 0;max-width:58ch;color:#fbeaea}
+.lead i{font-family:"Source Serif 4",Georgia,serif}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:clamp(28px,4vw,44px) 0 0;border-top:1px solid rgba(255,255,255,.32)}
+.stats div{padding:16px 24px 0 0}
+.stats div+div{padding-left:24px;border-left:1px solid rgba(255,255,255,.2)}
+.stats dt{font:600 clamp(30px,3.4vw,44px)/1 "Source Serif 4",Georgia,serif;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats dd{margin:8px 0 0;font-size:14px;line-height:1.35;color:#f6dcdc;max-width:22ch}
+nav.jump{display:flex;gap:6px;margin-top:clamp(28px,3.5vw,40px);padding:14px 0 18px;border-top:1px solid rgba(255,255,255,.18)}
+nav.jump a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:20px;text-decoration:none;font-weight:600;font-size:15px;color:#fbeaea;white-space:nowrap;transition:background .2s,color .2s}
 nav.jump a:hover,nav.jump a:focus-visible{background:#fff;color:var(--card);outline:none}
-nav.jump a.newsec::after{content:"new";font-size:11px;font-weight:700;margin-left:7px;padding:0 6px;border-radius:8px;background:#fff;color:var(--card);line-height:17px}
-nav.jump a.newsec:hover::after{background:var(--card);color:#fff}
+nav.jump a{flex:none}
+nav.jump a:first-child{margin-left:-14px}
+.hgrid{display:grid;gap:28px 72px}
+.htop{display:none}
+#htop{list-style:none;margin:0;padding:0}
+#htop li{display:grid;grid-template-columns:1.5em minmax(0,10.5em) minmax(0,1fr) 2.2em;gap:12px;align-items:center;padding:7px 0;border-top:1px solid rgba(255,255,255,.16)}
+#htop .rk{color:#f1c4c4;font-size:14px;font-variant-numeric:tabular-nums;text-align:right}
+#htop a{font:600 17px/1.2 "Source Serif 4",Georgia,serif;color:#fff;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#htop a:hover{text-decoration:underline}
+#htop .hb{height:6px;border-radius:3px;background:rgba(255,255,255,.16);overflow:hidden}
+#htop .hb i{display:block;height:100%;border-radius:3px;background:#fff;transform-origin:0 50%;animation:grow 1.1s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--k) * 70ms + .25s)}
+#htop b{text-align:right;font-size:15px;font-variant-numeric:tabular-nums}
+@keyframes grow{from{transform:scaleX(0)}}
+@media(min-width:1000px){.hgrid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:end}.htop{display:block}}
 section{border-top:1px solid var(--rule)}
 .shead{display:grid;gap:8px 40px;margin-bottom:18px}
 .shead p{margin:0;color:var(--mute);max-width:66ch}
@@ -243,8 +258,9 @@ details.ent a{color:var(--ink)}
 .fp,.bar i,.dec .bar{transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--k,0),30) * 24ms)}
 .js .band:not(.seen) .fp,.js .band:not(.seen) .bar i,.js .band:not(.seen) .dec .bar{transform:scaleX(0)}
 .js #generations:not(.seen) #gsv circle,.js #works:not(.seen) #wsv circle{opacity:0}
-@media(min-width:900px){.hgrid{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.shead{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}.gen{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
-@media(min-width:900px) and (max-width:1180px){.hgrid{grid-template-columns:minmax(0,1fr)}}
+@media(min-width:900px){.shead{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}.gen{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));border-top:0}.stats div,.stats div+div{padding:14px 12px 14px 0;border-left:0;border-top:1px solid rgba(255,255,255,.28)}
+  nav.jump a:first-child{margin-left:0}nav.jump{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}nav.jump::-webkit-scrollbar{display:none}}
 @media(max-width:600px){table{font-size:13px}td{padding:9px 4px}th{padding:6px 4px}td.nb{width:auto}.barbox,.bar.hide-s{display:none}.t{font-size:15px}.gain{grid-template-columns:minmax(0,1fr) 3em 5.8em}.gain .bar{display:none}tr.det td{padding-left:6px}.count{margin-left:0;width:100%}.controls>.chips{width:100%;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.chip{flex:none}.pnums b{font-size:22px}.fl{grid-template-columns:minmax(0,1fr)}.dec{grid-template-columns:3.6em minmax(0,1fr) 8.4em}
   .rbars{--rh:30px;--nw:6.6em}.rn{font-size:14px}.rn .full{display:none}.rn .short{display:inline}.rv{font-size:13px}.rctl{gap:10px}.rctl .pbtn span{display:none}.rlabs span{font-size:11px}.tr-tag{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
@@ -252,14 +268,18 @@ details.ent a{color:var(--ink)}
 </head>
 <body>
 <header class="band hero">
-  <div class="wrap hgrid">
-    <div>
-      <h1>David Lewis is still the Stanford Encyclopedia’s most-cited philosopher</h1>
-      <p class="lead" id="lead"></p>
+  <div class="wrap">
+    <div class="hgrid">
+      <div>
+        <p class="hkick" id="hkick">Stanford Encyclopedia of Philosophy · Citation count</p>
+        <h1>David Lewis is still the Stanford Encyclopedia’s most-cited philosopher</h1>
+        <p class="lead" id="lead"></p>
+      </div>
+      <div class="htop"><p class="hkick">Most cited, born since 1900</p><ol id="htop"></ol></div>
     </div>
     <dl class="stats" id="stats"></dl>
   </div>
-  <nav class="wrap jump" aria-label="Sections"><a href="#map">Map</a><a href="#philosophers">Rankings</a><a href="#race" class="newsec">Race</a><a href="#before" class="newsec">Before 1900</a><a href="#generations">Generations</a><a href="#fields">Fields</a><a href="#works">Works</a><a href="#changes">Since 2024</a><a href="#method">Method</a></nav>
+  <nav class="wrap jump" aria-label="Sections"><a href="#map">Map</a><a href="#philosophers">Rankings</a><a href="#race">Race</a><a href="#before">Before 1900</a><a href="#generations">Generations</a><a href="#fields">Fields</a><a href="#works">Works</a><a href="#changes">Since 2024</a><a href="#method">Method</a></nav>
 </header>
 
 <section class="band" id="map" style="border-top:0">
@@ -492,11 +512,13 @@ const lastSeg = LSEG[LSEG.length - 1], prevSeg = LSEG[LSEG.length - 2];
 
 /* ---------- header ---------- */
 const earliest = LC.reduce((a, h) => hb(h) < hb(a) ? h : a, LC[0]);
-$('#lead').innerHTML = `Counting the bibliographies of all ${fmt(M.entries)} entries, ${C.length} philosophers born since 1900 are cited in 30 or more. Lewis leads with ${C[0].n}, followed by Quine, Putnam, Rawls and Kripke; John Rawls’s <i>A Theory of Justice</i> is still the most-cited work. Below: a map of who is cited together, a century of citations replayed, ${LC.length} philosophers from before 1900 back to ${esc(earliest.a)}, and a profile for every one of them.`;
-const STATS = [[M.entries, '', 'SEP entries counted on ' + nice(M.date)], [C.length, '', 'philosophers born since 1900 cited in 30+ entries'],
-  [D.W.length, '', 'works since 1900 cited in 16+ entries'], [top100w, ' of 100', 'women among the 100 most-cited'],
-  [LC.length, '', 'philosophers born before 1900 with their own entry, named in 5+ others'], [lastSeg.y0, '', `the year ${lastSeg.p.sur} overtook ${prevSeg.p.sur} in the replay below`, 1900]];
-$('#stats').innerHTML = STATS.map(([v, suf, lab, from]) => `<div><dt><span class="cu" data-to="${v}" data-from="${from || 0}" data-y="${from ? 1 : 0}">${from ? v : fmt(v)}</span>${suf}</dt><dd>${lab}</dd></div>`).join('');
+const monthYear = new Date(M.date + 'T12:00:00').toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
+$('#hkick').textContent = `Stanford Encyclopedia of Philosophy · ${monthYear}`;
+$('#lead').innerHTML = `Recounted from the bibliographies of all ${fmt(M.entries)} entries. Lewis is cited in ${C[0].n}, ahead of Quine, Putnam, Rawls and Kripke, and John Rawls’s <i>A Theory of Justice</i> is still the most-cited work.`;
+const STATS = [[M.entries, 'SEP entries, every bibliography read'], [C.length, 'philosophers born since 1900, cited in 30+ entries'],
+  [LC.length, 'philosophers born before 1900, named in 5+ entries'], [D.W.length, 'works since 1900, cited in 16+ entries']];
+$('#stats').innerHTML = STATS.map(([v, lab]) => `<div><dt><span class="cu" data-to="${v}" data-from="0">${fmt(v)}</span></dt><dd>${lab}</dd></div>`).join('');
+$('#htop').innerHTML = C.slice(0, 8).map((p, k) => `<li style="--k:${k}"><span class="rk">${p.r}</span><a href="#p-${p.id}">${esc(p.a)}</a><span class="hb"><i style="width:${p.n / C[0].n * 100}%"></i></span><b>${p.n}</b></li>`).join('');
 const countUp = el => { const to = +el.dataset.to, from = +el.dataset.from, isY = el.dataset.y === '1', f = v => isY ? String(v) : fmt(v);
   if (RM) return; const t0 = performance.now(), dur = 1500;
   const step = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = f(Math.round(from + (to - from) * e)); if (k < 1) requestAnimationFrame(step); };

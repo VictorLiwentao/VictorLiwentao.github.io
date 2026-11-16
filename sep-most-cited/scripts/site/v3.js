@@ -51,11 +51,13 @@ const lastSeg = LSEG[LSEG.length - 1], prevSeg = LSEG[LSEG.length - 2];
 
 /* ---------- header ---------- */
 const earliest = LC.reduce((a, h) => hb(h) < hb(a) ? h : a, LC[0]);
-$('#lead').innerHTML = `Counting the bibliographies of all ${fmt(M.entries)} entries, ${C.length} philosophers born since 1900 are cited in 30 or more. Lewis leads with ${C[0].n}, followed by Quine, Putnam, Rawls and Kripke; John Rawls’s <i>A Theory of Justice</i> is still the most-cited work. Below: a map of who is cited together, a century of citations replayed, ${LC.length} philosophers from before 1900 back to ${esc(earliest.a)}, and a profile for every one of them.`;
-const STATS = [[M.entries, '', 'SEP entries counted on ' + nice(M.date)], [C.length, '', 'philosophers born since 1900 cited in 30+ entries'],
-  [D.W.length, '', 'works since 1900 cited in 16+ entries'], [top100w, ' of 100', 'women among the 100 most-cited'],
-  [LC.length, '', 'philosophers born before 1900 with their own entry, named in 5+ others'], [lastSeg.y0, '', `the year ${lastSeg.p.sur} overtook ${prevSeg.p.sur} in the replay below`, 1900]];
-$('#stats').innerHTML = STATS.map(([v, suf, lab, from]) => `<div><dt><span class="cu" data-to="${v}" data-from="${from || 0}" data-y="${from ? 1 : 0}">${from ? v : fmt(v)}</span>${suf}</dt><dd>${lab}</dd></div>`).join('');
+const monthYear = new Date(M.date + 'T12:00:00').toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
+$('#hkick').textContent = `Stanford Encyclopedia of Philosophy · ${monthYear}`;
+$('#lead').innerHTML = `Recounted from the bibliographies of all ${fmt(M.entries)} entries. Lewis is cited in ${C[0].n}, ahead of Quine, Putnam, Rawls and Kripke, and John Rawls’s <i>A Theory of Justice</i> is still the most-cited work.`;
+const STATS = [[M.entries, 'SEP entries, every bibliography read'], [C.length, 'philosophers born since 1900, cited in 30+ entries'],
+  [LC.length, 'philosophers born before 1900, named in 5+ entries'], [D.W.length, 'works since 1900, cited in 16+ entries']];
+$('#stats').innerHTML = STATS.map(([v, lab]) => `<div><dt><span class="cu" data-to="${v}" data-from="0">${fmt(v)}</span></dt><dd>${lab}</dd></div>`).join('');
+$('#htop').innerHTML = C.slice(0, 8).map((p, k) => `<li style="--k:${k}"><span class="rk">${p.r}</span><a href="#p-${p.id}">${esc(p.a)}</a><span class="hb"><i style="width:${p.n / C[0].n * 100}%"></i></span><b>${p.n}</b></li>`).join('');
 const countUp = el => { const to = +el.dataset.to, from = +el.dataset.from, isY = el.dataset.y === '1', f = v => isY ? String(v) : fmt(v);
   if (RM) return; const t0 = performance.now(), dur = 1500;
   const step = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = f(Math.round(from + (to - from) * e)); if (k < 1) requestAnimationFrame(step); };
