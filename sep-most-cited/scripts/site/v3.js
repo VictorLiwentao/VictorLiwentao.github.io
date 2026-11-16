@@ -53,11 +53,10 @@ const lastSeg = LSEG[LSEG.length - 1], prevSeg = LSEG[LSEG.length - 2];
 const earliest = LC.reduce((a, h) => hb(h) < hb(a) ? h : a, LC[0]);
 const monthYear = new Date(M.date + 'T12:00:00').toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
 $('#hkick').textContent = `Stanford Encyclopedia of Philosophy · ${monthYear}`;
-$('#lead').innerHTML = `Recounted from the bibliographies of all ${fmt(M.entries)} entries. Lewis is cited in ${C[0].n}, ahead of Quine, Putnam, Rawls and Kripke, and John Rawls’s <i>A Theory of Justice</i> is still the most-cited work.`;
-const STATS = [[M.entries, 'SEP entries, every bibliography read'], [C.length, 'philosophers born since 1900, cited in 30+ entries'],
-  [LC.length, 'philosophers born before 1900, named in 5+ entries'], [D.W.length, 'works since 1900, cited in 16+ entries']];
+$('#lead').innerHTML = `Every one of its ${fmt(M.entries)} entries, read for the people it cites and names. ${fmt(LC.length + C.length)} philosophers recur across them, from ${esc(earliest.a)} to people still writing today.`;
+const STATS = [[M.entries, 'SEP entries read, from first to last'], [LC.length, 'philosophers born before 1900, named in 5+ entries'],
+  [C.length, 'philosophers born since 1900, cited in 30+ entries'], [D.W.length, 'works since 1900, cited in 16+ entries']];
 $('#stats').innerHTML = STATS.map(([v, lab]) => `<div><dt><span class="cu" data-to="${v}" data-from="0">${fmt(v)}</span></dt><dd>${lab}</dd></div>`).join('');
-$('#htop').innerHTML = C.slice(0, 8).map((p, k) => `<li style="--k:${k}"><span class="rk">${p.r}</span><a href="#p-${p.id}">${esc(p.a)}</a><span class="hb"><i style="width:${p.n / C[0].n * 100}%"></i></span><b>${p.n}</b></li>`).join('');
 const countUp = el => { const to = +el.dataset.to, from = +el.dataset.from, isY = el.dataset.y === '1', f = v => isY ? String(v) : fmt(v);
   if (RM) return; const t0 = performance.now(), dur = 1500;
   const step = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = f(Math.round(from + (to - from) * e)); if (k < 1) requestAnimationFrame(step); };
@@ -514,6 +513,81 @@ $('#dwh').textContent = `Works that dropped below 16 entries (${D.X.length})`;
 $('#dw').innerHTML = D.X.map(w => `<li><b>${w.o} → ${w.n}</b> ${esc(w.t.split(/:\s/)[0])} <span class="by">${esc(w.a.split(' ').pop())}, ${w.y}</span></li>`).join('');
 const ratios = C.filter(p => p.o).map(p => p.n / p.o), mr = med(ratios);
 $('#chnote').textContent = `The SEP grew from 1,778 main entries in summer 2024 to ${fmt(M.entries)} now (+${((M.entries / 1778 - 1) * 100).toFixed(1)}%), and the median philosopher on both lists gained ${((mr - 1) * 100).toFixed(0)}%. Some names new to the list reflect how this count separates people who share a surname, rather than real change.`;
+
+/* ---------- header illustration: everyone, by year of birth ---------- */
+const hsv = $('#hsv'), hfig = $('#herofig'), hTip = $('#htip');
+const HDOT = [...LC.map(h => ({h: 'h-' + h.id, b: hb(h), n: h.m, f: h.g === 'f', s: LBL[h.a] || h.a.split(' ').pop(), o: h, old: true})),
+  ...C.filter(p => p.b).map(p => ({h: 'p-' + p.id, b: p.b, n: p.n, f: p.g === 'f', s: p.sur, o: p, old: false}))];
+const HBK = [-650, 500, 1400, 1600, 1800, 1900, Math.max(1985, ...HDOT.map(d => d.b + 4))];
+const HERA = ['Ancient', 'Medieval', 'Renaissance', 'Early modern', '19th century', 'Since 1900'], HERAs = ['Anc.', 'Med.', 'Ren.', 'Early mod.', '19th c.', 'Since 1900'];
+const hSeg = y => { for (let k = 0; k < 6; k++) if (y < HBK[k + 1] || k === 5) return k; };
+const hwRaw = HERA.map((_, k) => Math.pow(Math.max(30, HDOT.filter(d => hSeg(d.b) === k).length), .85)), hwSum = hwRaw.reduce((a, b) => a + b, 0), HWt = hwRaw.map(v => v / hwSum);
+const hX = (y, x0, x1) => { let acc = 0; for (let k = 0; k < 6; k++) { if (y < HBK[k + 1] || k === 5) return x0 + (acc + Math.max(0, Math.min(1, (y - HBK[k]) / (HBK[k + 1] - HBK[k]))) * HWt[k]) * (x1 - x0); acc += HWt[k]; } };
+const hMax = Math.max(...HDOT.map(d => d.n));
+const hLabels = (() => { const segs = HERA.map((_, k) => HDOT.filter(d => hSeg(d.b) === k).sort((a, b) => b.n - a.n)), out = [];
+  const wOld = HDOT.filter(d => d.f && d.old).sort((a, b) => b.n - a.n)[0], wNew = HDOT.filter(d => d.f && !d.old).sort((a, b) => b.n - a.n)[0];
+  for (let r = 0; r < 12; r++) segs.forEach(s => { if (s[r]) out.push(s[r]); if (r === 1) { [wOld, wNew].forEach(w => { if (w && !out.includes(w)) out.push(w); }); } });
+  return [...new Set(out)]; })();
+let hDrawn = false, hLastH = 0;
+const hDraw = () => {
+  const W = hsv.clientWidth; if (!W) return;
+  const narrow = W < 600, x0 = 4, x1 = W - 4, padTop = 58, padBot = 40, maxPile = narrow ? 210 : 250;
+  let sc = Math.sqrt(Math.min(1, W / 1240)), pts, pile;
+  for (let it = 0; it < 4; it++) {
+    const rmax = 13 * sc, pad = .9, JIT = [-2, 2, -4, 4, -6, 6, -8, 8, -10, 10];
+    pts = HDOT.map(d => ({d, x: hX(d.b, x0, x1), r: (2 + 11 * Math.sqrt(d.n / hMax)) * sc, y: 0}));
+    const bk = new Map(), BW = 16; pile = 0;
+    pts.slice().sort((a, b) => a.r - b.r || a.x - b.x).forEach(p => {
+      const cand = []; for (let i = Math.floor((p.x - p.r - rmax - pad - 11) / BW); i <= Math.floor((p.x + p.r + rmax + pad + 11) / BW); i++) { const a = bk.get(i); if (a) cand.push(...a); }
+      const lift = px => { let y = -p.r;
+        for (let g = 0; g < 2000; g++) { let hit = null;
+          for (const o of cand) { const dx = o.x - px, rr = o.r + p.r + pad; if (dx * dx + (o.y - y) * (o.y - y) < rr * rr - .01) { hit = o; break; } }
+          if (!hit) break; const dx = hit.x - px, rr = hit.r + p.r + pad; y = hit.y - Math.sqrt(Math.max(0, rr * rr - dx * dx)) - .02; }
+        return y; };
+      let bestX = p.x, y = lift(p.x);
+      for (const off of JIT) { const px = p.x + off * sc, yy = lift(px); if (yy > y + .5) { y = yy; bestX = px; } }
+      p.x = bestX; p.y = y; pile = Math.max(pile, -(y - p.r));
+      const bi = Math.floor(p.x / BW); if (!bk.has(bi)) bk.set(bi, []); bk.get(bi).push(p); });
+    if (pile <= maxPile) break; sc *= Math.sqrt(maxPile / pile) * .98;
+  }
+  const H = Math.ceil(pile + padTop + padBot), base = H - padBot;
+  if (Math.abs(H - hLastH) > 1) { hLastH = H; hfig.style.height = H + 'px'; }
+  const intro = !hDrawn && !RM; hDrawn = true;
+  const dl = p => Math.round(p.x / W * 1900 + (-p.y / pile) * 380);
+  let g = '';
+  for (let k = 0; k < 6; k++) { const a = hX(HBK[k], x0, x1), b = hX(HBK[k + 1] - .001, x0, x1);
+    if (k % 2) g += `<rect x="${a.toFixed(1)}" y="${(padTop - 20).toFixed(1)}" width="${(b - a).toFixed(1)}" height="${(base - padTop + 20).toFixed(1)}" fill="rgba(255,255,255,.045)"/>`;
+    const lab = !narrow && HERA[k].length * 7.4 < b - a - 4 ? HERA[k] : HERAs[k]; if (lab.length * 6.6 < b - a - 2) g += `<text class="era" x="${((a + b) / 2).toFixed(1)}" y="${base + 22}" text-anchor="middle">${lab}</text>`; }
+  g += `<line x1="${x0}" x2="${x1}" y1="${base + .5}" y2="${base + .5}" stroke="rgba(255,255,255,.4)"/>`;
+  const x19 = hX(1900, x0, x1);
+  g += `<line x1="${x19.toFixed(1)}" x2="${x19.toFixed(1)}" y1="${padTop - 20}" y2="${base}" stroke="rgba(255,255,255,.45)" stroke-dasharray="3 4"/>`;
+  if (!narrow) g += `<text class="tk" x="${(x19 - 8).toFixed(1)}" y="${padTop - 2}" text-anchor="end">size: entries naming them</text><text class="tk" x="${(x19 + 8).toFixed(1)}" y="${padTop - 2}">size: entries citing them</text>`;
+  g += pts.map(p => `<circle class="hd2" style="--d:${dl(p)}ms" cx="${p.x.toFixed(1)}" cy="${(base + p.y).toFixed(1)}" r="${p.r.toFixed(2)}" fill="${p.d.f ? '#ffcf6b' : '#fff'}" fill-opacity="${p.d.f ? 1 : .82}"/>`).join('');
+  const boxes = narrow ? [] : [{x: x19 - 190, y: padTop - 15, w: 380, h: 16}], K = narrow ? 7 : W < 1000 ? 13 : 20, cw = 6.9;
+  // name the peaks like a mountain panorama: each label floats just above the local skyline, with a thin leader to its dot
+  let lead = '', labs = '';
+  hLabels.slice(0, K).forEach(d => { const p = pts.find(q => q.d === d); if (!p) return; const w = d.s.length * cw, x = p.x, dy = base + p.y - p.r;
+    let sky = dy; pts.forEach(q => { if (Math.abs(q.x - x) < w / 2 + q.r + 2) sky = Math.min(sky, base + q.y - q.r); });
+    const lx = Math.max(w / 2 + 3, Math.min(W - w / 2 - 3, x));
+    for (let lvl = 0; lvl < 3; lvl++) { const ty = sky - 7 - lvl * 16, bb = {x: lx - w / 2 - 3, y: ty - 12, w: w + 6, h: 15};
+      if (bb.y < 2) break;
+      if (boxes.some(o => bb.x < o.x + o.w && bb.x + bb.w > o.x && bb.y < o.y + o.h && bb.y + bb.h > o.y)) continue;
+      boxes.push(bb);
+      if (dy - (ty + 3) > 3) lead += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${(ty + 4).toFixed(1)}" y2="${(dy - 1).toFixed(1)}" stroke="rgba(255,255,255,.55)" style="--d:${dl(p) + 260}ms"/>`;
+      labs += `<text x="${lx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" style="--d:${dl(p) + 260}ms">${esc(d.s)}</text>`; break; } });
+  g += lead + labs;
+  g += pts.map(p => `<circle class="hit" data-h="${p.d.h}" cx="${p.x.toFixed(1)}" cy="${(base + p.y).toFixed(1)}" r="${Math.max(5, p.r + 1).toFixed(1)}" fill="transparent"/>`).join('');
+  hsv.innerHTML = g;
+  if (intro) { hsv.classList.add('intro'); setTimeout(() => hsv.classList.remove('intro'), 3200); }
+};
+new ResizeObserver(hDraw).observe(hsv);
+const hByH = Object.fromEntries(HDOT.map(d => [d.h, d]));
+hsv.addEventListener('pointerover', e => { const k = e.target.dataset && e.target.dataset.h; if (!k) return; const d = hByH[k], o = d.o;
+  placeTip(hTip, hfig, +e.target.getAttribute('cx'), +e.target.getAttribute('cy'), d.old ? htip(o) : ptip(o)); });
+hsv.addEventListener('pointerout', e => { if (e.target.dataset && e.target.dataset.h) hTip.style.opacity = 0; });
+hsv.addEventListener('click', e => { const k = e.target.dataset && e.target.dataset.h; if (k) location.hash = k; });
+const nShown = HDOT.filter(d => !d.old).length;
+$('#hcap').textContent = `Each dot is a philosopher, placed by year of birth (${C.length - nShown} with no recorded birth year are not shown). Size shows how many entries name them, before 1900, or cite them, after; gold dots are women. Time is stretched where philosophers are many. Point at a dot for a name; click for a profile.`;
 
 renderA(); renderB(); renderW(); route();
 if (sio) sections.forEach(s => sio.observe(s));
