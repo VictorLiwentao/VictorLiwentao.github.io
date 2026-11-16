@@ -22,7 +22,8 @@ scheler|m collingwood|r neurath|o kelsen|h prichard|h stout|g alexander|s cook|j
 tarde|g sorel|g mill|j|john mill|j|james weber|m|max'''.split())
 PRE1900 -= {'smith|a', 'weber|m', 'alexander|s'}
 # not philosophers' persons but parse artifacts to drop
-DROP = {'press|c', 'press|n', 'press|p', 'anonymous|', 'et|'}
+DROP = {'press|c', 'press|n', 'press|p', 'anonymous|', 'et|',
+        'smith|s', 'allen|j', 'martin|m'}  # name keys that merge several different people
 ANCIENT_MEDIEVAL = {'aristotle|', 'plato|', 'aquinas|t', 'augustine|', 'avicenna|', 'averroes|', 'ockham|w', 'scotus|j'}
 
 DISPLAY = {

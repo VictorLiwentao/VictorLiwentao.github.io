@@ -1,0 +1,7486 @@
+{
+"18thGerman-preKant": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"abduction": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"abelard": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"abhidharma": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"abilities": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"abner-burgos": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"abortion": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"abrabanel": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"abraham-daud": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"abstract-objects": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"abu-bakr-al-razi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"academic-freedom": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"action": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"action-perception": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"actualism-possibilism-ethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"adaptationism": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"addams-jane": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"adorno": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"advance-directives": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"aesthetic-concept": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"aesthetic-experience": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"aesthetic-judgment": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"aesthetic-testimony": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"aesthetics-18th-british": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"aesthetics-18th-french": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"aesthetics-18th-german": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"aesthetics-19th-romantic": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"aesthetics-cogsci": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"aesthetics-critical-theory": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"aesthetics-existentialist": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"aesthetics-of-everyday": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"aesthetics-race": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"affirmative-action": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"african-ethics": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"african-sage": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"africana": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"africana-contemporary": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"afterlife": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"agency": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"agent-modeling-philscience": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"agrippa-nettesheim": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"akan-person": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"al-baghdadi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-din-al-razi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-farabi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-farabi-logic": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-farabi-metaphysics": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-farabi-psych": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-farabi-soc-rel": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-ghazali": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-khunaji": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-kindi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"al-qudat": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"alain-locke": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"albalag": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"alberic-paris": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"albert-great": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"albert-saxony": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"albo-joseph": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"alcmaeon": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"alexander": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"alexander-aphrodisias": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"alexander-crummell": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"alexander-humboldt": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"algebra-logic-tradition": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"algorithmic-fairness": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"alienation": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"alternative-possibilities": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"althusser": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"altruism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"altruism-biological": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"altruism-empirical": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"alyngton": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"ambiguity": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"ammonius": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"analogy-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"analysis": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"analytic-synthetic": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"anaphora": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"anarchism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"anaxagoras": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"ancient-political": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"ancient-soul": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"anderson-john": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"animal-communication": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"animal-normativity": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"animal-social-cognition": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"animal-thought": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"animalism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"anna-julia-cooper": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"anomalous-monism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"anscombe": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"anselm": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"antiochus-ascalon": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"antonio-rosmini": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"apriori": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"aquinas": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"aquinas-moral-political": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-causation": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-essence": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-greek": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-influence": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-judaic": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-language": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-liar": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-metaphysics": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-mind": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-mysticism": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-natural": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-phil-math": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arabic-islamic-religion": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"arcesilaus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"architecture": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"archytas": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"arendt": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"argument": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"aristotelianism-renaissance": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"aristotle": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-aesthetics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-biology": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-categories": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-causality": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-commentators": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-de-motu": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-ethics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-logic": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-mathematics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-metaphysics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-natphil": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-noncontradiction": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-politics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-psychology": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-rhetoric": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"aristotle-text": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"arnauld": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"arrows-theorem": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"art-definition": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"art-ontology-history": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"artifact": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"artificial-intelligence": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"assertion": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"associationist-thought": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"astell": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"atheism-agnosticism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"atomism-ancient": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"atomism-modern": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"atonement": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"attention": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"august-rehberg": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"augustine": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"auriol": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"austin-jl": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"austin-john": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"authenticity": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"authority": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"autonomy-moral": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"autrecourt": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"axiom-choice": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"ayer": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"ayn-rand": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"basing-epistemic": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"baudrillard": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"bauer": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"bayes-theorem": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"bayle": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"beardsley-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"beauty": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"beauvoir": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"behaviorism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"belief": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"belief-merging": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"bell-theorem": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"benjamin": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"bentham": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"bergson": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"berkeley": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"berlin": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"bessarion": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"binarium": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"biodiversity": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"bioethics-latin-america": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"bioethics-moral-reasoning": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"biology-developmental": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"biology-experiment": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"biology-individual": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"biology-philosophy": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"biomedicine": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"black-reparations": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"blame": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"bloch": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"bodily-awareness": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"bodin": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"boethius": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"boethius-dacia": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"bohr-correspondence": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"bolzano": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"bolzano-logic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"bonaventure": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"boolalg-math": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"boole": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"bosanquet": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"boundary": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"bounded-rationality": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"boyle": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"bradley": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"bradley-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"bradley-regress": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"branching-time": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"brentano": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"brentano-judgement": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"broad": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"brouwer": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"bruno": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"buber": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"buddha": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"buddhism-chan": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"buddhism-huayan": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"buddhism-tiantai": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"buridan": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"burke": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"burley": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"butler-moral": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"byzantine-philosophy": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"callicles-thrasymachus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"cambridge-platonists": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"campanella": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"camus": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"cancer": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"capability-approach": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"capitalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"cardano": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"carnap": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"carneades": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"cassirer": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"categories": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"category-mistakes": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"category-theory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"catharine-macaulay": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"causal-explanation-science": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"causal-models": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"causation-backwards": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"causation-counterfactual": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"causation-law": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"causation-mani": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"causation-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"causation-metaphysics": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"causation-physics": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"causation-probabilistic": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"causation-regularity": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"cell-biology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"cellular-automata": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"certainty": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"ceteris-paribus": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"chance-randomness": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"change": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"chaos": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"chemistry": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"childhood": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"children": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"chimeras": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"chinese-change": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-epistemology": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-legalism": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-logic-language": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-metaphysics": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-mind": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-painting-calligraphy": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-phil-medicine": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-phil-science": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-room": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"chinese-social-political": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chinese-translate-interpret": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"chisholm": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"christiantheology-philosophy": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"church": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"church-turing": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"cicero": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"citizenship": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"civic-education": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"civil-disobedience": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"civil-rights": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"clarke": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"clauberg": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"climate-science": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"clinical-research": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"cloning": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"closure-epistemic": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"cockburn": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"coercion": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"cognition-animal": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"cognitive-disability": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"cognitive-science": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"cohen": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"collective-intentionality": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"collective-responsibility": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"collingwood": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"collingwood-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"collins": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"colonialism": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"color": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"common-good": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"common-ground-pragmatics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"common-knowledge": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"communitarianism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"comparative-cognition": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"comparphil-chiwes": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"compatibilism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"compositionality": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"computability": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"computation-physicalsystems": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"computational-complexity": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"computational-linguistics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"computational-mind": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"computational-philosophy": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"computer-science": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"computing-history": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"computing-responsibility": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"comte": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"concept-emotion-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"concept-evil": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"concept-religion": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"concepts": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"conceptual-art": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"condemnation": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"condillac": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"conditionals": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"confirmation": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"confucian-gender": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"confucianism-modern": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"confucius": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"connectionism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"connectives-logic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"conscience": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"conscience-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"consciousness": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consciousness-17th": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"consciousness-animal": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consciousness-higher": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consciousness-intentionality": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consciousness-neuroscience": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consciousness-representational": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consciousness-temporal": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consciousness-unity": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"consequence-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"consequentialism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"consequentialism-rule": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"consequentializing": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"conservation-biology": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"conservatism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"constitutionalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"constructive-empiricism": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"constructivism-metaethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"constructivism-political": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"content-causal": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"content-externalism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"content-narrow": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"content-nonconceptual": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"content-teleological": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"contextualism-epistemology": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"continuity": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"continuum-hypothesis": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"contract-law": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"contractarianism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"contractarianism-contemporary": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"contractualism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"contradiction": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"convention": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"conway": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"copernicus": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"cordemoy": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"corruption": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"cosmological-argument": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"cosmology": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"cosmology-30s": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"cosmology-theology": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"cosmopolitanism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"counterfactuals": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"crathorn": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"creation-conservation": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"creationism": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"creativity": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"crescas": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"criminal-law": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"critical-phil-race": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"critical-theory": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"critical-thinking": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"croce-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"cudworth": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"cugoano": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"culture": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"culture-cogsci": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"curry-paradox": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"cusanus": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"cyrenaics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"dai-zhen": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"dance": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"dante": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"daoism": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"daoism-religion": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"darwinism": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"david": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"david-lewis": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"davidson": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"death": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"death-definition": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"decision-capacity": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"decision-causal": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"decision-theory": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"decision-theory-descriptive": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"dedekind-foundations": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"deductivism-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"defaults-semantics-pragmatics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"definitions": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"dehumanization": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"deleuze": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"della-porta": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"delmedigo": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"delusion": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"democracy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"democritus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"demonstration-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"dependence-ontological": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"depiction": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"derrida": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"descartes": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-epistemology": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-ethics": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-ideas": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-mathematics": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-method": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-modal": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-ontological": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-physics": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descartes-works": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"descriptions": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"desert": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"desgabets": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"desire": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"determinate-determinables": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"determinism-causal": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"dewey": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"dewey-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"dewey-moral": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"dewey-political": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"dharmakiirti": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"diagrams": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"dialectical-school": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"dialetheism": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"diderot": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"dietrich-freiberg": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"digital-art": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"dignity": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"dilthey": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"diodorus-cronus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"dirty-hands": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"disability": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"disability-care-rationing": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"disability-critical": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"disability-justice": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"disability-well-being": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"disagreement": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"disagreement-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"discourse-representation-theory": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"discrimination": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"disjunction": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"dispositions": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"divine-freedom": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"divine-hiddenness": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"divine-revelation": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"divine-simplicity": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"doing-allowing": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"domination": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"double-consciousness": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"double-effect": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"doxastic-voluntarism": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"doxography-ancient": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"dreams-dreaming": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"du-bos": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"dualism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"dubois": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"duhem": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"duns-scotus": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"dutch-book": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"dynamic-choice": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"dynamic-epistemic": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"dynamic-semantics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"early-modern-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"ecological-genetics": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"ecology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"economic-democracy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"economic-justice": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"economics": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"economics-early-modern": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"education-philosophy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"edwards": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"egalitarianism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"egoism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"ehrenfels": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"einstein-philscience": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"elias": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"elisabeth-bohemia": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"embodied-cognition": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"emerson": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"emilie-du-chatelet": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"emily-elizabeth-constance-jones": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"emotion": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"emotion-Christian-tradition": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"emotions-17th18th": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"emotions-chinese": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"empathy": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"empedocles": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"empiricism-ancient-medieval": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"engels": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"enhancement": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"enlightenment": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"environmental-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"envy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"epictetus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"epicurus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"epiphenomenalism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"episteme-techne": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"epistemic-game": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"epistemic-paradoxes": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"epistemic-self-doubt": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"epistemic-utility": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"epistemology": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"epistemology-ai": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"epistemology-bayesian": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"epistemology-evolutionary": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"epistemology-geometry": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"epistemology-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"epistemology-language-tibetan": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"epistemology-latin-america": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"epistemology-naturalized": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"epistemology-social": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"epistemology-virtue": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"epistemology-visual-thinking": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"epsilon-calculus": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"equal-ed-opportunity": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"equal-opportunity": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"equality": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"equivME": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"erasmus": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"erfurt": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"ergodic-hierarchy": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"ernst-mach": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"erotic-art": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"essential-accidental": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"eternity": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"ethics-ai": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-ancient": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"ethics-belief": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"ethics-business": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-chinese": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"ethics-cultural-heritage": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-deontological": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"ethics-environmental": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-indian-buddhism": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"ethics-internet-research": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-it-phenomenology": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"ethics-manipulation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-pregnancy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-search": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ethics-social-networking": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"ethics-virtue": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"eugenics": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"euthanasia-voluntary": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"events": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"evidence": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"evidence-legal": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"evil": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"evil-kinds-origins": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"evolution": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"evolution-before-darwin": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"evolution-cultural": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"evolution-development": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"evolutionary-psychology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"existence": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"existentialism": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"existentialism-mexican": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"experimental-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"experimental-jurisprudence": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"experimental-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"experimental-philosophy": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"exploitation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"facts": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"faith": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"falaquera": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"fallacies": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"fatalism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"fechner": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"federalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"feigl": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"femapproach-analy-cont": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"femapproach-analytic": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"femapproach-continental": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"femapproach-prag-cont": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"femapproach-pragmatism": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"feminism-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"feminism-argumentation": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-autonomy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"feminism-class": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-disability": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-environmental": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-epistemology": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-ethics": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-family": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"feminism-femhist": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"feminism-gender": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-globalization": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-language": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-latin-america": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"feminism-law": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-liberal": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"feminism-metaphysics": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-moralpsych": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-objectification": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-political": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-psychoanalysis": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-rape": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-self": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminism-trans": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-bioethics": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-body": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-philosophy": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-philosophy-biology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"feminist-power": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-religion": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-science": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-sex-markets": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feminist-social-epistemology": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"feyerabend": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"ficino": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"fiction": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"fiction-emotion-response": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"fictional-entities": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"fictionalism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"fictionalism-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"fictionalism-modal": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"fideism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"film": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"findlay": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"fine-tuning": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"fitch-paradox": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"fitness": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"fitting-attitude-theories": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"fitzralph": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"fleck": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"folkpsych-simulation": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"folkpsych-theory": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"forgiveness": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"form-matter": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"formal-belief": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"formal-epistemology": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"formalism-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"foucault": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"frame-problem": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"francis-bacon": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"francis-marchia": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"francisco-sanches": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"francois-barre": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"frantz-fanon": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"frederick-douglass": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"free-rider": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"free-will-foreknowledge": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"freedom-ancient": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"freedom-association": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"freedom-speech": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"freewill": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"frege": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"frege-hilbert": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"frege-logic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"frege-theorem": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"friedrich-hayek": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"friedrich-jacobi": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"friedrich-lange": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"friendship": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"fuller-margaret": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"functionalism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"fundamentality": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"future-contingents": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"gadamer": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"gadamer-aesthetics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"galen": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"galileo": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"game-ethics": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"game-evolutionary": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"game-theory": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"games-abstraction": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"gametes-donation-sale": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"gangesa": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"gassendi": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"gasset": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"gauge-theories": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"gelukpa": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"gene": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"generalized-quantifiers": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"generics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"genetic-drift": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"genetics": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"genomics": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"genotype-phenotype": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"genrel-early": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"geometry-19th": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"geometry-finitism": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"george-eliot": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"gersonides": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"gianfrancesco-pico": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"giles": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"global-democracy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"globalization": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"god-necessary-being": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"god-ultimates": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"godfrey": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"godwin": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"goedel": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"goedel-incompleteness": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"gomez-pereira": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"goodman": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"goodman-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"gorampa": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"gramsci": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"gratitude": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"green": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"gregory-rimini": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"grice": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"grosseteste": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"grotius": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"grounding": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"grounds-moral-status": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"habermas": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"haecceitism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"halevi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"hamann": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"han-dynasty": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"happiness": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"hare": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"harriet-mill": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"hartley": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hartshorne": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"hate-speech": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"health-disease": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"heaven-hell": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"hedonism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"hegel": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"hegel-aesthetics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"hegel-dialectics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"hegel-social-political": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"heidegger": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"heidegger-aesthetics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"heinrich-rickert": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"hempel": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"henricus-regius": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"henry-ghent": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"henry-more": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"heraclitus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"herder": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"heritability": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"hermann-helmholtz": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"hermann-lotze": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"hermeneutics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"heytesbury": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"higher-order-evidence": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"hilbert-program": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"hist-westphilmusic-since-1800": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"hist-westphilmusic-to-1800": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"histfem-condorcet": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"history": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"hobbes": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hobbes-moral": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hobbes-science": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"holbach": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"holes": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"holism-social": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"holkot": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"homosexuality": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"hope": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"horkheimer": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"human-genome": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"human-nature": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"humanism-civic": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"hume": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hume-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"hume-freewill": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hume-moral": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hume-newton": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hume-religion": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"humor": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"husserl": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"hutcheson": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"hyperintensionality": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"iamblichus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"ibn-arabi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-bajja": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-ezra": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-gabirol": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-kammuna": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-rushd": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-rushd-natural": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-sina": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-sina-logic": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-sina-metaphysics": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-sina-natural": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"ibn-taymiyya": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"idealism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"identity": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"identity-ethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"identity-indiscernible": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"identity-personal": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"identity-politics": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"identity-relative": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"identity-time": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"identity-transworld": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"ideology": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"idiolects": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"ikhwan-al-safa": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"illumination": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"imagination": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"imaginative-resistance": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"immigration": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"immunology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"immutability": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"impartiality": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"implicature": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"implicature-optimality-games": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"implicit-bias": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"impossible-worlds": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"imprecise-probabilities": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"incommensurability": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"incompatibilism-arguments": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"incompatibilism-theories": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"independence-large-cardinals": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"indexicals": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"induction-problem": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"infinite-regress": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"infinity": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"information": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"information-biological": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"information-entropy": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"information-semantic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"informed-consent": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"ingarden": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"inheritance-systems": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"innate-acquired": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"innateness-cognition": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"innateness-history": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"innateness-language": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"inner-speech": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"insolubles": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"integrity": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"intellectual-property": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"intensional-trans-verbs": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"intention": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"intentionality": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"intentionality-ancient": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"international-justice": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"international-law": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"intrinsic-extrinsic": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"introspection": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"intuition": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"intuitionism": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"intuitionism-ethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"intuitionistic-logic-development": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"israeli": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"it-moral-values": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"it-privacy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"jaina-philosophy": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"james": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"james-mill": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"james-viterbo": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"james-ward": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"japanese-aesthetics": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"japanese-confucian": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"japanese-philosophy": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"japanese-pure-land": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"japanese-zen": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"jaspers": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"jayaraasi": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"jefferson": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"joane-petrizi": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"johann-fichte": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"johann-herbart": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"johann-sturm": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"john-italos": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"john-norris": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"john-salisbury": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"jury-theorems": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justep-coherence": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"justep-foundational": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"justep-intext": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"justice": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-bad-luck": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-climate": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-distributive": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-global": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-healthcareaccess": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-inequality-health": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-intergenerational": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-moral-psych": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"justice-retributive": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-transitional": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justice-virtue": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"justification-public": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"justus-lipsius": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"kant": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-aesthetics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-conceptualism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-development": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-hume-causality": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-hume-morality": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-judgment": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-leibniz": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-mathematics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-metaphysics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-mind": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-moral": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-reason": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-religion": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-science": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-social-political": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-spacetime": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-transcendental": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kant-transcendental-idealism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"karl-reinhold": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kaspi-joseph": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"kepler": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"kierkegaard": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"kilvington": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"knowledge-acquaindescrip": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"knowledge-analysis": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"knowledge-how": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"knowledge-value": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"kochen-specker": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"kokugaku-school": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"korean-buddhism": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"korean-confucianism": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"korean-philosophy": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"kukai": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"kumaarila": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"kyoto-school": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"la-forge": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"lacan": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"lady-masham": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"lakatos": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"lambda-calculus": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"lambert-auxerre": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"landmann-kalischer": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"langer": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"language-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"language-thought": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"laozi": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"large-cardinals-determinacy": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"latin-american-analytic": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"latin-american-metaphilosophy": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"latin-american-philosophy": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"latinx": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"law-ideology": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"law-interpretivist": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"law-language": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"law-limits": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"lawphil-naturalism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"lawphil-nature": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"lawphil-theory": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"laws-of-nature": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"learning-formal": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"lefevre-etaples": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"legal-econanalysis": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legal-interpretation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legal-obligation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legal-positivism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legal-probabilism": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"legal-punishment": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legal-reas-interpret": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legal-reas-prec": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legal-rights": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legitimacy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"legrand": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz-causation": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz-ethics": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz-evil": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz-exoteric": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz-logic-influence": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"leibniz-mind": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz-modal": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibniz-physics": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"leibowitz-yeshayahu": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"lesniewski": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"leucippus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"levels-org-biology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"levinas": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"lewis-ci": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"lewis-metaphysics": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"liar-paradox": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"liberalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"liberalism-latin-america": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"liberation": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"libertarianism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"liberty-positive-negative": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"life": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"life-meaning": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"linguistics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"literal-nonliteral-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"llull": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"location-mereology": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"locke": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"locke-freedom": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"locke-moral": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"locke-on-medicine": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"locke-personal-identity": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"locke-philosophy-science": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"locke-political": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"logic-action": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-ai": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-algebraic-propositional": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-ancient": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"logic-belief-revision": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-classical": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-combinatory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-combining": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-conditionals": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-connexive": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-deontic": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-dependence": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"logic-dialogical": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-dynamic": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-epistemic": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-firstorder-emergence": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-free": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-fuzzy": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-games": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-higher-order": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-hybrid": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-if": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"logic-inductive": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-infinitary": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-informal": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"logic-information": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-intensional": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-intuitionistic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-justification": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-linear": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-many-sorted": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-manyvalued": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-massexpress": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"logic-modal": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-modal-origins": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-nonmonotonic": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-normative": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-ontology": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"logic-paraconsistent": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-power-games": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-preference": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-probability": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logic-propositional": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-provability": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-relevance": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-substructural": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logic-temporal": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logical-atomism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"logical-consequence": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logical-constants": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logical-construction": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logical-empiricism": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"logical-form": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"logical-pluralism": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logical-truth": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logicism": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"logics-for-games": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"lorenzo-valla": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"love": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"loyalty": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"lucretius": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"lucrezia-marinella": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"ludwig-feuerbach": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"lukacs": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"lukasiewicz": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"luther": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"luther-influence": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"luxemburg": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"lvov-warsaw": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"lying-definition": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"lyotard": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"machiavelli": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"macroevolution": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"madeleine-scudery": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"madhyamaka": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"maimon": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"maimonides": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"maimonides-islamic": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"malebranche": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"malebranche-ideas": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"mally": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"mally-deontic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"mandeville": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"marcel": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"marcus-aurelius": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"marcuse": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"margaret-cavendish": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"margaret-fell": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"maritain": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"markets": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"marriage": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"marsilius-inghen": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"marsilius-padua": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"marty": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"marx": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"marxism-analytical": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"mary-shepherd": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"material-constitution": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"materialism-eliminative": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"mathematical-practice": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"mathematical-style": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"mathematics-constructive": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"mathematics-explanation": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"mathematics-inconsistent": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"mathematics-nondeductive": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"mathphil-indis": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"max-stirner": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"mctaggart": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"mead": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"meaning": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"meaning-holism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"meaning-normativity": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"measurement-science": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"medicine": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"medieval-categories": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"medieval-emotions": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"medieval-futcont": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"medieval-haecceity": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"medieval-literary": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"medieval-philosophy": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"medieval-political": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"medieval-syllogism": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"medieval-terms": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"meinong": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"meister-eckhart": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"memory": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"memory-episprob": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"mencius": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"mendelssohn": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"mental-causation": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"mental-disorder": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"mental-imagery": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"mental-representation": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"mereology": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"mereology-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"meritocracy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"merleau-ponty": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"mersenne": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"metaepistemology": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"metaethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"metaphor": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"metaphysical-explanation": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"metaphysics": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"metaphysics-massexpress": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"methodological-individualism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"michel-henry": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"microbiology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"mill": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"mill-moral-political": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"mind-identity": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"mind-indian-buddhism": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"miracles": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"modality-epistemology": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"modality-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"modality-varieties": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"model-organisms": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"model-theory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"models-science": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"modeltheory-fo": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"modesty-humility": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"modularity-mind": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"mohism": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"mohist-canons": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"molecular-biology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"molecular-genetics": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"molyneux-problem": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"money-finance": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"monism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"monotheism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"montague-semantics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"montaigne": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"montesquieu": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"montessori-maria": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"moore": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"moore-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-animal": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"moral-anti-realism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-arguments-god": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"moral-character": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-character-empirical": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-cognitivism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-conventional": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-decision-uncertainty": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-demands-permissions": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-dilemmas": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-epistemology": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-epistemology-a-priori": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-learning": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"moral-luck": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-motivation": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-non-naturalism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-particularism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-particularism-generalism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-phenomenology": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"moral-psych-emp": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-realism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-relativism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-responsibility": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-responsibility-empirical": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-responsibility-epistemic": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-sentimentalism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"moral-theory": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"morality-biology": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"morality-definition": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"mulla-sadra": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"multiculturalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"multiple-realizability": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"murdoch": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"music": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"mysticism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"nagarjuna": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"names": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"nationalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"natorp": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"natphil-ren": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"natural-deduction": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"natural-kinds": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"natural-language-ontology": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"natural-law-ethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"natural-law-theories": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"natural-properties": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"natural-selection": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"natural-theology": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"naturalism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"naturalism-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"naturalism-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"naturalism-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"necessary-sufficient": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"needs": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"negation": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"negritude": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"neo-daoism": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"neo-kantianism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"neoliberalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"neoplatonism": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"neurath": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"neuroethics": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"neuroscience": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"neutral-monism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"newton": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"newton-philosophy": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"newton-principia": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"newton-stm": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"nicolai-hartmann": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"nicole-oresme": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"nietzsche": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"nietzsche-aesthetics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"nietzsche-life-works": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"nietzsche-moral-political": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"nishida-kitaro": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"nominalism-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"nominalism-metaphysics": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"nonexistent-objects": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"nonidentity-problem": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"nonwellfounded-set-theory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"normativity-metaethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"nothingness": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"novalis": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"nozick-political": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"numenius": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"oakeshott": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"object": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"obligationes": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"occasionalism": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"ockham": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"olivi": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"olympiodorus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"omnipotence": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"omnipresence": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"omniscience": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"ontological-arguments": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"ontological-commitment": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"ontology-is": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"operationalism": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"ordinary-objects": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"organ-donation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"organs-sale": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"origen": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"origin-descent": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"original-position": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"other-minds": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"pacifism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"pain": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"paine": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"panentheism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"panpsychism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"pantheism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"paradox-of-tragedy": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"paradox-simpson": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"paradox-skolem": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"paradox-stpetersburg": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"paradox-suspense": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"paradox-zeno": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"paradoxes-contemporary-logic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"parenthood": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"parmenides": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"pascal": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"pascal-wager": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"paternalism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"patriotism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"patrizi": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"paul-venice": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"peirce": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"peirce-benjamin": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"peirce-logic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"peirce-semiotics": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"penbygull": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"perception-auditory": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"perception-contents": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"perception-disjunctive": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"perception-episprob": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"perception-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"perception-justification": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"perception-problem": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"perceptual-learning": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"perfect-goodness": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"perfectionism-moral": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"personal-autonomy": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"personal-relationship-goods": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"personalism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"personhood-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"persons-means": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"peter-damian": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"peter-spain": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"petitionary-prayer": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"phenomenal-intentionality": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"phenomenology": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"phenomenology-mg": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"phenomenology-religion": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"phil-bio-latin-america": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"phil-multimodallogic": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"phil-science-latin-america": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"philanthropy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"philip-chancellor": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"philippa-foot": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"philo": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"philo-larissa": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"philodemus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"philolaus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"philoponus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"philosophy-chile": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"philosophy-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"philosophy-mexico": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"philosophy-religion": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"phylogenetic-inference": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"physicalism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"physics-Rpcc": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"physics-experiment": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"physics-holism": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"physics-interrelate": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"physics-structuralism": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"pico-della-mirandola": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"plato": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-aesthetics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-cratylus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-ethics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-ethics-politics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-ethics-shorter": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-friendship": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-laws": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-metaphysics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-myths": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-parmenides": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-rhetoric": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-sophstate": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-theaetetus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"plato-timaeus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"platonism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"platonism-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"pleasure": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"plotinus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"plural-quant": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"plutarch": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"pm-notation": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"poincare": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"political-obligation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"political-representation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"polqar": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"pomponazzi": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"popper": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"population-genetics": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"pornography-censorship": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"porphyry": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"port-royal-logic": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"possibilism-actualism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"possible-objects": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"possible-worlds": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"postmodernism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"practical-reason": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"practical-reason-action": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"practical-reason-med": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"pragmatic-belief-god": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"pragmatics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"pragmatism": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"prediction-accommodation": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"preferences": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"presentism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"presocratics": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"presupposition": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"price": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"prichard": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"principia-mathematica": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"principle-beneficence": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"prior": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"prioritarianism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"prisoner-dilemma": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"privacy": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"privacy-medicine": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"private-language": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"probability-interpret": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"probability-medieval-renaissance": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"problem-of-many": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"process-philosophy": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"process-theism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"proclus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"progress": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"promises": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"proof-theoretic-semantics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"proof-theory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"proof-theory-development": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"prop-attitude-reports": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"properties": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"properties-emergent": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"property": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"prophecy": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"propositional-function": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"propositions": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"propositions-singular": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"propositions-structured": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"protagoras": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"providence-divine": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"pseudo-dionysius-areopagite": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"pseudo-science": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"psychiatry": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"psychologism": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"psychology-normative-cognition": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"psychotherapy": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"public-goods": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"public-reason": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"publichealth-ethics": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"publicity": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"pufendorf": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"pyrrho": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"pythagoras": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"pythagoreanism": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"qing-philosophy": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"qm": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-bohm": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-collapse": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-consistent-histories": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-copenhagen": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-decoherence": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-everett": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-manyworlds": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-modal": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-relational": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qm-retrocausality": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-consciousness": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-entangle": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-epr": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-idind": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-issues": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-nvd": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-quantcomp": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-quantlog": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qt-uncertainty": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"qualia": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"qualia-inverted": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"qualia-knowledge": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"qualities-prim-sec": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"quantification": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"quantum-bayesian": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"quantum-field-theory": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"quantum-gravity": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"questions": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"quine": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"quine-nf": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"quotation": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"race": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"radulphus-brito": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"ramsey": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"ramsey-economics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"ramus": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"rationalism-early-modern": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"rationalism-empiricism": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"rationality-historicist": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"rationality-instrumental": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"rationality-normative-nonutility": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"rationality-normative-utility": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"rationality-structural": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"ratnakirti": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"rawls": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"real-essence": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"realism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"realism-about-metaphysics": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"realism-intl-relations": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"realism-sem-challenge": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"realism-theory-change": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"reasoning-analogy": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"reasoning-automated": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"reasoning-defeasible": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"reasoning-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"reasons-agent": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"reasons-internal-external": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"reasons-just-vs-expl": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"recognition": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"reconciliation": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"recursive-functions": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"redistribution": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"reduction-biology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"reference": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"reflective-equilibrium": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"reichenbach": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"reid": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"reid-ethics": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"reid-memory-identity": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"reinach": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"reism": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"relations": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"relations-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"relativism": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"reliabilism": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"religion-comparative": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"religion-epistemology": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"religion-evolutionary": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"religion-morality": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"religion-politics": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"religion-science": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"religious-commitment-reason": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"religious-experience": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"religious-language": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"religious-pluralism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"replication": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"representation-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"republicanism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"repugnant-conclusion": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"respect": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"reverse-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"revolution": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"richard-price": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"richard-sophister": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"ricoeur": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"rights": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"rights-children": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"rights-group": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"rights-human": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"rigid-designators": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"risk": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"robert-kilwardby": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"roger-bacon": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"rorty": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"rosenstock-huessy": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"rosenzweig": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"rousseau": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"royce": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"rule-following": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"rule-of-law": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"russell": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"russell-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"russell-paradox": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"russellian-monism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"ruth-barcan-marcus": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"ryle": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"saadya": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"saantarak-sita": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"sakya-pandita": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"santayana": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"sartre": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"scheler": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schelling": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schema": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"schiller": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schlegel": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schlegel-aw": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schleiermacher": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schlick": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"schmitt": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"scholem": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"scholz": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"school-names": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"school-salamanca": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"schopenhauer": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schopenhauer-aesthetics": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"schutz": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"science-big-data": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"science-mechanisms": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"science-theory-observation": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-discovery": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-explanation-20th": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-knowledge-social": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-method": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-objectivity": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-pluralism": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-progress": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-realism": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-reduction": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-representation": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-reproducibility": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-revolutions": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-underdetermination": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scientific-unity": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"scottish-18th": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"scottish-19th": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"scottus-eriugena": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"secession": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"selection-units": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"self-consciousness": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"self-consciousness-phenomenological": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"self-deception": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"self-defense": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"self-knowledge": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"self-knowledge-externalism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"self-locating-beliefs": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"self-obligations": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"self-reference": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"sellars": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"semiotics-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"seneca": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"sense-data": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"set-theory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"set-theory-constructive": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"settheory-alternative": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"settheory-early": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"sex-sexuality": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"sextus-empiricus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"shaaban-robert-ethics": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"shaftesbury": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"shankara": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"shantideva": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"shared-agency": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"sharpe": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"sidgwick": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"sidney-hook": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"sign-language-semantics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"sikh-philosophy": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"simon-faversham": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"simone-weil": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"simplicity": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"simplicius": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"simulations-science": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"sin-christian": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"singular-terms-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"situations-semantics": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"skeptical-theism": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"skepticism": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"skepticism-ancient": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"skepticism-content-externalism": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"skepticism-latin-america": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"skepticism-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"skepticism-moral": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"skepticism-moral-responsibility": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"smith-moral-political": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"social-choice": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"social-construction-naturalistic": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"social-institutions": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"social-minimum": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"social-norms": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"social-ontology": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"social-procedures": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"socialism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"sociobiology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"socrates": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"solidarity": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"song-ming-confucianism": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"sophie-de-grouchy": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"sophismata": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"sophists": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"sorites-paradox": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"sortals": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"sounds": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"sovereignty": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"spacetime-bebecome": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"spacetime-convensimul": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"spacetime-holearg": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"spacetime-iframes": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"spacetime-singularities": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"spacetime-supertasks": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"spacetime-theories": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"spacetime-theories-classical": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"special-obligations": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"species": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"speech-acts": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"spencer": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"speusippus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"spinoza": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"spinoza-attributes": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"spinoza-epistemology-mind": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"spinoza-modal": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"spinoza-physics": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"spinoza-political": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"spinoza-psychological": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"sport": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"square": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"srigupta": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"sriharsa": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"states-of-affairs": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"statistics": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"statphys-Boltzmann": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"statphys-statmech": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"stebbing": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"stein": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"stem-cells": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"stevenson": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"stoicism": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"strauss-leo": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"strawson": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"structural-realism": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"structuralism-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"structure-scientific-theories": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"stumpf": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"suarez": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"substance": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"sufficient-reason": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"suhrawardi": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"suicide": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"supererogation": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"supervenience": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"supervenience-ethics": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"susman-margarete": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"sylvan-routley": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"symmetry-breaking": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"syrianus": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"systems-synthetic-biology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"tarski": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"tarski-truth": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"taurellus": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"technology": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"teleological-arguments": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"teleology-biology": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"telesio": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"temporal-parts": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"tense-aspect": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"territorial-rights": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"terrorism": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"testimony-episprob": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"theater": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"theodicies": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"theology-aristotle": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"theophrastus": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"theoretical-terms-science": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"theories-biological-development": {
+"fine": "Philosophy of biology",
+"macro": "Science"
+},
+"thick-ethical-concepts": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"thomas-kuhn": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"thomas-more": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"thoreau": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"thought-experiment": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"tibbon": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"time": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"time-machine": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"time-thermo": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"time-travel": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"time-travel-phys": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"timon-phlius": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"toleration": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"tort-theories": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"torture": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"touch": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"trans": {
+"fine": "Feminist philosophy",
+"macro": "Social & political"
+},
+"transcendental-arguments": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"transcendentalism": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"transcendentals-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"transformative-experience": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"transmission-justification-warrant": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"trinity": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"tropes": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"trust": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"truth": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"truth-axiomatic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"truth-coherence": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"truth-correspondence": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"truth-deflationary": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"truth-identity": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"truth-pluralist": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"truth-pragmatic": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"truth-primitivist": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"truth-revision": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"truth-values": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"truthlikeness": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"truthmakers": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"tsongkhapa": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"turing": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"turing-machine": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"turing-test": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+},
+"twardowski": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"two-dimensional-semantics": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"twotruths-india": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"twotruths-tibet": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"type-theory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"type-theory-church": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"type-theory-intuitionistic": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"typelogical-grammar": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"types-tokens": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"umar-khayyam": {
+"fine": "Arabic, Islamic & Jewish philosophy",
+"macro": "History & traditions"
+},
+"understanding": {
+"fine": "Epistemology",
+"macro": "Metaphysics & epistemology"
+},
+"universals-medieval": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"utilitarianism-history": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"vagueness": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"vaihinger": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"value-incommensurable": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"value-intrinsic-extrinsic": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"value-pluralism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"value-theory": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"vasubandhu": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"vegetarianism": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"vico": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"vienna-circle": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"vives": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"voltaire": {
+"fine": "Early modern philosophy",
+"macro": "History & traditions"
+},
+"voluntarism-theological": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"voting": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"voting-methods": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"walter-chatton": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"wang-yangming": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"war": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"watsuji-tetsuro": {
+"fine": "Japanese philosophy",
+"macro": "History & traditions"
+},
+"weakness-will": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"weber": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"weighing-reasons": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"well-being": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"wesley-salmon": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"weyl": {
+"fine": "Philosophy of physics",
+"macro": "Science"
+},
+"whewell": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"whitehead": {
+"fine": "Philosophy of religion",
+"macro": "Metaphysics & epistemology"
+},
+"wilhelm-humboldt": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"wilhelm-windelband": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"wilhelm-wundt": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"william-auvergne": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"william-champeaux": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"william-david-ross": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"william-jevons": {
+"fine": "Philosophy of science & formal epistemology",
+"macro": "Science"
+},
+"william-sherwood": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"williams-bernard": {
+"fine": "Ethics",
+"macro": "Ethics"
+},
+"williams-dc": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"wilson": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"wisdom-analytic": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"wittgenstein": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"wittgenstein-aesthetics": {
+"fine": "Aesthetics",
+"macro": "Aesthetics"
+},
+"wittgenstein-atomism": {
+"fine": "Metaphysics",
+"macro": "Metaphysics & epistemology"
+},
+"wittgenstein-mathematics": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"wodeham": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"wolff-christian": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"wollstonecraft": {
+"fine": "Philosophy of race, Africana & Latin American philosophy",
+"macro": "Social & political"
+},
+"word-meaning": {
+"fine": "Philosophy of language",
+"macro": "Mind & language"
+},
+"work-labor": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"world-government": {
+"fine": "Political philosophy & applied ethics",
+"macro": "Social & political"
+},
+"wright": {
+"fine": "Continental philosophy & pragmatism",
+"macro": "History & traditions"
+},
+"wyclif": {
+"fine": "Medieval philosophy",
+"macro": "History & traditions"
+},
+"xenocrates": {
+"fine": "Late ancient philosophy",
+"macro": "History & traditions"
+},
+"xenophanes": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"xunzi": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"yogacara": {
+"fine": "Indian & Buddhist philosophy",
+"macro": "History & traditions"
+},
+"yorck": {
+"fine": "Kant & German philosophy",
+"macro": "History & traditions"
+},
+"zabarella": {
+"fine": "Renaissance philosophy",
+"macro": "History & traditions"
+},
+"zeno-elea": {
+"fine": "Ancient philosophy",
+"macro": "History & traditions"
+},
+"zermelo-set-theory": {
+"fine": "Logic & philosophy of mathematics",
+"macro": "Logic & mathematics"
+},
+"zhu-xi": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"zhuangzi": {
+"fine": "Chinese philosophy",
+"macro": "History & traditions"
+},
+"zombies": {
+"fine": "Philosophy of mind & cognitive science",
+"macro": "Mind & language"
+}
+}

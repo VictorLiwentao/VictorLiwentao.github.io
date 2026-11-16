@@ -1,499 +1,496 @@
-rank_born_1900_plus,rank_all_eras,citing_entries,name,born_before_1900,most_cited_work,entries_2024,rank_2024
-1,1,334,"Lewis, David K.",,On the Plurality of Worlds,307,1
-,2,240,"Russell, Bertrand",yes,The Principles of Mathematics,,
-2,3,224,"Quine, W. V. O.",,Word and Object,213,2
-,4,221,"Kant, Immanuel",yes,Critique of Pure Reason,,
-,5,208,"Hume, David",yes,A Treatise of Human Nature,,
-3,6,195,"Putnam, Hilary",,The Meaning of ‘Meaning’,190,3
-4,7,175,"Rawls, John",,A Theory of Justice,168,4
-5,8,167,"Kripke, Saul A.",,Naming and Necessity,159,5
-6,9,161,"Williamson, Timothy",,Knowledge and Its Limits,152,6
-7,10,156,"Davidson, Donald",,Essays on Actions and Events,151,7
-,11,154,"Mill, John Stuart",yes,On Liberty,,
-,12,153,"Carnap, Rudolf",yes,Meaning and Necessity,,
-8,13,152,"Williams, Bernard",,Ethics and the Limits of Philosophy,146,8
-9,14,149,"Nussbaum, Martha C.",,"Frontiers of Justice: Disability, Nationality, Species Membership",140,9
-,15,147,"Locke, John",yes,An Essay Concerning Human Understanding,,
-10,16,146,"Nagel, Thomas",,The View from Nowhere,137,10
-11,17,144,"Nozick, Robert",,"Anarchy, State, and Utopia",135,11
-12,18,136,"Jackson, Frank",,From Metaphysics to Ethics: A Defence of Conceptual Analysis,130,12
-13,19,131,"Chalmers, David J.",,The Conscious Mind,117,14
-,20,130,"Frege, Gottlob",yes,Die Grundlagen der Arithmetik,,
-14,21,128,"Searle, John R.",,Intentionality: An Essay in the Philosophy of Mind,120,13
-15,22,125,"Harman, Gilbert",,Change in View: Principles of Reasoning,116,16
-,22,125,"Wittgenstein, Ludwig",yes,Philosophical Investigations,,
-16,24,121,"van Fraassen, Bas C.",,The Scientific Image,117,14
-17,25,120,"Kitcher, Philip",,"The Advancement of Science: Science without Legend, Objectivity without Illusions",109,24
-17,25,120,"Parfit, Derek",,Reasons and Persons,112,19
-17,25,120,"Pettit, Philip",,Republicanism: A Theory of Freedom and Government,109,24
-17,25,120,"Strawson, P. F.",,Individuals: An Essay in Descriptive Metaphysics,116,16
-21,29,118,"Fine, Kit",,Essence and Modality,112,19
-22,30,117,"Fodor, Jerry A.",,Psychosemantics: The Problem of Meaning in the Philosophy of Mind,115,18
-23,31,114,"Dummett, Michael",,Frege: Philosophy of Language,110,22
-23,31,114,"Stalnaker, Robert C.",,A Theory of Conditionals,112,19
-25,33,113,"Dennett, Daniel C.",,Consciousness Explained,110,22
-26,34,112,"Armstrong, David M.",,A World of States of Affairs,106,26
-27,35,111,"Chisholm, Roderick M.",,Perceiving: A Philosophical Study,106,26
-,36,110,"Moore, G. E.",yes,Principia Ethica,,
-28,37,108,"Sober, Elliott",,Unto Others: The Evolution and Psychology of Unselfish Behavior,101,29
-29,38,106,"van Inwagen, Peter",,Material Beings,102,28
-30,39,105,"Dworkin, Ronald",,Taking Rights Seriously,101,29
-30,39,105,"McDowell, John",,Mind and World,96,33
-32,41,104,"Hawthorne, John",,Knowledge and Lotteries,97,32
-32,41,104,"Scanlon, T. M.",,What We Owe to Each Other,101,29
-34,43,101,"Popper, Karl R.",,The Logic of Scientific Discovery,94,34
-35,44,99,"Goldman, Alvin I.",,Knowledge in a Social World,88,38
-36,45,98,"Raz, Joseph",,The Morality of Freedom,89,37
-37,46,97,"Anderson, Elizabeth S.",,What is the Point of Equality?,83,40
-38,47,96,"Goodman, Nelson",,"Fact, Fiction, and Forecast",90,35
-39,48,94,"Geach, Peter T.",,Reference and Generality,88,38
-,49,91,"Descartes, René",yes,Meditations on First Philosophy,,
-40,50,90,"Adams, Robert Merrihew",,"Leibniz: Determinist, Theist, Idealist",81,43
-40,50,90,"Thomson, Judith Jarvis",,The Realm of Rights,72,61
-,52,88,"James, William",yes,The Principles of Psychology,,
-42,53,87,"Korsgaard, Christine M.",,The Sources of Normativity,80,45
-43,54,86,"Hacking, Ian",,Representing and Intervening,90,35
-43,54,86,"Plantinga, Alvin",,The Nature of Necessity,81,43
-43,54,86,"Priest, Graham",,In Contradiction,79,51
-43,54,86,"Schaffer, Jonathan",,On What Grounds What,80,45
-47,58,85,"Bennett, Jonathan",,A Study of Spinoza’s Ethics,83,40
-47,58,85,"Wright, Crispin",,Frege’s Conception of Numbers as Objects,80,45
-49,60,84,"Mackie, J. L.",,Ethics: Inventing Right and Wrong,80,45
-50,61,83,"Anscombe, G. E. M.",,Intention,80,45
-50,61,83,"Burge, Tyler",,Individualism and the Mental,77,53
-52,63,82,"Alston, William P.",,Perceiving God: The Epistemology of Religious Experience,77,53
-52,63,82,"Dretske, Fred I.",,Knowledge and the Flow of Information,78,52
-52,63,82,"Hintikka, Jaakko",,Knowledge and Belief: An Introduction to the Logic of the Two Notions,82,42
-52,63,82,"Stich, Stephen P.",,From Folk Psychology to Cognitive Science,73,59
-52,63,82,"Tarski, Alfred",,"Logic, Semantics, Metamathematics",80,45
-57,68,81,"Zalta, Edward N.",,Abstract Objects: An Introduction to Axiomatic Metaphysics,70,69
-,68,81,"Broad, C. D.",yes,The Mind and Its Place in Nature,,
-58,70,80,"Horgan, Terence",,The Intentionality of Phenomenology and the Phenomenology of Intentionality,75,58
-59,71,79,"Ayer, A. J.",,"Language, Truth and Logic",76,55
-59,71,79,"Gödel, Kurt",,Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I,76,55
-,71,79,"Hobbes, Thomas",yes,Leviathan,,
-61,74,77,"Gibbard, Allan",,"Wise Choices, Apt Feelings",76,55
-61,74,77,"Kaplan, David",,Demonstratives,72,61
-61,74,77,"Sellars, Wilfrid",,Empiricism and the Philosophy of Mind,71,63
-61,74,77,"Singer, Peter",,"Famine, Affluence, and Morality",71,63
-61,74,77,"Sosa, Ernest",,Knowledge in Perspective: Selected Essays in Epistemology,69,73
-66,79,75,"Field, Hartry",,"Realism, Mathematics and Modality",71,63
-66,79,75,"Kim, Jaegwon",,Mind in a Physical World,73,59
-66,79,75,"Woodward, James",,Making Things Happen: A Theory of Causal Explanation,69,73
-69,82,74,"Earman, John",,Bayes or Bust?,68,78
-69,82,74,"Ramsey, Frank Plumpton",,Truth and Probability,69,73
-69,82,74,"Rescher, Nicholas",,,71,63
-72,85,73,"Frankfurt, Harry G.",,Freedom of the Will and the Concept of a Person,69,73
-72,85,73,"Rosen, Gideon",,Metaphysical Dependence: Grounding and Reduction,69,73
-74,87,72,"Blackburn, Simon",,Ruling Passions,70,69
-74,87,72,"Darwall, Stephen L.",,"The Second-Person Standpoint: Morality, Respect, and Accountability",64,94
-74,87,72,"Hempel, Carl Gustav",,Aspects of Scientific Explanation,70,69
-74,87,72,"Lycan, William G.",,Consciousness and Experience,71,63
-74,87,72,"Sider, Theodore",,Four-Dimensionalism: An Ontology of Persistence and Time,68,78
-79,92,71,"Evans, Gareth",,The Varieties of Reference,70,69
-79,92,71,"Feinberg, Joel",,Harm to Self,67,83
-79,92,71,"Kuhn, Thomas S.",,The Structure of Scientific Revolutions,71,63
-79,92,71,"MacIntyre, Alasdair",,After Virtue: A Study in Moral Theory,65,91
-,92,71,"Husserl, Edmund",yes,Logische Untersuchungen,,
-,92,71,"Leibniz, Gottfried Wilhelm",yes,,,
-83,98,70,"Perry, John",,The Problem of the Essential Indexical,68,78
-83,98,70,"Skyrms, Brian",,Evolution of the Social Contract,66,87
-83,98,70,"Swinburne, Richard",,The Existence of God,67,83
-83,98,70,"Yablo, Stephen",,Aboutness,63,98
-87,102,69,"Lowe, E. J.",,The Four-Category Ontology: A Metaphysical Foundation for Natural Science,66,87
-87,102,69,"Sen, Amartya",,Inequality Reexamined,67,83
-87,102,69,"Velleman, J. David",,The Possibility of Practical Reason,66,87
-,102,69,"Ross, W. D.",yes,The Right and the Good,,
-90,106,68,"Waldron, Jeremy",,Law and Disagreement,68,78
-,106,68,"Sidgwick, Henry",yes,The Methods of Ethics,,
-91,108,67,"Austin, John Langshaw",,How to Do Things with Words,57,115
-91,108,67,"Barnes, Jonathan",,The Presocratic Philosophers,66,87
-91,108,67,"Grice, H. Paul",,Studies in the Way of Words,64,94
-91,108,67,"Habermas, Jürgen",,The Theory of Communicative Action,62,103
-91,108,67,"Miller, David",,On Nationality,56,118
-91,108,67,"Shoemaker, Sydney",,Causality and Properties,65,91
-97,114,66,"Shapiro, Stewart",,Philosophy of Mathematics: Structure and Ontology,64,94
-97,114,66,"Wiggins, David",,Sameness and Substance,67,83
-99,116,65,"Annas, Julia",,The Morality of Happiness,65,91
-99,116,65,"Burgess, John P.",,A Subject with No Object: Strategies for Nominalistic Interpretation of Mathematics,59,111
-99,116,65,"Prior, Arthur N.",,"Past, Present, and Future",63,98
-99,116,65,"Taylor, Charles",,Sources of the Self: The Making of the Modern Identity,63,98
-99,116,65,"Young, Iris Marion",,Justice and the Politics of Difference,62,103
-104,121,64,"Block, Ned",,On a Confusion about a Function of Consciousness,61,106
-104,121,64,"Clark, Andy",,The Extended Mind,51,138
-104,121,64,"Nichols, Shaun",,Sentimental Rules: On the Natural Foundations of Moral Judgment,63,98
-104,121,64,"Ryle, Gilbert",,The Concept of Mind,64,94
-104,121,64,"Soames, Scott",,"Direct Reference, Propositional Attitudes, and Semantic Content",63,98
-,121,64,"Heidegger, Martin",yes,Being and Time,,
-109,127,63,"Church, Alonzo",,An Unsolvable Problem of Elementary Number Theory,62,103
-109,127,63,"Foot, Philippa",,Natural Goodness,56,118
-109,127,63,"Jeffrey, Richard C.",,The Logic of Decision,61,106
-109,127,63,"Smith, Michael",,The Moral Problem,68,78
-,127,63,"Marx, Karl",yes,Das Kapital,,
-,127,63,"Reichenbach, Hans",yes,Experience and Prediction: An Analysis of the Foundations and the Structure of Knowledge,,
-113,133,62,"Irwin, Terence H.",,The Development of Ethics,55,123
-113,133,62,"Peacocke, Christopher",,A Study of Concepts,60,108
-,133,62,"Whitehead, Alfred North",yes,Principia Mathematica,,
-115,136,61,"Brink, David O.",,Moral Realism and the Foundations of Ethics,59,111
-115,136,61,"Friedman, Michael",,Kant and the Exact Sciences,60,108
-115,136,61,"Hare, R. M.",,The Language of Morals,60,108
-115,136,61,"Kenny, Anthony",,"Action, Emotion and Will",56,118
-119,140,60,"Arneson, Richard J.",,Equality and Equal Opportunity for Welfare,56,118
-119,140,60,"Audi, Robert",,The Good in the Right: A Theory of Intuition and Intrinsic Value,54,126
-119,140,60,"Hart, H. L. A.",,The Concept of Law,53,129
-119,140,60,"Papineau, David",,Thinking about Consciousness,56,118
-119,140,60,"Parsons, Terence",,Nonexistent Objects,53,129
-119,140,60,"Sorabji, Richard",,"Time, Creation and the Continuum",59,111
-,140,60,"Hilbert, David",yes,Grundzüge der theoretischen Logik,,
-125,147,59,"Cartwright, Nancy",,How the Laws of Physics Lie,59,111
-125,147,59,"Dancy, Jonathan",,Ethics Without Principles,54,126
-125,147,59,"van Benthem, Johan",,,57,115
-,147,59,"Peirce, Charles Sanders",yes,Collected Papers of Charles Sanders Peirce,,
-128,151,58,"Chomsky, Noam",,Aspects of the Theory of Syntax,52,134
-128,151,58,"Dupré, John",,The Disorder of Things: Metaphysical Foundations of the Disunity of Science,55,123
-128,151,58,"Smart, J. J. C.",,Sensations and Brain Processes,57,115
-128,151,58,"Smith, Barry",,,,
-132,155,57,"Buchanan, Allen",,From Chance to Choice: Genetics and Justice,51,138
-132,155,57,"Enoch, David",,Taking Morality Seriously: A Defense of Robust Realism,48,156
-132,155,57,"Godfrey-Smith, Peter",,Darwinian Populations and Natural Selection,53,129
-132,155,57,"McGinn, Colin",,Mental Content,54,126
-132,155,57,"Simons, Peter",,Parts: A Study in Ontology,55,123
-137,160,56,"Haslanger, Sally",,Resisting Reality: Social Construction and Social Critique,49,150
-137,160,56,"Johnston, Mark",,Constitution is not Identity,49,150
-137,160,56,"Montague, Richard",,Formal Philosophy: Selected Papers of Richard Montague,50,145
-137,160,56,"Prinz, Jesse J.",,The Emotional Construction of Morals,48,156
-137,160,56,"Rorty, Richard",,Philosophy and the Mirror of Nature,51,138
-137,160,56,"Sedley, David",,,51,138
-143,166,55,"Belnap, Nuel D.",,Facing the Future: Agents and Choices in Our Indeterminist World,52,134
-143,166,55,"Carruthers, Peter",,The Opacity of Mind: An Integrative Theory of Self-Knowledge,52,134
-143,166,55,"Wood, Allen W.",,Kant’s Ethical Thought,47,165
-143,166,55,"von Neumann, John",,Theory of Games and Economic Behavior,50,145
-147,170,54,"Brandom, Robert B.",,"Making It Explicit: Reasoning, Representing, and Discursive Commitment",49,150
-147,170,54,"Churchland, Paul M.",,Eliminative Materialism and the Propositional Attitudes,53,129
-147,170,54,"Devitt, Michael",,Realism and Truth,53,129
-147,170,54,"Griffiths, Paul E.",,Genetics and Philosophy: An Introduction,50,145
-147,170,54,"Norton, John D.",,A Material Theory of Induction,46,173
-147,170,54,"Salmon, Wesley C.",,Scientific Explanation and the Causal Structure of the World,48,156
-147,170,54,"Schofield, Malcolm",,,50,145
-147,170,54,"Sinnott-Armstrong, Walter",,Moral Dilemmas,49,150
-147,170,54,"Stanley, Jason",,Knowledge and Practical Interests,51,138
-147,170,54,"Sterelny, Kim",,The Evolved Apprentice: How Evolution Made Humans Unique,47,165
-147,170,54,"Tye, Michael",,Ten Problems of Consciousness,52,134
-158,181,53,"Barwise, Jon",,Situations and Attitudes,49,150
-158,181,53,"Glymour, Clark",,Theory and Evidence,51,138
-158,181,53,"List, Christian",,"Group Agency: The Possibility, Design, and Status of Corporate Agents",42,203
-158,181,53,"Railton, Peter",,"Alienation, Consequentialism, and the Demands of Morality",49,150
-158,181,53,"Wolterstorff, Nicholas",,,51,138
-,181,53,"Hegel, Georg Wilhelm Friedrich",yes,Phänomenologie des Geistes,,
-163,187,52,"Cohen, G. A.",,"Self-Ownership, Freedom, and Equality",44,187
-163,187,52,"Cooper, John M.",,Reason and Emotion: Essays on Ancient Moral Psychology and Ethical Theory,47,165
-163,187,52,"Mancosu, Paolo",,"The Development of Mathematical Logic from Russell to Tarski, 1900–1935",47,165
-,187,52,"Dewey, John",yes,Art as Experience,,
-166,191,51,"Read, Stephen",,,45,180
-166,191,51,"Thomasson, Amie L.",,Fiction and Metaphysics,42,203
-,191,51,"Reid, Thomas",yes,Essays on the Intellectual Powers of Man,,
-168,194,50,"Foucault, Michel",,The History of Sexuality,44,187
-168,194,50,"Lepore, Ernest",,,50,145
-170,196,49,"Appiah, Kwame Anthony",,In My Father’s House: Africa in the Philosophy of Culture,48,156
-170,196,49,"Boolos, George",,Computability and Logic,48,156
-170,196,49,"Broome, John",,Weighing Goods,43,196
-170,196,49,"Fricker, Miranda",,Epistemic Injustice: Power and the Ethics of Knowing,41,217
-170,196,49,"Guyer, Paul",,Kant and the Claims of Knowledge,45,180
-170,196,49,"Horwich, Paul",,Truth,47,165
-170,196,49,"Maudlin, Tim",,The Metaphysics Within Physics,45,180
-170,196,49,"Millikan, Ruth Garrett",,"Language, Thought, and Other Biological Categories: New Foundations for Realism",48,156
-170,196,49,"Sartre, Jean-Paul",,Being and Nothingness,48,156
-170,196,49,"Scheffler, Samuel",,The Rejection of Consequentialism,43,196
-170,196,49,"Strawson, Galen",,Mental Reality,48,156
-170,196,49,"Stump, Eleonore",,Wandering in Darkness: Narrative and the Problem of Suffering,48,156
-170,196,49,"Weatherson, Brian",,,47,165
-183,209,48,"Hale, Bob",,The Reason’s Proper Study: Essays towards a Neo-Fregean Philosophy of Mathematics,46,173
-183,209,48,"Levy, Neil",,,46,173
-183,209,48,"Longino, Helen E.",,Science as Social Knowledge: Values and Objectivity in Scientific Inquiry,47,165
-183,209,48,"Zagzebski, Linda Trinkaus",,Virtues of the Mind: An Inquiry into the Nature of Virtue and the Ethical Foundations of Knowledge,42,203
-187,213,47,"Beiser, Frederick C.",,The Fate of Reason: German Philosophy from Kant to Fichte,44,187
-187,213,47,"Elster, Jon",,Sour Grapes: Studies in the Subversion of Rationality,43,196
-187,213,47,"Feferman, Solomon",,,46,173
-187,213,47,"Hull, David L.",,Science as a Process: An Evolutionary Account of the Social and Conceptual Development of Science,43,196
-187,213,47,"Hurka, Thomas",,"Virtue, Vice, and Value",44,187
-187,213,47,"Kahneman, Daniel",,"Thinking, Fast and Slow",46,173
-187,213,47,"Kretzmann, Norman",,,47,165
-187,213,47,"Machery, Edouard",,,40,223
-187,213,47,"Mele, Alfred R.",,Autonomous Agents: From Self-Control to Autonomy,44,187
-187,213,47,"Nolan, Daniel",,Impossible Worlds: A Modest Approach,42,203
-187,213,47,"Salmon, Nathan",,Frege’s Puzzle,45,180
-187,213,47,"Sandel, Michael J.",,Liberalism and the Limits of Justice,46,173
-187,213,47,"Suppes, Patrick",,,46,173
-,213,47,"Bentham, Jeremy",yes,An Introduction to the Principles of Morals and Legislation,,
-,213,47,"Einstein, Albert",yes,Can Quantum-Mechanical Description of Physical Reality be Considered Complete?,,
-,213,47,"Smith, Adam",yes,The Theory of Moral Sentiments,,
-200,229,46,"Boghossian, Paul Artin",,,42,203
-200,229,46,"Butler, Judith",,Gender Trouble: Feminism and the Subversion of Identity,40,223
-200,229,46,"Gauthier, David P.",,Morals by Agreement,42,203
-200,229,46,"McLaughlin, Brian P.",,The Rise and Fall of British Emergentism,44,187
-200,229,46,"Van Cleve, James",,Problems from Kant,45,180
-205,234,45,"Barnes, Elizabeth",,The Minority Body: A Theory of Disability,33,305
-205,234,45,"Burnyeat, Myles",,,44,187
-205,234,45,"Byrne, Alex",,Intentionalism Defended,41,217
-205,234,45,"Halpern, Joseph Y.",,Reasoning About Uncertainty,37,251
-205,234,45,"Kriegel, Uriah",,,42,203
-205,234,45,"Kymlicka, Will",,Multicultural Citizenship: A Liberal Theory of Minority Rights,41,217
-205,234,45,"Mellor, D. H.",,Real Time II,45,180
-205,234,45,"Schwitzgebel, Eric",,,39,232
-205,234,45,"Slote, Michael",,,42,203
-205,234,45,"Unger, Peter",,Living High and Letting Die: Our Illusion of Innocence,44,187
-,234,45,"Cassirer, Ernst",yes,Substanzbegriff und Funktionsbegriff,,
-,234,45,"Lewis, C. I.",yes,Symbolic Logic,,
-215,246,44,"Craver, Carl F.",,Explaining the Brain: Mechanisms and the Mosaic Unity of Neuroscience,42,203
-215,246,44,"Huemer, Michael",,Ethical Intuitionism,40,223
-215,246,44,"Hájek, Alan",,Interpretations of Probability,38,244
-215,246,44,"Ladyman, James",,Every Thing Must Go: Metaphysics Naturalized,38,244
-215,246,44,"Lehrer, Keith",,Theory of Knowledge,43,196
-215,246,44,"Loewer, Barry",,,42,203
-215,246,44,"Merricks, Trenton",,Objects and Persons,40,223
-215,246,44,"Okin, Susan Moller",,"Justice, Gender, and the Family",45,180
-215,246,44,"O’Neill, Onora",,Towards Justice and Virtue: A Constructive Account of Practical Reasoning,44,187
-215,246,44,"Sunstein, Cass R.",,,42,203
-215,246,44,"Wolf, Susan",,Freedom within Reason,39,232
-,246,44,"Duhem, Pierre",yes,The Aim and Structure of Physical Theory,,
-226,258,43,"Adamson, Peter",,Al-Kindi,35,272
-226,258,43,"Barry, Brian",,Justice as Impartiality,40,223
-226,258,43,"Colyvan, Mark",,The Indispensability of Mathematics,39,232
-226,258,43,"Davies, Martin",,,43,196
-226,258,43,"Gabbay, Dov M.",,,39,232
-226,258,43,"Goodin, Robert E.",,,42,203
-226,258,43,"Hampton, Jean",,Hobbes and the Social Contract Tradition,39,232
-226,258,43,"Lange, Marc",,Because Without Cause: Non-Causal Explanations in Science and Mathematics,37,251
-226,258,43,"McMahan, Jeff",,The Ethics of Killing: Problems at the Margins of Life,39,232
-226,258,43,"Pasnau, Robert",,Metaphysical Themes 1274–1671,38,244
-226,258,43,"Schiffer, Stephen R.",,Meaning,41,217
-226,258,43,"Walzer, Michael",,Spheres of Justice: A Defense of Pluralism and Equality,43,196
-238,270,42,"Bird, Alexander",,Nature’s Metaphysics: Laws and Properties,38,244
-238,270,42,"Garber, Daniel",,Descartes’ Metaphysical Physics,40,223
-238,270,42,"Nagel, Ernest",,The Structure of Science: Problems in the Logic of Scientific Explanation,39,232
-238,270,42,"Schroeder, Mark",,Slaves of the Passions,37,251
-,270,42,"Darwin, Charles Robert",yes,On the Origin of Species,,
-242,275,41,"Bach, Kent",,Linguistic Communication and Speech Acts,40,223
-242,275,41,"Bealer, George",,Quality and Concept,39,232
-242,275,41,"Gärdenfors, Peter",,Knowledge in Flux: Modeling the Dynamics of Epistemic States,39,232
-242,275,41,"Heil, John",,From an Ontological Point of View,40,223
-242,275,41,"Kagan, Shelly",,The Limits of Morality,37,251
-242,275,41,"Laudan, Larry",,Progress and Its Problems: Towards a Theory of Scientific Growth,42,203
-242,275,41,"Scott, Dana S.",,,35,272
-242,275,41,"Wedgwood, Ralph",,The Nature of Normativity,37,251
-250,283,40,"Alcoff, Linda Martín",,"Visible Identities: Race, Gender, and the Self",36,260
-250,283,40,"Black, Deborah L.",,Logic and Aristotle’s Rhetoric and Poetics in Medieval Arabic Philosophy,,
-250,283,40,"Bratman, Michael E.",,"Intention, Plans, and Practical Reason",35,272
-250,283,40,"Bueno, Otávio",,,38,244
-250,283,40,"Gendler, Tamar Szabó",,Alief and Belief,38,244
-250,283,40,"Long, A. A.",,The Hellenistic Philosophers,41,217
-250,283,40,"Mills, Charles W.",,The Racial Contract,31,335
-250,283,40,"Pearl, Judea",,"Causality: Models, Reasoning, and Inference",37,251
-250,283,40,"Pollock, John L.",,Contemporary Theories of Knowledge,37,251
-250,283,40,"Restall, Greg",,An Introduction to Substructural Logics,40,223
-,283,40,"Brentano, Franz",yes,Psychologie vom empirischen Standpunkt,,
-,283,40,"Nietzsche, Friedrich",yes,On the Genealogy of Morality,,
-,283,40,"Weyl, Hermann",yes,Das Kontinuum,,
-260,296,39,"Crisp, Roger",,,39,232
-260,296,39,"Finnis, John",,Natural Law and Natural Rights,42,203
-260,296,39,"Lewontin, Richard C.",,,36,260
-260,296,39,"Linsky, Bernard",,In Defense of the Simplest Quantified Modal Logic,36,260
-260,296,39,"Okasha, Samir",,Evolution and the Levels of Selection,35,272
-260,296,39,"Recanati, François",,Literal Meaning,34,287
-260,296,39,"Sperber, Dan",,Relevance: Communication and Cognition,36,260
-260,296,39,"Watson, Gary",,Free Agency,34,287
-260,296,39,"White, Roger",,,,
-260,296,39,"Wilson, Robert A.",,,,
-260,296,39,"Zimmerman, Dean W.",,Could Extended Objects Be Made Out of Simple Parts? An Argument for ‘Atomless Gunk’,32,319
-,296,39,"Berkeley, George",yes,A Treatise Concerning the Principles of Human Knowledge,,
-271,308,38,"Bechtel, William",,Discovering Complexity: Decomposition and Localization as Strategies in Scientific Research,39,232
-271,308,38,"Conee, Earl",,Evidentialism: Essays in Epistemology,36,260
-271,308,38,"Crane, Tim",,,38,244
-271,308,38,"Feldman, Richard",,,37,251
-271,308,38,"Flanagan, Owen",,Consciousness Reconsidered,34,287
-271,308,38,"Hurley, Susan",,Consciousness in Action,35,272
-271,308,38,"Lloyd, Elisabeth A.",,The Structure and Confirmation of Evolutionary Theory,36,260
-271,308,38,"Rosenberg, Alexander",,"Darwinian Reductionism: Or, How to Stop Worrying and Love Molecular Biology",37,251
-271,308,38,"Teller, Paul",,,36,260
-271,308,38,"Varzi, Achille C.",,,32,319
-271,308,38,"Wimsatt, William C.",,Re-Engineering Philosophy for Limited Beings: Piecewise Approximations to Reality,33,305
-271,308,38,"Wolff, Jonathan",,"Fairness, Respect, and the Egalitarian Ethos",,
-,308,38,"Rousseau, Jean-Jacques",yes,Du contrat social; ou Principes du droit politique,,
-283,321,37,"Adams, Marilyn McCord",,William Ockham,32,319
-283,321,37,"Bennett, Karen",,Making Things Up,32,319
-283,321,37,"Brogaard, Berit",,,34,287
-283,321,37,"Cappelen, Herman",,Insensitive Semantics: A Defense of Semantic Minimalism and Speech Act Pluralism,31,335
-283,321,37,"Frede, Michael",,,32,319
-283,321,37,"Gallagher, Shaun",,How the Body Shapes the Mind,33,305
-283,321,37,"King, Peter",,,,
-283,321,37,"Kittay, Eva Feder",,"Love’s Labor: Essays on Women, Equality, and Dependency",35,272
-283,321,37,"MacFarlane, John",,Assessment Sensitivity: Relative Truth and Its Applications,31,335
-283,321,37,"Paul, L. A.",,Logical Parts,34,287
-283,321,37,"Pritchard, Duncan",,Epistemic Luck,33,305
-283,321,37,"Sorensen, Roy A.",,,35,272
-295,333,36,"Allen, James",,,,
-295,333,36,"Bayne, Tim",,,30,357
-295,333,36,"Beall, Jc",,Logical Pluralism,35,272
-295,333,36,"Benacerraf, Paul",,Mathematical Truth,34,287
-295,333,36,"Black, Max",,The Identity of Indiscernibles,33,305
-295,333,36,"Brandt, Richard B.",,A Theory of the Good and the Right,36,260
-295,333,36,"Cohen, Stewart",,Basic Knowledge and the Problem of Easy Knowledge,,
-295,333,36,"Cresswell, M. J.",,,35,272
-295,333,36,"Currie, Gregory",,Recreative Minds: Imagination in Philosophy and Psychology,34,287
-295,333,36,"Darden, Lindley",,Theory Change in Science: Strategies from Mendelian Genetics,34,287
-295,333,36,"Ebbesen, Sten",,,32,319
-295,333,36,"Feyerabend, Paul K.",,Against Method,36,260
-295,333,36,"Gould, Stephen Jay",,The Spandrels of San Marco and the Panglossian Paradigm: A Critique of the Adaptationist Programme,33,305
-295,333,36,"Kahn, Charles H.",,Pythagoras and the Pythagoreans,34,287
-295,333,36,"King, Jeffrey C.",,The Nature and Structure of Content,,
-295,333,36,"Kvanvig, Jonathan L.",,The Value of Knowledge and the Pursuit of Understanding,31,335
-295,333,36,"Levinson, Jerrold",,,32,319
-295,333,36,"Matthen, Mohan",,,35,272
-295,333,36,"Oppy, Graham",,,31,335
-295,333,36,"Parsons, Charles",,The Structuralist View of Mathematical Objects,35,272
-295,333,36,"Savulescu, Julian",,,31,335
-295,333,36,"Shafer-Landau, Russ",,Moral Realism: A Defence,34,287
-295,333,36,"Thagard, Paul",,,34,287
-295,333,36,"Thomason, Richmond H.",,,33,305
-,333,36,"Keynes, John Maynard",yes,A Treatise on Probability,,
-319,358,35,"Baier, Annette C.",,,33,305
-319,358,35,"Baker, Lynne Rudder",,Persons and Bodies: A Constitution View,36,260
-319,358,35,"Benhabib, Seyla",,"Situating the Self: Gender, Community and Postmodernism in Contemporary Ethics",34,287
-319,358,35,"BonJour, Laurence",,The Structure of Empirical Knowledge,36,260
-319,358,35,"Cameron, Ross P.",,"Turtles All the Way Down: Regress, Priority and Fundamentality",30,357
-319,358,35,"Feldman, Fred",,Pleasure and the Good Life,39,232
-319,358,35,"Fraser, Nancy",,Justice Interruptus: Critical Reflections on the “Postsocialist” Condition,,
-319,358,35,"Hitchcock, Christopher Read",,,35,272
-319,358,35,"Kamm, F. M.",,"Intricate Ethics: Rights, Responsibilities, and Permissible Harm",34,287
-319,358,35,"Kleene, Stephen Cole",,Introduction to Metamathematics,34,287
-319,358,35,"Leitgeb, Hannes",,,31,335
-319,358,35,"Merleau-Ponty, Maurice",,Phénoménologie de la perception,,
-319,358,35,"Pateman, Carole",,The Sexual Contract,32,319
-319,358,35,"Price, Huw",,Time’s Arrow and Archimedes’ Point,33,305
-319,358,35,"Tomasello, Michael",,A Natural History of Human Morality,,
-319,358,35,"Walton, Kendall L.",,Mimesis as Make-Believe: On the Foundations of the Representational Arts,,
-,358,35,"Schilpp, Paul Arthur",yes,,,
-335,375,34,"Callender, Craig",,,35,272
-335,375,34,"Copp, David",,,31,335
-335,375,34,"Dawkins, Richard",,The Selfish Gene,30,357
-335,375,34,"Dorr, Cian",,,,
-335,375,34,"Gaus, Gerald F.",,The Order of Public Reason: A Theory of Freedom and Morality in a Diverse and Bounded World,30,357
-335,375,34,"Giere, Ronald N.",,Explaining Science: A Cognitive Approach,33,305
-335,375,34,"Hatfield, Gary",,,32,319
-335,375,34,"Hill, Thomas E.",,,30,357
-335,375,34,"Linnebo, Øystein",,,,
-335,375,34,"Miller, Richard W.",,,,
-335,375,34,"O’Connor, Timothy",,Persons and Causes: The Metaphysics of Free Will,,
-335,375,34,"Penrose, Roger",,The Emperor’s New Mind,32,319
-335,375,34,"Pereboom, Derk",,Living Without Free Will,34,287
-335,375,34,"Ridge, Michael",,,,
-335,375,34,"Routley, Richard",,Exploring Meinong’s Jungle and Beyond,,
-335,375,34,"Sarkar, Sahotra",,Genetics and Reductionism,31,335
-335,375,34,"Turing, Alan M.",,"On Computable Numbers, with an Application to the Entscheidungsproblem",33,305
-335,375,34,"Tversky, Amos",,,33,305
-335,375,34,"Weisberg, Michael",,Simulation and Similarity: Using Models to Understand the World,30,357
-335,375,34,"van Heijenoort, Jean",,From Frege to Gödel,,
-355,395,33,"Beebee, Helen",,,32,319
-355,395,33,"Berlin, Isaiah",,Two Concepts of Liberty,31,335
-355,395,33,"Boyd, Richard N.",,How to be a Moral Realist,35,272
-355,395,33,"Cohen, Joshua",,,34,287
-355,395,33,"Hartmann, Stephan",,,31,335
-355,395,33,"Hellman, Geoffrey",,Mathematics without Numbers: Towards a Modal-Structural Interpretation,31,335
-355,395,33,"Hodges, Wilfrid",,Model Theory,30,357
-355,395,33,"Honneth, Axel",,,,
-355,395,33,"Kolodny, Niko",,Why Be Rational?,,
-355,395,33,"Kraut, Richard",,,,
-355,395,33,"Langton, Rae",,Speech Acts and Unspeakable Acts,32,319
-355,395,33,"MacKinnon, Catharine A.",,Toward a Feminist Theory of the State,31,335
-355,395,33,"Martin, Michael",,Atheism: A Philosophical Justification,,
-355,395,33,"McDaniel, Kris",,,31,335
-355,395,33,"Menn, Stephen",,,,
-355,395,33,"Rea, Michael C.",,,31,335
-355,395,33,"Simmons, A. John",,Moral Principles and Political Obligations,,
-355,395,33,"Tooley, Michael",,The Nature of Laws,,
-355,395,33,"Wilson, Jessica M.",,No Work for a Theory of Grounding,,
-374,414,32,"Bigelow, John",,The Reality of Numbers: A Physicalist’s Philosophy of Mathematics,,
-374,414,32,"Christensen, David",,Higher-Order Evidence,,
-374,414,32,"Dreyfus, Hubert L.",,"Being-in-the-World: A Commentary on Heidegger’s Being and Time, Division I",,
-374,414,32,"Fischer, John Martin",,Responsibility and Control: A Theory of Moral Responsibility,30,357
-374,414,32,"French, Steven",,The Structure of the World: Metaphysics and Representation,,
-374,414,32,"Hacker, P. M. S.",,,,
-374,414,32,"Hill, Christopher S.",,Sensations: A Defense of Type Materialism,,
-374,414,32,"Hornsby, Jennifer",,,30,357
-374,414,32,"Kneale, William",,The Development of Logic,33,305
-374,414,32,"Kreisel, Georg",,,32,319
-374,414,32,"Leiter, Brian",,,,
-374,414,32,"Machamer, Peter",,Thinking about Mechanisms,32,319
-374,414,32,"Maynard Smith, John",,,30,357
-374,414,32,"Mulligan, Kevin",,,34,287
-374,414,32,"Nadler, Steven",,,30,357
-374,414,32,"Normore, Calvin G.",,,,
-374,414,32,"Pettigrew, Richard",,Accuracy and the Laws of Credence,,
-374,414,32,"Pogge, Thomas W.",,World Poverty and Human Rights,34,287
-374,414,32,"Rey, Georges",,,32,319
-374,414,32,"Richardson, Henry S.",,Practical Reasoning about Final Ends,,
-374,414,32,"Richardson, Robert C.",,,,
-374,414,32,"Scruton, Roger",,,30,357
-374,414,32,"Thompson, Evan",,"Mind in Life: Biology, Phenomenology, and the Sciences of Mind",,
-374,414,32,"Wallace, David",,The Emergent Multiverse: Quantum Theory According to the Everett Interpretation,,
-374,414,32,"von Wright, Georg Henrik",,,30,357
-,414,32,"Schopenhauer, Arthur",yes,The World as Will and Representation,,
-,414,32,"Wolfson, Harry A.",yes,The Philosophy of Kalam,,
-399,441,31,"Allen, Colin",,,,
-399,441,31,"Allison, Henry E.",,Kant’s Transcendental Idealism,31,335
-399,441,31,"Anderson, Alan Ross",,Entailment: The Logic of Relevance and Necessity,,
-399,441,31,"Antony, Louise M.",,,,
-399,441,31,"Craig, William Lane",,,32,319
-399,441,31,"Cross, Richard",,Duns Scotus,,
-399,441,31,"Daniels, Norman",,,31,335
-399,441,31,"Driver, Julia",,,,
-399,441,31,"Garfield, Jay L.",,,,
-399,441,31,"Gilbert, Margaret",,On Social Facts,,
-399,441,31,"Griffin, James",,"Well-Being: Its Meaning, Measurement, and Moral Importance",33,305
-399,441,31,"Hooker, Brad",,"Ideal Code, Real World: A Rule-Consequentialist Theory of Morality",31,335
-399,441,31,"Howson, Colin",,Scientific Reasoning: The Bayesian Approach,30,357
-399,441,31,"Hursthouse, Rosalind",,On Virtue Ethics,,
-399,441,31,"Joyce, Richard",,The Evolution of Morality,30,357
-399,441,31,"Lackey, Jennifer",,,,
-399,441,31,"Markosian, Ned",,,,
-399,441,31,"Nanay, Bence",,,,
-399,441,31,"Schneewind, Jerome B.",,The Invention of Autonomy,,
-399,441,31,"Siegel, Susanna",,The Contents of Visual Experience,30,357
-399,441,31,"Simon, Herbert A.",,,,
-399,441,31,"Smith, Steven B.",,,,
-399,441,31,"Vlastos, Gregory",,Socrates: Ironist and Moral Philosopher,31,335
-399,441,31,"Zimmerman, Michael J.",,,,
-,441,31,"Bradley, Francis Herbert",yes,Appearance and Reality,,
-,441,31,"Hayek, Friedrich A.",yes,The Constitution of Liberty,,
-,441,31,"Poincaré, Henri",yes,,,
-423,468,30,"Ashworth, E. J.",,,31,335
-423,468,30,"Azzouni, Jody",,Deflating Existential Consequence: A Case for Nominalism,,
-423,468,30,"Bermúdez, José Luis",,,,
-423,468,30,"Bloom, Paul",,,,
-423,468,30,"Crenshaw, Kimberlé",,"Mapping the Margins: Intersectionality, Identity Politics, and Violence against Women of Color",,
-423,468,30,"Danto, Arthur C.",,The Transfiguration of the Commonplace,,
-423,468,30,"Doris, John M.",,Lack of Character: Personality and Moral Behavior,,
-423,468,30,"Egan, Andy",,,30,357
-423,468,30,"Eklund, Matti",,,,
-423,468,30,"Gutas, Dimitri",,Avicenna and the Aristotelian Tradition,,
-423,468,30,"Kornblith, Hilary",,,31,335
-423,468,30,"Kratzer, Angelika",,,,
-423,468,30,"Levi, Isaac",,The Enterprise of Knowledge,30,357
-423,468,30,"Levine, Joseph",,Purple Haze: The Puzzle of Consciousness,,
-423,468,30,"Lippert-Rasmussen, Kasper",,,,
-423,468,30,"Loar, Brian",,Phenomenal States,,
-423,468,30,"McGee, Vann",,,,
-423,468,30,"McGrath, Matthew",,,,
-423,468,30,"Noë, Alva",,Action in Perception,,
-423,468,30,"Perler, Dominik",,,,
-423,468,30,"Pinker, Steven",,The Language Instinct,,
-423,468,30,"Schurz, Gerhard",,,,
-423,468,30,"Taylor, Richard",,Action and Purpose,,
-423,468,30,"Timmons, Mark",,,,
-423,468,30,"Wallace, R. Jay",,Responsibility and the Moral Sentiments,,
-423,468,30,"Wang, Hao",,,,
-423,468,30,"Zangwill, Nick",,,,
-,468,30,"Bernays, Paul",yes,,,
-,468,30,"Meinong, Alexius",yes,Über Gegenstandstheorie,,
-,468,30,"Schlick, Moritz",yes,Allgemeine Erkenntnislehre,,
-,468,30,"Łukasiewicz, Jan",yes,Aristotle’s Syllogistic from the Standpoint of Modern Formal Logic,,
+rank_born_1900_plus,rank_all_eras,citing_entries,name,born,died,gender_wikidata,main_field,most_cited_work,entries_2024,rank_2024,wikidata
+1,1,334,David K. Lewis,1941,2001,male,Metaphysics & epistemology,On the Plurality of Worlds,307,1,Q384522
+,2,240,Bertrand Russell,1872,1970,male,Metaphysics & epistemology,The Principles of Mathematics,,,Q33760
+2,3,224,W. V. O. Quine,1908,2000,male,Metaphysics & epistemology,Word and Object,213,2,Q214969
+,4,221,Immanuel Kant,1724,1804,male,Social & political,Critique of Pure Reason,,,Q9312
+,5,208,David Hume,1711,1776,male,History & traditions,A Treatise of Human Nature,,,Q37160
+3,6,195,Hilary Putnam,1926,2016,male,Metaphysics & epistemology,The Meaning of ‘Meaning’,190,3,Q221697
+4,7,175,John Rawls,1921,2002,male,Social & political,A Theory of Justice,168,4,Q172544
+5,8,167,Saul A. Kripke,1940,2022,male,Metaphysics & epistemology,Naming and Necessity,159,5,Q298521
+6,9,161,Timothy Williamson,1955,,male,Metaphysics & epistemology,Knowledge and Its Limits,152,6,Q984380
+7,10,156,Donald Davidson,1917,2003,male,Mind & language,Essays on Actions and Events,151,7,Q311772
+,11,154,John Stuart Mill,1806,1873,male,Social & political,A System of Logic,,,Q50020
+,12,153,Rudolf Carnap,1891,1970,male,Science,Meaning and Necessity,,,Q76519
+8,13,152,Bernard Williams,1929,2003,male,Ethics,Ethics and the Limits of Philosophy,146,8,Q345641
+9,14,149,Martha C. Nussbaum,1947,,female,Social & political,"Frontiers of Justice: Disability, Nationality, Species Membership",140,9,Q235470
+,15,147,John Locke,1632,1704,male,Social & political,An Essay Concerning Human Understanding,,,Q9353
+10,16,146,Thomas Nagel,1937,,male,Social & political,The View from Nowhere,137,10,Q350239
+11,17,144,Robert Nozick,1938,2002,male,Social & political,"Anarchy, State, and Utopia",135,11,Q205927
+12,18,136,Frank Jackson,1943,,male,Mind & language,From Metaphysics to Ethics: A Defence of Conceptual Analysis,130,12,Q1365057
+13,19,131,David J. Chalmers,1966,,male,Mind & language,The Conscious Mind,117,14,Q366123
+,20,130,Gottlob Frege,1848,1925,male,Logic & mathematics,Die Grundlagen der Arithmetik,,,Q60028
+14,21,128,John R. Searle,1932,2025,male,Mind & language,Intentionality: An Essay in the Philosophy of Mind,120,13,Q295012
+15,22,125,Gilbert Harman,1938,2021,male,Mind & language,Change in View: Principles of Reasoning,116,16,Q962148
+,22,125,Ludwig Wittgenstein,1889,1951,male,Mind & language,Philosophical Investigations,,,Q9391
+16,24,121,Bas C. van Fraassen,1941,,male,Science,The Scientific Image,117,14,Q809744
+17,25,120,Philip Kitcher,1947,,male,Science,"The Advancement of Science: Science without Legend, Objectivity without Illusions",109,24,Q1935210
+17,25,120,Derek Parfit,1942,2017,male,Ethics,Reasons and Persons,112,19,Q962160
+17,25,120,Philip Pettit,1945,,male,Social & political,Republicanism: A Theory of Freedom and Government,109,24,Q1237041
+17,25,120,P. F. Strawson,1919,2006,male,Mind & language,Individuals: An Essay in Descriptive Metaphysics,116,16,Q311760
+21,29,118,Kit Fine,1946,,male,Metaphysics & epistemology,Essence and Modality,112,19,Q23450
+22,30,117,Jerry A. Fodor,1935,2017,male,Mind & language,Psychosemantics: The Problem of Meaning in the Philosophy of Mind,115,18,Q319186
+23,31,114,Michael Dummett,1925,2011,male,Logic & mathematics,Frege: Philosophy of Language,110,22,Q342646
+23,31,114,Robert C. Stalnaker,1940,,male,Metaphysics & epistemology,A Theory of Conditionals,112,19,Q1364893
+25,33,113,Daniel C. Dennett,1942,2024,male,Mind & language,Consciousness Explained,110,22,Q215263
+26,34,112,David M. Armstrong,1926,2014,male,Metaphysics & epistemology,A World of States of Affairs,106,26,Q1173590
+27,35,111,Roderick M. Chisholm,1916,1999,male,Metaphysics & epistemology,Perceiving: A Philosophical Study,106,26,Q877276
+,36,110,G. E. Moore,1873,1958,male,Ethics,Principia Ethica,,,Q295386
+28,37,108,Elliott Sober,1948,,male,Science,Unto Others: The Evolution and Psychology of Unselfish Behavior,101,29,Q329031
+29,38,106,Peter van Inwagen,1942,,male,Metaphysics & epistemology,Material Beings,102,28,Q1972246
+30,39,105,Ronald Dworkin,1931,2013,male,Social & political,Taking Rights Seriously,101,29,Q319803
+30,39,105,John McDowell,1942,,male,Ethics,Mind and World,96,33,Q1252398
+32,41,104,John Hawthorne,1964,,male,Metaphysics & epistemology,Knowledge and Lotteries,97,32,Q6238326
+32,41,104,T. M. Scanlon,1940,,male,Ethics,What We Owe to Each Other,101,29,Q1773977
+34,43,101,Karl R. Popper,1902,1994,male,Science,The Logic of Scientific Discovery,94,34,Q81244
+35,44,99,Alvin I. Goldman,1938,2024,male,Metaphysics & epistemology,Knowledge in a Social World,88,38,Q449089
+36,45,98,Joseph Raz,1939,2022,male,Social & political,The Morality of Freedom,89,37,Q1380371
+37,46,97,Elizabeth S. Anderson,1959,,female,Social & political,What is the Point of Equality?,83,40,Q1331312
+38,47,96,Nelson Goodman,1906,1998,male,Science,"Fact, Fiction, and Forecast",90,35,Q318048
+39,48,94,Peter T. Geach,1916,2013,male,Metaphysics & epistemology,Reference and Generality,88,38,Q725797
+,49,91,René Descartes,1596,1650,male,History & traditions,Meditations on First Philosophy,,,Q9191
+40,50,90,Robert Merrihew Adams,1937,2024,male,Metaphysics & epistemology,"Leibniz: Determinist, Theist, Idealist",81,43,Q5254926
+40,50,90,Judith Jarvis Thomson,1929,2020,female,Ethics,The Realm of Rights,72,61,Q3120860
+,52,88,William James,1842,1910,male,Metaphysics & epistemology,The Principles of Psychology,,,Q125249
+42,53,87,Christine M. Korsgaard,1952,,female,Ethics,The Sources of Normativity,80,45,Q467518
+43,54,86,Ian Hacking,1936,2023,male,Science,Representing and Intervening,90,35,Q188357
+43,54,86,Alvin Plantinga,1932,,male,Metaphysics & epistemology,The Nature of Necessity,81,43,Q355201
+43,54,86,Graham Priest,1948,,male,Metaphysics & epistemology,In Contradiction,79,51,Q1541962
+43,54,86,Jonathan Schaffer,1970,,male,Metaphysics & epistemology,On What Grounds What,80,45,Q785790
+47,58,85,Jonathan Bennett,1930,2024,male,History & traditions,A Study of Spinoza’s Ethics,83,40,Q3738153
+47,58,85,Crispin Wright,1942,,male,Metaphysics & epistemology,Frege’s Conception of Numbers as Objects,80,45,Q445989
+49,60,84,J. L. Mackie,1917,1981,male,Ethics,Ethics: Inventing Right and Wrong,80,45,Q713642
+50,61,83,G. E. M. Anscombe,1919,2001,female,Ethics,Intention,80,45,Q229646
+50,61,83,Tyler Burge,1946,,male,Mind & language,Individualism and the Mental,77,53,Q1971876
+52,63,82,William P. Alston,1921,2009,male,Metaphysics & epistemology,Perceiving God: The Epistemology of Religious Experience,77,53,Q125879
+52,63,82,Fred I. Dretske,1932,2013,male,Mind & language,Knowledge and the Flow of Information,78,52,Q1452279
+52,63,82,Jaakko Hintikka,1929,2015,male,Science,Knowledge and Belief: An Introduction to the Logic of the Two Notions,82,42,Q288756
+52,63,82,Stephen P. Stich,1943,,male,Mind & language,From Folk Psychology to Cognitive Science,73,59,Q2345102
+52,63,82,Alfred Tarski,1901,1983,male,Logic & mathematics,"Logic, Semantics, Metamathematics",80,45,Q207534
+57,68,81,Edward N. Zalta,1952,,male,Metaphysics & epistemology,Abstract Objects: An Introduction to Axiomatic Metaphysics,70,69,Q4355172
+,68,81,C. D. Broad,1887,1971,male,Metaphysics & epistemology,The Mind and Its Place in Nature,,,Q1022453
+58,70,80,Terence Horgan,1948,,male,Mind & language,The Intentionality of Phenomenology and the Phenomenology of Intentionality,75,58,Q1702848
+59,71,79,A. J. Ayer,1910,1989,male,Ethics,"Language, Truth and Logic",76,55,Q243757
+59,71,79,Kurt Gödel,1906,1978,male,Logic & mathematics,Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I,76,55,Q41390
+,71,79,Thomas Hobbes,1588,1679,male,Social & political,Leviathan,,,Q37621
+61,74,77,Allan Gibbard,1942,,male,Ethics,"Wise Choices, Apt Feelings",76,55,Q4730627
+61,74,77,David Kaplan,1933,,male,Mind & language,Demonstratives,72,61,Q1174939
+61,74,77,Wilfrid Sellars,1912,1989,male,Mind & language,Empiricism and the Philosophy of Mind,71,63,Q712462
+61,74,77,Peter Singer,1946,,male,Social & political,"Famine, Affluence, and Morality",71,63,Q211539
+61,74,77,Ernest Sosa,1940,,male,Metaphysics & epistemology,Knowledge in Perspective: Selected Essays in Epistemology,69,73,Q1356547
+66,79,75,Hartry Field,1946,,male,Metaphysics & epistemology,"Realism, Mathematics and Modality",71,63,Q1587666
+66,79,75,Jaegwon Kim,1934,2019,male,Metaphysics & epistemology,Mind in a Physical World,73,59,Q180893
+66,79,75,James Woodward,1946,,male,Science,Making Things Happen: A Theory of Causal Explanation,69,73,Q30329545
+69,82,74,John Earman,1942,,male,Science,Bayes or Bust?,68,78,Q864260
+69,82,74,Frank Plumpton Ramsey,1903,1930,male,Science,Truth and Probability,69,73,Q315387
+69,82,74,Nicholas Rescher,1928,2024,male,History & traditions,Scientific Progress: A Philosophical Essay on the Economics of Research in Natural Science,71,63,Q216170
+72,85,73,Harry G. Frankfurt,1929,2023,male,Ethics,Freedom of the Will and the Concept of a Person,69,73,Q740969
+72,85,73,Gideon Rosen,1962,,male,Metaphysics & epistemology,Metaphysical Dependence: Grounding and Reduction,69,73,Q20732338
+74,87,72,Simon Blackburn,1944,,male,Ethics,Ruling Passions,70,69,Q287357
+74,87,72,Stephen L. Darwall,1946,,male,Ethics,"The Second-Person Standpoint: Morality, Respect, and Accountability",64,94,Q7609017
+74,87,72,Carl Gustav Hempel,1905,1997,male,Science,Aspects of Scientific Explanation,70,69,Q61885
+74,87,72,William G. Lycan,1945,,male,Mind & language,Consciousness and Experience,71,63,Q3480449
+74,87,72,Theodore Sider,,,male,Metaphysics & epistemology,Four-Dimensionalism: An Ontology of Persistence and Time,68,78,Q1710307
+79,92,71,Gareth Evans,1946,1980,male,Mind & language,The Varieties of Reference,70,69,Q2720529
+79,92,71,Joel Feinberg,1926,2004,male,Social & political,Harm to Self,67,83,Q1691712
+79,92,71,Thomas S. Kuhn,1922,1996,male,Science,The Structure of Scientific Revolutions,71,63,Q184980
+79,92,71,Alasdair MacIntyre,1929,2025,male,Ethics,After Virtue: A Study in Moral Theory,65,91,Q310178
+,92,71,Edmund Husserl,1859,1938,male,History & traditions,Logische Untersuchungen,,,Q58586
+,92,71,Gottfried Wilhelm Leibniz,1646,1716,male,History & traditions,Philosophical Papers and Letters,,,Q9047
+83,98,70,John Perry,1943,,male,Mind & language,The Problem of the Essential Indexical,68,78,Q1701398
+83,98,70,Brian Skyrms,1938,,male,Science,Evolution of the Social Contract,66,87,Q1497924
+83,98,70,Richard Swinburne,1934,,male,Metaphysics & epistemology,The Existence of God,67,83,Q712709
+83,98,70,Stephen Yablo,1957,,male,Metaphysics & epistemology,Aboutness,63,98,Q7610894
+87,102,69,E. J. Lowe,1950,2014,male,Metaphysics & epistemology,The Four-Category Ontology: A Metaphysical Foundation for Natural Science,66,87,Q3742339
+87,102,69,Amartya Sen,1933,,male,Social & political,Inequality Reexamined,67,83,Q132489
+87,102,69,J. David Velleman,1952,,male,Ethics,The Possibility of Practical Reason,66,87,Q1620273
+,102,69,W. D. Ross,1877,1971,male,Ethics,The Right and the Good,,,Q1364954
+90,106,68,Jeremy Waldron,1953,,male,Social & political,Law and Disagreement,68,78,Q3177364
+,106,68,Henry Sidgwick,1838,1900,male,Ethics,The Methods of Ethics,,,Q433076
+91,108,67,John Langshaw Austin,1911,1960,male,Mind & language,How to Do Things with Words,57,115,Q272615
+91,108,67,Jonathan Barnes,1942,,male,History & traditions,The Presocratic Philosophers,66,87,Q1193088
+91,108,67,H. Paul Grice,1913,1988,male,Mind & language,Studies in the Way of Words,64,94,Q311776
+91,108,67,Jürgen Habermas,1929,2026,male,Social & political,The Theory of Communicative Action,62,103,Q76357
+91,108,67,David Miller,1946,,male,Social & political,On Nationality,56,118,Q404333
+91,108,67,Sydney Shoemaker,1931,2022,male,Mind & language,Causality and Properties,65,91,Q3480224
+97,114,66,Stewart Shapiro,1951,,male,Logic & mathematics,Philosophy of Mathematics: Structure and Ontology,64,94,Q448724
+97,114,66,David Wiggins,1933,,male,Metaphysics & epistemology,Sameness and Substance,67,83,Q5241057
+99,116,65,Julia Annas,1946,,female,History & traditions,The Morality of Happiness,65,91,Q437981
+99,116,65,John P. Burgess,1948,,male,Logic & mathematics,A Subject with No Object: Strategies for Nominalistic Interpretation of Mathematics,59,111,Q6251515
+99,116,65,Arthur N. Prior,1914,1969,male,Metaphysics & epistemology,"Past, Present, and Future",63,98,Q250020
+99,116,65,Charles Taylor,1931,,male,Social & political,Sources of the Self: The Making of the Modern Identity,63,98,Q311757
+99,116,65,Iris Marion Young,1949,2006,female,Social & political,Justice and the Politics of Difference,62,103,Q543381
+104,121,64,Ned Block,1942,,male,Mind & language,On a Confusion about a Function of Consciousness,61,106,Q1722354
+104,121,64,Andy Clark,1957,,male,Mind & language,The Extended Mind,51,138,Q4760523
+104,121,64,Shaun Nichols,1950,,male,Mind & language,Sentimental Rules: On the Natural Foundations of Moral Judgment,63,98,Q7490928
+104,121,64,Gilbert Ryle,1900,1976,male,Mind & language,The Concept of Mind,64,94,Q313386
+104,121,64,Scott Soames,1945,,male,Mind & language,"Direct Reference, Propositional Attitudes, and Semantic Content",63,98,Q350231
+,121,64,Martin Heidegger,1889,1976,male,History & traditions,Being and Time,,,Q48301
+109,127,63,Alonzo Church,1903,1995,male,Logic & mathematics,An Unsolvable Problem of Elementary Number Theory,62,103,Q92741
+109,127,63,Philippa Foot,1920,2010,female,Ethics,Natural Goodness,56,118,Q297493
+109,127,63,Richard C. Jeffrey,1926,2002,male,Science,The Logic of Decision,61,106,Q7326846
+109,127,63,Michael Smith,1954,,male,Ethics,The Moral Problem,68,78,Q6828096
+,127,63,Karl Marx,1818,1883,male,Social & political,Das Kapital,,,Q9061
+,127,63,Hans Reichenbach,1891,1953,male,Science,Experience and Prediction: An Analysis of the Foundations and the Structure of Knowledge,,,Q170147
+113,133,62,Terence H. Irwin,1947,,male,History & traditions,The Development of Ethics,55,123,Q7701921
+113,133,62,Christopher Peacocke,1950,,male,Mind & language,A Study of Concepts,60,108,Q5113043
+,133,62,Alfred North Whitehead,1861,1947,male,Logic & mathematics,Principia Mathematica,,,Q183372
+115,136,61,David O. Brink,1958,,male,Ethics,Moral Realism and the Foundations of Ethics,59,111,Q21903486
+115,136,61,Michael Friedman,1947,2025,male,Science,Kant and the Exact Sciences,60,108,Q6830429
+115,136,61,R. M. Hare,1919,2002,male,Ethics,The Language of Morals,60,108,Q471923
+115,136,61,Anthony Kenny,1931,2026,male,History & traditions,"Action, Emotion and Will",56,118,Q250315
+119,140,60,Richard J. Arneson,1945,,male,Social & political,Equality and Equal Opportunity for Welfare,56,118,Q5559613
+119,140,60,Robert Audi,1941,,male,Ethics,The Good in the Right: A Theory of Intuition and Intrinsic Value,54,126,Q340070
+119,140,60,H. L. A. Hart,1907,1992,male,Social & political,The Concept of Law,53,129,Q374834
+119,140,60,David Papineau,1947,,male,Mind & language,Thinking about Consciousness,56,118,Q329264
+119,140,60,Terence Parsons,1939,2022,male,Metaphysics & epistemology,Nonexistent Objects,53,129,Q7701986
+119,140,60,Richard Sorabji,1934,,male,History & traditions,"Time, Creation and the Continuum",59,111,Q7329146
+,140,60,David Hilbert,1862,1943,male,Logic & mathematics,Grundzüge der theoretischen Logik,,,Q41585
+125,147,59,Nancy Cartwright,1944,,female,Science,How the Laws of Physics Lie,59,111,Q512979
+125,147,59,Jonathan Dancy,1946,,male,Ethics,Ethics Without Principles,54,126,Q2460022
+125,147,59,Johan van Benthem,1949,,male,Logic & mathematics,The Logic of Time,57,115,Q1692111
+,147,59,Charles Sanders Peirce,1839,1914,male,Science,Collected Papers of Charles Sanders Peirce,,,Q187520
+128,151,58,Noam Chomsky,1928,,male,Mind & language,Aspects of the Theory of Syntax,52,134,Q9049
+128,151,58,John Dupré,1952,,male,Science,The Disorder of Things: Metaphysical Foundations of the Disunity of Science,55,123,Q322761
+128,151,58,J. J. C. Smart,1920,2012,male,Ethics,Sensations and Brain Processes,57,115,Q600759
+128,151,58,Barry Smith,1952,,male,Metaphysics & epistemology,Austrian Philosophy: The Legacy of Franz Brentano,,,Q809101
+132,155,57,Allen Buchanan,1948,,male,Social & political,From Chance to Choice: Genetics and Justice,51,138,Q4731555
+132,155,57,David Enoch,1971,,male,Ethics,Taking Morality Seriously: A Defense of Robust Realism,48,156,Q6871095
+132,155,57,Peter Godfrey-Smith,1965,,male,Science,Darwinian Populations and Natural Selection,53,129,Q7174267
+132,155,57,Colin McGinn,1950,,male,Mind & language,Mental Content,54,126,Q742827
+132,155,57,Peter Simons,1950,,male,Metaphysics & epistemology,Parts: A Study in Ontology,55,123,Q2492967
+137,160,56,Sally Haslanger,1955,,female,Social & political,Resisting Reality: Social Construction and Social Critique,49,150,Q7405159
+137,160,56,Mark Johnston,1954,,male,Metaphysics & epistemology,Constitution is not Identity,49,150,Q20645836
+137,160,56,Richard Montague,1930,1971,male,Mind & language,Formal Philosophy: Selected Papers of Richard Montague,50,145,Q536528
+137,160,56,Jesse J. Prinz,1950,,male,Mind & language,The Emotional Construction of Morals,48,156,Q6186758
+137,160,56,Richard Rorty,1931,2007,male,History & traditions,Philosophy and the Mirror of Nature,51,138,Q215258
+137,160,56,David Sedley,1947,,male,History & traditions,Diodorus Cronus and Hellenistic Philosophy,51,138,Q5239627
+143,166,55,Nuel D. Belnap,1930,2024,male,Logic & mathematics,Facing the Future: Agents and Choices in Our Indeterminist World,52,134,Q2004296
+143,166,55,Peter Carruthers,1952,,male,Mind & language,The Opacity of Mind: An Integrative Theory of Self-Knowledge,52,134,Q15485635
+143,166,55,Allen W. Wood,1942,,male,History & traditions,Kant’s Ethical Thought,47,165,Q14509268
+143,166,55,John von Neumann,1903,1957,male,Science,Theory of Games and Economic Behavior,50,145,Q17455
+147,170,54,Robert B. Brandom,1950,,male,Mind & language,"Making It Explicit: Reasoning, Representing, and Discursive Commitment",49,150,Q1312168
+147,170,54,Paul M. Churchland,1942,,male,Mind & language,Eliminative Materialism and the Propositional Attitudes,53,129,Q712681
+147,170,54,Michael Devitt,1938,,male,Metaphysics & epistemology,Realism and Truth,53,129,Q15462718
+147,170,54,Paul E. Griffiths,1962,,male,Science,Genetics and Philosophy: An Introduction,50,145,Q21266555
+147,170,54,John D. Norton,1953,,male,Science,A Material Theory of Induction,46,173,Q52409712
+147,170,54,Wesley C. Salmon,1925,2001,male,Science,Scientific Explanation and the Causal Structure of the World,48,156,Q327630
+147,170,54,Malcolm Schofield,1942,,male,History & traditions,Plato: Political Philosophy,50,145,Q65625061
+147,170,54,Walter Sinnott-Armstrong,1955,,male,Ethics,Moral Dilemmas,49,150,Q7966144
+147,170,54,Jason Stanley,1969,,male,Metaphysics & epistemology,Knowledge and Practical Interests,51,138,Q1683995
+147,170,54,Kim Sterelny,1950,,male,Science,The Evolved Apprentice: How Evolution Made Humans Unique,47,165,Q4115356
+147,170,54,Michael Tye,1950,,male,Mind & language,Ten Problems of Consciousness,52,134,Q708836
+158,181,53,Jon Barwise,1942,2000,male,Logic & mathematics,Situations and Attitudes,49,150,Q723578
+158,181,53,Clark Glymour,1942,,male,Science,Theory and Evidence,51,138,Q5127247
+158,181,53,Christian List,1973,,male,Social & political,"Group Agency: The Possibility, Design, and Status of Corporate Agents",42,203,Q20712127
+158,181,53,Peter Railton,1950,,male,Ethics,"Alienation, Consequentialism, and the Demands of Morality",49,150,Q429743
+158,181,53,Nicholas Wolterstorff,1932,,male,Metaphysics & epistemology,Works and Worlds of Art,51,138,Q7026429
+,181,53,Georg Wilhelm Friedrich Hegel,1770,1831,male,History & traditions,Phänomenologie des Geistes,,,Q9235
+163,187,52,G. A. Cohen,1941,2009,male,Social & political,"Self-Ownership, Freedom, and Equality",44,187,Q553987
+163,187,52,John M. Cooper,1939,2022,male,History & traditions,Reason and Emotion: Essays on Ancient Moral Psychology and Ethical Theory,47,165,Q16664965
+163,187,52,Paolo Mancosu,1960,,male,Logic & mathematics,"The Development of Mathematical Logic from Russell to Tarski, 1900–1935",47,165,Q102121448
+,187,52,John Dewey,1859,1952,male,Social & political,Art as Experience,,,Q131805
+166,191,51,Stephen Read,1947,,male,History & traditions,Relevant Logic,45,180,Q16405380
+166,191,51,Amie L. Thomasson,1968,,female,Metaphysics & epistemology,Fiction and Metaphysics,42,203,Q15429029
+,191,51,Thomas Reid,1710,1796,male,History & traditions,Essays on the Intellectual Powers of Man,,,Q316347
+168,194,50,Michel Foucault,1926,1984,male,History & traditions,The History of Sexuality,44,187,Q44272
+168,194,50,Ernest Lepore,1950,,male,Mind & language,Imagination and Convention: Distinguishing Grammar and Inference in Language,50,145,Q5393458
+170,196,49,Kwame Anthony Appiah,1954,,male,Social & political,In My Father’s House: Africa in the Philosophy of Culture,48,156,Q572741
+170,196,49,George Boolos,1940,1996,male,Logic & mathematics,Computability and Logic,48,156,Q1392740
+170,196,49,John Broome,1947,,male,Ethics,Weighing Goods,43,196,Q5587507
+170,196,49,Miranda Fricker,1966,,female,Social & political,Epistemic Injustice: Power and the Ethics of Knowing,41,217,Q13522475
+170,196,49,Paul Guyer,1948,,male,History & traditions,Kant and the Claims of Knowledge,45,180,Q7151044
+170,196,49,Paul Horwich,1947,,male,Metaphysics & epistemology,Truth,47,165,Q7151387
+170,196,49,Tim Maudlin,1958,,male,Science,The Metaphysics Within Physics,45,180,Q75377
+170,196,49,Ruth Garrett Millikan,1933,,female,Mind & language,"Language, Thought, and Other Biological Categories: New Foundations for Realism",48,156,Q452770
+170,196,49,Jean-Paul Sartre,1905,1980,male,Mind & language,Being and Nothingness,48,156,Q9364
+170,196,49,Samuel Scheffler,1951,,male,Social & political,The Rejection of Consequentialism,43,196,Q15446370
+170,196,49,Galen Strawson,1952,,male,Mind & language,Mental Reality,48,156,Q1491810
+170,196,49,Eleonore Stump,1947,,female,Metaphysics & epistemology,Wandering in Darkness: Narrative and the Problem of Suffering,48,156,Q1267587
+170,196,49,Brian Weatherson,,,male,Metaphysics & epistemology,Normative Externalism,47,165,Q4965590
+183,209,48,Bob Hale,1945,2017,male,Metaphysics & epistemology,The Reason’s Proper Study: Essays towards a Neo-Fregean Philosophy of Mathematics,46,173,Q290859
+183,209,48,Neil Levy,1967,,male,Ethics,Hard Luck: How Luck Undermines Free Will and Moral Responsibility,46,173,Q42722093
+183,209,48,Helen E. Longino,1944,,female,Science,Science as Social Knowledge: Values and Objectivity in Scientific Inquiry,47,165,Q5702699
+183,209,48,Linda Trinkaus Zagzebski,1946,,female,Metaphysics & epistemology,Virtues of the Mind: An Inquiry into the Nature of Virtue and the Ethical Foundations of Knowledge,42,203,Q4356374
+187,213,47,Frederick C. Beiser,1949,,male,History & traditions,The Fate of Reason: German Philosophy from Kant to Fichte,44,187,Q5497459
+187,213,47,Jon Elster,1940,,male,Social & political,Sour Grapes: Studies in the Subversion of Rationality,43,196,Q468043
+187,213,47,Solomon Feferman,1928,2016,male,Logic & mathematics,Systems of predicative analysis,46,173,Q957416
+187,213,47,David L. Hull,1935,2010,male,Science,Science as a Process: An Evolutionary Account of the Social and Conceptual Development of Science,43,196,Q4495105
+187,213,47,Thomas Hurka,1952,,male,Ethics,"Virtue, Vice, and Value",44,187,Q7790919
+187,213,47,Daniel Kahneman,1934,2024,male,Science,"Thinking, Fast and Slow",46,173,Q233950
+187,213,47,Norman Kretzmann,1928,1998,male,History & traditions,Boethius and the truth about tomorrow’s sea battle,47,165,Q7052453
+187,213,47,Edouard Machery,,,,Mind & language,Philosophy Within Its Proper Bounds,40,223,
+187,213,47,Alfred R. Mele,1951,,male,Ethics,Autonomous Agents: From Self-Control to Autonomy,44,187,Q1725595
+187,213,47,Daniel Nolan,,,,Metaphysics & epistemology,Impossible Worlds: A Modest Approach,42,203,
+187,213,47,Nathan Salmon,1951,,male,Metaphysics & epistemology,Frege’s Puzzle,45,180,Q516801
+187,213,47,Michael J. Sandel,1953,,male,Social & political,Liberalism and the Limits of Justice,46,173,Q381044
+187,213,47,Patrick Suppes,1922,2014,male,Science,A Probabilistic Theory of Causality,46,173,Q323107
+,213,47,Jeremy Bentham,1748,1832,male,Social & political,An Introduction to the Principles of Morals and Legislation,,,Q60887
+,213,47,Albert Einstein,1879,1955,male,Science,Can Quantum-Mechanical Description of Physical Reality be Considered Complete?,,,Q937
+,213,47,Adam Smith,1723,1790,male,Social & political,The Theory of Moral Sentiments,,,Q9381
+200,229,46,Paul Artin Boghossian,1957,,male,Mind & language,Analyticity Reconsidered,42,203,Q2625853
+200,229,46,Judith Butler,1956,,non-binary,Social & political,Gender Trouble: Feminism and the Subversion of Identity,40,223,Q219368
+200,229,46,David P. Gauthier,1932,2023,male,Ethics,Morals by Agreement,42,203,Q1174527
+200,229,46,Brian P. McLaughlin,,,male,Mind & language,The Rise and Fall of British Emergentism,44,187,Q97451260
+200,229,46,James Van Cleve,,,male,Metaphysics & epistemology,Problems from Kant,45,180,Q133999881
+205,234,45,Elizabeth Barnes,,,female,Metaphysics & epistemology,The Minority Body: A Theory of Disability,33,305,Q27925340
+205,234,45,Myles Burnyeat,1939,2019,male,History & traditions,Can the Sceptic Live His Scepticism?,44,187,Q3480903
+205,234,45,Alex Byrne,1960,,male,Mind & language,Intentionalism Defended,41,217,Q112420828
+205,234,45,Joseph Y. Halpern,1953,2026,male,Science,Reasoning About Uncertainty,37,251,Q6283747
+205,234,45,Uriah Kriegel,,,male,Mind & language,Subjective Consciousness: A Self-Representational Theory,42,203,Q136997281
+205,234,45,Will Kymlicka,1962,,male,Social & political,Multicultural Citizenship: A Liberal Theory of Minority Rights,41,217,Q523005
+205,234,45,D. H. Mellor,1938,2020,male,Metaphysics & epistemology,Real Time II,45,180,Q3787447
+205,234,45,Eric Schwitzgebel,1968,,male,Mind & language,Expertise in Moral Reasoning? Order Effects on Moral Judgment in Professional Philosophers and Non-Philosophers,39,232,Q30522357
+205,234,45,Michael Slote,1941,,male,Ethics,Moral Sentimentalism,42,203,Q6834452
+205,234,45,Peter Unger,1942,,male,Metaphysics & epistemology,Living High and Letting Die: Our Illusion of Innocence,44,187,Q433321
+,234,45,Ernst Cassirer,1874,1945,male,History & traditions,Substanzbegriff und Funktionsbegriff,,,Q57188
+,234,45,C. I. Lewis,1883,1964,male,Logic & mathematics,Symbolic Logic,,,Q725642
+215,246,44,Carl F. Craver,1967,,male,Science,Explaining the Brain: Mechanisms and the Mosaic Unity of Neuroscience,42,203,Q93226573
+215,246,44,Michael Huemer,1969,,male,Metaphysics & epistemology,Ethical Intuitionism,40,223,Q1927910
+215,246,44,Alan Hájek,1962,,male,Science,Interpretations of Probability,38,244,Q103296641
+215,246,44,James Ladyman,1969,,male,Science,Every Thing Must Go: Metaphysics Naturalized,38,244,Q93238318
+215,246,44,Keith Lehrer,1936,,male,Metaphysics & epistemology,Theory of Knowledge,43,196,Q1738063
+215,246,44,Barry Loewer,1945,,male,Science,Counterfactuals and the Second Law,42,203,Q4864434
+215,246,44,Trenton Merricks,1950,,male,Metaphysics & epistemology,Objects and Persons,40,223,Q4356592
+215,246,44,Susan Moller Okin,1946,2004,female,Social & political,"Justice, Gender, and the Family",45,180,Q2915288
+215,246,44,Onora O’Neill,1941,,female,Social & political,Towards Justice and Virtue: A Constructive Account of Practical Reasoning,44,187,Q336089
+215,246,44,Cass R. Sunstein,1954,,male,Social & political,Legal Reasoning and Political Conflict,42,203,Q956164
+215,246,44,Susan Wolf,1952,,female,Ethics,Freedom Within Reason,39,232,Q7648308
+,246,44,Pierre Duhem,1861,1916,male,Science,The Aim and Structure of Physical Theory,,,Q314172
+226,258,43,Peter Adamson,1972,,male,History & traditions,Al-Kindi,35,272,Q2073588
+226,258,43,Brian Barry,1936,2009,male,Social & political,Justice as Impartiality,40,223,Q911833
+226,258,43,Mark Colyvan,,,male,Science,The Indispensability of Mathematics,39,232,Q29625150
+226,258,43,Martin Davies,1949,,male,Mind & language,Two Notions of Necessity,43,196,Q25183932
+226,258,43,Dov M. Gabbay,1945,,male,Logic & mathematics,Temporal Logic: Mathematical Foundations and Computational Aspects,39,232,Q220076
+226,258,43,Robert E. Goodin,1950,,male,Social & political,What Is So Special about Our Fellow Countrymen?,42,203,Q18719437
+226,258,43,Jean Hampton,1954,1996,female,Social & political,Hobbes and the Social Contract Tradition,39,232,Q6170615
+226,258,43,Marc Lange,1963,,male,Science,Because Without Cause: Non-Causal Explanations in Science and Mathematics,37,251,Q1707725
+226,258,43,Jeff McMahan,1954,,male,Social & political,The Ethics of Killing: Problems at the Margins of Life,39,232,Q510448
+226,258,43,Robert Pasnau,1967,,male,History & traditions,Metaphysical Themes 1274–1671,38,244,Q93237455
+226,258,43,Stephen R. Schiffer,1940,,male,Metaphysics & epistemology,Meaning,41,217,Q7610475
+226,258,43,Michael Walzer,1935,,male,Social & political,Spheres of Justice: A Defense of Pluralism and Equality,43,196,Q445511
+238,270,42,Alexander Bird,1964,,male,Science,Nature’s Metaphysics: Laws and Properties,38,244,Q58726652
+238,270,42,Daniel Garber,1949,,male,History & traditions,Descartes’ Metaphysical Physics,40,223,Q66490637
+238,270,42,Ernest Nagel,1901,1985,male,Science,The Structure of Science: Problems in the Logic of Scientific Explanation,39,232,Q553870
+238,270,42,Mark Schroeder,,,,Ethics,Slaves of the Passions,37,251,
+,270,42,Charles Robert Darwin,1809,1882,male,Science,On the Origin of Species,,,Q1035
+242,275,41,Kent Bach,1943,,male,Mind & language,Linguistic Communication and Speech Acts,40,223,Q6391616
+242,275,41,George Bealer,1944,2025,male,Metaphysics & epistemology,Quality and Concept,39,232,Q120979102
+242,275,41,Peter Gärdenfors,1949,,male,Science,Knowledge in Flux: Modeling the Dynamics of Epistemic States,39,232,Q1148805
+242,275,41,John Heil,1943,,male,Metaphysics & epistemology,From an Ontological Point of View,40,223,Q58323175
+242,275,41,Shelly Kagan,1956,,male,Ethics,The Limits of Morality,37,251,Q2277964
+242,275,41,Larry Laudan,1941,2022,male,Science,Progress and Its Problems: Towards a Theory of Scientific Growth,42,203,Q1370686
+242,275,41,Dana S. Scott,1932,,male,Logic & mathematics,Measurable Cardinals and Constructible Sets,35,272,Q49823
+242,275,41,Ralph Wedgwood,1964,,male,Ethics,The Nature of Normativity,37,251,Q7528518
+250,283,40,Linda Martín Alcoff,1955,,female,Social & political,"Visible Identities: Race, Gender, and the Self",36,260,Q6551801
+250,283,40,Deborah L. Black,1958,,female,History & traditions,Logic and Aristotle’s Rhetoric and Poetics in Medieval Arabic Philosophy,,,Q1181580
+250,283,40,Michael E. Bratman,1945,,male,Ethics,"Intention, Plans, and Practical Reason",35,272,Q3739250
+250,283,40,Otávio Bueno,,,male,Science,Is It Possible to Nominalize Quantum Mechanics?,38,244,Q113736387
+250,283,40,Tamar Szabó Gendler,1965,,female,Metaphysics & epistemology,Alief and Belief,38,244,Q7680735
+250,283,40,A. A. Long,1937,,male,History & traditions,The Hellenistic Philosophers,41,217,Q4647479
+250,283,40,Charles W. Mills,1951,2021,male,Social & political,The Racial Contract,31,335,Q5083233
+250,283,40,Judea Pearl,1936,,male,Science,"Causality: Models, Reasoning, and Inference",37,251,Q92824
+250,283,40,John L. Pollock,1940,2009,male,Metaphysics & epistemology,Contemporary Theories of Knowledge,37,251,Q6243668
+250,283,40,Greg Restall,1969,,male,Logic & mathematics,An Introduction to Substructural Logics,40,223,Q57413682
+,283,40,Franz Brentano,1838,1917,male,History & traditions,Psychologie vom empirischen Standpunkt,,,Q57196
+,283,40,Friedrich Nietzsche,1844,1900,male,History & traditions,On the Genealogy of Morality,,,Q9358
+,283,40,Hermann Weyl,1885,1955,male,Logic & mathematics,Das Kontinuum,,,Q71029
+260,296,39,Roger Crisp,1961,,male,Ethics,Sacrifice Regained: Morality and Self-Interest in British Moral Philosophy from Hobbes to Bentham,39,232,Q612358
+260,296,39,John Finnis,1940,,male,Social & political,Natural Law and Natural Rights,42,203,Q3312283
+260,296,39,Richard C. Lewontin,1929,2021,male,Science,The Genetic Basis of Evolutionary Change,36,260,Q659265
+260,296,39,Bernard Linsky,1950,,male,Logic & mathematics,In Defense of the Simplest Quantified Modal Logic,36,260,Q133675042
+260,296,39,Samir Okasha,1971,,male,Science,Evolution and the Levels of Selection,35,272,Q15958571
+260,296,39,François Recanati,1952,,male,Mind & language,Literal Meaning,34,287,Q3085655
+260,296,39,Dan Sperber,1942,,male,Mind & language,Relevance: Communication and Cognition,36,260,Q187363
+260,296,39,Gary Watson,1943,,male,Ethics,Free Agency,34,287,Q112376852
+260,296,39,Roger White,,,,Science,Epistemic Permissiveness,,,
+260,296,39,Robert A. Wilson,1964,,male,Science,When Traditional Essentialism Fails: Biological Natural Kinds,,,Q23092173
+260,296,39,Dean W. Zimmerman,1950,,male,Metaphysics & epistemology,Could Extended Objects Be Made Out of Simple Parts? An Argument for ‘Atomless Gunk’,32,319,Q5246576
+,296,39,George Berkeley,1685,1753,male,History & traditions,A Treatise Concerning the Principles of Human Knowledge,,,Q82049
+271,308,38,William Bechtel,1951,,male,Science,Discovering Complexity: Decomposition and Localization as Strategies in Scientific Research,39,232,Q8005287
+271,308,38,Earl Conee,1950,,male,Metaphysics & epistemology,Evidentialism: Essays in Epistemology,36,260,Q112486916
+271,308,38,Tim Crane,1962,,male,Mind & language,Elements of Mind,38,244,Q7803365
+271,308,38,Richard Feldman,1948,,male,Metaphysics & epistemology,Respecting the Evidence,37,251,Q104512375
+271,308,38,Owen Flanagan,1949,,male,Mind & language,Consciousness Reconsidered,34,287,Q1408431
+271,308,38,Susan Hurley,1954,2007,female,Mind & language,Consciousness in Action,35,272,Q7647988
+271,308,38,Elisabeth A. Lloyd,1956,,female,Science,The Structure and Confirmation of Evolutionary Theory,36,260,Q1330109
+271,308,38,Alexander Rosenberg,1946,,male,Science,"Darwinian Reductionism: Or, How to Stop Worrying and Love Molecular Biology",37,251,Q3739981
+271,308,38,Paul Teller,1943,,male,Science,Conditionalization and Observation,36,260,Q94856919
+271,308,38,Achille C. Varzi,1958,,male,Metaphysics & epistemology,"‘Spatial Reasoning and Ontology: Parts, Wholes, and Locations’",32,319,Q3209962
+271,308,38,William C. Wimsatt,1941,,male,Science,Re-Engineering Philosophy for Limited Beings: Piecewise Approximations to Reality,33,305,Q8006429
+271,308,38,Jonathan Wolff,1959,,male,Social & political,"Fairness, Respect, and the Egalitarian Ethos",,,Q3482377
+,308,38,Jean-Jacques Rousseau,1712,1778,male,Social & political,Du contrat social; ou Principes du droit politique,,,Q6527
+283,321,37,Marilyn McCord Adams,1943,2017,female,Metaphysics & epistemology,William Ockham,32,319,Q4356809
+283,321,37,Karen Bennett,1971,,female,Metaphysics & epistemology,Making Things Up,32,319,Q139035283
+283,321,37,Berit Brogaard,1970,,female,Metaphysics & epistemology,Remarks on Counterpossibles,34,287,Q4891891
+283,321,37,Herman Cappelen,1967,,male,Mind & language,Insensitive Semantics: A Defense of Semantic Minimalism and Speech Act Pluralism,31,335,Q5739617
+283,321,37,Michael Frede,1940,2007,male,History & traditions,Stoic Epistemology,32,319,Q78319
+283,321,37,Shaun Gallagher,1948,,male,Mind & language,How the Body Shapes the Mind,33,305,Q7490851
+283,321,37,Peter King,1955,,male,History & traditions,Metaphysics,,,Q113704481
+283,321,37,Eva Feder Kittay,1946,,female,Social & political,"Love’s Labor: Essays on Women, Equality, and Dependency",35,272,Q16730899
+283,321,37,John MacFarlane,1967,,male,Metaphysics & epistemology,Assessment Sensitivity: Relative Truth and Its Applications,31,335,Q15821559
+283,321,37,L. A. Paul,1966,,female,Metaphysics & epistemology,Logical Parts,34,287,Q6456228
+283,321,37,Duncan Pritchard,1974,,male,Metaphysics & epistemology,Epistemic Luck,33,305,Q38092292
+283,321,37,Roy A. Sorensen,,,,Metaphysics & epistemology,Blindspots,35,272,
+295,333,36,Tim Bayne,,,male,Mind & language,Perception and the Reach of Phenomenal Content,30,357,Q110122299
+295,333,36,Jc Beall,1966,,male,Logic & mathematics,Logical Pluralism,35,272,Q28112860
+295,333,36,Paul Benacerraf,1931,2025,male,Logic & mathematics,Mathematical Truth,34,287,Q1396649
+295,333,36,Max Black,1909,1988,male,Metaphysics & epistemology,The Identity of Indiscernibles,33,305,Q687424
+295,333,36,Richard B. Brandt,1910,1997,male,Ethics,A Theory of the Good and the Right,36,260,Q5970702
+295,333,36,Stewart Cohen,,,,Metaphysics & epistemology,Basic Knowledge and the Problem of Easy Knowledge,,,
+295,333,36,M. J. Cresswell,1939,2024,male,Metaphysics & epistemology,Structured Meanings,35,272,Q1413249
+295,333,36,Gregory Currie,1950,,male,Aesthetics,Recreative Minds: Imagination in Philosophy and Psychology,34,287,Q5606874
+295,333,36,Lindley Darden,1945,,female,Science,Theory Change in Science: Strategies from Mendelian Genetics,34,287,Q6552543
+295,333,36,Sten Ebbesen,1946,,male,History & traditions,Commentators and Commentaries on Aristotle’s Sophistici Elenchi,32,319,Q1256714
+295,333,36,Paul K. Feyerabend,1924,1994,male,Science,Against Method,36,260,Q78497
+295,333,36,Stephen Jay Gould,1941,2002,male,Science,The Spandrels of San Marco and the Panglossian Paradigm: A Critique of the Adaptationist Programme,33,305,Q180619
+295,333,36,Charles H. Kahn,1928,2023,male,History & traditions,Pythagoras and the Pythagoreans,34,287,Q96742571
+295,333,36,Jeffrey C. King,,,male,Metaphysics & epistemology,The Nature and Structure of Content,,,Q129780024
+295,333,36,Jonathan L. Kvanvig,1954,,male,Metaphysics & epistemology,The Value of Knowledge and the Pursuit of Understanding,31,335,Q6273611
+295,333,36,Jerrold Levinson,1948,,male,Aesthetics,What a Musical Work Is,32,319,Q1812792
+295,333,36,Mohan Matthen,1948,,male,Mind & language,Two ways of thinking about fitness and natural selection,35,272,Q93237636
+295,333,36,Graham Oppy,1960,,male,Metaphysics & epistemology,Arguing About Gods,31,335,Q5593123
+295,333,36,Charles Parsons,1933,2024,male,Logic & mathematics,The Structuralist View of Mathematical Objects,35,272,Q5081510
+295,333,36,Julian Savulescu,1963,,male,Social & political,Procreative Beneficence: Why We Should Select the Best Children,31,335,Q1712057
+295,333,36,Russ Shafer-Landau,1963,,male,Ethics,Moral Realism: A Defence,34,287,Q7381231
+295,333,36,Paul Thagard,1950,,male,Science,"The Cognitive Science of Science: Explanation, Discovery, and Conceptual Change",34,287,Q2435752
+295,333,36,Richmond H. Thomason,1939,,male,Logic & mathematics,Combinations of Tense and Modality,33,305,Q93239733
+,333,36,John Maynard Keynes,1883,1946,male,Science,A Treatise on Probability,,,Q9317
+318,357,35,Annette C. Baier,1929,2012,female,Social & political,A Progress of Sentiments,33,305,Q4769048
+318,357,35,Lynne Rudder Baker,1944,2017,female,Metaphysics & epistemology,Persons and Bodies: A Constitution View,36,260,Q1373388
+318,357,35,Seyla Benhabib,1950,,female,Social & political,"Situating the Self: Gender, Community and Postmodernism in Contemporary Ethics",34,287,Q263235
+318,357,35,Laurence BonJour,1943,,male,Metaphysics & epistemology,The Structure of Empirical Knowledge,36,260,Q1807971
+318,357,35,Ross P. Cameron,,,,Metaphysics & epistemology,"Turtles All the Way Down: Regress, Priority and Fundamentality",30,357,
+318,357,35,Fred Feldman,1941,,male,Ethics,Pleasure and the Good Life,39,232,Q5495128
+318,357,35,Nancy Fraser,1947,,female,Social & political,Justice Interruptus: Critical Reflections on the “Postsocialist” Condition,,,Q267536
+318,357,35,Christopher Read Hitchcock,1964,,male,Science,The Intransitivity of Causation Revealed in Equations and Graphs,35,272,Q112474047
+318,357,35,F. M. Kamm,,,female,Ethics,"Intricate Ethics: Rights, Responsibilities, and Permissible Harm",34,287,Q5478769
+318,357,35,Stephen Cole Kleene,1909,1994,male,Logic & mathematics,Introduction to Metamathematics,34,287,Q335148
+318,357,35,Hannes Leitgeb,1972,,male,Science,The Stability Theory of Belief,31,335,Q1576033
+318,357,35,Maurice Merleau-Ponty,1908,1961,male,Mind & language,Phénoménologie de la perception,,,Q212639
+318,357,35,Carole Pateman,1940,,female,Social & political,The Sexual Contract,32,319,Q299627
+318,357,35,Huw Price,1953,,male,Science,Time’s Arrow and Archimedes’ Point,33,305,Q11710343
+318,357,35,Michael Tomasello,1950,,male,Mind & language,A Natural History of Human Morality,,,Q714346
+318,357,35,Kendall L. Walton,1939,,male,Aesthetics,Mimesis as Make-Believe: On the Foundations of the Representational Arts,,,Q6388945
+,357,35,Paul Arthur Schilpp,1897,1993,male,Science,,,,Q4356837
+334,374,34,Craig Callender,1968,,male,Science,What Makes Time Special?,35,272,Q5180794
+334,374,34,David Copp,1948,,male,Ethics,Darwinian Skepticism about Moral Realism,31,335,Q93247149
+334,374,34,Richard Dawkins,1941,,male,Science,The Selfish Gene,30,357,Q44461
+334,374,34,Cian Dorr,1972,,male,Metaphysics & epistemology,What We Disagree About When We Disagree About Ontology,,,Q93222539
+334,374,34,Gerald F. Gaus,1952,2020,male,Social & political,The Order of Public Reason: A Theory of Freedom and Morality in a Diverse and Bounded World,30,357,Q16510826
+334,374,34,Ronald N. Giere,1938,2020,male,Science,Explaining Science: A Cognitive Approach,33,305,Q706432
+334,374,34,Gary Hatfield,1950,,male,History & traditions,The Natural and the Normative: Theories of Spatial Perception from Kant to Helmholtz,32,319,Q60687369
+334,374,34,Thomas E. Hill,1937,,male,Ethics,Autonomy and Self-Respect,30,357,Q16104682
+334,374,34,Øystein Linnebo,1971,,male,Logic & mathematics,Plural quantification,,,Q8079328
+334,374,34,Richard W. Miller,1945,2023,male,Social & political,Globalizing Justice: The Ethics of Poverty and Power,,,Q7329718
+334,374,34,Timothy O’Connor,1965,,male,Metaphysics & epistemology,Persons and Causes: The Metaphysics of Free Will,,,Q104584822
+334,374,34,Roger Penrose,1931,,male,Science,The Emperor’s New Mind,32,319,Q193803
+334,374,34,Derk Pereboom,1957,,male,Ethics,Living Without Free Will,34,287,Q1200200
+334,374,34,Michael Ridge,,,,Ethics,Impassioned Belief,,,
+334,374,34,Richard Routley,1935,1996,male,Logic & mathematics,Exploring Meinong’s Jungle and Beyond,,,Q7329328
+334,374,34,Sahotra Sarkar,1961,,male,Science,Genetics and Reductionism,31,335,Q7399715
+334,374,34,Alan M. Turing,1912,1954,male,Logic & mathematics,"On Computable Numbers, with an Application to the Entscheidungsproblem",33,305,Q7251
+334,374,34,Amos Tversky,1937,1996,male,Science,Features of Similarity,33,305,Q474333
+334,374,34,Michael Weisberg,1976,,male,Science,Simulation and Similarity: Using Models to Understand the World,30,357,Q48095572
+334,374,34,Jean van Heijenoort,1912,1986,male,Logic & mathematics,From Frege to Gödel,,,Q449711
+354,394,33,Helen Beebee,1968,,female,Metaphysics & epistemology,Causing and Nothingness,32,319,Q16203574
+354,394,33,Isaiah Berlin,1909,1997,male,History & traditions,Two Concepts of Liberty,31,335,Q205162
+354,394,33,Richard N. Boyd,1942,2021,male,Science,How to be a Moral Realist,35,272,Q974723
+354,394,33,Joshua Cohen,1951,,male,Social & political,Deliberation and Democratic Legitimacy,34,287,Q5610438
+354,394,33,Stephan Hartmann,1968,,male,Science,"Effective Field Theories, Reductionism and Scientific Explanation",31,335,Q16199533
+354,394,33,Geoffrey Hellman,1943,,male,Logic & mathematics,Mathematics without Numbers: Towards a Modal-Structural Interpretation,31,335,Q5534656
+354,394,33,Wilfrid Hodges,1941,,male,Logic & mathematics,Model Theory,30,357,Q451634
+354,394,33,Axel Honneth,1949,,male,Social & political,The Struggle for Recognition: The Moral Grammar of Social Conflicts,,,Q60735
+354,394,33,Niko Kolodny,,,male,Social & political,Why Be Rational?,,,Q16403824
+354,394,33,Richard Kraut,1944,,male,History & traditions,What is Good and Why: The Ethics of Well-Being,,,Q18202457
+354,394,33,Rae Langton,1961,,female,Social & political,Speech Acts and Unspeakable Acts,32,319,Q15990111
+354,394,33,Catharine A. MacKinnon,1946,,female,Social & political,Toward a Feminist Theory of the State,31,335,Q528159
+354,394,33,Kris McDaniel,1976,,,Metaphysics & epistemology,The Fragmentation of Being,31,335,Q133643252
+354,394,33,Stephen Menn,1964,,male,History & traditions,Al-Fārābī’s Kitāb al-Ḥurūf and His Analysis of the Senses of Being,,,Q7609982
+354,394,33,Michael C. Rea,1968,,male,Metaphysics & epistemology,The Problem of Material Constitution,31,335,Q6829038
+354,394,33,A. John Simmons,1950,,male,Social & political,Moral Principles and Political Obligations,,,Q58528260
+354,394,33,Michael Tooley,1941,,male,Metaphysics & epistemology,The Nature of Laws,,,Q14949641
+354,394,33,Jessica M. Wilson,,,female,Metaphysics & epistemology,No Work for a Theory of Grounding,,,Q16078961
+372,412,32,John Bigelow,1948,,male,Metaphysics & epistemology,The Reality of Numbers: A Physicalist’s Philosophy of Mathematics,,,Q125659049
+372,412,32,David Christensen,1955,,male,Science,Higher-Order Evidence,,,Q60055580
+372,412,32,Hubert L. Dreyfus,1929,2017,male,Mind & language,"Being-in-the-World: A Commentary on Heidegger’s Being and Time, Division I",,,Q971585
+372,412,32,John Martin Fischer,1952,,male,Ethics,Responsibility and Control: A Theory of Moral Responsibility,30,357,Q6246985
+372,412,32,Steven French,1956,,male,Science,The Structure of the World: Metaphysics and Representation,,,Q112449903
+372,412,32,P. M. S. Hacker,1939,,male,Mind & language,"Wittgenstein: Meaning and Mind, Volume 3 of an Analytical Commentary on the Philosophical Investigations",,,Q712696
+372,412,32,Christopher S. Hill,1942,,male,Mind & language,Sensations: A Defense of Type Materialism,,,Q57586512
+372,412,32,Jennifer Hornsby,1951,,female,Metaphysics & epistemology,Free Speech and Illocution,30,357,Q6178448
+372,412,32,William Kneale,1906,1990,male,Logic & mathematics,The Development of Logic,33,305,Q994761
+372,412,32,Georg Kreisel,1923,2015,male,Logic & mathematics,Informal Rigour and Completeness Proofs,32,319,Q951409
+372,412,32,Brian Leiter,1963,,male,Social & political,Naturalizing Jurisprudence: Essays on American Legal Realism and Naturalism in Legal Philosophy,,,Q4964476
+372,412,32,Peter Machamer,1942,2023,male,Science,Thinking about Mechanisms,32,319,Q16847586
+372,412,32,John Maynard Smith,1920,2004,male,Science,Evolution and the Theory of Games,30,357,Q323207
+372,412,32,Kevin Mulligan,1951,,male,Metaphysics & epistemology,Truth-Makers,34,287,Q350124
+372,412,32,Steven Nadler,1958,,male,History & traditions,Occasionalism: Causation Among the Cartesians,30,357,Q7615080
+372,412,32,Calvin G. Normore,1948,,male,History & traditions,Future Contingents,,,Q5024466
+372,412,32,Richard Pettigrew,1981,,male,Science,Accuracy and the Laws of Credence,,,Q88425186
+372,412,32,Thomas W. Pogge,1953,,male,Social & political,World Poverty and Human Rights,34,287,Q66820
+372,412,32,Georges Rey,1945,,male,Mind & language,A Question About Consciousness,32,319,Q5546876
+372,412,32,Henry S. Richardson,1955,,male,Social & political,Practical Reasoning about Final Ends,,,Q16499826
+372,412,32,Robert C. Richardson,,,male,Science,Evolutionary Psychology as Maladapted Psychology,,,Q134568817
+372,412,32,Roger Scruton,1944,2020,male,Aesthetics,The Aesthetics of Music,30,357,Q445939
+372,412,32,Evan Thompson,1962,,male,Mind & language,"Mind in Life: Biology, Phenomenology, and the Sciences of Mind",,,Q329249
+372,412,32,David Wallace,1976,,male,Science,The Emergent Multiverse: Quantum Theory According to the Everett Interpretation,,,Q112476267
+372,412,32,Georg Henrik von Wright,1916,2003,male,Science,Norm and Action,30,357,Q350183
+,412,32,Arthur Schopenhauer,1788,1860,male,Aesthetics,The World as Will and Representation,,,Q38193
+,412,32,Harry A. Wolfson,1887,1974,male,History & traditions,The Philosophy of Kalam,,,Q1389056
+397,439,31,Colin Allen,1960,,male,Mind & language,Species of Mind: The Philosophy and Biology of Cognitive Ethology,,,Q64014531
+397,439,31,Henry E. Allison,1937,2023,male,History & traditions,Kant’s Transcendental Idealism,31,335,Q48816738
+397,439,31,Alan Ross Anderson,1925,1973,male,Logic & mathematics,Entailment: The Logic of Relevance and Necessity,,,Q3268033
+397,439,31,Louise M. Antony,1950,,female,Mind & language,Quine as Feminist: The Radical Import of Naturalized Epistemology,,,Q16731647
+397,439,31,William Lane Craig,1918,2016,male,Metaphysics & epistemology,The Kalām Cosmological Argument,32,319,Q8007226
+397,439,31,Richard Cross,1964,,male,History & traditions,Duns Scotus,,,Q7323652
+397,439,31,Norman Daniels,1942,,male,Social & political,Just Health: Meeting Health Needs Fairly,31,335,Q7052137
+397,439,31,Julia Driver,1961,,female,Ethics,Consequentialism,,,Q20829630
+397,439,31,Jay L. Garfield,1955,,male,History & traditions,The Fundamental Wisdom of the Middle Way: Nagarjuna’s Mulamadhyamakakarika,,,Q28018074
+397,439,31,Margaret Gilbert,1942,,female,Social & political,On Social Facts,,,Q3290490
+397,439,31,James Griffin,1933,2019,male,Ethics,"Well-Being: Its Meaning, Measurement, and Moral Importance",33,305,Q14945583
+397,439,31,Brad Hooker,1957,,male,Ethics,"Ideal Code, Real World: A Rule-Consequentialist Theory of Morality",31,335,Q4954005
+397,439,31,Colin Howson,1945,2020,male,Science,Scientific Reasoning: The Bayesian Approach,30,357,Q5145213
+397,439,31,Rosalind Hursthouse,1943,,female,Ethics,On Virtue Ethics,,,Q3480230
+397,439,31,Richard Joyce,1966,,male,Ethics,The Evolution of Morality,30,357,Q2149904
+397,439,31,Jennifer Lackey,1969,,female,Metaphysics & epistemology,Learning from Words: Testimony as a Source of Knowledge,,,Q16731152
+397,439,31,Ned Markosian,,,male,Metaphysics & epistemology,Brutal Composition,,,Q25517976
+397,439,31,Bence Nanay,1974,,male,Mind & language,Between Perception and Action,,,Q4886908
+397,439,31,Jerome B. Schneewind,1930,2024,male,History & traditions,The Invention of Autonomy,,,Q4356122
+397,439,31,Susanna Siegel,1970,,female,Mind & language,The Contents of Visual Experience,30,357,Q16885971
+397,439,31,Herbert A. Simon,1916,2001,male,Science,Models of Man,,,Q181529
+397,439,31,Gregory Vlastos,1907,1991,male,History & traditions,Socrates: Ironist and Moral Philosopher,31,335,Q1149031
+397,439,31,Michael J. Zimmerman,1946,,male,Ethics,Living with Uncertainty: The Moral Significance of Ignorance,,,Q4191970
+,439,31,Francis Herbert Bradley,1846,1924,male,Metaphysics & epistemology,Appearance and Reality,,,Q350236
+,439,31,Friedrich A. Hayek,1899,1992,male,Social & political,The Constitution of Liberty,,,Q1325
+,439,31,Henri Poincaré,1854,1912,male,Science,La Science et L'Hypothése,,,Q81082
+420,465,30,E. J. Ashworth,1939,2024,female,History & traditions,Language and Logic in the Post-Medieval Period,31,335,Q93231126
+420,465,30,Jody Azzouni,1954,,male,Logic & mathematics,Deflating Existential Consequence: A Case for Nominalism,,,Q1357241
+420,465,30,José Luis Bermúdez,1967,,male,Mind & language,Thinking without Words,,,Q93238485
+420,465,30,Paul Bloom,1963,,male,Mind & language,Against Empathy: The Case for Rational Compassion,,,Q1590549
+420,465,30,Kimberlé Crenshaw,1959,,female,Social & political,"Mapping the Margins: Intersectionality, Identity Politics, and Violence against Women of Color",,,Q6409990
+420,465,30,Arthur C. Danto,1924,2013,male,Aesthetics,The Transfiguration of the Commonplace,,,Q365129
+420,465,30,John M. Doris,1963,,male,Ethics,Lack of Character: Personality and Moral Behavior,,,Q112475075
+420,465,30,Andy Egan,,,,Mind & language,Epistemic Modals in Context,30,357,
+420,465,30,Matti Eklund,,,male,Metaphysics & epistemology,The Picture of Reality as an Amorphous Lump,,,Q124644990
+420,465,30,Dimitri Gutas,1945,,male,History & traditions,Avicenna and the Aristotelian Tradition,,,Q1225901
+420,465,30,Hilary Kornblith,1954,,male,Metaphysics & epistemology,Knowledge and Its Place in Nature,31,335,Q5761008
+420,465,30,Angelika Kratzer,1948,,female,Mind & language,Modals and Conditionals,,,Q4762710
+420,465,30,Isaac Levi,1930,2018,male,Science,The Enterprise of Knowledge,30,357,Q6076692
+420,465,30,Joseph Levine,1952,,male,Mind & language,Purple Haze: The Puzzle of Consciousness,,,Q1707510
+420,465,30,Kasper Lippert-Rasmussen,1964,,male,Social & political,Luck Egalitarianism,,,Q59156216
+420,465,30,Brian Loar,1939,2014,male,Mind & language,Phenomenal States,,,Q59533324
+420,465,30,Vann McGee,1949,,male,Metaphysics & epistemology,"Truth, Vagueness, and Paradox: An Essay on the Logic of Truth",,,Q102184839
+420,465,30,Matthew McGrath,,,,Metaphysics & epistemology,Memory and Epistemic Conservatism,,,
+420,465,30,Alva Noë,1964,,male,Mind & language,Action in Perception,,,Q258358
+420,465,30,Dominik Perler,1965,,male,History & traditions,Occasionalismus: Theorien der Kausalität im arabisch-islamischen und im europäischen Denken,,,Q119777
+420,465,30,Steven Pinker,1954,,male,Mind & language,The Language Instinct,,,Q212730
+420,465,30,Gerhard Schurz,1956,,male,Science,Hume’s Problem Solved: The Optimality of Meta-Induction,,,Q1244391
+420,465,30,Richard Taylor,,,,Metaphysics & epistemology,Action and Purpose,,,
+420,465,30,Mark Timmons,1951,,male,Ethics,Significance and System: Essays on Kant’s Ethics,,,Q95308651
+420,465,30,R. Jay Wallace,1957,,male,Ethics,Responsibility and the Moral Sentiments,,,Q13522540
+420,465,30,Hao Wang,1921,1995,male,Logic & mathematics,From Mathematics to Philosophy,,,Q707977
+420,465,30,Nick Zangwill,1957,,male,Aesthetics,The Metaphysics of Beauty,,,Q59815573
+,465,30,Paul Bernays,1888,1977,male,Logic & mathematics,Axiomatische Untersuchung des Aussagen-Kalkuls der ‘Principia Mathematica’,,,Q122318
+,465,30,Alexius Meinong,1853,1920,male,History & traditions,Über Gegenstandstheorie,,,Q78600
+,465,30,Moritz Schlick,1882,1936,male,Science,Allgemeine Erkenntnislehre,,,Q57193
+,465,30,Jan Łukasiewicz,1878,1956,male,Logic & mathematics,Aristotle’s Syllogistic from the Standpoint of Modern Formal Logic,,,Q313454
