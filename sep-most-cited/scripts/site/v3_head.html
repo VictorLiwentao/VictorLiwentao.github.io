@@ -40,7 +40,40 @@ h3{font-size:19px;letter-spacing:-.01em}
 #hsv text.tk{font-size:12px;font-weight:400;fill:#e7aaaa;stroke:none}
 #hsv .hd2{transition:r .2s}
 .hero .tip{color:var(--ink)}
-.hcap{font-size:13px;line-height:1.45;color:#efc0c0;margin:6px 0 0;max-width:92ch}
+.hcap{font-size:13px;line-height:1.45;color:#efc0c0;margin:0;max-width:92ch}
+.hfoot{display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px 22px;margin-top:8px}
+.hctl{display:flex;gap:8px;flex:none}
+.hbtn{min-height:36px;padding:0 14px;border-radius:18px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;font-size:14px}
+.hbtn:hover{background:#fff;color:var(--card)}
+.hbtn svg{width:12px;height:12px}
+.hfoot .hcap{flex:1 1 380px}
+.hring{fill:none;stroke:#fff;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ring 1.5s ease-out 2;pointer-events:none}
+.hhalo{fill:none;stroke:#fff;stroke-width:2;pointer-events:none;animation:fade .3s both}
+@keyframes ring{from{transform:scale(1);opacity:.95}to{transform:scale(3.4);opacity:0}}
+/* shared playback speed */
+.speed{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--rule);border-radius:22px;padding:3px;background:var(--bg)}
+.speed>span{font-size:13px;color:var(--mute);padding:0 6px 0 10px}
+.speed button{min-height:36px;min-width:42px;padding:0 10px;border:0;border-radius:18px;font-size:14px;background:none;color:var(--ink);transition:background .2s,color .2s}
+.speed button:hover{background:var(--soft)}
+.speed button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+/* playable generations and works */
+#gsv .gd,#wsv .wd{transform-box:fill-box;transform-origin:center;transition:transform .45s cubic-bezier(.2,.8,.3,1.3),opacity .3s}
+#gsv .off,#wsv .off{transform:scale(0);opacity:0}
+#gsv text.off,#wsv text.off,#wsv line.off{transform:none;opacity:0;transition:opacity .4s}
+#gsv text.lab,#wsv text.lab,#wsv .wmed{transition:opacity .5s}
+#gsv .hit.off,#wsv .hit.off{pointer-events:none}
+svg text.pyear{font:600 44px "Source Serif 4",Georgia,serif;fill:var(--ink);opacity:.14;stroke:none;letter-spacing:-.03em}
+svg text.pyear.sub{font:600 14px "Source Sans 3",sans-serif;opacity:.55;letter-spacing:0}
+#decs.live .dec .bar{transition-delay:0s}
+.dec{transition:opacity .4s}
+.dec.off{opacity:.25}
+.dec.off .bar{transform:scaleX(0)}
+/* fields arrive one by one */
+.field{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--fk,0) * 90ms)}
+.js #fields:not(.seen) .field{opacity:0;transform:translateY(16px)}
+/* race: a new leader */
+.rlead em{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:10px;padding:2px 8px;margin-left:8px;vertical-align:3px;display:inline-block;animation:pulse 1s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(1.08)}}
 #hsv.intro text,#hsv.intro line{animation:fade .6s both;animation-delay:var(--d,0ms)}
 .lead{font-size:clamp(17px,1.5vw,20px);line-height:1.5;margin:18px 0 0;max-width:58ch;color:#fbeaea}
 .lead i{font-family:"Source Serif 4",Georgia,serif}
@@ -138,6 +171,7 @@ ul.flat b{font-variant-numeric:tabular-nums}
 .facts div{border-top:2px solid var(--ink);padding-top:8px}
 .facts b{display:block;font:600 30px/1 "Source Serif 4",Georgia,serif;font-variant-numeric:tabular-nums}
 .facts span{font-size:14px;color:var(--mute)}
+.facts b span,.pnums b span{font-size:inherit;color:inherit}
 .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:28px 36px}
 .field h3{display:flex;align-items:center;gap:8px}
 .field .sub{font-size:14px;color:var(--mute);margin:4px 0 8px}
@@ -187,8 +221,8 @@ svg.intro>text{animation:fade .7s 1.1s both}
 .rt{display:flex;align-items:center;gap:8px;height:100%}
 .rf{display:block;height:100%;border-radius:0 5px 5px 0;min-width:2px}
 .rv{font-weight:700;font-size:14px;font-variant-numeric:tabular-nums;color:var(--ink)}
-.rctl{display:flex;align-items:center;gap:16px;margin-top:16px}
-.rscrub{position:relative;flex:1;height:48px;cursor:pointer;touch-action:none;border-radius:6px}
+.rctl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:16px}
+.rscrub{position:relative;flex:1 1 260px;height:48px;cursor:pointer;touch-action:none;border-radius:6px}
 .rseg{position:absolute;left:0;right:0;top:19px;height:10px;display:flex;gap:2px;border-radius:5px;overflow:hidden}
 .rseg i{display:block;height:100%}
 .rlabs span,.rtk span{position:absolute;font-size:12px;color:var(--mute);white-space:nowrap}
@@ -270,7 +304,10 @@ details.ent a{color:var(--ink)}
     <h1>The philosophers the Stanford Encyclopedia keeps coming back to</h1>
     <p class="lead" id="lead"></p>
     <div class="fig" id="herofig"><svg id="hsv" role="img" aria-label="Every philosopher in this count, placed by year of birth"></svg><div class="tip" id="htip"></div></div>
-    <p class="hcap" id="hcap"></p>
+    <div class="hfoot">
+      <div class="hctl"><button type="button" class="hbtn pbtn" id="hreplay"></button><button type="button" class="hbtn pbtn" id="hspot" aria-pressed="true"></button></div>
+      <p class="hcap" id="hcap"></p>
+    </div>
     <dl class="stats" id="stats"></dl>
   </div>
   <nav class="wrap jump" aria-label="Sections"><a href="#map">Map</a><a href="#philosophers">Rankings</a><a href="#race">Race</a><a href="#before">Before 1900</a><a href="#generations">Generations</a><a href="#fields">Fields</a><a href="#works">Works</a><a href="#changes">Since 2024</a><a href="#method">Method</a></nav>
@@ -287,6 +324,7 @@ details.ent a{color:var(--ink)}
       <datalist id="names"></datalist>
       <div class="chips" id="mchips" role="group" aria-label="Highlight a field"></div>
       <button type="button" class="pbtn" id="mtour" aria-pressed="false"></button>
+      <div class="speed-slot"></div>
     </div>
     <div class="fig" id="mapfig"><svg id="msv" role="img" aria-label="Map of philosophers placed by shared citations"></svg><div class="tip" id="mtip"></div><div class="mcap" id="mcap" aria-hidden="true"></div></div>
     <p class="note">Positions come from comparing which entries cite each philosopher (a UMAP projection of their citation profiles), so nearness means “cited together”, and the axes have no meaning. Lines join a philosopher to the six people most often cited in the same entries. Region names mark where philosophers whose main field is that one cluster.</p>
@@ -327,6 +365,7 @@ details.ent a{color:var(--ink)}
         <div class="rscrub" id="rscrub" role="slider" tabindex="0" aria-label="Year" aria-valuemin="1900" aria-valuemax="2026" aria-valuenow="1900">
           <div class="rlabs" id="rlabs"></div><div class="rseg" id="rseg"></div><div class="rtk" id="rtk"></div><div class="rph" id="rph"></div>
         </div>
+        <div class="speed-slot"></div>
       </div>
     </div>
     <p class="note" id="rnote"></p>
@@ -340,6 +379,7 @@ details.ent a{color:var(--ink)}
     <div class="controls">
       <div class="chips" id="bmode" role="group" aria-label="Colour the dots by"><button type="button" class="chip" data-m="0" aria-pressed="true">Tradition</button><button type="button" class="chip" data-m="1" aria-pressed="false">Women</button></div>
       <button type="button" class="pbtn" id="bplay"></button>
+      <div class="speed-slot"></div>
       <div class="legend" id="blegend"></div>
     </div>
     <div class="fig" id="tlfig"><svg id="tsv" role="img" aria-label="Philosophers born before 1900, by birth year and number of SEP entries that name them"></svg><div class="tip" id="ttip"></div></div>
@@ -363,6 +403,7 @@ details.ent a{color:var(--ink)}
     <div class="shead"><h2 id="gtitle">Who the canon is</h2><p id="gsub"></p></div>
     <div class="gen">
       <div>
+        <div class="controls"><button type="button" class="pbtn" id="gplay"></button><div class="speed-slot"></div></div>
         <div class="legend" style="margin-bottom:8px"><span><i class="sw" style="background:var(--acc)"></i>Women</span><span><i class="sw" style="background:var(--men)"></i>Men</span><span><i class="sw" style="background:var(--nb)"></i>Non-binary</span><span><i class="sw" style="border:1.5px solid var(--men)"></i>Not recorded</span></div>
         <div class="fig" id="genfig"><svg id="gsv" role="img" aria-label="Philosophers by birth year and number of citing entries"></svg><div class="tip" id="gtip"></div></div>
         <p class="note">Each dot is a philosopher: birth year across, citing entries up (log scale). Click a dot for a profile.</p>
@@ -389,6 +430,7 @@ details.ent a{color:var(--ink)}
       <h2 id="wtitle">The most-cited works since 1900</h2>
       <p>A work scores one point for each entry whose bibliography cites it. Each dot is a work: the year it first appeared, and how many entries cite it. Click a row to see the citing entries, or an author for their profile.</p>
     </div>
+    <div class="controls"><button type="button" class="pbtn" id="wplay"></button><div class="speed-slot"></div></div>
     <div class="legend" style="margin-bottom:6px"><span><i class="sw" style="background:var(--acc)"></i>On the 2024 list</span><span><i class="sw" style="background:var(--f0)"></i>New to the list since 2024</span></div>
     <div class="fig" id="workfig"><svg id="wsv" role="img" aria-label="Scatter plot of the most-cited works by year and citing entries"></svg><div class="tip" id="wtip"></div></div>
     <p class="note">The dashed line marks the median year of first publication.</p>

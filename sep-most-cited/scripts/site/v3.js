@@ -32,6 +32,12 @@ const living = C.filter(p => p.b && !p.d).length;
 const med = a => { const s = [...a].sort((x, y) => x - y); return s[Math.floor(s.length / 2)]; };
 const ICON = {play: '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9.5-5.5z"/></svg>', pause: '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 1.5h3.2v11H2.5zM8.3 1.5h3.2v11H8.3z"/></svg>',
   replay: '<svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2a5 5 0 1 1-4.6 3H.6L3.4 1.6 6.2 5H4.1A3.4 3.4 0 1 0 7 3.6z"/></svg>'};
+let SPEED = 1; try { SPEED = +localStorage.getItem('sepSpeed') || 1; } catch (e) {}
+const SPEEDS = [[.25, '¼×', 'quarter'], [.5, '½×', 'half'], [1, '1×', 'normal'], [2, '2×', 'double']];
+document.querySelectorAll('.speed-slot').forEach(el => { el.outerHTML = `<div class="speed" role="group" aria-label="Playback speed"><span>Speed</span>${SPEEDS.map(([v, l, n]) => `<button type="button" data-s="${v}" aria-pressed="${v === SPEED}" aria-label="${n} speed">${l}</button>`).join('')}</div>`; });
+document.addEventListener('click', e => { const b = e.target.closest('.speed button'); if (!b) return; SPEED = +b.dataset.s;
+  try { localStorage.setItem('sepSpeed', String(SPEED)); } catch (err) {}
+  document.querySelectorAll('.speed button').forEach(x => x.setAttribute('aria-pressed', String(+x.dataset.s === SPEED))); });
 const tryLab = (boxes, x, y, r, s, W, H, attrs = 'class="lab"', cw = 7, minX = 2) => { const w = s.length * cw;
   for (const [tx, ty, an, bx] of [[x + r + 4, y + 4, 'start', x + r + 4], [x - r - 4, y + 4, 'end', x - r - 4 - w], [x, y - r - 5, 'middle', x - w / 2], [x, y + r + 14, 'middle', x - w / 2]]) {
     const b = {x: bx, y: ty - 12, w, h: 15}; if (b.x < minX || b.x + w > W - 2 || b.y < 0 || b.y + b.h > H) continue;
@@ -57,8 +63,8 @@ $('#lead').innerHTML = `Every one of its ${fmt(M.entries)} entries, read for the
 const STATS = [[M.entries, 'SEP entries read, from first to last'], [LC.length, 'philosophers born before 1900, named in 5+ entries'],
   [C.length, 'philosophers born since 1900, cited in 30+ entries'], [D.W.length, 'works since 1900, cited in 16+ entries']];
 $('#stats').innerHTML = STATS.map(([v, lab]) => `<div><dt><span class="cu" data-to="${v}" data-from="0">${fmt(v)}</span></dt><dd>${lab}</dd></div>`).join('');
-const countUp = el => { const to = +el.dataset.to, from = +el.dataset.from, isY = el.dataset.y === '1', f = v => isY ? String(v) : fmt(v);
-  if (RM) return; const t0 = performance.now(), dur = 1500;
+const countUp = (el, dur = 1500) => { const to = +el.dataset.to, from = +el.dataset.from, isY = el.dataset.y === '1', f = v => isY ? String(v) : fmt(v);
+  if (RM) return; const t0 = performance.now();
   const step = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = f(Math.round(from + (to - from) * e)); if (k < 1) requestAnimationFrame(step); };
   el.textContent = f(from); requestAnimationFrame(step); };
 document.querySelectorAll('#stats .cu').forEach(countUp);
@@ -150,7 +156,8 @@ const tourStep = () => {
   const nbs = p.nb.map(j => P[j]).filter(q => mpos[q.id]).slice(0, 4).map(q => esc(q.a));
   mcap.innerHTML = `<span class="k">Spotlight</span><b>${esc(p.a)}</b> is most often cited in the same entries as ${andList(nbs)}.`; mcap.classList.add('on');
 };
-setInterval(tourStep, 3800);
+const tourLoop = () => { tourStep(); setTimeout(tourLoop, 3800 / SPEED); };
+setTimeout(tourLoop, 3800);
 tourBtn();
 $('#mtour').addEventListener('click', () => { tour.on = !tour.on; tourBtn(); if (!tour.on) { mcap.classList.remove('on'); hideCon(); } else tourStep(); });
 mfig.addEventListener('pointerenter', () => { tour.user = true; mcap.classList.remove('on'); if (ms.soft) hideCon(); });
@@ -203,7 +210,7 @@ const rframe = dt => {
   const y = RY0 + Math.floor(t + 1e-6);
   ryear.textContent = y;
   let ld = LSEG[0]; for (const s of LSEG) if (s.y0 <= y) ld = s;
-  rlead.innerHTML = `Leader in ${y}: <b>${esc(ld.p.a)}</b>${ld.y0 < y ? ` <span>(since ${ld.y0})</span>` : ''}`;
+  rlead.innerHTML = `Leader in ${y}: <b>${esc(ld.p.a)}</b>${ld.y0 < y ? ` <span>(since ${ld.y0})</span>` : ''}${rs.play && ld !== LSEG[0] && y - ld.y0 <= 3 ? '<em>New leader</em>' : ''}`;
   let kk = null; for (const v of KL) if (v.y <= y) kk = v;
   if (kk !== rs.tick) { rs.tick = kk;
     rtick.innerHTML = kk ? `Most-cited work from ${kk.y}: <i>${esc(kk.t)}</i>, ${esc(kk.a)}, now cited in ${kk.n} entries` : '';
@@ -219,7 +226,7 @@ const settle = () => { rs.settleUntil = performance.now() + 900; if (rs.settling
     if (now < rs.settleUntil && !rs.play) requestAnimationFrame(f); else rs.settling = false; };
   requestAnimationFrame(f); };
 const rloop = now => { if (!rs.play) return; const dt = rs.last == null ? 1 / 60 : Math.min(.1, (now - rs.last) / 1000); rs.last = now;
-  rs.t = Math.min(NY, rs.t + dt * speed(rs.t)); rframe(dt);
+  rs.t = Math.min(NY, rs.t + dt * speed(rs.t) * SPEED); rframe(dt);
   if (rs.t >= NY) { rs.play = false; rbtn(); settle(); $('#rsr').textContent = `${RY0 + NY}: ${lastSeg.p.a} leads.`; return; }
   requestAnimationFrame(rloop); };
 const rplay = () => { if (rs.t >= NY) { rs.t = 0; rframe(null); } rs.play = true; rs.last = null; rbtn(); requestAnimationFrame(rloop); };
@@ -293,7 +300,7 @@ new ResizeObserver(tDraw).observe(tsv);
 const TDUR = 9000;
 const tbtn = () => { const b = $('#bplay'); b.innerHTML = ts.play ? ICON.pause + '<span>Pause</span>' : ts.s >= 1 ? ICON.replay + '<span>Replay the timeline</span>' : ICON.play + '<span>Play</span>'; };
 const tloop = now => { if (!ts.play) return; const dt = ts.last == null ? 16 : Math.min(100, now - ts.last); ts.last = now;
-  ts.s = Math.min(1, ts.s + dt / TDUR); tApply(); if (ts.s >= 1) { ts.play = false; tbtn(); return; } requestAnimationFrame(tloop); };
+  ts.s = Math.min(1, ts.s + dt / TDUR * SPEED); tApply(); if (ts.s >= 1) { ts.play = false; tbtn(); return; } requestAnimationFrame(tloop); };
 const tplay = () => { if (ts.s >= 1) { ts.s = 0; tApply(); } ts.play = true; ts.last = null; tbtn(); requestAnimationFrame(tloop); };
 $('#bplay').addEventListener('click', () => { if (ts.play) { ts.play = false; tbtn(); } else tplay(); });
 tbtn();
@@ -315,7 +322,7 @@ const lw = LC.filter(h => h.g === 'f'), lnon = LC.filter(h => h.tr), pct = Math.
 $('#btitle').textContent = `Before 1900: ${LC[0].a} is named in ${pct}% of all SEP entries`;
 $('#bsub').textContent = `${LC.length} philosophers born before 1900 have their own entry and are named in at least five others. ${LC[0].a}, ${LC[1].a} and ${LC[2].a} lead; ${lw.length} are women, and ${lnon.length} come from Arabic, Islamic and Jewish, Indian and Buddhist, Chinese or Japanese traditions. The SEP cites historical figures by title rather than by author, so here they are counted by mention.`;
 const ancients = LC.filter(h => hb(h) < 500).length, c19 = LC.filter(h => hb(h) >= 1800).length;
-$('#bfacts').innerHTML = [[LC[0].m, `entries name ${LC[0].a}`], [c19, 'born in the 19th century'], [ancients, 'born before 500 CE'], [lw.length, 'women, led by ' + lw[0].a], [lnon.length, 'from outside the Western tradition']].map(([a, b]) => `<div><b>${a}</b><span>${esc(b)}</span></div>`).join('');
+$('#bfacts').innerHTML = [[LC[0].m, `entries name ${LC[0].a}`], [c19, 'born in the 19th century'], [ancients, 'born before 500 CE'], [lw.length, 'women, led by ' + lw[0].a], [lnon.length, 'from outside the Western tradition']].map(([a, b]) => `<div><b><span class="cu" data-to="${a}" data-from="0">${a}</span></b><span>${esc(b)}</span></div>`).join('');
 $('#bth').textContent = `The long canon: all ${LC.length}`;
 $('#bt').innerHTML += TRAD.map((t, k) => tcount(k) ? `<option value="${k}">${t}</option>` : '').join('');
 const bs = {all: false};
@@ -343,6 +350,7 @@ const fieldBlock = (p, verb) => `<div class="psec"><h3>Where they are ${verb}</h
 const sbar = (prev, next, pre) => `<div class="sbar"><div class="nav">${prev ? `<button type="button" data-go="${pre}${prev.id}" aria-label="Previous: ${esc(prev.a)}">← Prev</button>` : ''}${next ? `<button type="button" data-go="${pre}${next.id}" aria-label="Next: ${esc(next.a)}">Next →</button>` : ''}</div><button type="button" id="pclose" aria-label="Close profile">Close ✕</button></div>`;
 const showSheet = () => { const was = !sheet.hidden; if (!was) lastFocus = document.activeElement;
   sheet.hidden = false; scrim.hidden = false; document.body.style.overflow = 'hidden'; sheet.scrollTop = 0; $('#pclose').focus({preventScroll: true});
+  sin.querySelectorAll('.pnums b').forEach(b => { const v = +b.textContent; if (Number.isFinite(v) && v > 0 && /^\d+$/.test(b.textContent)) { b.innerHTML = `<span class="cu" data-to="${v}" data-from="0">${v}</span>`; countUp(b.firstChild, 700); } });
   if (was && !RM) sin.animate([{opacity: 0, transform: 'translateY(8px)'}, {opacity: 1, transform: 'none'}], {duration: 260, easing: 'ease-out'}); };
 const openProfile = id => {
   const p = byId[id]; if (!p) return;
@@ -405,32 +413,45 @@ const genDraw = () => {
   [30, 50, 100, 200, 300].forEach(v => g += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--rule)"/><text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`);
   for (let v = 1900; v <= 1980; v += narrow ? 20 : 10) g += `<text x="${X(v)}" y="${H - 8}" text-anchor="middle">${v}</text>`;
   const order = GP.slice().sort((a, b) => (a.g === 'f') - (b.g === 'f'));
-  g += order.map(p => `<circle style="--d:${((p.b - 1898) * 15).toFixed(0)}ms" cx="${X(p.b + .5).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="${p.g ? 4.6 : 4}" fill="${gcol(p)}" ${p.g ? 'stroke="var(--bg)" stroke-width="1.2"' : 'stroke="var(--men)" stroke-width="1.5"'}/>`).join('');
+  g += `<text class="pyear" id="gyr" x="${m.l + 10}" y="${m.t + 40}"></text>`;
+  g += order.map(p => `<circle class="gd${p.b > gs.y ? ' off' : ''}" data-b="${p.b}" cx="${X(p.b + .5).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="${p.g ? 4.6 : 4}" fill="${gcol(p)}" ${p.g ? 'stroke="var(--bg)" stroke-width="1.2"' : 'stroke="var(--men)" stroke-width="1.5"'}/>`).join('');
   const boxes = [];
   const lab = [...new Set([...GP.slice().sort((a, b) => b.n - a.n).slice(0, narrow ? 4 : 9), ...GP.filter(p => p.g === 'f').sort((a, b) => b.n - a.n).slice(0, narrow ? 3 : 8)])];
-  lab.forEach(p => { g += tryLab(boxes, X(p.b + .5), Y(p.n), 3, p.sur, W, H - m.b, `class="lab"${p.g === 'f' ? ' style="fill:var(--acc)"' : ''}`, 6.9); });
-  g += GP.map(p => `<circle class="hit" data-id="${p.id}" cx="${X(p.b + .5).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="8" fill="transparent"/>`).join('');
-  gsv.innerHTML = g;
+  boxes.push({x: m.l + 6, y: m.t, w: 130, h: 46});
+  lab.forEach(p => { g += tryLab(boxes, X(p.b + .5), Y(p.n), 3, p.sur, W, H - m.b, `class="lab${p.b > gs.y ? ' off' : ''}" data-b="${p.b}"${p.g === 'f' ? ' style="fill:var(--acc)"' : ''}`, 6.9); });
+  g += GP.map(p => `<circle class="hit${p.b > gs.y ? ' off' : ''}" data-b="${p.b}" data-id="${p.id}" cx="${X(p.b + .5).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="8" fill="transparent"/>`).join('');
+  gsv.innerHTML = g; gApply();
 };
+const G0 = 1896, G1 = Math.max(1982, ...GP.map(p => p.b + 1));
+const gs = {y: ('IntersectionObserver' in window && !RM) ? G0 : G1, play: false, last: null};
+const gApply = () => { const y = gs.y, mid = gs.play || (y > G0 && y < G1);
+  gsv.querySelectorAll('[data-b]').forEach(el => el.classList.toggle('off', +el.dataset.b > y));
+  document.querySelectorAll('#decs .dec').forEach(el => el.classList.toggle('off', +el.dataset.d > y));
+  const t = gsv.querySelector('#gyr'); if (t) t.textContent = mid ? Math.floor(y) : ''; };
+const gbtn = () => { $('#gplay').innerHTML = gs.play ? ICON.pause + '<span>Pause</span>' : gs.y >= G1 ? ICON.replay + '<span>Replay by birth year</span>' : ICON.play + '<span>Play</span>'; };
+const gloop = now => { if (!gs.play) return; const dt = gs.last == null ? 16 : Math.min(100, now - gs.last); gs.last = now;
+  gs.y = Math.min(G1, gs.y + dt / 1000 * 10 * SPEED); gApply(); if (gs.y >= G1) { gs.play = false; $('#decs').classList.remove('live'); gbtn(); gApply(); return; } requestAnimationFrame(gloop); };
+const gplay = () => { if (gs.y >= G1) { gs.y = G0; gApply(); } $('#decs').classList.add('live'); gs.play = true; gs.last = null; gbtn(); requestAnimationFrame(gloop); };
+$('#gplay').addEventListener('click', () => { if (gs.play) { gs.play = false; gbtn(); } else gplay(); });
 new ResizeObserver(genDraw).observe(gsv);
-$('#generations').addEventListener('seen', () => introOn(gsv, 2400));
+if ('IntersectionObserver' in window && !RM) { const gio = new IntersectionObserver(es => { if (es[0].isIntersecting) { gio.disconnect(); setTimeout(gplay, 250); } }, {threshold: .4}); gio.observe(gfig); }
 gsv.addEventListener('pointerover', e => { const id = e.target.dataset && e.target.dataset.id; if (id) placeTip(gtip, gfig, +e.target.getAttribute('cx'), +e.target.getAttribute('cy'), ptip(byId[id])); });
 gsv.addEventListener('pointerout', e => { if (e.target.dataset && e.target.dataset.id) gtip.style.opacity = 0; });
 gsv.addEventListener('click', e => { const id = e.target.dataset && e.target.dataset.id; if (id) location.hash = 'p-' + id; });
 const decs = {}; C.forEach(p => { if (!p.b) return; const d = Math.floor(p.b / 10) * 10; const o = decs[d] = decs[d] || {n: 0, w: 0}; o.n++; if (p.g === 'f') o.w++; });
 const dkeys = Object.keys(decs).map(Number).filter(d => decs[d].n >= 3).sort(), dmax = Math.max(...dkeys.map(d => decs[d].n));
-$('#decs').innerHTML = dkeys.map((d, k) => `<div class="dec" style="--k:${k}"><span>${d}s</span><span class="bar" style="width:${decs[d].n / dmax * 100}%"><i style="width:${decs[d].w / decs[d].n * 100}%"></i></span><span class="v">${decs[d].n} · ${decs[d].w} women (${Math.round(decs[d].w / decs[d].n * 100)}%)</span></div>`).join('');
+$('#decs').innerHTML = dkeys.map((d, k) => `<div class="dec" data-d="${d}" style="--k:${k}"><span>${d}s</span><span class="bar" style="width:${decs[d].n / dmax * 100}%"><i style="width:${decs[d].w / decs[d].n * 100}%"></i></span><span class="v">${decs[d].n} · ${decs[d].w} women (${Math.round(decs[d].w / decs[d].n * 100)}%)</span></div>`).join('');
 const wShare = Math.round(women.length / gknown * 100);
 const peak = dkeys.reduce((a, d) => decs[d].n > decs[a].n ? d : a, dkeys[0]);
 $('#gtitle').textContent = `The largest cohort was born in the ${peak}s, and ${top100w} of the top 100 are women`;
 $('#gsub').textContent = `Women are ${women.length} of the ${gknown} philosophers whose gender Wikidata records (${wShare}%), and only ${top100w} of the 100 most-cited. Their share is higher among those born after 1940 than before, but has not risen much since. Before 1900 it is ${lw.length} of ${LC.length}.`;
 $('#gfacts').innerHTML = [[med(C.slice(0, 100).filter(p => p.b).map(p => p.b)), 'median birth year, top 100'], [med(C.filter(p => p.b).map(p => p.b)), `median birth year, all ${C.length}`],
-  [living, 'still living, of ' + bknown + ' with known birth year'], [women.length, 'women on the list']].map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join('');
+  [living, 'still living, of ' + bknown + ' with known birth year'], [women.length, 'women on the list']].map(([a, b]) => `<div><b><span class="cu" data-to="${a}" data-from="${a > 1800 ? 1900 : 0}" data-y="${a > 1800 ? 1 : 0}">${a}</span></b><span>${b}</span></div>`).join('');
 
 /* ---------- fields ---------- */
 const fieldTotals = MAC.map((_, k) => E.filter(e => e[2] === k).length);
 $('#fieldgrid').innerHTML = MAC.map((m, k) => { const top = C.slice().sort((a, b) => b.mac[k] - a.mac[k]).slice(0, 6), mx = top[0].mac[k];
-  return `<div class="field"><h3><i class="sw" style="background:${FC[k]};width:12px;height:12px"></i>${m}</h3><p class="sub">${fieldTotals[k]} entries</p>${top.map((p, j) => `<div class="lrow" style="--k:${k * 2 + j}"><a href="#p-${p.id}">${esc(p.a)}</a><span class="bar"><i style="width:${p.mac[k] / mx * 100}%;background:${FC[k]}"></i></span><b>${p.mac[k]}</b></div>`).join('')}</div>`; }).join('');
+  return `<div class="field" style="--fk:${k}"><h3><i class="sw" style="background:${FC[k]};width:12px;height:12px"></i>${m}</h3><p class="sub">${fieldTotals[k]} entries</p>${top.map((p, j) => `<div class="lrow" style="--k:${k * 2 + j}"><a href="#p-${p.id}">${esc(p.a)}</a><span class="bar"><i style="width:${p.mac[k] / mx * 100}%;background:${FC[k]}"></i></span><b>${p.mac[k]}</b></div>`).join('')}</div>`; }).join('');
 
 /* ---------- works ---------- */
 const W = D.W.map((w, i) => ({...w, i, yr: +String(w.y).slice(0, 4)}));
@@ -446,20 +467,33 @@ const workDraw = () => {
   for (let v = 25; v <= 125; v += 25) g += `<line x1="${m.l}" x2="${Wd - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--rule)"/><text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`;
   for (let v = 1900; v <= 2020; v += narrow ? 40 : 20) g += `<text x="${X(v)}" y="${H - 8}" text-anchor="middle">${v}</text>`;
   const mt = `median ${wmed}`, mw = mt.length * 7, mR = X(wmed) + 8 + mw < Wd - m.r;
-  g += `<line x1="${X(wmed)}" x2="${X(wmed)}" y1="${m.t}" y2="${H - m.b}" stroke="var(--mute)" stroke-dasharray="3 4"/><text x="${mR ? X(wmed) + 6 : X(wmed) - 6}" y="${m.t + 10}" text-anchor="${mR ? 'start' : 'end'}">${mt}</text>`;
+  const wo = ws2.y < W1 ? ' off' : '';
+  g += `<line class="wmed${wo}" data-b="${W1}" x1="${X(wmed)}" x2="${X(wmed)}" y1="${m.t}" y2="${H - m.b}" stroke="var(--mute)" stroke-dasharray="3 4"/><text class="wmed${wo}" data-b="${W1}" x="${mR ? X(wmed) + 6 : X(wmed) - 6}" y="${m.t + 10}" text-anchor="${mR ? 'start' : 'end'}">${mt}</text>`;
+  g += `<text class="pyear" id="wyr" x="${m.l + 10}" y="${m.t + 40}"></text><text class="pyear sub" id="wyn" x="${m.l + 12}" y="${m.t + 60}"></text>`;
   const seen = {}, pts = W.map(w => { const k = w.yr + '|' + w.n, j = seen[k] = (seen[k] || 0) + 1; return {w, x: X(w.yr) + (j - 1) * 3.2, y: Y(w.n)}; });
-  g += pts.map(p => `<circle style="--d:${((p.w.yr - 1900) * 9).toFixed(0)}ms" cx="${p.x}" cy="${p.y}" r="4.5" fill="${p.w.o == null ? 'var(--f0)' : 'var(--acc)'}" stroke="var(--bg)" stroke-width="1.5"/>`).join('');
-  const boxes = [{x: mR ? X(wmed) + 2 : X(wmed) - 8 - mw, y: m.t - 4, w: mw + 6, h: 18}], K = narrow ? 4 : Wd < 760 ? 7 : 12, cw = 6.9;
+  g += pts.map(p => `<circle class="wd${p.w.yr > ws2.y ? ' off' : ''}" data-b="${p.w.yr}" cx="${p.x}" cy="${p.y}" r="4.5" fill="${p.w.o == null ? 'var(--f0)' : 'var(--acc)'}" stroke="var(--bg)" stroke-width="1.5"/>`).join('');
+  const boxes = [{x: mR ? X(wmed) + 2 : X(wmed) - 8 - mw, y: m.t - 4, w: mw + 6, h: 18}, {x: m.l + 6, y: m.t, w: 130, h: 66}], K = narrow ? 4 : Wd < 760 ? 7 : 12, cw = 6.9;
   [...pts].sort((a, b) => b.w.n - a.w.n).slice(0, K).forEach(p => { const s = short(p.w.t, narrow ? 20 : 30) + ' · ' + surOf(p.w), w = s.length * cw;
     for (const [tx, ty, an, bx] of [[p.x + 8, p.y + 4, 'start', p.x + 8], [p.x - 8, p.y + 4, 'end', p.x - 8 - w], [p.x + 7, p.y - 6, 'start', p.x + 7], [p.x - 7, p.y - 6, 'end', p.x - 7 - w], [p.x + 7, p.y + 15, 'start', p.x + 7], [p.x - 7, p.y + 15, 'end', p.x - 7 - w], [p.x, p.y - 10, 'middle', p.x - w / 2], [p.x, p.y + 18, 'middle', p.x - w / 2]]) {
       const b = {x: bx, y: ty - 12, w, h: 15}; if (b.x < m.l || b.x + w > Wd - m.r || b.y < 0 || b.y + b.h > H - m.b) continue;
       if (boxes.some(o => b.x < o.x + o.w && b.x + b.w > o.x && b.y < o.y + o.h && b.y + b.h > o.y)) continue;
-      boxes.push(b); g += `<text class="lab" x="${tx}" y="${ty}" text-anchor="${an}">${esc(s)}</text>`; break; } });
-  g += pts.map(p => `<circle class="hit" data-i="${p.w.i}" cx="${p.x}" cy="${p.y}" r="10" fill="transparent"/>`).join('');
-  wsv.innerHTML = g;
+      boxes.push(b); g += `<text class="lab${p.w.yr > ws2.y ? ' off' : ''}" data-b="${p.w.yr}" x="${tx}" y="${ty}" text-anchor="${an}">${esc(s)}</text>`; break; } });
+  g += pts.map(p => `<circle class="hit${p.w.yr > ws2.y ? ' off' : ''}" data-b="${p.w.yr}" data-i="${p.w.i}" cx="${p.x}" cy="${p.y}" r="10" fill="transparent"/>`).join('');
+  wsv.innerHTML = g; wApply();
 };
+const W0 = 1899, W1 = 2027;
+const ws2 = {y: ('IntersectionObserver' in window && !RM) ? W0 : W1, play: false, last: null};
+const wApply = () => { const y = ws2.y, mid = ws2.play || (y > W0 && y < W1);
+  wsv.querySelectorAll('[data-b]').forEach(el => el.classList.toggle('off', +el.dataset.b > y));
+  const t = wsv.querySelector('#wyr'), n = wsv.querySelector('#wyn');
+  if (t) t.textContent = mid ? Math.min(2026, Math.floor(y)) : ''; if (n) n.textContent = mid ? `${W.filter(w => w.yr <= y).length} works` : ''; };
+const wbtn = () => { $('#wplay').innerHTML = ws2.play ? ICON.pause + '<span>Pause</span>' : ws2.y >= W1 ? ICON.replay + '<span>Replay by year</span>' : ICON.play + '<span>Play</span>'; };
+const wloop = now => { if (!ws2.play) return; const dt = ws2.last == null ? 16 : Math.min(100, now - ws2.last); ws2.last = now;
+  ws2.y = Math.min(W1, ws2.y + dt / 1000 * 13 * SPEED); wApply(); if (ws2.y >= W1) { ws2.play = false; wbtn(); wApply(); return; } requestAnimationFrame(wloop); };
+const wplay = () => { if (ws2.y >= W1) { ws2.y = W0; wApply(); } ws2.play = true; ws2.last = null; wbtn(); requestAnimationFrame(wloop); };
+$('#wplay').addEventListener('click', () => { if (ws2.play) { ws2.play = false; wbtn(); } else wplay(); });
 new ResizeObserver(workDraw).observe(wsv);
-$('#works').addEventListener('seen', () => introOn(wsv, 2200));
+if ('IntersectionObserver' in window && !RM) { const wio = new IntersectionObserver(es => { if (es[0].isIntersecting) { wio.disconnect(); setTimeout(wplay, 250); } }, {threshold: .4}); wio.observe(wfig); }
 wsv.addEventListener('pointerover', e => { const i = e.target.dataset && e.target.dataset.i; if (i == null) return; const w = W[+i];
   placeTip(wtip, wfig, +e.target.getAttribute('cx'), +e.target.getAttribute('cy'), `<b>${esc(w.t)}</b><br>${esc(w.a)}, ${w.y}<br>Cited in <b>${w.n}</b> entries · rank ${w.r}<br>${w.o == null ? 'New to the list' : '2024: ' + w.o + ' entries'}`); });
 wsv.addEventListener('pointerout', e => { if (e.target.dataset && e.target.dataset.i != null) wtip.style.opacity = 0; });
@@ -587,8 +621,35 @@ hsv.addEventListener('pointerover', e => { const k = e.target.dataset && e.targe
 hsv.addEventListener('pointerout', e => { if (e.target.dataset && e.target.dataset.h) hTip.style.opacity = 0; });
 hsv.addEventListener('click', e => { const k = e.target.dataset && e.target.dataset.h; if (k) location.hash = k; });
 const nShown = HDOT.filter(d => !d.old).length;
+const hSpotList = (() => { const lab = new Set(hLabels.slice(0, 20)), pool = HDOT.filter(d => !lab.has(d)).sort((a, b) => b.n - a.n);
+  const picks = [...pool.filter(d => d.f).slice(0, 10), ...pool.filter(d => d.old && d.o.tr).slice(0, 8), ...HERA.flatMap((_, k) => pool.filter(d => hSeg(d.b) === k).slice(0, 4))];
+  const uniq = [...new Set(picks)].sort((a, b) => a.b - b.b), out = [];
+  for (let k = 0; k < uniq.length; k++) out.push(uniq[(k * 11) % uniq.length]);
+  return [...new Set(out)]; })();
+const hs = {on: !RM, user: false, vis: true, k: 0};
+const hspotBtn = () => { const b = $('#hspot'); b.innerHTML = hs.on ? ICON.pause + '<span>Pause spotlight</span>' : ICON.play + '<span>Spotlight</span>'; b.setAttribute('aria-pressed', String(hs.on)); };
+const hClear = () => { hsv.querySelectorAll('.hring,.hhalo').forEach(n => n.remove()); hTip.style.opacity = 0; };
+const hStep = () => {
+  if (!hs.on || hs.user || !hs.vis || !sheet.hidden || document.hidden || hsv.classList.contains('intro')) return;
+  const d = hSpotList[hs.k++ % hSpotList.length], c = hsv.querySelector(`.hit[data-h="${d.h}"]`); if (!c) return;
+  hClear(); const x = +c.getAttribute('cx'), y = +c.getAttribute('cy'), r = Math.max(4, +c.getAttribute('r') - 1);
+  const ns = 'http://www.w3.org/2000/svg';
+  [['hhalo', r + 3], ['hring', r + 2]].forEach(([cls, rr]) => { const e = document.createElementNS(ns, 'circle'); e.setAttribute('class', cls); e.setAttribute('cx', x); e.setAttribute('cy', y); e.setAttribute('r', rr); hsv.insertBefore(e, hsv.querySelector('.hit')); });
+  placeTip(hTip, hfig, x, y, `<span style="display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">${d.old ? 'Before 1900' : 'Since 1900'}</span>${d.old ? htip(d.o) : ptip(d.o)}`); };
+const hLoop = () => { hStep(); setTimeout(hLoop, 3600 / SPEED); };
+setTimeout(hLoop, RM ? 0 : 3600);
+hspotBtn();
+$('#hspot').addEventListener('click', () => { hs.on = !hs.on; hspotBtn(); if (!hs.on) hClear(); else hStep(); });
+$('#hreplay').innerHTML = ICON.replay + '<span>Replay</span>';
+$('#hreplay').addEventListener('click', () => { hClear(); hDrawn = false; hsv.classList.remove('intro'); void hsv.getBoundingClientRect(); hDraw(); if (RM) return; });
+hfig.addEventListener('pointerenter', () => { hs.user = true; hClear(); });
+hfig.addEventListener('pointerleave', () => { hs.user = false; hTip.style.opacity = 0; });
+if ('IntersectionObserver' in window) new IntersectionObserver(es => { hs.vis = es[0].isIntersecting; if (!hs.vis) hClear(); }, {threshold: .3}).observe(hfig);
 $('#hcap').textContent = `Each dot is a philosopher, placed by year of birth (${C.length - nShown} with no recorded birth year are not shown). Size shows how many entries name them, before 1900, or cite them, after; gold dots are women. Time is stretched where philosophers are many. Point at a dot for a name; click for a profile.`;
 
+if ('IntersectionObserver' in window && !RM) { const fio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { fio.unobserve(e.target); e.target.querySelectorAll('.cu').forEach(el => countUp(el, 1300)); } }), {threshold: .6});
+  document.querySelectorAll('.facts').forEach(f => fio.observe(f)); }
+gbtn(); wbtn();
 renderA(); renderB(); renderW(); route();
 if (sio) sections.forEach(s => sio.observe(s));
 }
