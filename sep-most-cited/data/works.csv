@@ -1,0 +1,280 @@
+rank,citing_entries,author,year,title,entries_2024,rank_2024
+1,135,"Rawls, John",1971,A Theory of Justice,127,1
+2,97,"Kripke, Saul A.",1972,Naming and Necessity,92,2
+3,82,"Parfit, Derek",1984,Reasons and Persons,79,3
+4,78,"Nozick, Robert",1974,"Anarchy, State, and Utopia",72,4
+5,74,"Lewis, David K.",1986,On the Plurality of Worlds,70,6
+5,74,"Wittgenstein, Ludwig",1953,Philosophical Investigations,71,5
+7,69,"Quine, W. V. O.",1960,Word and Object,69,7
+8,67,"Scanlon, T. M.",1998,What We Owe to Each Other,67,8
+9,61,"Rawls, John",1993,Political Liberalism,57,10
+10,58,"Kuhn, Thomas S.",1962,The Structure of Scientific Revolutions,58,9
+11,54,"Chalmers, David J.",1996,The Conscious Mind,54,11
+12,53,"Lewis, David K.",1973,Counterfactuals,48,13
+12,53,"Moore, G. E.",1903,Principia Ethica,47,16
+12,53,"Williamson, Timothy",2000,Knowledge and Its Limits,48,13
+15,49,"Quine, W. V. O.",1951,Two Dogmas of Empiricism,45,18
+15,49,"Russell, Bertrand",1903,The Principles of Mathematics,49,12
+17,46,"Putnam, Hilary",1975,The Meaning of ‘Meaning’,45,18
+18,45,"Kaplan, David",1977,Demonstratives,47,16
+19,44,"Jackson, Frank",1998,From Metaphysics to Ethics: A Defence of Conceptual Analysis,43,20
+20,43,"Ayer, A. J.",1936,"Language, Truth and Logic",41,21
+21,42,"Ross, W. D.",1930,The Right and the Good,39,22
+22,40,"Carnap, Rudolf",1947,Meaning and Necessity,39,22
+22,40,"van Fraassen, Bas C.",1980,The Scientific Image,39,22
+24,39,"Whitehead, Alfred North & Bertrand Russell",1910–13,Principia Mathematica,37,26
+25,38,"Raz, Joseph",1986,The Morality of Freedom,34,34
+25,38,"Russell, Bertrand",1912,The Problems of Philosophy,33,40
+27,37,"Evans, Gareth",1982,The Varieties of Reference,37,26
+27,37,"Korsgaard, Christine M.",1996,The Sources of Normativity,34,34
+27,37,"Nozick, Robert",1981,Philosophical Explanations,34,34
+27,37,"Popper, Karl R.",1959,The Logic of Scientific Discovery,35,32
+27,37,"Ryle, Gilbert",1949,The Concept of Mind,39,22
+32,36,"Fodor, Jerry A.",1987,Psychosemantics,34,34
+32,36,"Fricker, Miranda",2007,Epistemic Injustice: Power and the Ethics of Knowing,29,49
+32,36,"Lewis, David K.",1969,Convention: A Philosophical Study,34,34
+32,36,"Mackie, J. L.",1977,Ethics: Inventing Right and Wrong,37,26
+32,36,"McDowell, John",1994,Mind and World,33,40
+32,36,"Woodward, James",2003,Making Things Happen: A Theory of Causal Explanation,34,34
+38,34,"Gauthier, David P.",1986,Morals by Agreement,33,40
+38,34,"Williams, Bernard",1985,Ethics and the Limits of Philosophy,32,44
+40,33,"Goodman, Nelson",1954,"Fact, Fiction, and Forecast",36,31
+40,33,"Nagel, Thomas",1986,The View from Nowhere,33,40
+40,33,"Russell, Bertrand",1905,On Denoting,37,26
+40,33,"Wittgenstein, Ludwig",1921,Tractatus Logico-Philosophicus,35,32
+44,32,"Dummett, Michael",1973,Frege: Philosophy of Language,37,26
+44,32,"Parfit, Derek",2011,On What Matters,32,44
+44,32,"Strawson, P. F.",1959,Individuals: An Essay in Descriptive Metaphysics,31,46
+47,31,"Brandom, Robert B.",1994,"Making It Explicit: Reasoning, Representing, and Discursive Commitment",28,52
+47,31,"Fodor, Jerry A.",1975,The Language of Thought,25,78
+47,31,"Pearl, Judea",2000,"Causality: Models, Reasoning, and Inference",28,52
+50,30,"Davidson, Donald",1980,Essays on Actions and Events,31,46
+50,30,"Gibbard, Allan",1990,"Wise Choices, Apt Feelings",31,46
+52,29,"Armstrong, David M.",1997,A World of States of Affairs,27,61
+52,29,"Hart, H. L. A.",1961,The Concept of Law,25,78
+52,29,"Lewis, David K.",1983,New Work for a Theory of Universals,27,61
+52,29,"Longino, Helen E.",1990,Science as Social Knowledge: Values and Objectivity in Scientific Inquiry,29,49
+52,29,"Plantinga, Alvin",1974,The Nature of Necessity,28,52
+52,29,"Sellars, Wilfrid",1956,Empiricism and the Philosophy of Mind,28,52
+52,29,"Young, Iris Marion",1990,Justice and the Politics of Difference,27,61
+59,28,"Dretske, Fred I.",1981,Knowledge and the Flow of Information,27,61
+59,28,"Finnis, John",1980,Natural Law and Natural Rights,29,49
+59,28,"Grice, H. Paul",1989,Studies in the Way of Words,26,71
+59,28,"Kripke, Saul A.",1982,Wittgenstein on Rules and Private Language,26,71
+59,28,"Millikan, Ruth Garrett",1984,"Language, Thought, and Other Biological Categories: New Foundations for Realism",27,61
+59,28,"Nagel, Thomas",1974,What Is It Like to Be a Bat?,27,61
+59,28,"Nussbaum, Martha C.",2006,"Frontiers of Justice: Disability, Nationality, Species Membership",26,71
+59,28,"Quine, W. V. O.",1948,On What There Is,28,52
+59,28,"Searle, John R.",1983,Intentionality: An Essay in the Philosophy of Mind,26,71
+59,28,"Smith, Michael",1994,The Moral Problem,27,61
+69,27,"Anderson, Elizabeth S.",1999,What is the Point of Equality?,25,78
+69,27,"Butler, Judith",1990,Gender Trouble: Feminism and the Subversion of Identity,27,61
+69,27,"Dennett, Daniel C.",1991,Consciousness Explained,27,61
+69,27,"Dworkin, Ronald",1977,Taking Rights Seriously,25,78
+69,27,"Frankfurt, Harry G.",1971,Freedom of the Will and the Concept of a Person,26,71
+69,27,"Hare, R. M.",1952,The Language of Morals,27,61
+69,27,"Jeffrey, Richard C.",1965,The Logic of Decision,26,71
+69,27,"Quine, W. V. O.",1970,Philosophy of Logic,24,92
+69,27,"Williamson, Timothy",2007,The Philosophy of Philosophy,25,78
+69,27,"van Inwagen, Peter",1990,Material Beings,28,52
+79,26,"Burge, Tyler",1979,Individualism and the Mental,24,92
+79,26,"Carnap, Rudolf",1950,Logical Foundations of Probability,26,71
+79,26,"Nagel, Ernest",1961,The Structure of Science: Problems in the Logic of Scientific Explanation,25,78
+79,26,"Rawls, John",2001,Justice as Fairness: A Restatement,28,52
+79,26,"Strawson, P. F.",1962,Freedom and Resentment,21,119
+84,25,"Blackburn, Simon",1998,Ruling Passions,24,92
+84,25,"Dennett, Daniel C.",1987,The Intentional Stance,20,135
+84,25,"Hempel, Carl Gustav",1965,Aspects of Scientific Explanation,25,78
+84,25,"Lewis, David K.",1983,Philosophical Papers,24,92
+84,25,"MacIntyre, Alasdair",1981,After Virtue: A Study in Moral Theory,25,78
+84,25,"Machamer, Peter & Lindley Darden, Carl F. Craver",2000,Thinking about Mechanisms,22,112
+84,25,"Nussbaum, Martha C.",2000,Women and Human Development: The Capabilities Approach,21,119
+84,25,"Ramsey, Frank Plumpton",1926,Truth and Probability,25,78
+84,25,"Rawls, John",1999,The Law of Peoples,25,78
+84,25,"Russell, Bertrand",1918,The Philosophy of Logical Atomism,25,78
+84,25,"Searle, John R.",1969,Speech Acts,23,100
+84,25,"Stalnaker, Robert C.",1968,A Theory of Conditionals,23,100
+84,25,"Stalnaker, Robert C.",1984,Inquiry,25,78
+84,25,"Zalta, Edward N.",1983,Abstract Objects: An Introduction to Axiomatic Metaphysics,22,112
+98,24,"Alcoff, Linda Martín",2006,"Visible Identities: Race, Gender, and the Self",21,119
+98,24,"Anscombe, G. E. M.",1957,Intention,28,52
+98,24,"Armstrong, David M.",1968,A Materialist Theory of the Mind,25,78
+98,24,"Carnap, Rudolf",1950,"Empiricism, Semantics, and Ontology",23,100
+98,24,"Dworkin, Ronald",1986,Law’s Empire,21,119
+98,24,"Fine, Kit",1994,Essence and Modality,24,92
+98,24,"Jackson, Frank",1982,Epiphenomenal Qualia,28,52
+98,24,"Kneale, William & M. Kneale",1962,The Development of Logic,25,78
+98,24,"Putnam, Hilary",1981,"Reason, Truth and History",23,100
+98,24,"Turing, Alan M.",1936,"On Computable Numbers, with an Application to the Entscheidungsproblem",23,100
+98,24,"van Fraassen, Bas C.",1989,Laws and Symmetry,22,112
+109,23,"Cartwright, Nancy",1983,How the Laws of Physics Lie,23,100
+109,23,"Davidson, Donald",1963,"Actions, Reasons, and Causes",22,112
+109,23,"Davidson, Donald",1984,Inquiries into Truth and Interpretation,20,135
+109,23,"Dretske, Fred I.",1995,Naturalizing the Mind,22,112
+109,23,"Gettier, Edmund L.",1963,Is Justified True Belief Knowledge?,21,119
+109,23,"Gilligan, Carol",1982,In a Different Voice: Psychological Theory and Women’s Development,23,100
+109,23,"Hare, R. M.",1981,Moral Thinking,24,92
+109,23,"Kitcher, Philip",1993,"The Advancement of Science: Science without Legend, Objectivity without Illusions",23,100
+109,23,"Lewis, David K.",1991,Parts of Classes,18,169
+109,23,"Savage, Leonard J.",1954,The Foundations of Statistics,23,100
+109,23,"Shafer-Landau, Russ",2003,Moral Realism: A Defence,23,100
+109,23,"Sider, Theodore",2001,Four-Dimensionalism: An Ontology of Persistence and Time,19,151
+109,23,"Spirtes, Peter & Clark Glymour, Richard Scheines",1993,"Causation, Prediction, and Search",23,100
+109,23,"Street, Sharon",2006,A Darwinian Dilemma for Realist Theories of Value,22,112
+109,23,"Walton, Kendall L.",1990,Mimesis as Make-Believe: On the Foundations of the Representational Arts,18,169
+124,22,"Brink, David O.",1989,Moral Realism and the Foundations of Ethics,24,92
+124,22,"Darwall, Stephen L.",2006,"The Second-Person Standpoint: Morality, Respect, and Accountability",20,135
+124,22,"Dupré, John",1993,The Disorder of Things: Metaphysical Foundations of the Disunity of Science,24,92
+124,22,"Dworkin, Ronald",2000,Sovereign Virtue: The Theory and Practice of Equality,20,135
+124,22,"Field, Hartry",1989,"Realism, Mathematics and Modality",21,119
+124,22,"Kittay, Eva Feder",1999,"Love’s Labor: Essays on Women, Equality, and Dependency",18,169
+124,22,"Okin, Susan Moller",1989,"Justice, Gender, and the Family",21,119
+124,22,"Quine, W. V. O.",1953,From a Logical Point of View,20,135
+124,22,"Rosen, Gideon",2010,Metaphysical Dependence: Grounding and Reduction,20,135
+124,22,"Sober, Elliott & David Sloan Wilson",1998,Unto Others: The Evolution and Psychology of Unselfish Behavior,21,119
+134,21,"Annas, Julia",1993,The Morality of Happiness,17,192
+134,21,"Austin, John Langshaw",1962,How to Do Things with Words,20,135
+134,21,"Chisholm, Roderick M.",1957,Perceiving: A Philosophical Study,20,135
+134,21,"Dawkins, Richard",1976,The Selfish Gene,21,119
+134,21,"Feyerabend, Paul K.",1975,Against Method,20,135
+134,21,"Fodor, Jerry A.",1983,The Modularity of Mind,22,112
+134,21,"Griffin, James",1986,"Well-Being: Its Meaning, Measurement, and Moral Importance",23,100
+134,21,"Gödel, Kurt",1931,Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I,20,135
+134,21,"Salmon, Wesley C.",1984,Scientific Explanation and the Causal Structure of the World,18,169
+134,21,"Tye, Michael",1995,Ten Problems of Consciousness,21,119
+134,21,"Walzer, Michael",1983,Spheres of Justice: A Defense of Pluralism and Equality,21,119
+134,21,"Williamson, Timothy",2013,Modal Logic as Metaphysics,19,151
+146,20,"Anderson, Alan Ross & Nuel D. Belnap",1975,Entailment: The Logic of Relevance and Necessity,19,151
+146,20,"Barnes, Jonathan",1979,The Presocratic Philosophers,18,169
+146,20,"Benacerraf, Paul",1973,Mathematical Truth,17,192
+146,20,"Blackburn, Simon",1984,Spreading the Word,19,151
+146,20,"Brandt, Richard B.",1979,A Theory of the Good and the Right,21,119
+146,20,"Collins, Patricia Hill",1990,"Black Feminist Thought: Knowledge, Consciousness, and the Politics of Empowerment",,
+146,20,"Dancy, Jonathan",2004,Ethics Without Principles,20,135
+146,20,"Fischer, John Martin & Mark Ravizza",1982,Responsibility and Control: A Theory of Moral Responsibility,19,151
+146,20,"Fodor, Jerry A.",1974,Special Sciences (or: The Disunity of Science as a Working Hypothesis),21,119
+146,20,"Goldman, Alvin I.",1999,Knowledge in a Social World,,
+146,20,"Goodman, Nelson",1968,Languages of Art: An Approach to a Theory of Symbols,18,169
+146,20,"Longino, Helen E.",2001,The Fate of Knowledge,21,119
+146,20,"Pettit, Philip",1997,Republicanism: A Theory of Freedom and Government,,
+146,20,"Reichenbach, Hans",1938,Experience and Prediction: An Analysis of the Foundations and the Structure of Knowledge,20,135
+146,20,"Schaffer, Jonathan",2009,On What Grounds What,18,169
+146,20,"Thomasson, Amie L.",1999,Fiction and Metaphysics,19,151
+146,20,"Wiggins, David",1980,Sameness and Substance,21,119
+146,20,"Wright, Crispin",1983,Frege’s Conception of Numbers as Objects,20,135
+146,20,"Zalta, Edward N.",1988,Intensional Logic and the Metaphysics of Intentionality,20,135
+165,19,"Anscombe, Elizabeth",1958,Modern Moral Philosophy,17,192
+165,19,"Armstrong, David M.",2004,Truth and Truthmakers,,
+165,19,"Chisholm, Roderick M.",1976,Person and Object,19,151
+165,19,"Craver, Carl F.",2007,Explaining the Brain: Mechanisms and the Mosaic Unity of Neuroscience,19,151
+165,19,"Grice, H. Paul",1957,Meaning,17,192
+165,19,"Harman, Gilbert",1986,Change in View: Principles of Reasoning,18,169
+165,19,"Hilbert, David & Wilhelm Ackermann",1928,Grundzüge der theoretischen Logik,18,169
+165,19,"Hintikka, Jaakko",1962,Knowledge and Belief: An Introduction to the Logic of the Two Notions,19,151
+165,19,"Husserl, Edmund",1900–01,Logische Untersuchungen,20,135
+165,19,"Irwin, Terence H.",2008,The Development of Ethics,16,221
+165,19,"Keynes, John Maynard",1921,A Treatise on Probability,19,151
+165,19,"Lewis, David K.",1973,Causation,18,169
+165,19,"List, Christian & Philip Pettit",2011,"Group Agency: The Possibility, Design, and Status of Corporate Agents",17,192
+165,19,"Noë, Alva",2004,Action in Perception,18,169
+165,19,"Parsons, Terence",1980,Nonexistent Objects,19,151
+165,19,"Plantinga, Alvin",2000,Warranted Christian Belief,17,192
+165,19,"Pogge, Thomas W.",2002,World Poverty and Human Rights,19,151
+165,19,"Popper, Karl R.",1962,Conjectures and Refutations,16,221
+165,19,"Priest, Graham",1987,In Contradiction,19,151
+165,19,"Prior, Arthur N.",1967,"Past, Present, and Future",18,169
+165,19,"Raz, Joseph",1975,Practical Reason and Norms,16,221
+165,19,"Rorty, Richard",1979,Philosophy and the Mirror of Nature,20,135
+165,19,"Ross, W. D.",1939,Foundations of Ethics,17,192
+165,19,"Russell, Bertrand",1927,The Analysis of Matter,16,221
+165,19,"Salmon, Nathan",1986,Frege’s Puzzle,19,151
+165,19,"Tarski, Alfred",1956,"Logic, Semantics, Metamathematics",19,151
+191,18,"Benacerraf, Paul",1965,What Numbers Could Not Be,,
+191,18,"Blackburn, Simon",1993,Essays in Quasi-Realism,19,151
+191,18,"Cartwright, Nancy",1999,The Dappled World: A Study of the Boundaries of Science,21,119
+191,18,"Chisholm, Roderick M.",1966,Theory of Knowledge,18,169
+191,18,"Chomsky, Noam",1965,Aspects of the Theory of Syntax,,
+191,18,"Dummett, Michael",1991,The Logical Basis of Metaphysics,16,221
+191,18,"Field, Hartry",1980,Science Without Numbers,17,192
+191,18,"Fodor, Jerry A.",1990,A Theory of Content and Other Essays,18,169
+191,18,"Foot, Philippa",2001,Natural Goodness,,
+191,18,"Guthrie, William Keith Chambers",1962,A History of Greek Philosophy,17,192
+191,18,"Hooker, Brad",2000,"Ideal Code, Real World: A Rule-Consequentialist Theory of Morality",17,192
+191,18,"Joyce, James M.",1999,The Foundations of Causal Decision Theory,16,221
+191,18,"Kahneman, Daniel",2011,"Thinking, Fast and Slow",18,169
+191,18,"Kleene, Stephen Cole",1952,Introduction to Metamathematics,17,192
+191,18,"Lewis, David K.",1979,Attitudes De Dicto and De Se,19,151
+191,18,"MacKinnon, Catharine A.",1989,Toward a Feminist Theory of the State,17,192
+191,18,"Moore, G. E.",1912,Ethics,18,169
+191,18,"Russell, Bertrand",1914,Our Knowledge of the External World,17,192
+191,18,"Schaffer, Jonathan",2010,Monism: The Priority of the Whole,,
+191,18,"Searle, John R.",1992,The Rediscovery of the Mind,18,169
+191,18,"Sider, Theodore",2011,Writing the Book of the World,,
+191,18,"Stich, Stephen P.",1983,From Folk Psychology to Cognitive Science,18,169
+191,18,"Weisberg, Michael",2013,Simulation and Similarity: Using Models to Understand the World,,
+191,18,"Williams, Bernard",1981,Moral Luck,16,221
+191,18,"Wright, Crispin",1992,Truth and Objectivity,18,169
+191,18,"Zagzebski, Linda Trinkaus",1996,Virtues of the Mind: An Inquiry into the Nature of Virtue and the Ethical Foundations of Knowledge,,
+217,17,"Adams, Robert Merrihew",1994,"Leibniz: Determinist, Theist, Idealist",16,221
+217,17,"Armstrong, David M.",1989,Universals: An Opinionated Introduction,18,169
+217,17,"Axelrod, Robert",1981,The Evolution of Cooperation,16,221
+217,17,"Barnes, Elizabeth",2016,The Minority Body: A Theory of Disability,,
+217,17,"BonJour, Laurence",1985,The Structure of Empirical Knowledge,,
+217,17,"Brandom, Robert B.",2000,Articulating Reasons: An Introduction to Inferentialism,,
+217,17,"Broad, C. D.",1925,The Mind and Its Place in Nature,,
+217,17,"Carnap, Rudolf",1928,Der logische Aufbau der Welt,17,192
+217,17,"Clark, Andy & David Chalmers",1998,The Extended Mind,16,221
+217,17,"Dretske, Fred I.",1988,Explaining Behavior: Reasons in a World of Causes,17,192
+217,17,"Geach, Peter T.",1962,Reference and Generality,16,221
+217,17,"Gibbard, Allan",2003,Thinking How to Live,18,169
+217,17,"Goldman, Alvin I.",1979,What Is Justified Belief?,17,192
+217,17,"Grice, H. Paul",1975,Logic and Conversation,19,151
+217,17,"Gödel, Kurt",1944,Russell’s Mathematical Logic,16,221
+217,17,"Horgan, Terence & John Tienson",2002,The Intentionality of Phenomenology and the Phenomenology of Intentionality,16,221
+217,17,"Howson, Colin & Peter Urbach",1993,Scientific Reasoning: The Bayesian Approach,17,192
+217,17,"Hursthouse, Rosalind",1999,On Virtue Ethics,,
+217,17,"Kim, Jaegwon",1998,Mind in a Physical World,17,192
+217,17,"Korsgaard, Christine M.",2009,"Self-Constitution: Agency, Identity, and Integrity",,
+217,17,"Lycan, William G.",1996,Consciousness and Experience,,
+217,17,"Marr, David",1982,Vision,17,192
+217,17,"Merleau-Ponty, Maurice",1945,Phénoménologie de la perception,,
+217,17,"Peacocke, Christopher",1992,A Study of Concepts,17,192
+217,17,"Perry, John",1979,The Problem of the Essential Indexical,16,221
+217,17,"Schneewind, Jerome B.",1997,The Invention of Autonomy,17,192
+217,17,"Swinburne, Richard",1977,The Coherence of Theism,16,221
+217,17,"Swinburne, Richard",1979,The Existence of God,,
+217,17,"van Inwagen, Peter",1983,An Essay on Free Will,17,192
+217,17,"von Neumann, John & Oskar Morgenstern",1944,Theory of Games and Economic Behavior,17,192
+247,16,"Alston, William P.",1991,Perceiving God: The Epistemology of Religious Experience,,
+247,16,"Bechtel, William & Robert C. Richardson",1993,Discovering Complexity: Decomposition and Localization as Strategies in Scientific Research,,
+247,16,"Butler, Judith",1993,Bodies That Matter: On the Discursive Limits of “Sex”,16,221
+247,16,"Churchland, Paul M.",1981,Eliminative Materialism and the Propositional Attitudes,16,221
+247,16,"Crenshaw, Kimberlé",1991,"Mapping the Margins: Intersectionality, Identity Politics, and Violence against Women of Color",,
+247,16,"Davidson, Donald",1970,Mental Events,17,192
+247,16,"Earman, John",1986,A Primer on Determinism,,
+247,16,"Earman, John",1992,Bayes or Bust?,,
+247,16,"Enoch, David",2011,Taking Morality Seriously: A Defense of Robust Realism,,
+247,16,"Fagin, Ronald & Joseph Y. Halpern, Yoram Moses",1995,Reasoning About Knowledge,,
+247,16,"Fine, Kit",2001,The Question of Realism,16,221
+247,16,"Goldman, Alvin I.",1976,Discrimination and Perceptual Knowledge,,
+247,16,"Graham, Angus C.",1989,Disputers of the Tao: Philosophical Argument in Ancient China,17,192
+247,16,"Hare, R. M.",1963,Freedom and Reason,16,221
+247,16,"Harman, Gilbert",1990,The Intrinsic Quality of Experience,,
+247,16,"Heidegger, Martin",1927,Being and Time,,
+247,16,"Kagan, Shelly",1989,The Limits of Morality,17,192
+247,16,"Kane, Robert",1996,The Significance of Free Will,16,221
+247,16,"Lewis, David K.",1980,A Subjectivist’s Guide to Objective Chance,17,192
+247,16,"Lewis, David K.",1970,How to Define Theoretical Terms,,
+247,16,"Lipton, Peter",1991,Inference to the Best Explanation,16,221
+247,16,"McMahan, Jeff",2002,The Ethics of Killing: Problems at the Margins of Life,16,221
+247,16,"Mills, Charles W.",1997,The Racial Contract,,
+247,16,"Popper, Karl R.",1945,The Open Society and Its Enemies,,
+247,16,"Putnam, Hilary",1975,"Mind, Language and Reality",,
+247,16,"Sandel, Michael J.",1982,Liberalism and the Limits of Justice,16,221
+247,16,"Schaffner, Kenneth F.",1993,Discovery and Explanation in Biology and Medicine,,
+247,16,"Scheffler, Samuel",1982,The Rejection of Consequentialism,16,221
+247,16,"Sen, Amartya",1992,Inequality Reexamined,,
+247,16,"Stevenson, Charles Leslie",1944,Ethics and Language,16,221
+247,16,"Tye, Michael",2000,"Consciousness, Color, and Content",16,221
+247,16,"Whitehead, Alfred North",1929,Process and Reality: An Essay in Cosmology,,
+247,16,"Williams, George C.",1966,Adaptation and Natural Selection: A Critique of Some Current Evolutionary Thought,16,221

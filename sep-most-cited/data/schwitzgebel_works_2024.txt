@@ -1,0 +1,253 @@
+1. (127) Rawls, John, 1971, A Theory of Justice
+2. (92) Kripke, Saul, 1972, Naming and Necessity
+3. (79) Parfit, Derek, 1984, Reasons and Persons
+4. (72) Nozick, Robert, 1974, Anarchy, State, and Utopia
+5. (71) Wittgenstein, Ludwig, 1953 [2001], Philosophical Investigations
+6. (70) Lewis, David, 1986, On the Plurality of Worlds
+7. (69) Quine, W. V. O., 1960. Word and Object
+8. (67) Scanlon, T. M., 1998, What We Owe to Each Other
+9. (58) Kuhn, Thomas S., 1962, The Structure of Scientific Revolutions
+10. (57) Rawls, John, 1996, Political Liberalism
+11. (54) Chalmers, David J., 1996, The Conscious Mind
+12. (49) Russell, Betrand, 1903, The Principles of Mathematics
+13. (48) Lewis, David, 1973. Counterfactuals
+13. (48) Sidgwick, Henry, 1907, The Methods of Ethics
+13. (48) Williamson, Timothy, 2000, Knowledge and its Limits
+16. (47) Kaplan, David, 1977, Demonstratives
+16. (47) Moore, G.E., 1903, Principia Ethica
+18. (45) Putnam, Hilary, 1975, The Meaning of "Meaning"
+18. (45) Quine, W.V.O., 1951, Two Dogmas of Empiricism
+20. (43) Jackson, Frank, 1998, From Metaphysics to Ethics
+21. (41) Ayer, A.J., 1936, Language, Truth and Logic
+22. (39) Carnap, Rudolf, 1956, Meaning and necessity
+22. (39) Ross, W.D., 1931, The Right and the Good
+22. (39) Ryle, Gilbert, 1949. The Concept of Mind
+22. (39) van Fraassen, Bas C., 1980, The Scientific Image
+26. (37) Dummett, Michael, 1973, Frege: Philosophy of Language
+26. (37) Evans, Gareth, 1982, The Varieties of Reference
+26. (37) Mackie, J. L., 1977, Ethics: Inventing Right and Wrong
+26. (37) Russell, Bertrand, 1905, On Denoting
+26. (37) Whitehead, Alfred North and Bertrand Russell, 1910-1913, Principia Mathematica
+31. (36) Goodman, Nelson, 1954. Fact, Fiction and Forecast
+32. (35) Popper, Karl R., 1959, The Logic of Scientific Discovery
+32. (35) Wittgenstein, L., 1922, Tractatus Logico-Philosophicus
+34. (34) Fodor, Jerry A., 1987, Psychosemantics
+34. (34) Korsgaard, Christine M., 1996, Sources of Normativity
+34. (34) Lewis, David K., 1969, Convention: A Philosophical Study
+34. (34) Nozick, Robert, 1981, Philosophical Explanations
+34. (34) Raz, Joseph, 1986, The Morality of Freedom
+34. (34) Woodward, James, 2003, Making Things Happen
+40. (33) Gauthier, David, 1986, Morals by Agreement
+40. (33) McDowell, John, 1994, Mind and World
+40. (33) Nagel, Thomas, 1986, The View from Nowhere
+40. (33) Russell, Bertrand, 1912, The Problems of Philosophy
+44. (32) Parfit, Derek, 2017, On What Matters
+44. (32) Williams, Bernard, 1985, Ethics and the Limits of Philosophy
+46. (31) Davidson, Donald, 1980, Essays on Actions and Events
+46. (31) Gibbard, Allan, 1990, Wise Choices, Apt Feelings
+46. (31) Strawson, P.F., 1959. Individuals
+49. (29) Finnis, John. M, 1980, Natural Law and Natural Rights
+49. (29) Fricker, Miranda, 2007, Epistemic Injustice
+49. (29) Longino, Helen E., 1990, Science as Social Knowledge
+52. (28) Anscombe, G. E. M., 1957, Intention
+52. (28) Brandom, Robert B., 1994, Making It Explicit
+52. (28) Jackson, Frank, 1982, Epiphenomenal Qualia
+52. (28) Pearl, Judea, 2000, Causality: Models, Reasoning, and Inference
+52. (28) Plantinga, Alvin, 1974, The Nature of Necessity
+52. (28) Quine, W. V. O., 1948, On What There Is
+52. (28) Rawls, John, 2001, Justice as Fairness: A Restatement
+52. (28) Sellars, Wilfrid, 1956, Empiricism and the philosophy of mind
+52. (28) van Inwagen, Peter, 1990, Material Beings
+61. (27) Armstrong, David M., 1997, A World of States of Affairs
+61. (27) Butler, Judith, 1990, Gender Trouble
+61. (27) Dennett, Daniel C., 1991, Consciousness Explained
+61. (27) Dretske, Fred I., 1981, Knowledge and the Flow of Information
+61. (27) Hare, R.M., 1952, The Language of Morals
+61. (27) Lewis, David, 1983, New Work for a Theory of Universals
+61. (27) Millikan, Ruth Garrett, 1984, Language, Thought, and Other Biological Categories
+61. (27) Nagel, Thomas, 1974, What is It Like to Be a Bat?
+61. (27) Smith, Michael, 1994, The Moral Problem
+61. (27) Young, Iris Marion, 1990, Justice and the Politics of Difference
+71. (26) Carnap, Rudolf, 1950, Logical Foundations of Probability
+71. (26) Frankfurt, Harry, 1971, Freedom of the Will and the Concept of a Person
+71. (26) Grice, Herbert Paul, 1989, Studies in the Way of Words
+71. (26) Jeffrey, Richard C., 1965 [1983], The Logic of Decision
+71. (26) Kripke, Saul, 1982, Wittgenstein on Rules and Private Language
+71. (26) Nussbaum, Martha C., 2006, Frontiers of Justice
+71. (26) Searle, John R., 1983, Intentionality
+78. (25) Anderson, Elizabeth S., 1999, What Is the Point of Equality?
+78. (25) Armstrong, David M., 1968, A Materialist Theory of Mind
+78. (25) Dworkin, Ronald, 1977, Taking Rights Seriously
+78. (25) Fodor, Jerry A., 1975, The Language of Thought
+78. (25) Hart, H.L.A., 1961, The Concept of Law
+78. (25) Hempel, Carl G., 1965, Aspects of Scientific Explanation
+78. (25) Kneale, William and Martha Kneale, 1962. The Development of Logic
+78. (25) MacIntyre, Alasdair, 1984. After Virtue
+78. (25) Nagel, Ernest, 1961, The Structure of Science
+78. (25) Ramsey, Frank P., 1931, Truth and Probability
+78. (25) Rawls, John, 1999, The Law of Peoples
+78. (25) Russell, Bertrand, 1918/1919, The Philosophy of Logical Atomism
+78. (25) Stalnaker, Robert, 1984, Inquiry
+78. (25) Williamson, Timothy, 2007, The Philosophy of Philosophy
+92. (24) Blackburn, Simon, 1998, Ruling Passions
+92. (24) Brink, David O., 1989. Moral Realism and the Foundations of Ethics
+92. (24) Burge, Tyler, 1979, Individualism and the Mental
+92. (24) Dupré, John, 1993, The Disorder of Things
+92. (24) Fine, Kit, 1994, Essence and Modality
+92. (24) Hare, R.M., 1981, Moral Thinking
+92. (24) Lewis, D., 1986, Philosophical Papers
+92. (24) Quine, W. V. O., 1970, Philosophy of Logic
+100. (23) Carnap, Rudolf, 1950, Empiricism, Semantics, and Ontology
+100. (23) Cartwright, Nancy, 1983, How the laws of physics lie
+100. (23) Gilligan, Carol, 1982, In a Different Voice
+100. (23) Griffin, James, 1986, Well-Being: its Meaning, Measurement, and Moral Importance
+100. (23) Kitcher, Philip, 1993, The Advancement of Science
+100. (23) Putnam, Hilary, 1981, Reason, Truth and History
+100. (23) Savage, Leonard J., 1954, The Foundations of Statistics
+100. (23) Searle, John R., 1969, Speech Acts
+100. (23) Shafer-Landau, Russ, 2005, Moral Realism
+100. (23) Spirtes, Peter, Clark Glymour, and Richard Scheines, 1993, Causation, Prediction, and Search
+100. (23) Stalnaker, Robert C., 1968, A Theory of Conditionals
+100. (23) Turing, Alan M., 1936 [1965], On Computable Numbers, with an Application to the Entscheidungsproblem
+112. (22) Davidson, Donald, 1963. Actions, Reasons, Causes
+112. (22) Dretske, Fred, 1995, Naturalizing the Mind
+112. (22) Fodor, Jerry A., 1983, Modularity of Mind
+112. (22) Machamer, Peter, Lindley Darden, and Carl F. Craver, 2000, Thinking about Mechanisms
+112. (22) Street, Sharon, 2006, A Darwinian Dilemma for Realist Theories of Value
+112. (22) van Fraassen, Bas C., 1989, Laws and Symmetry
+112. (22) Zalta, Edward N., 1983, Abstract Objects
+119. (21) Alcoff, Linda Martin, 2006. Visible Identities
+119. (21) Brandt, Richard B., 1979, A Theory of the Good and the Right
+119. (21) Cartwright, Nancy, 1999, The Dappled World
+119. (21) Dawkins, Richard, 1976, The Selfish Gene
+119. (21) Dworkin, Ronald, 1986, Law's Empire,
+119. (21) Field, Hartry, 1989, Realism, Mathematics and Modality
+119. (21) Fodor, Jerry A., 1974, Special Sciences (or: The Disunity of Science as a Working Hypothesis)
+119. (21) Gettier, Edmund L., 1963, Is Justified True Belief Knowledge?
+119. (21) Longino, H. 2001, The Fate of Knowledge
+119. (21) Nussbaum, Martha C., 2000. Women and Human Development
+119. (21) Okin, Susan Moller, 1989, Justice, Gender, and the Family
+119. (21) Sober, Elliott and David Wilson, 1998, Unto Others
+119. (21) Strawson, Peter F., 1962, Freedom and Resentment
+119. (21) Tye, Michael, 1995, Ten Problems of Consciousness
+119. (21) Walzer, Michael, 1983, Spheres of Justice
+119. (21) Wiggins, David, 1980, Sameness and Substance
+135. (20) Austin, J.L., 1962, How to Do Things with Words
+135. (20) Chisholm, Roderick M., 1957, Perceiving
+135. (20) Dancy, Jonathan, 2004, Ethics Without Principles
+135. (20) Darwall, Stephen, 2006. The Second-Person Standpoint
+135. (20) Davidson, Donald, 1984, Inquiries into truth and interpretation
+135. (20) Dennett, Daniel C., 1987, The Intentional Stance
+135. (20) Dworkin, Ronald, 2000. Sovereign Virtue
+135. (20) Feyerabend, Paul K., 1975, Against Method
+135. (20) Gödel, Kurt, 1931, Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I
+135. (20) Husserl, Edmund, 1900-01, Logische Untersuchungen
+135. (20) Quine, Willard Van Orman, 1953, From A Logical Point of View
+135. (20) Reichenbach, Hans, 1938, Experience and Prediction
+135. (20) Rorty, Richard, 1979, Philosophy and the Mirror of Nature
+135. (20) Rosen, Gideon, 2010, Metaphysical Dependence
+135. (20) Wright, Crispin, 1983, Frege's Conception of Numbers as Objects
+135. (20) Zalta, Edward N., 1988, Intensional Logic and the Metaphysics of Intentionality
+151. (19) Anderson, Alan and Nuel Belnap, 1975, Entailment: The logic of relevance and necessity
+151. (19) Blackburn, Simon, 1984. Spreading the Word
+151. (19) Blackburn, Simon, 1993, Essays in Quasi-Realism
+151. (19) Chisholm, Roderick M., 1976, Person and Object
+151. (19) Craver, Carl F., 2007, Explaining the Brain
+151. (19) Fischer, John Martin and Ravizza, Mark, 1998. Responsibility and Control
+151. (19) Grice, H. P., 1975, Logic and Conversation
+151. (19) Hintikka, Jaakko, 1962, Knowledge and Belief
+151. (19) Keynes, John Maynard, 1921, A Treatise on Probability
+151. (19) Lewis, David, 1979, Attitudes De Dicto and De Se
+151. (19) Parsons, Terence, 1980, Nonexistent Objects
+151. (19) Pogge, Thomas, 2002 [2008], World Poverty and Human Rights
+151. (19) Priest, Graham, 1987, In Contradiction
+151. (19) Salmon, Nathan, 1986, Frege's Puzzle
+151. (19) Sider, Theodore, 2001, Four-Dimensionalism
+151. (19) Tarski, A., 1983, Logic, Semantics, Metamathematics
+151. (19) Thomasson, Amie L., 1999, Fiction and Metaphysics
+151. (19) Williamson, Timothy, 2013. Modal Logic as Metaphysics
+169. (18) Armstrong, D., 1989, Universals: An Opinionated Introduction
+169. (18) Barnes, Jonathan, 1982, The Presocratic Philosophers
+169. (18) Chisholm, Roderick M., 1966, Theory of Knowledge
+169. (18) Fodor, J., 1992, A Theory of Content and Other Essays
+169. (18) Gibbard, Allan, 2003, Thinking How to Live
+169. (18) Goodman, Nelson, 1968, Languages of Art
+169. (18) Hacking, Ian, 1983, Representing and Intervening
+169. (18) Harman, Gilbert, 1986, Change in View
+169. (18) Hilbert, David and Wilhelm Ackermann, 1928, Grundzüge der Theoretischen Logik
+169. (18) Kahneman, Daniel, 2011, Thinking, Fast and Slow
+169. (18) Kittay, Eva Feder, 1999, Love's Labor
+169. (18) Lewis, David K., 1991, Parts of Classes
+169. (18) Lewis, David, 1973, Causation
+169. (18) Moore, G. E., 1912. Ethics
+169. (18) Noë, Alva, 2004, Action in Perception
+169. (18) Prior, Arthur N., 1967, Past, Present and Future
+169. (18) Salmon, Wesley, 1984, Scientific Explanation and the Causal Structure of the World
+169. (18) Schaffer, Jonathan, 2009, On What Grounds What
+169. (18) Searle, John R., 1992, The Rediscovery of the Mind
+169. (18) Stich, Stephen P., 1983, From folk psychology to cognitive science
+169. (18) Taylor, Charles, 1989, Sources of the Self
+169. (18) Walton, Kendall, 1990, Mimesis as Make-Believe
+169. (18) Wright, Crispin, 1992, Truth and Objectivity
+192. (17) Annas, Julia, 1993, The Morality of Happiness
+192. (17) Anscombe, G.E.M., 1958, Modern Moral Philosophy
+192. (17) Benacerraf, Paul, 1973, Mathematical Truth
+192. (17) Carnap, Rudolf, 1928. Der logische Aufbau der Welt
+192. (17) Davidson, Donald, 1970, Mental Events
+192. (17) Dretske, Fred, 1988, Explaining behavior
+192. (17) Field, Hartry, 1980, Science Without Numbers
+192. (17) Goldman, Alvin, 1979, What is Justified Belief?
+192. (17) Graham, Angus C., 1989, Disputers of the Tao
+192. (17) Grice, H. P., 1957, Meaning
+192. (17) Guthrie, W.K.C., 1962-1981, A History of Greek Philosophy
+192. (17) Hooker, Brad, 2000, Ideal Code, Real World
+192. (17) Howson, Colin and Peter Urbach, 2006, Scientific Reasoning
+192. (17) Hull, David L., 1988, Science as a Process
+192. (17) Kagan, Shelly, 1989, The Limits of Morality
+192. (17) Kim, Jaegwon, 1998, Mind in a Physical World
+192. (17) Kleene, Stephen Cole, 1952, Introduction to Metamathematics
+192. (17) Lewis, David, 1980, A Subjectivist's Guide to Objective Chance
+192. (17) List, Christian and Philip Pettit, 2011, Group Agency
+192. (17) MacKinnon, Catherine, 1989, Towards a Feminist Theory of the State
+192. (17) Marr, David, 1982, Vision
+192. (17) Peacocke, Christopher, 1992, A Study of Concepts
+192. (17) Plantinga, Alvin, 2000, Warranted Christian Belief
+192. (17) Ross, W.D., 1939, Foundations of Ethics
+192. (17) Russell, B., 1914, Our Knowledge of the External World
+192. (17) Schneewind, J. B., 1998. The Invention of Autonomy
+192. (17) Tarski, Alfred, 1935, The Concept of Truth in Formalized Languages
+192. (17) van Inwagen, Peter, 1983. An Essay on Free Will
+192. (17) Von Neumann, John and Oskar Morgenstern, 1944, Theory of Games and Economic Behavior
+221. (16) Adams, Robert Merrihew, 1994, Leibniz
+221. (16) Armstrong, D. M., 1978, Universals and Scientific Realism
+221. (16) Axelrod, Robert and William D. Hamilton, 1981, The Evolution of Cooperation
+221. (16) Butler, Judith, 1993. Bodies That Matter
+221. (16) Churchland, Paul M., 1981, Eliminative materialism and the propositional attitudes
+221. (16) Clark, Andy and David J. Chalmers, 1998, The Extended Mind
+221. (16) Dummett, Michael, 1991, The Logical Basis of Metaphysics
+221. (16) Fine, Kit, 2001, The Question of Realism
+221. (16) Frankfurt, Harry, 1988. The Importance of What We Care About
+221. (16) Frege, Gottlob, 1918/1956, The Thought: A Logical Inquiry
+221. (16) Geach, Peter, 1962, Reference and Generality
+221. (16) Gödel, Kurt, 1944, Russell's Mathematical Logic
+221. (16) Hare, R. M., 1963. Freedom and Reason
+221. (16) Horgan, Terence and John Tienson, 2002, The Intentionality of Phenomenology and the Phenomenology of Intentionality
+221. (16) Irwin, Terence. H., 2008, The Development of Ethics
+221. (16) Joyce, James M., 1999, The Foundations of Causal Decision Theory
+221. (16) Kane, Robert, 1996, The Significance of Free Will
+221. (16) Lipton, Peter, 1971 [2003], Inference to the Best Explanation
+221. (16) Lloyd, Genevieve, 1984, The Man of Reason
+221. (16) McMahan, Jeff, 2002, The Ethics of Killing
+221. (16) Mellor, D.H., 1981, Real Time
+221. (16) Perry, John, 1979, The Problem of the Essential Indexical
+221. (16) Popper, Karl, 1962. Conjectures and refutations
+221. (16) Raz, J., 1990. Practical reason and norms
+221. (16) Russell, Bertrand, 1927, The Analysis of Matter
+221. (16) Sandel, Michael J., 1982. Liberalism and the Limits of Justice
+221. (16) Scheffler, Samuel, 1982, The Rejection of Consequentialism
+221. (16) Stalnaker, Robert, 1978, Assertion
+221. (16) Stevenson, Charles L., 1944, Ethics and Language
+221. (16) Swinburne, Richard, 1977, The Coherence of Theism
+221. (16) Tye, Michael, 2000, Consciousness, Color, and Content
+221. (16) Williams, Bernard, 1981, Moral Luck
+221. (16) Williams, George C., 1966, Adaptation and Natural Selection

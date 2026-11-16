@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEP Most-Cited 2026</title>
+<meta name="description" content="The most-cited works and philosophers in the Stanford Encyclopedia of Philosophy, recounted from all 1,872 entries in November 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a reference-desk graphic, precise and calm
+   IDEA the "index of works cited" at the back of a great encyclopedia, set as a newspaper data page
+   PICTURE every work cited in 16+ entries as a dot: year first published against entries citing it
+   COLOUR white ground, ink, Stanford cardinal header field and marks, one blue for "new since 2024"
+   TYPE Source Serif 4 for titles and figures, Source Sans 3 for text and tables
+   LAYOUT cardinal band (finding left, figures right) over a full-width chart; tables below; stacks under 600px */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#141112);--ink:light-dark(#1c1617,#efe8e8);--mute:light-dark(#675d5f,#a99fa1);--rule:light-dark(#e8e2e2,#2f2829);--soft:light-dark(#f7f3f3,#1e191a);--card:light-dark(#8c1515,#4b0f13);--a1:light-dark(#a3202a,#e0606a);--a2:light-dark(#2366b8,#4a8ad6);--link:light-dark(#8c1515,#f08a92)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+a{color:var(--link);text-underline-offset:2px}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(32px,4.6vw,50px)}
+h2{font-size:clamp(26px,3vw,34px)}
+h3{font-size:20px;letter-spacing:-.01em}
+.band{padding-block:clamp(28px,4vw,56px);padding-inline:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.hero{background:var(--card);color:#fff}
+.hero a{color:#fff}
+.hgrid{display:grid;gap:28px 56px;align-items:end}
+.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.45;margin:16px 0 0;max-width:62ch;color:#fbeaea}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;margin:0}
+.stats div{border-top:1px solid rgba(255,255,255,.35);padding-top:10px}
+.stats dt{font:600 clamp(28px,3.2vw,38px)/1 "Source Serif 4",Georgia,serif;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats dd{margin:6px 0 0;font-size:14px;color:#f6dcdc}
+nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+nav.jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid rgba(255,255,255,.45);border-radius:22px;text-decoration:none;font-weight:600}
+nav.jump a:hover,nav.jump a:focus-visible{background:#fff;color:var(--card);outline:none}
+.chead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;margin-bottom:10px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--mute)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;background:var(--a1);vertical-align:-1px}
+.legend .k2::before{background:var(--a2)}
+.fig{position:relative;height:clamp(330px,42vw,480px)}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+svg text{font:13px "Source Sans 3",system-ui,sans-serif;fill:var(--mute);paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
+svg .lab{fill:var(--ink);font-weight:600}
+svg .hit{cursor:pointer}
+.tip{position:absolute;pointer-events:none;background:var(--bg);color:var(--ink);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;font-size:14px;line-height:1.35;box-shadow:0 4px 14px rgba(0,0,0,.12);max-width:280px;opacity:0;transition:opacity .12s}
+.tip b{font-family:"Source Serif 4",Georgia,serif;font-weight:600}
+.note{font-size:14px;color:var(--mute);margin:8px 0 0}
+section{border-top:1px solid var(--rule)}
+.shead{display:grid;gap:6px 40px;margin-bottom:18px}
+.shead p{margin:0;color:var(--mute);max-width:66ch}
+.controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin:0 0 12px}
+input[type=search],select{font:inherit;font-size:16px;min-height:44px;padding:0 12px;border:1px solid color-mix(in srgb,var(--ink) 30%,transparent);border-radius:8px;background:var(--bg);color:var(--ink)}
+input[type=search]{width:min(100%,320px)}
+input:focus-visible,select:focus-visible,button:focus-visible,tr.row:focus-visible{outline:2px solid var(--a2);outline-offset:2px}
+label.chk{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer}
+label.chk input{width:18px;height:18px;accent-color:var(--a1)}
+button{font:600 15px "Source Sans 3",system-ui,sans-serif;min-height:44px;padding:0 16px;border-radius:8px;border:1px solid color-mix(in srgb,var(--ink) 30%,transparent);background:var(--bg);color:var(--ink);cursor:pointer}
+button:hover{background:var(--soft)}
+.count{font-size:14px;color:var(--mute);margin-left:auto}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th{font-size:13px;font-weight:600;color:var(--mute);text-align:left;padding:8px;border-bottom:1px solid var(--ink)}
+td{padding:10px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th.r,td.r{text-align:right;width:3.4em;font-variant-numeric:tabular-nums;color:var(--mute)}
+th.d,td.d{text-align:right;width:5.2em;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.nb{width:30%}
+.nbw{display:flex;align-items:center;gap:10px;padding-top:2px}
+.num{flex:0 0 3ch;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.bar{flex:1;height:9px}
+.bar i{display:block;height:100%;background:var(--a1);border-radius:0 4px 4px 0}
+tr.row{cursor:pointer}
+tr.row:hover td{background:var(--soft)}
+tr.row[aria-expanded=true] td{background:var(--soft);border-bottom-color:transparent}
+.t{font:600 17px/1.3 "Source Serif 4",Georgia,serif}
+.by{font-size:14px;color:var(--mute);margin-top:2px}
+.new{display:inline-block;font-size:13px;font-weight:700;color:#fff;background:var(--a2);border-radius:10px;padding:0 8px;line-height:20px}
+.old{display:inline-block;font-size:12px;font-weight:600;color:var(--mute);border:1px solid var(--rule);border-radius:10px;padding:0 7px;margin-left:6px;vertical-align:1px;white-space:nowrap}
+tr.det td{background:var(--soft);font-size:14px;color:var(--mute);padding:0 8px 14px 3.4em}
+tr.det a{color:var(--ink)}
+.more{margin-top:14px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:36px 56px}
+.gain{display:grid;grid-template-columns:minmax(0,1fr) 96px 3.2em 6.4em;gap:4px 12px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.gain .g{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.gain .f{text-align:right;color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:14px}
+.gain .bar{height:8px}
+.gain .bar i{background:var(--a2)}
+.gain em{font-style:normal;color:var(--mute);font-size:13px;display:block}
+ul.flat{list-style:none;padding:0;margin:8px 0 0;columns:3 300px;column-gap:40px;font-size:15px}
+ul.flat li{break-inside:avoid;padding:5px 0;border-bottom:1px solid var(--rule)}
+ul.flat b{font-variant-numeric:tabular-nums}
+.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:8px 48px}
+.method p{margin:0 0 14px}
+.method h3{margin:10px 0 8px}
+footer{background:var(--card);color:#f6dcdc;font-size:14px}
+footer a{color:#fff}
+@media(min-width:900px){.hgrid{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}.shead{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}}
+@media(max-width:600px){table{font-size:13px}td{padding:9px 4px}th{padding:6px 4px}td.nb{width:auto}.bar{display:none}.t{font-size:15px}.gain{grid-template-columns:minmax(0,1fr) 3em 5.8em}.gain .bar{display:none}tr.det td{padding-left:6px}.count{margin-left:0;width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tip{transition:none}}
+</style>
+</head>
+<body>
+<header class="band hero">
+  <div class="wrap hgrid">
+    <div>
+      <h1>Rawls and David Lewis still top the Stanford Encyclopedia’s citations</h1>
+      <p class="lead" id="lead">John Rawls’s <i>A Theory of Justice</i> is cited in more entries of the Stanford Encyclopedia of Philosophy than any other work published since 1900, and David Lewis is the most-cited philosopher born since 1900. These counts update Eric Schwitzgebel and Jordan Jackson’s 2024 lists, rebuilt from every current entry.</p>
+    </div>
+    <dl class="stats" id="stats"></dl>
+  </div>
+  <nav class="wrap jump" aria-label="Sections"><a href="#works">Works</a><a href="#philosophers">Philosophers</a><a href="#changes">What changed since 2024</a><a href="#method">Method</a></nav>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <div class="chead">
+      <h3>Each dot is a work: the year it first appeared, and how many SEP entries cite it</h3>
+      <div class="legend"><span>On the 2024 list</span><span class="k2">New to the list since 2024</span></div>
+    </div>
+    <div class="fig" id="fig"><svg id="sv" role="img" aria-label="Scatter plot of the most-cited works by publication year and number of citing entries"></svg><div class="tip" id="tip"></div></div>
+    <p class="note" id="fignote">The dashed line marks the median year of first publication: half of these works are older. Hover or tap a dot for details; click to open it in the table below.</p>
+  </div>
+</div>
+
+<section class="band" id="works">
+  <div class="wrap">
+    <div class="shead">
+      <h2 id="wtitle">The most-cited works since 1900</h2>
+      <p>A work scores one point for each SEP entry whose bibliography cites it, however many times. Click a row to see the citing entries.</p>
+    </div>
+    <div class="controls">
+      <input type="search" id="wq" placeholder="Search titles or authors" aria-label="Search works">
+      <select id="wdec" aria-label="Decade first published"><option value="">All decades</option></select>
+      <label class="chk"><input type="checkbox" id="wnew"> Only new since 2024</label>
+      <button type="button" id="wcopy">Copy as CSV</button>
+      <span class="count" id="wcount" aria-live="polite"></span>
+    </div>
+    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th>Citing entries</th><th>Work</th><th class="d">vs 2024</th></tr></thead><tbody id="wbody"></tbody></table></div>
+    <button type="button" class="more" id="wmore">Show all works</button>
+  </div>
+</section>
+
+<section class="band" id="philosophers">
+  <div class="wrap">
+    <div class="shead">
+      <h2 id="atitle">The most-cited philosophers born since 1900</h2>
+      <p>An author scores one point for each entry that cites them as first, second or last author, or as an editor named before the date. Most-cited work is shown when it appears, as first author, in 8 or more entries.</p>
+    </div>
+    <div class="controls">
+      <input type="search" id="aq" placeholder="Search philosophers or works" aria-label="Search philosophers">
+      <label class="chk"><input type="checkbox" id="apre"> Include authors born before 1900</label>
+      <label class="chk"><input type="checkbox" id="anew"> Only new since 2024</label>
+      <button type="button" id="acopy">Copy as CSV</button>
+      <span class="count" id="acount" aria-live="polite"></span>
+    </div>
+    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th>Citing entries</th><th>Philosopher</th><th class="d">vs 2024</th></tr></thead><tbody id="abody"></tbody></table></div>
+    <button type="button" class="more" id="amore">Show all philosophers</button>
+  </div>
+</section>
+
+<section class="band" id="changes">
+  <div class="wrap">
+    <div class="shead">
+      <h2>What changed since the 2024 scrape</h2>
+      <p id="chnote"></p>
+    </div>
+    <div class="two">
+      <div><h3>Largest gains: philosophers</h3><div id="ga"></div></div>
+      <div><h3>Largest gains: works</h3><div id="gw"></div></div>
+    </div>
+    <div style="margin-top:40px"><h3 id="nwh">New to the works list</h3><ul class="flat" id="nw"></ul></div>
+    <div style="margin-top:36px"><h3 id="dwh">Dropped below 16 entries</h3><ul class="flat" id="dw"></ul></div>
+  </div>
+</section>
+
+<section class="band" id="method">
+  <div class="wrap">
+    <div class="shead"><h2>How the counts were made</h2><p>The rules follow Schwitzgebel’s published method as closely as possible, so the two snapshots can be compared.</p></div>
+    <div class="method">
+      <div>
+        <h3>Source</h3>
+        <p id="msrc"></p>
+        <h3>Works</h3>
+        <p>Citations are matched to the same work when the author matches and the titles begin with the same words, ignoring punctuation, capitals and a leading “a”, “an” or “the”. Later editions, reprints and near-identical spellings are merged; multi-volume works are merged; translations are not, so a work cited in both English and its original language is split. Citations in the role of editor are not counted. Co-authored works are listed under their first author.</p>
+        <p id="msidg"></p>
+      </div>
+      <div>
+        <h3>Philosophers</h3>
+        <p>Name variants (initials, middle names, nicknames, misspellings) are merged. People who share a surname and initial are separated by first name, middle initial and, where needed, by the titles they are cited for: for example Paul and Patricia Churchland, Charles Taylor and C. C. W. Taylor, J. S. Bell and J. L. Bell. The main list covers authors born in 1900 or later, as Schwitzgebel’s does. The toggle adds earlier authors, but ancient and medieval authors are left out because SEP usually cites their works by title alone, so a name-based count would mean little.</p>
+        <h3>Accuracy</h3>
+        <p>Spot checks against a raw-text search of every bibliography put most counts within one to three entries of the truth. Small changes since 2024 can come from differences between two independent scrapers, as well as real revisions, so treat a gain of a few entries as noise. Corrections are welcome.</p>
+        <p>Data and code: <a href="https://victorliwentao.github.io/sep-most-cited/data/works.csv">works.csv</a>, <a href="https://victorliwentao.github.io/sep-most-cited/data/philosophers.csv">philosophers.csv</a>, and the <a href="https://github.com/VictorLiwentao/VictorLiwentao.github.io/tree/main/sep-most-cited">scripts that produced them</a>.</p>
+        <p>Original analyses: <a href="https://schwitzsplinters.blogspot.com/2025/03/the-253-most-cited-works-in-stanford.html">The 253 most-cited works in the SEP</a> and <a href="https://schwitzsplinters.blogspot.com/2024/08/the-378-most-cited-contemporary-authors.html">The most-cited contemporary authors in the SEP</a>, by Eric Schwitzgebel. This page is not affiliated with the <a href="https://plato.stanford.edu/">Stanford Encyclopedia of Philosophy</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="band"><div class="wrap" id="foot">Counts compiled from plato.stanford.edu.</div></footer>
+
+<script type="application/json" id="data">__DATA__</script>
+<script>
+{
+const D = JSON.parse(document.getElementById('data').textContent);
+const E = D.E, M = D.meta;
+const W = D.W.map((w, i) => ({...w, i, yr: +String(w.y).slice(0, 4)}));
+const A = D.A.map((a, i) => ({...a, k: 'a' + i}));
+const P = D.P.map((a, i) => ({...a, k: 'p' + i}));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const fmt = n => n.toLocaleString('en-US');
+const fold = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const nice = d => new Date(d + 'T12:00:00').toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'});
+const delta = (n, o) => o == null ? '<span class="new">new</span>' : n > o ? '+' + (n - o) : n === o ? '0' : '−' + (o - n);
+const dTitle = (o, r) => o == null ? 'Not on the 2024 list' : '2024: ' + o + ' entries, rank ' + r;
+const links = e => e.map(k => `<a href="https://plato.stanford.edu/entries/${E[k][0]}/">${esc(E[k][1])}</a>`).join(', ');
+
+$('#stats').innerHTML = [[fmt(M.entries), 'SEP entries scraped on ' + nice(M.date)], [fmt(M.lines), 'bibliography lines parsed'],
+  [W.length, 'works since 1900 cited in 16 or more entries'], [A.length, 'philosophers born since 1900 cited in 30 or more entries']]
+  .map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join('');
+$('#wtitle').textContent = `The ${W.length} most-cited works since 1900`;
+$('#atitle').textContent = `The ${A.length} most-cited philosophers born since 1900`;
+$('#msrc').innerHTML = `All ${fmt(M.entries)} entries listed in the SEP table of contents were downloaded on ${nice(M.date)}, and the bibliography of each main entry was parsed (${fmt(M.lines)} lines). Supplementary documents are not included. A work or author counts once per entry, so a score of 40 means 40 different entries cite it.`;
+$('#msidg').textContent = `Only works first published in 1900 or later are ranked. That leaves out Sidgwick’s The Methods of Ethics (1874), which Schwitzgebel’s list included under its 1907 seventh edition; with ${M.sidgwick} entries it would tie for 10th.`;
+$('#foot').innerHTML = `Counts compiled ${nice(M.date)} from <a href="https://plato.stanford.edu/">plato.stanford.edu</a>, following the method of Eric Schwitzgebel and Jordan Jackson.`;
+
+/* ---------- chart ---------- */
+const sv = $('#sv'), tip = $('#tip'), fig = $('#fig');
+const med = [...W].map(w => w.yr).sort((a, b) => a - b)[Math.floor(W.length / 2)];
+const short = (t, n) => { t = t.split(/:\s/)[0]; return t.length > n ? t.slice(0, n - 1).trim() + '…' : t; };
+const draw = () => {
+  const Wd = sv.clientWidth, H = sv.clientHeight, narrow = Wd < 520;
+  const m = {l: 34, r: 12, t: 14, b: 28};
+  const x0 = 1900, x1 = 2026, y0 = 10, y1 = 140;
+  const X = v => m.l + (v - x0) / (x1 - x0) * (Wd - m.l - m.r);
+  const Y = v => H - m.b - (v - y0) / (y1 - y0) * (H - m.t - m.b);
+  let g = '';
+  for (let v = 25; v <= 125; v += 25) g += `<line x1="${m.l}" x2="${Wd - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--rule)"/><text x="${m.l - 6}" y="${Y(v) + 4}" text-anchor="end">${v}</text>`;
+  for (let v = 1900; v <= 2020; v += narrow ? 40 : 20) g += `<text x="${X(v)}" y="${H - 8}" text-anchor="middle">${v}</text>`;
+  g += `<line x1="${X(med)}" x2="${X(med)}" y1="${m.t}" y2="${H - m.b}" stroke="var(--mute)" stroke-dasharray="3 4"/>`;
+  const mt = `median ${med}`, mw = mt.length * 7;
+  const mRight = X(med) + 8 + mw < Wd - m.r;
+  g += `<text x="${mRight ? X(med) + 6 : X(med) - 6}" y="${m.t + 10}" text-anchor="${mRight ? 'start' : 'end'}">${mt}</text>`;
+  const seen = {};
+  const pts = W.map(w => { const key = w.yr + '|' + w.n; const j = seen[key] = (seen[key] || 0) + 1; return {w, x: X(w.yr) + (j - 1) * 3.2, y: Y(w.n)}; });
+  g += pts.map(p => `<circle cx="${p.x}" cy="${p.y}" r="4.5" fill="${p.w.o == null ? 'var(--a2)' : 'var(--a1)'}" stroke="var(--bg)" stroke-width="1.5"/>`).join('');
+  const boxes = [{x: mRight ? X(med) + 2 : X(med) - 8 - mw, y: m.t - 4, w: mw + 6, h: 18}];
+  const K = narrow ? 4 : Wd < 760 ? 7 : 12, cw = 6.9;
+  [...pts].sort((a, b) => b.w.n - a.w.n).slice(0, K).forEach(p => {
+    const s = short(p.w.t, narrow ? 20 : 30) + ' · ' + p.w.a.split(',')[0], w = s.length * cw;
+    const tries = [[p.x + 8, p.y + 4, 'start', p.x + 8], [p.x - 8, p.y + 4, 'end', p.x - 8 - w],
+      [p.x + 7, p.y - 6, 'start', p.x + 7], [p.x - 7, p.y - 6, 'end', p.x - 7 - w], [p.x + 7, p.y + 15, 'start', p.x + 7], [p.x - 7, p.y + 15, 'end', p.x - 7 - w],
+      [p.x, p.y - 10, 'middle', p.x - w / 2], [p.x, p.y + 18, 'middle', p.x - w / 2]];
+    for (const [tx, ty, an, bx] of tries) {
+      const b = {x: bx, y: ty - 12, w, h: 15};
+      if (b.x < m.l || b.x + w > Wd - m.r || b.y < 0 || b.y + b.h > H - m.b) continue;
+      if (boxes.some(o => b.x < o.x + o.w && b.x + b.w > o.x && b.y < o.y + o.h && b.y + b.h > o.y)) continue;
+      boxes.push(b); g += `<text class="lab" x="${tx}" y="${ty}" text-anchor="${an}">${esc(s)}</text>`; break;
+    }
+  });
+  g += pts.map(p => `<circle class="hit" data-i="${p.w.i}" cx="${p.x}" cy="${p.y}" r="10" fill="transparent"/>`).join('');
+  sv.innerHTML = g;
+};
+new ResizeObserver(draw).observe(sv);
+const showTip = (el) => {
+  const w = W[+el.dataset.i], fr = fig.getBoundingClientRect(), cx = +el.getAttribute('cx'), cy = +el.getAttribute('cy');
+  tip.innerHTML = `<b>${esc(w.t)}</b><br>${esc(w.a)}, ${w.y}<br>Cited in <b>${w.n}</b> entries · rank ${w.r}<br>${w.o == null ? 'New to the list' : '2024: ' + w.o + ' entries'}`;
+  tip.style.opacity = 1;
+  const tw = tip.offsetWidth, th = tip.offsetHeight;
+  tip.style.left = Math.max(0, Math.min(fr.width - tw, cx + 14)) + 'px';
+  tip.style.top = Math.max(0, cy - th - 10) + 'px';
+};
+sv.addEventListener('pointerover', e => { if (e.target.classList.contains('hit')) showTip(e.target); });
+sv.addEventListener('pointerout', e => { if (e.target.classList.contains('hit')) tip.style.opacity = 0; });
+sv.addEventListener('click', e => { if (!e.target.classList.contains('hit')) return; const i = +e.target.dataset.i;
+  $('#wq').value = ''; $('#wdec').value = ''; $('#wnew').checked = false; ws.all = true; ws.open.add(i); renderW();
+  const r = document.getElementById('w' + i); if (r) { r.scrollIntoView({block: 'center'}); r.focus({preventScroll: true}); } });
+
+/* ---------- works table ---------- */
+const decs = [...new Set(W.map(w => Math.floor(w.yr / 10) * 10))].sort();
+$('#wdec').innerHTML += decs.map(d => `<option value="${d}">${d}s</option>`).join('');
+const ws = {all: false, open: new Set()};
+const maxW = W[0].n;
+const renderW = () => {
+  const q = fold($('#wq').value.trim()), dec = $('#wdec').value, nw = $('#wnew').checked;
+  const list = W.filter(w => (!q || fold(w.t + ' ' + w.a).includes(q)) && (!dec || Math.floor(w.yr / 10) * 10 == dec) && (!nw || w.o == null));
+  const filtered = q || dec || nw, shown = filtered || ws.all ? list : list.slice(0, 50);
+  $('#wbody').innerHTML = shown.map(w => { const op = ws.open.has(w.i);
+    return `<tr class="row" id="w${w.i}" data-i="${w.i}" tabindex="0" aria-expanded="${op}"><td class="r">${w.r}</td><td class="nb"><div class="nbw"><span class="num">${w.n}</span><span class="bar"><i style="width:${w.n / maxW * 100}%"></i></span></div></td><td><div class="t">${esc(w.t)}</div><div class="by">${esc(w.a)}, ${w.y}</div></td><td class="d" title="${dTitle(w.o, w.or)}">${delta(w.n, w.o)}</td></tr>`
+      + (op ? `<tr class="det"><td colspan="4">Cited in ${w.n} entries: ${links(w.e)}</td></tr>` : ''); }).join('') || '<tr><td colspan="4">No works match.</td></tr>';
+  $('#wcount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : W.length}`;
+  $('#wmore').hidden = filtered || ws.all;
+};
+['#wq', '#wdec', '#wnew'].forEach(s => $(s).addEventListener('input', renderW));
+$('#wmore').addEventListener('click', () => { ws.all = true; renderW(); });
+
+/* ---------- philosophers table ---------- */
+const as = {all: false, open: new Set()};
+const renderA = () => {
+  const q = fold($('#aq').value.trim()), pre = $('#apre').checked, nw = $('#anew').checked;
+  const base = pre ? [...A, ...P].sort((a, b) => b.n - a.n || a.a.localeCompare(b.a)) : A;
+  const list = base.filter(a => (!q || fold(a.a + ' ' + (a.w || '')).includes(q)) && (!nw || (a.o == null && !a.p)));
+  const filtered = q || nw, shown = filtered || as.all ? list : list.slice(0, 50), mx = base[0].n;
+  $('#abody').innerHTML = shown.map(a => { const op = as.open.has(a.k);
+    return `<tr class="row" data-k="${a.k}" tabindex="0" aria-expanded="${op}"><td class="r">${pre ? a.ra : a.r}</td><td class="nb"><div class="nbw"><span class="num">${a.n}</span><span class="bar"><i style="width:${a.n / mx * 100}%"></i></span></div></td><td><div class="t">${esc(a.a)}${a.p ? '<span class="old">born before 1900</span>' : ''}</div><div class="by">${a.w ? 'Most-cited work: ' + esc(a.w) : '&nbsp;'}</div></td><td class="d" title="${a.p ? 'Not ranked in 2024' : dTitle(a.o, a.or)}">${a.p ? '–' : delta(a.n, a.o)}</td></tr>`
+      + (op ? `<tr class="det"><td colspan="4">Cited in ${a.n} entries: ${links(a.e)}</td></tr>` : ''); }).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
+  $('#acount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : base.length}`;
+  $('#amore').hidden = filtered || as.all;
+};
+['#aq', '#apre', '#anew'].forEach(s => $(s).addEventListener('input', renderA));
+$('#amore').addEventListener('click', () => { as.all = true; renderA(); });
+
+const toggle = (body, st, attr, render) => {
+  const go = e => { if (e.target.closest('a')) return; const tr = e.target.closest('tr.row'); if (!tr) return;
+    const v = attr === 'i' ? +tr.dataset.i : tr.dataset.k; st.open.has(v) ? st.open.delete(v) : st.open.add(v); render();
+    const again = body.querySelector(`tr.row[data-${attr}="${v}"]`); if (again) again.focus({preventScroll: true}); };
+  body.addEventListener('click', go);
+  body.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('tr.row')) { e.preventDefault(); go(e); } });
+};
+toggle($('#wbody'), ws, 'i', renderW);
+toggle($('#abody'), as, 'k', renderA);
+
+/* ---------- CSV ---------- */
+const csv = rows => rows.map(r => r.map(v => { v = v == null ? '' : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }).join(',')).join('\n');
+const copy = (btn, text) => { const t = btn.textContent;
+  (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => btn.textContent = 'Copied', () => btn.textContent = 'Copy failed')
+    .finally(() => setTimeout(() => btn.textContent = t, 1800)); };
+$('#wcopy').addEventListener('click', e => copy(e.currentTarget, csv([['rank', 'citing_entries', 'author', 'year', 'title', 'entries_2024'], ...W.map(w => [w.r, w.n, w.a, w.y, w.t, w.o])])));
+$('#acopy').addEventListener('click', e => copy(e.currentTarget, csv([['rank_born_1900_plus', 'rank_all_eras', 'citing_entries', 'name', 'born_before_1900', 'most_cited_work', 'entries_2024'],
+  ...[...A, ...P].sort((a, b) => a.ra - b.ra).map(a => [a.p ? '' : a.r, a.ra, a.n, a.a, a.p ? 'yes' : '', a.w, a.o])])));
+
+/* ---------- changes ---------- */
+const gainRows = (arr, label) => { const top = arr.filter(x => x.o != null && !x.p).sort((a, b) => (b.n - b.o) - (a.n - a.o) || b.n - a.n).slice(0, 12), mx = top[0].n - top[0].o;
+  return top.map(x => `<div class="gain"><div>${esc(label(x))}</div><span class="bar"><i style="width:${(x.n - x.o) / mx * 100}%"></i></span><span class="g">+${x.n - x.o}</span><span class="f">${x.o} → ${x.n}</span></div>`).join(''); };
+$('#ga').innerHTML = gainRows(A, a => a.a);
+$('#gw').innerHTML = gainRows(W, w => w.t + ' (' + w.a.split(',')[0] + ')');
+const nws = W.filter(w => w.o == null);
+$('#nwh').textContent = `New to the works list (${nws.length})`;
+$('#nw').innerHTML = nws.map(w => `<li><b>${w.n}</b> ${esc(w.t.split(/:\s/)[0])} <span class="by">${esc(w.a.split(',')[0])}, ${w.y}</span></li>`).join('');
+$('#dwh').textContent = `Dropped below 16 entries (${D.X.length})`;
+$('#dw').innerHTML = D.X.map(w => `<li><b>${w.o} → ${w.n}</b> ${esc(w.t.split(/:\s/)[0])} <span class="by">${esc(w.a.split(',')[0])}, ${w.y}</span></li>`).join('');
+const ratios = A.filter(a => a.o).map(a => a.n / a.o).sort((a, b) => a - b), mr = ratios[Math.floor(ratios.length / 2)];
+const newA = A.filter(a => a.o == null).length;
+$('#chnote').textContent = `The SEP grew from 1,778 main entries in summer 2024 to ${fmt(M.entries)} now (+${((M.entries / 1778 - 1) * 100).toFixed(1)}%), and the median philosopher on both lists gained ${((mr - 1) * 100).toFixed(0)}%. ${newA} philosophers and ${nws.length} works are new to the lists; some of the new names reflect how this count splits common surnames rather than real change.`;
+
+renderW(); renderA();
+}
+</script>
+</body>
+</html>
