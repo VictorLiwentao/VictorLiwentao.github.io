@@ -1,0 +1,365 @@
+rank,entries_mentioning,entries_linking,name,born,died,tradition,gender_wikidata,sep_entry,wikidata
+1,818,118,Aristotle,-384,-322,Western,male,https://plato.stanford.edu/entries/aristotle/,Q868
+2,601,114,Plato,-429,-349,Western,male,https://plato.stanford.edu/entries/plato/,Q859
+3,594,199,Immanuel Kant,1724,1804,Western,male,https://plato.stanford.edu/entries/kant/,Q9312
+4,451,107,David Hume,1711,1776,Western,male,https://plato.stanford.edu/entries/hume/,Q37160
+5,412,103,René Descartes,1596,1650,Western,male,https://plato.stanford.edu/entries/descartes/,Q9191
+6,347,71,Bertrand Russell,1872,1970,Western,male,https://plato.stanford.edu/entries/russell/,Q33760
+7,344,84,G. W. Leibniz,1646,1716,Western,male,https://plato.stanford.edu/entries/leibniz/,Q9047
+7,344,19,Socrates,-470,-399,Western,male,https://plato.stanford.edu/entries/socrates/,Q913
+9,303,95,Thomas Aquinas,1225,1274,Western,male,https://plato.stanford.edu/entries/aquinas/,Q9438
+10,300,83,John Locke,1632,1704,Western,male,https://plato.stanford.edu/entries/locke/,Q9353
+11,271,56,Ludwig Wittgenstein,1889,1951,Western,male,https://plato.stanford.edu/entries/wittgenstein/,Q9391
+12,262,83,Gottlob Frege,1848,1925,Western,male,https://plato.stanford.edu/entries/frege/,Q60028
+13,259,62,John Stuart Mill,1806,1873,Western,male,https://plato.stanford.edu/entries/mill/,Q50020
+14,242,82,G. W. F. Hegel,1770,1831,Western,male,https://plato.stanford.edu/entries/hegel/,Q9235
+15,222,52,Augustine,354,430,Western,male,https://plato.stanford.edu/entries/augustine/,Q8018
+16,220,61,Thomas Hobbes,1588,1679,Western,male,https://plato.stanford.edu/entries/hobbes/,Q37621
+17,216,33,Isaac Newton,1643,1727,Western,male,https://plato.stanford.edu/entries/newton/,Q935
+18,193,38,Rudolf Carnap,1891,1970,Western,male,https://plato.stanford.edu/entries/carnap/,Q76519
+19,192,54,Baruch Spinoza,1632,1677,Western,male,https://plato.stanford.edu/entries/spinoza/,Q35802
+20,163,15,Albert Einstein,1879,1955,Western,male,https://plato.stanford.edu/entries/einstein-philscience/,Q937
+21,162,38,G. E. Moore,1873,1958,Western,male,https://plato.stanford.edu/entries/moore/,Q295386
+22,160,44,Karl Marx,1818,1883,Western,male,https://plato.stanford.edu/entries/marx/,Q9061
+23,158,52,Edmund Husserl,1859,1938,Western,male,https://plato.stanford.edu/entries/husserl/,Q58586
+24,151,44,Martin Heidegger,1889,1976,Western,male,https://plato.stanford.edu/entries/heidegger/,Q48301
+25,146,39,Friedrich Nietzsche,1844,1900,Western,male,https://plato.stanford.edu/entries/nietzsche/,Q9358
+26,143,20,Cicero,-107,-43,Western,male,https://plato.stanford.edu/entries/cicero/,Q1541
+26,143,55,William of Ockham,1287,1349,Western,male,https://plato.stanford.edu/entries/ockham/,Q43936
+28,142,28,David Hilbert,1862,1943,Western,male,https://plato.stanford.edu/entries/hilbert-program/,Q41585
+29,137,26,George Berkeley,1685,1753,Western,male,https://plato.stanford.edu/entries/berkeley/,Q82049
+30,136,17,Jean-Jacques Rousseau,1712,1778,Western,male,https://plato.stanford.edu/entries/rousseau/,Q6527
+31,132,43,Avicenna,980,1037,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/ibn-sina/,Q8011
+32,129,19,Galileo Galilei,1564,1642,Western,male,https://plato.stanford.edu/entries/galileo/,Q307
+33,126,19,Alfred North Whitehead,1861,1947,Western,male,https://plato.stanford.edu/entries/whitehead/,Q183372
+34,125,37,William James,1842,1910,Western,male,https://plato.stanford.edu/entries/james/,Q125249
+35,123,45,John Duns Scotus,1266,1308,Western,male,https://plato.stanford.edu/entries/duns-scotus/,Q190089
+36,122,31,Averroes,1126,1198,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/ibn-rushd/,Q39837
+37,116,34,Charles Sanders Peirce,1839,1914,Western,male,https://plato.stanford.edu/entries/peirce/,Q187520
+38,102,27,Boethius,480,524,Western,male,https://plato.stanford.edu/entries/boethius/,Q102851
+38,102,50,Plotinus,205,270,Western,male,https://plato.stanford.edu/entries/plotinus/,Q134189
+40,101,17,Jeremy Bentham,1748,1832,Western,male,https://plato.stanford.edu/entries/bentham/,Q60887
+41,96,29,John Dewey,1859,1952,Western,male,https://plato.stanford.edu/entries/dewey/,Q131805
+42,95,22,Parmenides,-515,-470,Western,male,https://plato.stanford.edu/entries/parmenides/,Q125551
+43,92,23,Porphyry,233,301,Western,male,https://plato.stanford.edu/entries/porphyry/,Q203445
+44,86,19,Henry Sidgwick,1838,1900,Western,male,https://plato.stanford.edu/entries/sidgwick/,Q433076
+45,80,12,Adam Smith,1723,1790,Western,male,https://plato.stanford.edu/entries/smith-moral-political/,Q9381
+46,78,21,Anselm of Canterbury,1033,1109,Western,male,https://plato.stanford.edu/entries/anselm/,Q43939
+47,76,27,Franz Brentano,1838,1917,Western,male,https://plato.stanford.edu/entries/brentano/,Q57196
+47,76,23,Thomas Reid,1710,1796,Western,male,https://plato.stanford.edu/entries/reid/,Q316347
+49,75,7,W. D. Ross,1877,1971,Western,male,https://plato.stanford.edu/entries/william-david-ross/,Q1364954
+50,74,23,Epicurus,-342,-270,Western,male,https://plato.stanford.edu/entries/epicurus/,Q43216
+50,74,19,Francis Bacon,1561,1626,Western,male,https://plato.stanford.edu/entries/francis-bacon/,Q37388
+52,73,26,Arthur Schopenhauer,1788,1860,Western,male,https://plato.stanford.edu/entries/schopenhauer/,Q38193
+52,73,17,Hans Reichenbach,1891,1953,Western,male,https://plato.stanford.edu/entries/reichenbach/,Q170147
+54,71,21,Alexander of Aphrodisias,200,215,Western,male,https://plato.stanford.edu/entries/alexander-aphrodisias/,Q317146
+55,68,4,Johannes Kepler,1572,1630,Western,male,https://plato.stanford.edu/entries/kepler/,Q8963
+55,68,13,Max Weber,1864,1920,Western,male,https://plato.stanford.edu/entries/weber/,Q9387
+57,67,14,Albertus Magnus,1200,1280,Western,male,https://plato.stanford.edu/entries/albert-great/,Q60059
+57,67,3,C. D. Broad,1887,1971,Western,male,https://plato.stanford.edu/entries/broad/,Q1022453
+57,67,6,Plutarch,40,120,Western,male,https://plato.stanford.edu/entries/plutarch/,Q41523
+57,67,25,Proclus,412,485,Western,male,https://plato.stanford.edu/entries/proclus/,Q271809
+57,67,20,Søren Kierkegaard,1813,1855,Western,male,https://plato.stanford.edu/entries/kierkegaard/,Q6512
+62,66,31,Jean Buridan,1295,1358,Western,male,https://plato.stanford.edu/entries/buridan/,Q275500
+63,65,8,Henri Poincaré,1854,1912,Western,male,https://plato.stanford.edu/entries/poincare/,Q81082
+64,64,8,Henri Bergson,1859,1941,Western,male,https://plato.stanford.edu/entries/bergson/,Q42156
+64,64,30,Maimonides,1135,1204,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/maimonides/,Q127398
+66,63,19,The Buddha,-501,-501,Indian & Buddhist,male,https://plato.stanford.edu/entries/buddha/,Q9441
+67,62,13,Democritus,-461,-361,Western,male,https://plato.stanford.edu/entries/democritus/,Q41980
+67,62,20,Johann Gottlieb Fichte,1762,1814,Western,male,https://plato.stanford.edu/entries/johann-fichte/,Q102585
+67,62,21,Samuel Clarke,1675,1729,Western,male,https://plato.stanford.edu/entries/clarke/,Q381073
+70,61,6,Blaise Pascal,1623,1662,Western,male,https://plato.stanford.edu/entries/pascal/,Q1290
+70,61,6,Joseph Butler,1692,1752,Western,male,https://plato.stanford.edu/entries/butler-moral/,Q218322
+72,60,12,Ernst Cassirer,1874,1945,Western,male,https://plato.stanford.edu/entries/cassirer/,Q57188
+72,60,17,Pythagoras,-583,-491,Western,male,https://plato.stanford.edu/entries/pythagoras/,Q10261
+74,58,23,F. H. Bradley,1846,1924,Western,male,https://plato.stanford.edu/entries/bradley/,Q350236
+74,58,20,F. W. J. Schelling,1775,1854,Western,male,https://plato.stanford.edu/entries/schelling/,Q60070
+74,58,12,Heraclitus,-535,-471,Western,male,https://plato.stanford.edu/entries/heraclitus/,Q41155
+74,58,27,Nicolas Malebranche,1638,1715,Western,male,https://plato.stanford.edu/entries/malebranche/,Q309818
+78,57,10,Voltaire,1694,1778,Western,male,https://plato.stanford.edu/entries/voltaire/,Q9068
+79,55,17,Ernst Mach,1838,1916,Western,male,https://plato.stanford.edu/entries/ernst-mach/,Q93996
+79,55,9,Galen,129,216,Western,male,https://plato.stanford.edu/entries/galen/,Q8778
+79,55,15,Pierre Duhem,1861,1916,Western,male,https://plato.stanford.edu/entries/duhem/,Q314172
+82,54,22,Alexius Meinong,1853,1920,Western,male,https://plato.stanford.edu/entries/meinong/,Q78600
+83,53,4,Francis Hutcheson,1694,1746,Western,male,https://plato.stanford.edu/entries/hutcheson/,Q316367
+83,53,12,Simplicius,480,560,Western,male,https://plato.stanford.edu/entries/simplicius/,Q351518
+85,52,15,Bernard Bolzano,1781,1848,Western,male,https://plato.stanford.edu/entries/bolzano/,Q184735
+85,52,12,Francisco Suárez,1548,1617,Western,male,https://plato.stanford.edu/entries/suarez/,Q316339
+85,52,16,Robert Boyle,1627,1691,Western,male,https://plato.stanford.edu/entries/boyle/,Q43393
+88,51,26,Confucius,-551,-479,Chinese,male,https://plato.stanford.edu/entries/confucius/,Q4604
+88,51,10,Herbert Spencer,1820,1903,Western,male,https://plato.stanford.edu/entries/spencer/,Q144535
+88,51,3,Martin Luther,1483,1546,Western,male,https://plato.stanford.edu/entries/luther/,Q9554
+88,51,10,Richard Dedekind,1831,1916,Western,male,https://plato.stanford.edu/entries/dedekind-foundations/,Q76556
+92,50,13,Auguste Comte,1798,1857,Western,male,https://plato.stanford.edu/entries/comte/,Q12718
+92,50,18,John Philoponus,490,570,Western,male,https://plato.stanford.edu/entries/philoponus/,Q317632
+92,50,16,Wilhelm Dilthey,1833,1911,Western,male,https://plato.stanford.edu/entries/dilthey/,Q60080
+95,49,8,Nicolaus Copernicus,1473,1543,Western,male,https://plato.stanford.edu/entries/copernicus/,Q619
+95,49,5,Protagoras,-490,-420,Western,male,https://plato.stanford.edu/entries/protagoras/,Q169243
+95,49,32,al-Fārābī,870,951,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/al-farabi/,Q160460
+98,48,7,Seneca,-5,65,Western,male,https://plato.stanford.edu/entries/seneca/,Q2054
+99,46,10,Moritz Schlick,1882,1936,Western,male,https://plato.stanford.edu/entries/schlick/,Q57193
+100,45,12,Christian Wolff,1679,1754,Western,male,https://plato.stanford.edu/entries/wolff-christian/,Q76510
+100,45,7,Friedrich Schiller,1759,1805,Western,male,https://plato.stanford.edu/entries/schiller/,Q22670
+100,45,14,Shaftesbury,1671,1713,Western,male,https://plato.stanford.edu/entries/shaftesbury/,Q335112
+103,43,7,Friedrich Hayek,1899,1992,Western,male,https://plato.stanford.edu/entries/friedrich-hayek/,Q1325
+104,42,16,L. E. J. Brouwer,1881,1966,Western,male,https://plato.stanford.edu/entries/brouwer/,Q155887
+104,42,18,Pierre Gassendi,1592,1655,Western,male,https://plato.stanford.edu/entries/gassendi/,Q192315
+106,41,7,C. I. Lewis,1883,1964,Western,male,https://plato.stanford.edu/entries/lewis-ci/,Q725642
+106,41,7,Empedocles,-494,-434,Western,male,https://plato.stanford.edu/entries/empedocles/,Q83375
+106,41,24,Mencius,-372,-289,Chinese,male,https://plato.stanford.edu/entries/mencius/,Q188903
+106,41,12,Peter Abelard,1079,1142,Western,male,https://plato.stanford.edu/entries/abelard/,Q4295
+110,40,6,Hermann Weyl,1885,1955,Western,male,https://plato.stanford.edu/entries/weyl/,Q71029
+110,40,12,Hermann von Helmholtz,1821,1894,Western,male,https://plato.stanford.edu/entries/hermann-helmholtz/,Q60024
+110,40,1,Niels Bohr,1885,1962,Western,male,https://plato.stanford.edu/entries/bohr-correspondence/,Q7085
+110,40,16,Pseudo-Dionysius,500,600,Western,male,https://plato.stanford.edu/entries/pseudo-dionysius-areopagite/,Q312816
+110,40,22,Zhuangzi,-369,-288,Chinese,male,https://plato.stanford.edu/entries/zhuangzi/,Q47739
+115,39,5,Jan Łukasiewicz,1878,1956,Western,male,https://plato.stanford.edu/entries/lukasiewicz/,Q313454
+116,38,6,Anaxagoras,-500,-428,Western,male,https://plato.stanford.edu/entries/anaxagoras/,Q83041
+116,38,2,Carl Schmitt,1888,1985,Western,male,https://plato.stanford.edu/entries/schmitt/,Q77148
+116,38,12,Pierre Bayle,1647,1706,Western,male,https://plato.stanford.edu/entries/bayle/,Q214816
+116,38,5,Theophrastus,-371,-287,Western,male,https://plato.stanford.edu/entries/theophrastus/,Q160362
+116,38,17,Walter Burley,1275,1344,Western,male,https://plato.stanford.edu/entries/burley/,Q1862572
+121,37,12,Henry of Ghent,1217,1293,Western,male,https://plato.stanford.edu/entries/henry-ghent/,Q707637
+122,36,8,George Boole,1815,1864,Western,male,https://plato.stanford.edu/entries/boole/,Q134661
+122,36,13,Niccolò Machiavelli,1469,1527,Western,male,https://plato.stanford.edu/entries/machiavelli/,Q1399
+124,35,10,Antoine Arnauld,1612,1694,Western,male,https://plato.stanford.edu/entries/arnauld/,Q353887
+124,35,8,Edmund Burke,1729,1797,Western,male,https://plato.stanford.edu/entries/burke/,Q165792
+124,35,8,Iamblichus,245,325,Western,male,https://plato.stanford.edu/entries/iamblichus/,Q310916
+124,35,13,Johann Gottfried Herder,1744,1803,Western,male,https://plato.stanford.edu/entries/herder/,Q155547
+124,35,10,Lucretius,-94,-55,Western,male,https://plato.stanford.edu/entries/lucretius/,Q47154
+124,35,8,Marin Mersenne,1588,1648,Western,male,https://plato.stanford.edu/entries/mersenne/,Q188663
+124,35,6,Montesquieu,1689,1755,Western,male,https://plato.stanford.edu/entries/montesquieu/,Q15975
+124,35,13,R. G. Collingwood,1889,1943,Western,male,https://plato.stanford.edu/entries/collingwood/,Q317075
+132,34,9,Wilhelm Wundt,1832,1920,Western,male,https://plato.stanford.edu/entries/wilhelm-wundt/,Q75814
+133,33,4,Denis Diderot,1713,1784,Western,male,https://plato.stanford.edu/entries/diderot/,Q448
+133,33,24,Nagarjuna,150,250,Indian & Buddhist,male,https://plato.stanford.edu/entries/nagarjuna/,Q171195
+133,33,13,Sextus Empiricus,200,300,Western,male,https://plato.stanford.edu/entries/sextus-empiricus/,Q236594
+136,32,12,Friedrich Heinrich Jacobi,1743,1819,Western,male,https://plato.stanford.edu/entries/friedrich-jacobi/,Q168004
+136,32,11,Friedrich Schleiermacher,1768,1834,Western,male,https://plato.stanford.edu/entries/schleiermacher/,Q76576
+136,32,10,Hermann Lotze,1817,1881,Western,male,https://plato.stanford.edu/entries/hermann-lotze/,Q57684
+136,32,8,Hugo Grotius,1583,1645,Western,male,https://plato.stanford.edu/entries/grotius/,Q154959
+136,32,9,Michel de Montaigne,1533,1592,Western,male,https://plato.stanford.edu/entries/montaigne/,Q41568
+136,32,16,William Whewell,1794,1866,Western,male,https://plato.stanford.edu/entries/whewell/,Q333922
+142,31,5,Epictetus,50,138,Western,male,https://plato.stanford.edu/entries/epictetus/,Q183144
+142,31,9,J. M. E. McTaggart,1866,1925,Western,male,https://plato.stanford.edu/entries/mctaggart/,Q463553
+142,31,8,Max Scheler,1874,1928,Western,male,https://plato.stanford.edu/entries/scheler/,Q76521
+142,31,11,Peter of Spain,1300,1300,Western,male,https://plato.stanford.edu/entries/peter-spain/,Q320546
+146,30,8,Bonaventure,1221,1274,Western,male,https://plato.stanford.edu/entries/bonaventure/,Q43746
+146,30,3,Friedrich Engels,1820,1895,Western,male,https://plato.stanford.edu/entries/engels/,Q34787
+146,30,9,Giordano Bruno,1548,1600,Western,male,https://plato.stanford.edu/entries/bruno/,Q36330
+146,30,8,Otto Neurath,1882,1945,Western,male,https://plato.stanford.edu/entries/neurath/,Q78570
+150,29,9,Moses Mendelssohn,1729,1786,Western,male,https://plato.stanford.edu/entries/mendelssohn/,Q76997
+151,28,14,Giles of Rome,1243,1316,Western,male,https://plato.stanford.edu/entries/giles/,Q380647
+151,28,1,Leo Strauss,1899,1973,Western,male,https://plato.stanford.edu/entries/strauss-leo/,Q77144
+151,28,10,Mary Wollstonecraft,1759,1797,Western,female,https://plato.stanford.edu/entries/wollstonecraft/,Q101638
+151,28,6,Nicolas de Condorcet,1743,1794,Western,male,https://plato.stanford.edu/entries/histfem-condorcet/,Q201477
+151,28,4,Ralph Cudworth,1617,1688,Western,male,https://plato.stanford.edu/entries/cudworth/,Q528261
+151,28,17,Xunzi,-313,-231,Chinese,male,https://plato.stanford.edu/entries/xunzi/,Q216072
+157,27,8,Heinrich Rickert,1863,1936,Western,male,https://plato.stanford.edu/entries/heinrich-rickert/,Q77012
+157,27,17,Marsilio Ficino,1433,1499,Western,male,https://plato.stanford.edu/entries/ficino/,Q192374
+159,26,7,Henry More,1614,1687,Western,male,https://plato.stanford.edu/entries/henry-more/,Q528802
+159,26,7,Ludwig Feuerbach,1804,1872,Western,male,https://plato.stanford.edu/entries/ludwig-feuerbach/,Q76422
+159,26,12,T. H. Green,1836,1882,Western,male,https://plato.stanford.edu/entries/green/,Q369621
+159,26,9,W. E. B. Du Bois,1868,1963,Western,male,https://plato.stanford.edu/entries/dubois/,Q158060
+159,26,10,Zhu Xi,1130,1200,Chinese,male,https://plato.stanford.edu/entries/zhu-xi/,Q9397
+164,25,13,Ammonius,435,517,Western,male,https://plato.stanford.edu/entries/ammonius/,Q123147
+164,25,19,Dharmakirti,700,660,Indian & Buddhist,male,https://plato.stanford.edu/entries/dharmakiirti/,Q457990
+164,25,12,Roman Ingarden,1893,1970,Western,male,https://plato.stanford.edu/entries/ingarden/,Q355355
+164,25,9,Walter Benjamin,1892,1940,Western,male,https://plato.stanford.edu/entries/benjamin/,Q61078
+164,25,4,Wilhelm Windelband,1848,1915,Western,male,https://plato.stanford.edu/entries/wilhelm-windelband/,Q77045
+164,25,6,Xenophanes,-570,-478,Western,male,https://plato.stanford.edu/entries/xenophanes/,Q131671
+170,24,9,Erasmus,1466,1536,Western,male,https://plato.stanford.edu/entries/erasmus/,Q43499
+170,24,0,George Eliot,1819,1880,Western,female,https://plato.stanford.edu/entries/george-eliot/,Q131333
+170,24,15,Hermann Cohen,1842,1918,Western,male,https://plato.stanford.edu/entries/cohen/,Q76709
+170,24,8,Meister Eckhart,1260,1328,Western,male,https://plato.stanford.edu/entries/meister-eckhart/,Q76548
+170,24,7,Robert Grosseteste,1168,1253,Western,male,https://plato.stanford.edu/entries/grosseteste/,Q256541
+170,24,11,Roger Bacon,1220,1292,Western,male,https://plato.stanford.edu/entries/roger-bacon/,Q171677
+176,23,6,Bernard Bosanquet,1848,1923,Western,male,https://plato.stanford.edu/entries/bosanquet/,Q822329
+176,23,8,Charles Hartshorne,1897,2000,Western,male,https://plato.stanford.edu/entries/hartshorne/,Q1064777
+176,23,8,Georg Lukács,1885,1971,Western,male,https://plato.stanford.edu/entries/lukacs/,Q151523
+176,23,0,Giovanni Francesco Pico della Mirandola,1469,1533,Western,male,https://plato.stanford.edu/entries/gianfrancesco-pico/,Q1338411
+176,23,13,Giovanni Pico della Mirandola,1463,1494,Western,male,https://plato.stanford.edu/entries/pico-della-mirandola/,Q182128
+176,23,11,Josiah Royce,1855,1916,Western,male,https://plato.stanford.edu/entries/royce/,Q471260
+176,23,0,Thomas Jefferson,1743,1826,Western,male,https://plato.stanford.edu/entries/jefferson/,Q11812
+183,22,7,Max Horkheimer,1895,1973,Western,male,https://plato.stanford.edu/entries/horkheimer/,Q76826
+183,22,11,Nicholas of Cusa,1401,1464,Western,male,https://plato.stanford.edu/entries/cusanus/,Q154751
+185,21,6,Origen,184,254,Western,male,https://plato.stanford.edu/entries/origen/,Q170472
+185,21,6,Samuel von Pufendorf,1632,1694,Western,male,https://plato.stanford.edu/entries/pufendorf/,Q57186
+187,20,3,Edith Stein,1891,1942,Western,female,https://plato.stanford.edu/entries/stein/,Q76749
+187,20,5,Herbert Marcuse,1898,1979,Western,male,https://plato.stanford.edu/entries/marcuse/,Q60030
+187,20,5,Isaac ben Solomon al-Israeli,832,932,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/israeli/,Q536837
+187,20,15,Laozi,-580,-501,Chinese,male,https://plato.stanford.edu/entries/laozi/,Q9333
+187,20,15,Vasubandhu,300,399,Indian & Buddhist,male,https://plato.stanford.edu/entries/vasubandhu/,Q316343
+187,20,1,William Stanley Jevons,1835,1882,Western,male,https://plato.stanford.edu/entries/william-jevons/,Q312546
+193,19,5,Albertus de Saxonia,1316,1390,Western,male,https://plato.stanford.edu/entries/albert-saxony/,Q61044
+193,19,0,Bernard Mandeville,1670,1733,Western,male,https://plato.stanford.edu/entries/mandeville/,Q379912
+193,19,10,Friedrich Schlegel,1772,1829,Western,male,https://plato.stanford.edu/entries/schlegel/,Q157271
+193,19,3,Gustav Fechner,1801,1887,Western,male,https://plato.stanford.edu/entries/fechner/,Q76881
+193,19,2,Samuel Alexander,1859,1938,Western,male,https://plato.stanford.edu/entries/alexander/,Q379900
+193,19,4,Wilhelm von Humboldt,1767,1835,Western,male,https://plato.stanford.edu/entries/wilhelm-humboldt/,Q77888
+199,18,6,Adam de Wodeham,1295,1358,Western,male,https://plato.stanford.edu/entries/wodeham/,Q4680059
+199,18,10,Benedetto Croce,1866,1952,Western,male,https://plato.stanford.edu/entries/croce-aesthetics/,Q192348
+199,18,7,Frederick Douglass,1818,1895,Western,male,https://plato.stanford.edu/entries/frederick-douglass/,Q215562
+199,18,9,Martin Buber,1878,1965,Western,male,https://plato.stanford.edu/entries/buber/,Q84423
+199,18,4,Nicole Oresme,1320,1382,Western,male,https://plato.stanford.edu/entries/nicole-oresme/,Q310777
+199,18,9,Paul of Venice,1369,1429,Western,male,https://plato.stanford.edu/entries/paul-venice/,Q2064265
+199,18,8,Robert Kilwardby,1215,1279,Western,male,https://plato.stanford.edu/entries/robert-kilwardby/,Q1364372
+199,18,9,Émilie du Châtelet,1706,1749,Western,female,https://plato.stanford.edu/entries/emilie-du-chatelet/,Q7286
+207,17,10,Carl Stumpf,1848,1936,Western,male,https://plato.stanford.edu/entries/stumpf/,Q57497
+207,17,5,Diodorus Cronus,-401,-301,Western,male,https://plato.stanford.edu/entries/diodorus-cronus/,Q715478
+207,17,5,Elisabeth of the Palatinate,1618,1680,Western,female,https://plato.stanford.edu/entries/elisabeth-bohemia/,Q61389
+207,17,8,Fakhr al-Din al-Razi,1150,1210,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/al-din-al-razi/,Q333703
+207,17,2,Karl Jaspers,1883,1969,Western,male,https://plato.stanford.edu/entries/jaspers/,Q76509
+207,17,8,Paul Natorp,1854,1924,Western,male,https://plato.stanford.edu/entries/natorp/,Q76504
+207,17,8,Shihab al-Din Suhrawardi,1155,1191,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/suhrawardi/,Q282883
+207,17,4,William of Sherwood,1200,1272,Western,male,https://plato.stanford.edu/entries/william-sherwood/,Q325650
+215,16,10,Carneades,-213,-129,Western,male,https://plato.stanford.edu/entries/carneades/,Q284994
+215,16,9,Gregory of Rimini,1300,1358,Western,male,https://plato.stanford.edu/entries/gregory-rimini/,Q540799
+215,16,5,H. A. Prichard,1871,1947,Western,male,https://plato.stanford.edu/entries/prichard/,Q3498726
+215,16,4,Johann Friedrich Herbart,1776,1841,Western,male,https://plato.stanford.edu/entries/johann-herbart/,Q76685
+215,16,8,Pietro Pomponazzi,1462,1525,Western,male,https://plato.stanford.edu/entries/pomponazzi/,Q318787
+215,16,8,Ralph Waldo Emerson,1803,1882,Western,male,https://plato.stanford.edu/entries/emerson/,Q48226
+221,15,16,Al-Ghazali,1056,1111,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/al-ghazali/,Q9546
+221,15,6,Heinrich Cornelius Agrippa,1486,1535,Western,male,https://plato.stanford.edu/entries/agrippa-nettesheim/,Q76568
+221,15,5,Jonathan Edwards,1703,1758,Western,male,https://plato.stanford.edu/entries/edwards/,Q313073
+221,15,2,Marcus Aurelius,121,180,Western,male,https://plato.stanford.edu/entries/marcus-aurelius/,Q1430
+221,15,8,Mulla Sadra,1571,1641,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/mulla-sadra/,Q2010955
+221,15,7,Olympiodorus the Younger,495,570,Western,male,https://plato.stanford.edu/entries/olympiodorus/,Q974775
+221,15,8,Peter Olivi,1248,1298,Western,male,https://plato.stanford.edu/entries/olivi/,Q326307
+221,15,6,Petrus Aureolus,1280,1322,Western,male,https://plato.stanford.edu/entries/auriol/,Q1383191
+221,15,7,Étienne Bonnot de Condillac,1714,1780,Western,male,https://plato.stanford.edu/entries/condillac/,Q272119
+230,14,7,Arcesilaus,-315,-240,Western,male,https://plato.stanford.edu/entries/arcesilaus/,Q73527
+230,14,2,Boetius of Dacia,1240,1284,Western,male,https://plato.stanford.edu/entries/boethius-dacia/,Q428694
+230,14,7,Francesco Patrizi,1529,1597,Western,male,https://plato.stanford.edu/entries/patrizi/,Q435300
+230,14,4,George Santayana,1863,1952,Western,male,https://plato.stanford.edu/entries/santayana/,Q237833
+230,14,7,Jane Addams,1860,1935,Western,female,https://plato.stanford.edu/entries/addams-jane/,Q180989
+230,14,2,Philodemus,-110,-35,Western,male,https://plato.stanford.edu/entries/philodemus/,Q451550
+230,14,3,Richard Price,1723,1791,Western,male,https://plato.stanford.edu/entries/richard-price/,Q561101
+230,14,7,Robert Holkot,1290,1349,Western,male,https://plato.stanford.edu/entries/holkot/,Q7345564
+230,14,10,Solomon ibn Gabirol,1020,1070,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/ibn-gabirol/,Q239355
+230,14,7,Stanisław Leśniewski,1886,1939,Western,male,https://plato.stanford.edu/entries/lesniewski/,Q528493
+240,13,1,Abd al-Latif al-Baghdadi,1162,1231,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/al-baghdadi/,Q307277
+240,13,2,Ernst Bloch,1885,1977,Western,male,https://plato.stanford.edu/entries/bloch/,Q57240
+240,13,10,Ibn Bājja,1095,1139,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/ibn-bajja/,Q11362
+240,13,1,James Ward,1843,1925,Western,male,https://plato.stanford.edu/entries/james-ward/,Q6145127
+240,13,8,John Austin,1790,1859,Western,male,https://plato.stanford.edu/entries/austin-john/,Q60837
+240,13,4,Leucippus,-501,-501,Western,male,https://plato.stanford.edu/entries/leucippus/,Q165589
+240,13,7,Mary Astell,1666,1731,Western,female,https://plato.stanford.edu/entries/astell/,Q2359434
+240,13,7,Novalis,1772,1801,Western,male,https://plato.stanford.edu/entries/novalis/,Q60684
+240,13,3,Susan Stebbing,1885,1943,Western,female,https://plato.stanford.edu/entries/stebbing/,Q2106841
+240,13,9,Wang Yangming,1472,1529,Chinese,male,https://plato.stanford.edu/entries/wang-yangming/,Q378462
+240,13,2,Ādi Shankara,788,820,Indian & Buddhist,male,https://plato.stanford.edu/entries/shankara/,Q180967
+251,12,5,Alain LeRoy Locke,1885,1954,Western,male,https://plato.stanford.edu/entries/alain-locke/,Q2120917
+251,12,6,Anne Conway,1631,1679,Western,female,https://plato.stanford.edu/entries/conway/,Q260404
+251,12,5,Elias,600,600,Western,male,https://plato.stanford.edu/entries/elias/,Q974885
+251,12,6,Ernst Mally,1879,1944,Western,male,https://plato.stanford.edu/entries/mally/,Q90003
+251,12,6,Gersonides,1288,1344,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/gersonides/,Q353633
+251,12,5,Henry David Thoreau,1817,1862,Western,male,https://plato.stanford.edu/entries/thoreau/,Q131149
+251,12,7,Jacopo Zabarella,1533,1589,Western,male,https://plato.stanford.edu/entries/zabarella/,Q627941
+251,12,6,Johann Georg Hamann,1730,1788,Western,male,https://plato.stanford.edu/entries/hamann/,Q76499
+251,12,9,John Wycliffe,1320,1385,Western,male,https://plato.stanford.edu/entries/wyclif/,Q173893
+251,12,4,Numenius of Apamea,200,200,Western,male,https://plato.stanford.edu/entries/numenius/,Q707344
+251,12,7,Pyrrho,-361,-271,Western,male,https://plato.stanford.edu/entries/pyrrho/,Q192313
+251,12,5,Syrianus,500,437,Western,male,https://plato.stanford.edu/entries/syrianus/,Q1373037
+251,12,8,Walter Chatton,1285,1343,Western,male,https://plato.stanford.edu/entries/walter-chatton/,Q1373185
+251,12,23,Zeno of Elea,-490,-425,Western,male,https://plato.stanford.edu/entries/zeno-elea/,Q132157
+265,11,20,Al-Kindi,801,873,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/al-kindi/,Q179759
+265,11,6,Anna J. Cooper,1858,1964,Western,female,https://plato.stanford.edu/entries/anna-julia-cooper/,Q977118
+265,11,5,Archytas,-430,-345,Western,male,https://plato.stanford.edu/entries/archytas/,Q202001
+265,11,5,Baron d'Holbach,1723,1789,Western,male,https://plato.stanford.edu/entries/holbach/,Q7104
+265,11,5,Gabriel Marcel,1889,1973,Western,male,https://plato.stanford.edu/entries/marcel/,Q154145
+265,11,6,Giambattista Vico,1668,1744,Western,male,https://plato.stanford.edu/entries/vico/,Q178709
+265,11,5,Géraud de Cordemoy,1626,1684,Western,male,https://plato.stanford.edu/entries/cordemoy/,Q1370379
+265,11,1,Hans Vaihinger,1852,1933,Western,male,https://plato.stanford.edu/entries/vaihinger/,Q76518
+265,11,7,Hasdai Crescas,1340,1412,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/crescas/,Q528415
+265,11,6,Ibn Arabi,1165,1240,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/ibn-arabi/,Q46420
+265,11,5,Jacques Maritain,1882,1973,Western,male,https://plato.stanford.edu/entries/maritain/,Q45723
+265,11,4,John Scottus Eriugena,800,877,Western,male,https://plato.stanford.edu/entries/scottus-eriugena/,Q184500
+265,11,10,Judah Halevi,1075,1141,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/halevi/,Q299200
+265,11,4,Karl Leonhard Reinhold,1757,1823,Western,male,https://plato.stanford.edu/entries/karl-reinhold/,Q112258
+265,11,4,Marsilius of Inghen,1335,1396,Western,male,https://plato.stanford.edu/entries/marsilius-inghen/,Q704472
+265,11,1,Susanne Langer,1895,1985,Western,female,https://plato.stanford.edu/entries/langer/,Q466026
+265,11,5,Tommaso Campanella,1568,1639,Western,male,https://plato.stanford.edu/entries/campanella/,Q191850
+265,11,2,Xenocrates,-396,-314,Western,male,https://plato.stanford.edu/entries/xenocrates/,Q214121
+265,11,13,Śāntarakṣita,725,788,Indian & Buddhist,male,https://plato.stanford.edu/entries/saantarak-sita/,Q553722
+284,10,5,Adolf Reinach,1883,1917,Western,male,https://plato.stanford.edu/entries/reinach/,Q66061
+284,10,4,Anton Marty,1847,1914,Western,male,https://plato.stanford.edu/entries/marty/,Q123379
+284,10,7,Bernardino Telesio,1509,1588,Western,male,https://plato.stanford.edu/entries/telesio/,Q457986
+284,10,6,Damaris Masham,1659,1708,Western,female,https://plato.stanford.edu/entries/lady-masham/,Q2332520
+284,10,7,Franz Rosenzweig,1886,1929,Western,male,https://plato.stanford.edu/entries/rosenzweig/,Q76710
+284,10,2,Gershom Scholem,1897,1982,Western,male,https://plato.stanford.edu/entries/scholem/,Q138850
+284,10,4,José Ortega y Gasset,1883,1955,Western,male,https://plato.stanford.edu/entries/gasset/,Q153020
+284,10,4,Kazimierz Twardowski,1866,1938,Western,male,https://plato.stanford.edu/entries/twardowski/,Q381994
+284,10,4,Kumārila Bhaṭṭa,700,700,Indian & Buddhist,male,https://plato.stanford.edu/entries/kumaarila/,Q774847
+284,10,6,Lorenzo Valla,1407,1457,Western,male,https://plato.stanford.edu/entries/lorenzo-valla/,Q214115
+284,10,7,Margaret Cavendish,1617,1673,Western,female,https://plato.stanford.edu/entries/margaret-cavendish/,Q242640
+284,10,5,Philolaus,-470,-390,Western,male,https://plato.stanford.edu/entries/philolaus/,Q212338
+284,10,4,Thomas More,1478,1535,Western,male,https://plato.stanford.edu/entries/thomas-more/,Q42544
+284,10,1,Thomas Paine,1737,1809,Western,male,https://plato.stanford.edu/entries/paine/,Q126462
+298,9,3,Antiochus of Ascalon,-130,-68,Western,male,https://plato.stanford.edu/entries/antiochus-ascalon/,Q320042
+298,9,3,Antoine Le Grand,1629,1699,Western,male,https://plato.stanford.edu/entries/legrand/,Q327782
+298,9,6,Friedrich Albert Lange,1828,1875,Western,male,https://plato.stanford.edu/entries/friedrich-lange/,Q61674
+298,9,4,George Herbert Mead,1863,1931,Western,male,https://plato.stanford.edu/entries/mead/,Q295978
+298,9,1,H. H. Price,1899,1984,Western,male,https://plato.stanford.edu/entries/price/,Q3751249
+298,9,3,James Mill,1773,1836,Western,male,https://plato.stanford.edu/entries/james-mill/,Q271666
+298,9,3,Jean Bodin,1530,1596,Western,male,https://plato.stanford.edu/entries/bodin/,Q190944
+298,9,4,John Cook Wilson,1849,1915,Western,male,https://plato.stanford.edu/entries/wilson/,Q3817476
+298,9,6,John of Salisbury,1110,1180,Western,male,https://plato.stanford.edu/entries/john-salisbury/,Q264028
+298,9,2,Juan Luis Vives,1492,1540,Western,male,https://plato.stanford.edu/entries/vives/,Q316357
+298,9,3,Louis de La Forge,1632,1666,Western,male,https://plato.stanford.edu/entries/la-forge/,Q2617364
+298,9,4,Radulphus Brito,1270,1320,Western,male,https://plato.stanford.edu/entries/radulphus-brito/,Q1222132
+298,9,5,Richard Kilvington,1305,1361,Western,male,https://plato.stanford.edu/entries/kilvington/,Q468950
+298,9,3,Salomon Maimon,1754,1800,Western,male,https://plato.stanford.edu/entries/maimon/,Q465763
+298,9,2,Speusippus,-407,-339,Western,male,https://plato.stanford.edu/entries/speusippus/,Q325955
+313,8,4,Abu Bakr al-Razi,866,925,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/abu-bakr-al-razi/,Q169234
+313,8,3,Basilios Bessarion,1403,1472,Western,male,https://plato.stanford.edu/entries/bessarion/,Q299446
+313,8,3,Christian von Ehrenfels,1859,1932,Western,male,https://plato.stanford.edu/entries/ehrenfels/,Q78603
+313,8,1,David Hartley,1705,1757,Western,male,https://plato.stanford.edu/entries/hartley/,Q379902
+313,8,7,Godfrey of Fontaines,1300,1309,Western,male,https://plato.stanford.edu/entries/godfrey/,Q332288
+313,8,2,Henricus Regius,1598,1679,Western,male,https://plato.stanford.edu/entries/henricus-regius/,Q743918
+313,8,4,Nicholas of Autrecourt,1299,1369,Western,male,https://plato.stanford.edu/entries/autrecourt/,Q331322
+313,8,2,Nicolai Hartmann,1882,1950,Western,male,https://plato.stanford.edu/entries/nicolai-hartmann/,Q76501
+313,8,5,Nishida Kitarō,1870,1945,Japanese & Korean,male,https://plato.stanford.edu/entries/nishida-kitaro/,Q45125
+313,8,3,Philip the Chancellor,1160,1236,Western,male,https://plato.stanford.edu/entries/philip-chancellor/,Q768555
+313,8,3,Ramon Llull,1232,1316,Western,male,https://plato.stanford.edu/entries/llull/,Q193660
+313,8,1,Rosa Luxemburg,1871,1919,Western,female,https://plato.stanford.edu/entries/luxemburg/,Q7231
+313,8,8,William of Heytesbury,1313,1372,Western,male,https://plato.stanford.edu/entries/heytesbury/,Q1856133
+326,7,5,Abraham ibn Ezra,1092,1167,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/ibn-ezra/,Q270670
+326,7,2,Alexander Crummell,1819,1898,Western,male,https://plato.stanford.edu/entries/alexander-crummell/,Q1766103
+326,7,1,Catharine Macaulay,1731,1791,Western,female,https://plato.stanford.edu/entries/catharine-macaulay/,Q538767
+326,7,0,Dai Zhen,1724,1777,Chinese,male,https://plato.stanford.edu/entries/dai-zhen/,Q714369
+326,7,0,Heinrich Scholz,1884,1956,Western,male,https://plato.stanford.edu/entries/scholz/,Q104461
+326,7,4,Ibn Taymiyya,1263,1328,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/ibn-taymiyya/,Q491558
+326,7,3,Ludwik Fleck,1896,1961,Western,male,https://plato.stanford.edu/entries/fleck/,Q523087
+326,7,0,Marsilius of Padua,1275,1342,Western,male,https://plato.stanford.edu/entries/marsilius-padua/,Q315357
+326,7,3,Simon of Faversham,1260,1306,Western,male,https://plato.stanford.edu/entries/simon-faversham/,Q7520146
+326,7,3,William Godwin,1756,1836,Western,male,https://plato.stanford.edu/entries/godwin/,Q188569
+336,6,6,Anthony Collins,1676,1729,Western,male,https://plato.stanford.edu/entries/collins/,Q573040
+336,6,3,August Wilhelm von Schlegel,1767,1845,Western,male,https://plato.stanford.edu/entries/schlegel-aw/,Q57281
+336,6,2,Bruno Bauer,1809,1882,Western,male,https://plato.stanford.edu/entries/bauer/,Q76878
+336,6,5,Elia del Medigo,1458,1497,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/delmedigo/,Q463405
+336,6,1,François Poullain de la Barre,1647,1723,Western,male,https://plato.stanford.edu/entries/francois-barre/,Q1388233
+336,6,3,Gerolamo Cardano,1501,1576,Western,male,https://plato.stanford.edu/entries/cardano/,Q184530
+336,6,3,Harriet Taylor Mill,1807,1858,Western,female,https://plato.stanford.edu/entries/harriet-mill/,Q240782
+336,6,1,Jean-Baptiste Dubos,1670,1742,Western,male,https://plato.stanford.edu/entries/du-bos/,Q432585
+336,6,3,Justus Lipsius,1547,1606,Western,male,https://plato.stanford.edu/entries/justus-lipsius/,Q315871
+336,6,2,Lambert of Auxerre,1300,1300,Western,male,https://plato.stanford.edu/entries/lambert-auxerre/,Q610309
+336,6,5,Philo of Larissa,-159,-84,Western,male,https://plato.stanford.edu/entries/philo-larissa/,Q365110
+336,6,4,Shem-Tov ibn Falaquera,1225,1290,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/falaquera/,Q1383938
+336,6,1,Theodoric of Freiberg,1240,1318,Western,male,https://plato.stanford.edu/entries/dietrich-freiberg/,Q1224163
+349,5,0,Antonio Gramsci,1891,1937,Western,male,https://plato.stanford.edu/entries/gramsci/,Q83003
+349,5,4,Catharine Trotter,1674,1749,Western,female,https://plato.stanford.edu/entries/cockburn/,Q1091103
+349,5,2,Johann Sturm,1635,1703,Western,male,https://plato.stanford.edu/entries/johann-sturm/,Q75642
+349,5,3,John Norris,1657,1711,Western,male,https://plato.stanford.edu/entries/john-norris/,Q3182195
+349,5,2,Mary Shepherd,1777,1847,Western,female,https://plato.stanford.edu/entries/mary-shepherd/,Q6470434
+349,5,3,Max Stirner,1806,1856,Western,male,https://plato.stanford.edu/entries/max-stirner/,Q76725
+349,5,2,Omar Khayyám,1048,1131,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/umar-khayyam/,Q35900
+349,5,5,Petrus Ramus,1515,1572,Western,male,https://plato.stanford.edu/entries/ramus/,Q376124
+349,5,1,Philo of Alexandria,-15,50,Western,male,https://plato.stanford.edu/entries/philo/,Q189597
+349,5,5,Robert Alyngton,1355,1398,Western,male,https://plato.stanford.edu/entries/alyngton/,Q7341485
+349,5,3,Samuel ibn Tibbon,1150,1230,"Arabic, Islamic & Jewish",male,https://plato.stanford.edu/entries/tibbon/,Q338123
+349,5,1,Shantideva,685,763,Indian & Buddhist,male,https://plato.stanford.edu/entries/shantideva/,Q445460
+349,5,0,Sophie de Grouchy,1764,1822,Western,female,https://plato.stanford.edu/entries/sophie-de-grouchy/,Q2641456
+349,5,5,Tsongkhapa,1357,1419,Indian & Buddhist,male,https://plato.stanford.edu/entries/tsongkhapa/,Q323439
+349,5,5,William Crathorn,1301,,Western,male,https://plato.stanford.edu/entries/crathorn/,Q4355955
+349,5,3,William of Champeaux,1070,1121,Western,male,https://plato.stanford.edu/entries/william-champeaux/,Q267825
