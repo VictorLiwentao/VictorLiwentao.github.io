@@ -39,7 +39,7 @@ document.addEventListener('click', e => { const b = e.target.closest('.speed but
   try { localStorage.setItem('sepSpeed', String(SPEED)); } catch (err) {}
   document.querySelectorAll('.speed button').forEach(x => x.setAttribute('aria-pressed', String(+x.dataset.s === SPEED))); });
 /* sound: opt-in, quiet, pentatonic so every note fits with every other; no audio files */
-const SND = {on: false, ctx: null, out: null, last: 0};
+const SND = {on: false, ctx: null, out: null, lastCh: {}};
 try { SND.on = localStorage.getItem('sepSound') === '1'; } catch (e) {}
 const actx = () => { // only ever called from a click or key press, so browsers allow it
   if (!SND.ctx) { const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
@@ -51,14 +51,25 @@ const actx = () => { // only ever called from a click or key press, so browsers 
   return SND.ctx; };
 const PENTA = [0, 2, 4, 7, 9];
 const hz = s => 196 * Math.pow(2, (Math.floor(s / 5) * 12 + PENTA[((s % 5) + 5) % 5]) / 12);
-const tone = (s, {vel = .5, type = 'sine', dur = .7, at = 0, force = false} = {}) => {
-  if (!SND.on || !SND.ctx || SND.ctx.state !== 'running') return;
-  const now = performance.now(); if (!force && now - SND.last < 55) return; if (!force) SND.last = now;
+const tone = (s, {vel = .5, type = 'sine', dur = .7, at = 0, ch = null, gap = 60} = {}) => {
+  if (!SND.on || !SND.ctx || SND.ctx.state !== 'running') return false;
+  const now = performance.now(); if (ch) { if (now - (SND.lastCh[ch] || 0) < gap) return false; SND.lastCh[ch] = now; }
   const c = SND.ctx, t = c.currentTime + at, o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.value = hz(s);
   g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.12 * vel, t + .012); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
-  o.connect(g); g.connect(SND.out); o.start(t); o.stop(t + dur + .05); };
-const bell = (s, vel = .5) => { tone(s, {vel, dur: 1.5, force: true}); tone(s + 5, {vel: vel * .3, dur: 1.1, force: true}); };
-const chord = s => [0, 2, 4, 5].forEach((k, i) => tone(s + k, {vel: .45, dur: 1.3, at: i * .09, force: true, type: 'triangle'}));
+  o.connect(g); g.connect(SND.out); o.start(t); o.stop(t + dur + .05); return true; };
+// a soft held voice that follows a playhead: its pitch climbs through the scale as time moves forward
+const mkVoice = () => { const c = SND.ctx; if (!c || c.state !== 'running') return null;
+  const o1 = c.createOscillator(), o2 = c.createOscillator(), f = c.createBiquadFilter(), g = c.createGain(), t = c.currentTime;
+  o1.type = 'triangle'; o2.type = 'sine'; o2.detune.value = 5; f.type = 'lowpass'; f.frequency.value = 800; g.gain.value = 0;
+  o1.connect(f); o2.connect(f); f.connect(g); g.connect(SND.out); o1.start(t); o2.start(t); g.gain.setTargetAtTime(.03, t, .15);
+  let last = null;
+  return {glide(s) { if (s === last) return; last = s; const t = c.currentTime, fq = hz(s - 5);
+      o1.frequency.setTargetAtTime(fq, t, .05); o2.frequency.setTargetAtTime(fq * 2, t, .05); f.frequency.setTargetAtTime(420 + fq * 2.2, t, .08); },
+    stop() { const t = c.currentTime; g.gain.cancelScheduledValues(t); g.gain.setTargetAtTime(0, t, .12); setTimeout(() => { try { o1.stop(); o2.stop(); } catch (e) {} }, 900); }}; };
+const voiceSync = (st, playing) => { if (playing && SND.on && !st.v) st.v = mkVoice(); if ((!playing || !SND.on) && st.v) { st.v.stop(); st.v = null; } return st.v; };
+const LAG = .07; // notes land as the dot or bar visibly arrives
+const bell = (s, vel = .5) => { tone(s, {vel, dur: 1.5}); tone(s + 5, {vel: vel * .3, dur: 1.1}); };
+const chord = s => [0, 2, 4, 5].forEach((k, i) => tone(s + k, {vel: .45, dur: 1.3, at: i * .09, type: 'triangle'}));
 const tick = () => { if (!SND.on || !SND.ctx || SND.ctx.state !== 'running') return; const c = SND.ctx, t = c.currentTime, o = c.createOscillator(), g = c.createGain();
   o.type = 'triangle'; o.frequency.value = 2200; g.gain.setValueAtTime(.025, t); g.gain.exponentialRampToValueAtTime(.0001, t + .035); o.connect(g); g.connect(SND.out); o.start(t); o.stop(t + .05); };
 const SICON = {on: '<svg viewBox="0 0 16 14" aria-hidden="true"><path d="M1 5h3l4-3.5v11L4 9H1z"/><path d="M10.5 4.4a3.6 3.6 0 0 1 0 5.2M12.7 2.4a6.6 6.6 0 0 1 0 9.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
@@ -230,7 +241,7 @@ const rframe = dt => {
   const vals = RR.map(r => valAt(r.c, t));
   const order = vals.map((v, k) => k).sort((a, b) => vals[b] - vals[a] || RR[a].p.ra - RR[b].p.ra);
   const top = Math.max(10, vals[order[0]]);
-  rs.xmax = snap ? top : rs.xmax + (top - rs.xmax) * Math.min(1, dt * 5);
+  rs.xmax = snap ? top : rs.xmax + (top - rs.xmax) * Math.min(1, dt * 5); rs.top = top;
   rbars.style.height = (N * RH) + 'px';
   order.forEach((k, rank) => { const r = RR[k], e = relem[k], vis = rank < N && vals[k] > 0, tgt = vis ? rank : N;
     r.pos = snap ? tgt : r.pos + (tgt - r.pos) * Math.min(1, dt * 8);
@@ -243,11 +254,15 @@ const rframe = dt => {
   ryear.textContent = y;
   let ld = LSEG[0]; for (const s of LSEG) if (s.y0 <= y) ld = s;
   if (rs.play) { if (y !== rs.sy) tick(); if (rs.sl && ld !== rs.sl) chord(7); } rs.sy = y; rs.sl = ld;
+  const topN = order.slice(0, N).filter(k => vals[k] > 0);
+  if (rs.play && rs.prevTop) { const up = topN.findIndex((k, i) => { const was = rs.prevTop.indexOf(k); return was === -1 || was > i; });
+    if (up >= 0) tone(13 - up, {vel: .35, dur: .45, type: 'triangle', ch: 'swap', gap: 110, at: LAG}); }
+  rs.prevTop = topN;
   rlead.innerHTML = `Leader in ${y}: <b>${esc(ld.p.a)}</b>${ld.y0 < y ? ` <span>(since ${ld.y0})</span>` : ''}${rs.play && ld !== LSEG[0] && y - ld.y0 <= 3 ? '<em>New leader</em>' : ''}`;
   let kk = null; for (const v of KL) if (v.y <= y) kk = v;
   if (kk !== rs.tick) { rs.tick = kk;
     rtick.innerHTML = kk ? `Most-cited work from ${kk.y}: <i>${esc(kk.t)}</i>, ${esc(kk.a)}, now cited in ${kk.n} entries` : '';
-    if (kk && rs.play) tone(4 + Math.round(Math.log(kk.n) * 2.4), {vel: .45, dur: 1, force: true});
+    if (kk && rs.play) tone(4 + Math.round(Math.log(kk.n) * 2.4), {vel: .45, dur: 1});
     if (kk && !RM && rs.play) rtick.animate([{opacity: 0, transform: 'translateY(4px)'}, {opacity: 1, transform: 'none'}], {duration: 350, easing: 'ease-out'}); }
   rph.style.left = (t / NY * 100) + '%';
   rscrub.setAttribute('aria-valuenow', y); rscrub.setAttribute('aria-valuetext', `${y}: ${ld.p.a} leads`);
@@ -259,9 +274,10 @@ const settle = () => { rs.settleUntil = performance.now() + 900; if (rs.settling
   const f = now => { const dt = Math.min(.1, (now - lt) / 1000); lt = now; if (!rs.play) rframe(RM ? null : dt);
     if (now < rs.settleUntil && !rs.play) requestAnimationFrame(f); else rs.settling = false; };
   requestAnimationFrame(f); };
-const rloop = now => { if (!rs.play) return; const dt = rs.last == null ? 1 / 60 : Math.min(.1, (now - rs.last) / 1000); rs.last = now;
+const rloop = now => { if (!rs.play) { voiceSync(rs, false); return; } const dt = rs.last == null ? 1 / 60 : Math.min(.1, (now - rs.last) / 1000); rs.last = now;
   rs.t = Math.min(NY, rs.t + dt * speed(rs.t) * SPEED); rframe(dt);
-  if (rs.t >= NY) { rs.play = false; rbtn(); settle(); $('#rsr').textContent = `${RY0 + NY}: ${lastSeg.p.a} leads.`; return; }
+  const rv = voiceSync(rs, true); if (rv) rv.glide(Math.round(Math.log(Math.max(10, rs.top)) / Math.log(340) * 15));
+  if (rs.t >= NY) { rs.play = false; voiceSync(rs, false); rbtn(); settle(); $('#rsr').textContent = `${RY0 + NY}: ${lastSeg.p.a} leads.`; return; }
   requestAnimationFrame(rloop); };
 const rplay = () => { if (rs.t >= NY) { rs.t = 0; rframe(null); } rs.play = true; rs.last = null; rbtn(); requestAnimationFrame(rloop); };
 const rpause = () => { rs.play = false; rs.auto = false; rbtn(); settle(); };
@@ -328,7 +344,7 @@ const tApply = () => {
   ts.els.forEach(el => { const on = +el.dataset.x <= sx + .5;
     if (on && ts.play && el.dataset.k != null && !el.classList.contains('on')) { const hh = LC[+el.dataset.k]; if (!best || hh.m > best.m) best = hh; }
     el.classList.toggle('on', on); });
-  if (best) tone(Math.round(2 + Math.log(best.m) * 2.2), {vel: .2 + .6 * Math.sqrt(best.m / LC[0].m), type: best.g === 'f' ? 'triangle' : 'sine'});
+  if (best) tone(Math.round(ts.s * 15) + Math.round(4 * Math.sqrt(best.m / LC[0].m)), {vel: .2 + .6 * Math.sqrt(best.m / LC[0].m), type: best.g === 'f' ? 'triangle' : 'sine', ch: 'tl', gap: 70, at: LAG});
   if (!ts.sw) return;
   ts.sw.setAttribute('x1', sx); ts.sw.setAttribute('x2', sx); ts.sw.setAttribute('opacity', mid ? 1 : 0);
   const right = sx > ts.W - 90; ts.sy.setAttribute('x', right ? sx - 6 : sx + 6); ts.sy.setAttribute('text-anchor', right ? 'end' : 'start');
@@ -337,8 +353,9 @@ const tApply = () => {
 new ResizeObserver(tDraw).observe(tsv);
 const TDUR = 9000;
 const tbtn = () => { const b = $('#bplay'); b.innerHTML = ts.play ? ICON.pause + '<span>Pause</span>' : ts.s >= 1 ? ICON.replay + '<span>Replay the timeline</span>' : ICON.play + '<span>Play</span>'; };
-const tloop = now => { if (!ts.play) return; const dt = ts.last == null ? 16 : Math.min(100, now - ts.last); ts.last = now;
-  ts.s = Math.min(1, ts.s + dt / TDUR * SPEED); tApply(); if (ts.s >= 1) { ts.play = false; tbtn(); return; } requestAnimationFrame(tloop); };
+const tloop = now => { if (!ts.play) { voiceSync(ts, false); return; } const dt = ts.last == null ? 16 : Math.min(100, now - ts.last); ts.last = now;
+  ts.s = Math.min(1, ts.s + dt / TDUR * SPEED); tApply(); const tv = voiceSync(ts, true); if (tv) tv.glide(Math.round(ts.s * 15));
+  if (ts.s >= 1) { ts.play = false; voiceSync(ts, false); tbtn(); return; } requestAnimationFrame(tloop); };
 const tplay = () => { if (ts.s >= 1) { ts.s = 0; tApply(); } ts.play = true; ts.last = null; tbtn(); requestAnimationFrame(tloop); };
 $('#bplay').addEventListener('click', () => { if (ts.play) { ts.play = false; tbtn(); } else tplay(); });
 tbtn();
@@ -467,12 +484,13 @@ const gApply = () => { const y = gs.y, mid = gs.play || (y > G0 && y < G1);
   gsv.querySelectorAll('[data-b]').forEach(el => { const off = +el.dataset.b > y;
     if (!off && gs.play && el.dataset.n && el.classList.contains('off') && (!best || +el.dataset.n > +best.dataset.n)) best = el;
     el.classList.toggle('off', off); });
-  if (best) tone(Math.round(Math.log(+best.dataset.n) * 3.2 - 4), {vel: .3 + .5 * Math.sqrt(+best.dataset.n / C[0].n), type: best.dataset.f === '1' ? 'triangle' : 'sine'});
+  if (best) tone(Math.round((y - G0) / (G1 - G0) * 15) + Math.round(4 * Math.sqrt(+best.dataset.n / C[0].n)), {vel: .3 + .5 * Math.sqrt(+best.dataset.n / C[0].n), type: best.dataset.f === '1' ? 'triangle' : 'sine', ch: 'gen', gap: 70, at: LAG});
   document.querySelectorAll('#decs .dec').forEach(el => el.classList.toggle('off', +el.dataset.d > y));
   const t = gsv.querySelector('#gyr'); if (t) t.textContent = mid ? Math.floor(y) : ''; };
 const gbtn = () => { $('#gplay').innerHTML = gs.play ? ICON.pause + '<span>Pause</span>' : gs.y >= G1 ? ICON.replay + '<span>Replay by birth year</span>' : ICON.play + '<span>Play</span>'; };
-const gloop = now => { if (!gs.play) return; const dt = gs.last == null ? 16 : Math.min(100, now - gs.last); gs.last = now;
-  gs.y = Math.min(G1, gs.y + dt / 1000 * 10 * SPEED); gApply(); if (gs.y >= G1) { gs.play = false; $('#decs').classList.remove('live'); gbtn(); gApply(); return; } requestAnimationFrame(gloop); };
+const gloop = now => { if (!gs.play) { voiceSync(gs, false); return; } const dt = gs.last == null ? 16 : Math.min(100, now - gs.last); gs.last = now;
+  gs.y = Math.min(G1, gs.y + dt / 1000 * 10 * SPEED); gApply(); const gv = voiceSync(gs, true); if (gv) gv.glide(Math.round((gs.y - G0) / (G1 - G0) * 15));
+  if (gs.y >= G1) { gs.play = false; voiceSync(gs, false); $('#decs').classList.remove('live'); gbtn(); gApply(); return; } requestAnimationFrame(gloop); };
 const gplay = () => { if (gs.y >= G1) { gs.y = G0; gApply(); } $('#decs').classList.add('live'); gs.play = true; gs.last = null; gbtn(); requestAnimationFrame(gloop); };
 $('#gplay').addEventListener('click', () => { if (gs.play) { gs.play = false; gbtn(); } else gplay(); });
 new ResizeObserver(genDraw).observe(gsv);
@@ -530,12 +548,13 @@ const wApply = () => { const y = ws2.y, mid = ws2.play || (y > W0 && y < W1);
   wsv.querySelectorAll('[data-b]').forEach(el => { const off = +el.dataset.b > y;
     if (!off && ws2.play && el.dataset.n && el.classList.contains('off') && (!best || +el.dataset.n > +best.dataset.n)) best = el;
     el.classList.toggle('off', off); });
-  if (best) tone(Math.round(Math.log(+best.dataset.n) * 3.4 - 3), {vel: .3 + .5 * Math.sqrt(+best.dataset.n / W[0].n)});
+  if (best) tone(Math.round((y - W0) / (W1 - W0) * 15) + Math.round(4 * Math.sqrt(+best.dataset.n / W[0].n)), {vel: .3 + .5 * Math.sqrt(+best.dataset.n / W[0].n), ch: 'works', gap: 70, at: LAG});
   const t = wsv.querySelector('#wyr'), n = wsv.querySelector('#wyn');
   if (t) t.textContent = mid ? Math.min(2026, Math.floor(y)) : ''; if (n) n.textContent = mid ? `${W.filter(w => w.yr <= y).length} works` : ''; };
 const wbtn = () => { $('#wplay').innerHTML = ws2.play ? ICON.pause + '<span>Pause</span>' : ws2.y >= W1 ? ICON.replay + '<span>Replay by year</span>' : ICON.play + '<span>Play</span>'; };
-const wloop = now => { if (!ws2.play) return; const dt = ws2.last == null ? 16 : Math.min(100, now - ws2.last); ws2.last = now;
-  ws2.y = Math.min(W1, ws2.y + dt / 1000 * 13 * SPEED); wApply(); if (ws2.y >= W1) { ws2.play = false; wbtn(); wApply(); return; } requestAnimationFrame(wloop); };
+const wloop = now => { if (!ws2.play) { voiceSync(ws2, false); return; } const dt = ws2.last == null ? 16 : Math.min(100, now - ws2.last); ws2.last = now;
+  ws2.y = Math.min(W1, ws2.y + dt / 1000 * 13 * SPEED); wApply(); const wv = voiceSync(ws2, true); if (wv) wv.glide(Math.round((ws2.y - W0) / (W1 - W0) * 15));
+  if (ws2.y >= W1) { ws2.play = false; voiceSync(ws2, false); wbtn(); wApply(); return; } requestAnimationFrame(wloop); };
 const wplay = () => { if (ws2.y >= W1) { ws2.y = W0; wApply(); } ws2.play = true; ws2.last = null; wbtn(); requestAnimationFrame(wloop); };
 $('#wplay').addEventListener('click', () => { if (ws2.play) { ws2.play = false; wbtn(); } else wplay(); });
 new ResizeObserver(workDraw).observe(wsv);
@@ -606,7 +625,7 @@ const hX = (y, x0, x1) => { let acc = 0; for (let k = 0; k < 6; k++) { if (y < H
 const hMax = Math.max(...HDOT.map(d => d.n));
 const hLabels = (() => { const segs = HERA.map((_, k) => HDOT.filter(d => hSeg(d.b) === k).sort((a, b) => b.n - a.n)), out = [];
   const wOld = HDOT.filter(d => d.f && d.old).sort((a, b) => b.n - a.n)[0], wNew = HDOT.filter(d => d.f && !d.old).sort((a, b) => b.n - a.n)[0];
-  for (let r = 0; r < 12; r++) segs.forEach(s => { if (s[r]) out.push(s[r]); if (r === 1) { [wOld, wNew].forEach(w => { if (w && !out.includes(w)) out.push(w); }); } });
+  for (let r = 0; r < 16; r++) segs.forEach(s => { if (s[r]) out.push(s[r]); if (r === 1) { [wOld, wNew].forEach(w => { if (w && !out.includes(w)) out.push(w); }); } });
   return [...new Set(out)]; })();
 let hDrawn = false, hLastH = 0;
 const hDraw = () => {
@@ -643,31 +662,31 @@ const hDraw = () => {
   g += `<line x1="${x19.toFixed(1)}" x2="${x19.toFixed(1)}" y1="${padTop - 20}" y2="${base}" stroke="rgba(255,255,255,.45)" stroke-dasharray="3 4"/>`;
   if (!narrow) g += `<text class="tk" x="${(x19 - 8).toFixed(1)}" y="${padTop - 2}" text-anchor="end">size: entries naming them</text><text class="tk" x="${(x19 + 8).toFixed(1)}" y="${padTop - 2}">size: entries citing them</text>`;
   g += pts.map(p => `<circle class="hd2" style="--d:${dl(p)}ms" cx="${p.x.toFixed(1)}" cy="${(base + p.y).toFixed(1)}" r="${p.r.toFixed(2)}" fill="${p.d.f ? '#ffcf6b' : '#fff'}" fill-opacity="${p.d.f ? 1 : .82}"/>`).join('');
-  const boxes = narrow ? [] : [{x: x19 - 190, y: padTop - 15, w: 380, h: 16}], K = narrow ? 7 : W < 1000 ? 13 : 20, cw = 6.9;
+  const boxes = narrow ? [] : [{x: x19 - 190, y: padTop - 15, w: 380, h: 16}], K = narrow ? 10 : W < 1000 ? 20 : 32, cw = 6.9;
   // name the peaks like a mountain panorama: each label floats just above the local skyline, with a thin leader to its dot
-  let lead = '', labs = '', hume = '';
-  const hp = pts.find(q => q.d.h === 'h-david-hume');
-  if (hp) { const s = 'David Hume', w = s.length * 7.4 + 22, x = hp.x, cy = base + hp.y, dy = cy - hp.r;
-    let sky = dy; pts.forEach(q => { if (Math.abs(q.x - x) < w / 2 + q.r + 2) sky = Math.min(sky, base + q.y - q.r); });
-    const lx = Math.max(w / 2 + 2, Math.min(W - w / 2 - 2, x)), ty = Math.max(16, sky - 34);
-    boxes.push({x: lx - w / 2 - 4, y: ty - 14, w: w + 8, h: 28});
-    hume = `<g class="hume" style="--d:${dl(hp) + 200}ms"><line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${(ty + 11).toFixed(1)}" y2="${(dy - 3).toFixed(1)}" stroke="#fff" stroke-width="1.5"/><circle class="hume-pulse" cx="${x.toFixed(1)}" cy="${cy.toFixed(1)}" r="${(hp.r + 3).toFixed(1)}"/><circle cx="${x.toFixed(1)}" cy="${cy.toFixed(1)}" r="${(hp.r + 3).toFixed(1)}" fill="none" stroke="#fff" stroke-width="2"/><rect x="${(lx - w / 2).toFixed(1)}" y="${(ty - 11).toFixed(1)}" width="${w.toFixed(1)}" height="22" rx="11" fill="#fff"/><text class="hume-t" x="${lx.toFixed(1)}" y="${(ty + 4.5).toFixed(1)}" text-anchor="middle">${s}</text></g>`; }
-  hLabels.filter(d => d.h !== 'h-david-hume').slice(0, K).forEach(d => { const p = pts.find(q => q.d === d); if (!p) return; const w = d.s.length * cw, x = p.x, dy = base + p.y - p.r;
+  let lead = '', labs = '';
+  const HUMEd = HDOT.find(d => d.h === 'h-david-hume');
+  [HUMEd, ...hLabels.filter(d => d !== HUMEd)].filter(Boolean).slice(0, K).forEach(d => { const p = pts.find(q => q.d === d); if (!p) return; const w = d.s.length * cw, x = p.x, dy = base + p.y - p.r;
     let sky = dy; pts.forEach(q => { if (Math.abs(q.x - x) < w / 2 + q.r + 2) sky = Math.min(sky, base + q.y - q.r); });
     const lx = Math.max(w / 2 + 3, Math.min(W - w / 2 - 3, x));
-    for (let lvl = 0; lvl < 3; lvl++) { const ty = sky - 7 - lvl * 16, bb = {x: lx - w / 2 - 3, y: ty - 12, w: w + 6, h: 15};
+    for (let lvl = 0; lvl < 4; lvl++) { const ty = sky - 7 - lvl * 16, bb = {x: lx - w / 2 - 3, y: ty - 12, w: w + 6, h: 15};
       if (bb.y < 2) break;
       if (boxes.some(o => bb.x < o.x + o.w && bb.x + bb.w > o.x && bb.y < o.y + o.h && bb.y + bb.h > o.y)) continue;
       boxes.push(bb);
       if (dy - (ty + 3) > 3) lead += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${(ty + 4).toFixed(1)}" y2="${(dy - 1).toFixed(1)}" stroke="rgba(255,255,255,.55)" style="--d:${dl(p) + 260}ms"/>`;
       labs += `<text x="${lx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" style="--d:${dl(p) + 260}ms">${esc(d.s)}</text>`; break; } });
-  g += lead + labs + hume;
+  g += lead + labs;
   g += pts.map(p => `<circle class="hit" data-h="${p.d.h}" cx="${p.x.toFixed(1)}" cy="${(base + p.y).toFixed(1)}" r="${Math.max(5, p.r + 1).toFixed(1)}" fill="transparent"/>`).join('');
   hsv.innerHTML = g;
   if (intro) { hsv.classList.add('intro'); setTimeout(() => hsv.classList.remove('intro'), 3200);
-    if (SND.on && SND.ctx && SND.ctx.state === 'running') { const slots = new Map();
+    if (SND.on && SND.ctx && SND.ctx.state === 'running') { const slots = new Map(), c = SND.ctx, t0 = c.currentTime + LAG + .1;
       pts.forEach(p => { const k = Math.floor(dl(p) / 90), o = slots.get(k); if (!o || p.d.n > o.d.n) slots.set(k, p); });
-      [...slots.entries()].forEach(([k, p]) => tone(Math.round(2 + p.x / W * 15), {vel: .2 + .6 * Math.sqrt(p.d.n / hMax), type: p.d.f ? 'triangle' : 'sine', at: k * .09, force: true, dur: .9})); } }
+      const ks = [...slots.keys()].sort((a, b) => a - b), last = ks[ks.length - 1] * .09;
+      ks.forEach(k => { const p = slots.get(k); tone(Math.round(2 + p.x / W * 15), {vel: .2 + .6 * Math.sqrt(p.d.n / hMax), type: p.d.f ? 'triangle' : 'sine', at: LAG + .1 + k * .09, dur: .9}); });
+      const o = c.createOscillator(), f = c.createBiquadFilter(), g = c.createGain(); o.type = 'triangle'; f.type = 'lowpass'; f.frequency.value = 900;
+      g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.03, t0 + .3); g.gain.setValueAtTime(.03, t0 + last); g.gain.linearRampToValueAtTime(0, t0 + last + .8);
+      ks.forEach(k => o.frequency.setTargetAtTime(hz(Math.round(2 + slots.get(k).x / W * 15) - 5), t0 + k * .09, .03));
+      o.connect(f); f.connect(g); g.connect(SND.out); o.start(t0); o.stop(t0 + last + 1); } }
 };
 new ResizeObserver(hDraw).observe(hsv);
 const hByH = Object.fromEntries(HDOT.map(d => [d.h, d]));
@@ -700,7 +719,7 @@ $('#hreplay').addEventListener('click', () => { hClear(); hDrawn = false; hsv.cl
 hfig.addEventListener('pointerenter', () => { hs.user = true; hClear(); });
 hfig.addEventListener('pointerleave', () => { hs.user = false; hTip.style.opacity = 0; });
 if ('IntersectionObserver' in window) new IntersectionObserver(es => { hs.vis = es[0].isIntersecting; if (!hs.vis) hClear(); }, {threshold: .3}).observe(hfig);
-$('#hcap').textContent = `Each dot is a philosopher, placed by year of birth (${C.length - nShown} with no recorded birth year are not shown). Size shows how many entries name them, before 1900, or cite them, after; gold dots are women. Time is stretched where philosophers are many. Point at a dot for a name; click for a profile.`;
+$('#hcap').textContent = `Each dot is a philosopher, placed by year of birth, so the height of a pile shows how many were born around then. Dot size shows how many entries name them (before 1900) or cite them (after), and the biggest dots sit on top of their pile. Gold dots are women. Time is stretched where philosophers are many; ${C.length - nShown} with no recorded birth year are not shown.`;
 
 if ('IntersectionObserver' in window && !RM) { const fio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { fio.unobserve(e.target); e.target.querySelectorAll('.cu').forEach(el => countUp(el, 1300)); } }), {threshold: .6});
   document.querySelectorAll('.facts').forEach(f => fio.observe(f)); }
