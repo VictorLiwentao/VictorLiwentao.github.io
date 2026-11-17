@@ -38,6 +38,38 @@ document.querySelectorAll('.speed-slot').forEach(el => { el.outerHTML = `<div cl
 document.addEventListener('click', e => { const b = e.target.closest('.speed button'); if (!b) return; SPEED = +b.dataset.s;
   try { localStorage.setItem('sepSpeed', String(SPEED)); } catch (err) {}
   document.querySelectorAll('.speed button').forEach(x => x.setAttribute('aria-pressed', String(+x.dataset.s === SPEED))); });
+/* sound: opt-in, quiet, pentatonic so every note fits with every other; no audio files */
+const SND = {on: false, ctx: null, out: null, last: 0};
+try { SND.on = localStorage.getItem('sepSound') === '1'; } catch (e) {}
+const actx = () => { // only ever called from a click or key press, so browsers allow it
+  if (!SND.ctx) { const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
+    const c = new AC(), comp = c.createDynamicsCompressor(), master = c.createGain(), dly = c.createDelay(1), fb = c.createGain(), lp = c.createBiquadFilter(), wet = c.createGain();
+    master.gain.value = .5; dly.delayTime.value = .23; fb.gain.value = .3; lp.type = 'lowpass'; lp.frequency.value = 2400; wet.gain.value = .25;
+    master.connect(comp); comp.connect(c.destination); master.connect(dly); dly.connect(lp); lp.connect(fb); fb.connect(dly); lp.connect(wet); wet.connect(comp);
+    SND.ctx = c; SND.out = master; }
+  if (SND.ctx.state === 'suspended') SND.ctx.resume();
+  return SND.ctx; };
+const PENTA = [0, 2, 4, 7, 9];
+const hz = s => 196 * Math.pow(2, (Math.floor(s / 5) * 12 + PENTA[((s % 5) + 5) % 5]) / 12);
+const tone = (s, {vel = .5, type = 'sine', dur = .7, at = 0, force = false} = {}) => {
+  if (!SND.on || !SND.ctx || SND.ctx.state !== 'running') return;
+  const now = performance.now(); if (!force && now - SND.last < 55) return; if (!force) SND.last = now;
+  const c = SND.ctx, t = c.currentTime + at, o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.value = hz(s);
+  g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.12 * vel, t + .012); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+  o.connect(g); g.connect(SND.out); o.start(t); o.stop(t + dur + .05); };
+const bell = (s, vel = .5) => { tone(s, {vel, dur: 1.5, force: true}); tone(s + 5, {vel: vel * .3, dur: 1.1, force: true}); };
+const chord = s => [0, 2, 4, 5].forEach((k, i) => tone(s + k, {vel: .45, dur: 1.3, at: i * .09, force: true, type: 'triangle'}));
+const tick = () => { if (!SND.on || !SND.ctx || SND.ctx.state !== 'running') return; const c = SND.ctx, t = c.currentTime, o = c.createOscillator(), g = c.createGain();
+  o.type = 'triangle'; o.frequency.value = 2200; g.gain.setValueAtTime(.025, t); g.gain.exponentialRampToValueAtTime(.0001, t + .035); o.connect(g); g.connect(SND.out); o.start(t); o.stop(t + .05); };
+const SICON = {on: '<svg viewBox="0 0 16 14" aria-hidden="true"><path d="M1 5h3l4-3.5v11L4 9H1z"/><path d="M10.5 4.4a3.6 3.6 0 0 1 0 5.2M12.7 2.4a6.6 6.6 0 0 1 0 9.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
+  off: '<svg viewBox="0 0 16 14" aria-hidden="true"><path d="M1 5h3l4-3.5v11L4 9H1z"/><path d="M11 4.6l4 4.8M15 4.6l-4 4.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'};
+document.querySelectorAll('.speed').forEach(el => el.insertAdjacentHTML('afterend', '<button type="button" class="pbtn sndbtn" aria-pressed="false"></button>'));
+const sndSync = () => document.querySelectorAll('.sndbtn').forEach(b => { b.innerHTML = (SND.on ? SICON.on : SICON.off) + `<span>Sound ${SND.on ? 'on' : 'off'}</span>`; b.setAttribute('aria-pressed', String(SND.on)); b.setAttribute('aria-label', SND.on ? 'Turn sound off' : 'Turn sound on'); });
+document.addEventListener('click', e => { const b = e.target.closest('.sndbtn'); if (!b) return; SND.on = !SND.on;
+  try { localStorage.setItem('sepSound', SND.on ? '1' : '0'); } catch (err) {} sndSync();
+  if (SND.on) { const c = actx(); if (c) c.resume().then(() => chord(5)); } });
+['pointerdown', 'keydown'].forEach(ev => addEventListener(ev, () => { if (SND.on) actx(); }, {once: true, capture: true}));
+sndSync();
 const tryLab = (boxes, x, y, r, s, W, H, attrs = 'class="lab"', cw = 7, minX = 2) => { const w = s.length * cw;
   for (const [tx, ty, an, bx] of [[x + r + 4, y + 4, 'start', x + r + 4], [x - r - 4, y + 4, 'end', x - r - 4 - w], [x, y - r - 5, 'middle', x - w / 2], [x, y + r + 14, 'middle', x - w / 2]]) {
     const b = {x: bx, y: ty - 12, w, h: 15}; if (b.x < minX || b.x + w > W - 2 || b.y < 0 || b.y + b.h > H) continue;
@@ -152,7 +184,7 @@ const tourBtn = () => { const b = $('#mtour'); b.innerHTML = tour.on ? ICON.paus
 const andList = a => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
 const tourStep = () => {
   if (!tour.on || tour.user || !tour.vis || !sheet.hidden || document.hidden || !msv.classList.contains('shown')) return;
-  const p = tourList[tour.k++ % tourList.length]; ms.con = p.id; ms.soft = true; showCon(p.id, true);
+  const p = tourList[tour.k++ % tourList.length]; ms.con = p.id; ms.soft = true; showCon(p.id, true); bell(7 + p.mf, .3);
   const nbs = p.nb.map(j => P[j]).filter(q => mpos[q.id]).slice(0, 4).map(q => esc(q.a));
   mcap.innerHTML = `<span class="k">Spotlight</span><b>${esc(p.a)}</b> is most often cited in the same entries as ${andList(nbs)}.`; mcap.classList.add('on');
 };
@@ -210,10 +242,12 @@ const rframe = dt => {
   const y = RY0 + Math.floor(t + 1e-6);
   ryear.textContent = y;
   let ld = LSEG[0]; for (const s of LSEG) if (s.y0 <= y) ld = s;
+  if (rs.play) { if (y !== rs.sy) tick(); if (rs.sl && ld !== rs.sl) chord(7); } rs.sy = y; rs.sl = ld;
   rlead.innerHTML = `Leader in ${y}: <b>${esc(ld.p.a)}</b>${ld.y0 < y ? ` <span>(since ${ld.y0})</span>` : ''}${rs.play && ld !== LSEG[0] && y - ld.y0 <= 3 ? '<em>New leader</em>' : ''}`;
   let kk = null; for (const v of KL) if (v.y <= y) kk = v;
   if (kk !== rs.tick) { rs.tick = kk;
     rtick.innerHTML = kk ? `Most-cited work from ${kk.y}: <i>${esc(kk.t)}</i>, ${esc(kk.a)}, now cited in ${kk.n} entries` : '';
+    if (kk && rs.play) tone(4 + Math.round(Math.log(kk.n) * 2.4), {vel: .45, dur: 1, force: true});
     if (kk && !RM && rs.play) rtick.animate([{opacity: 0, transform: 'translateY(4px)'}, {opacity: 1, transform: 'none'}], {duration: 350, easing: 'ease-out'}); }
   rph.style.left = (t / NY * 100) + '%';
   rscrub.setAttribute('aria-valuenow', y); rscrub.setAttribute('aria-valuetext', `${y}: ${ld.p.a} leads`);
@@ -290,7 +324,11 @@ const tDraw = () => {
 };
 const tApply = () => {
   const sx = ts.x0 + ts.s * (ts.x1 - ts.x0), mid = ts.s > 0 && ts.s < 1;
-  ts.els.forEach(el => el.classList.toggle('on', +el.dataset.x <= sx + .5));
+  let best = null;
+  ts.els.forEach(el => { const on = +el.dataset.x <= sx + .5;
+    if (on && ts.play && el.dataset.k != null && !el.classList.contains('on')) { const hh = LC[+el.dataset.k]; if (!best || hh.m > best.m) best = hh; }
+    el.classList.toggle('on', on); });
+  if (best) tone(Math.round(2 + Math.log(best.m) * 2.2), {vel: .2 + .6 * Math.sqrt(best.m / LC[0].m), type: best.g === 'f' ? 'triangle' : 'sine'});
   if (!ts.sw) return;
   ts.sw.setAttribute('x1', sx); ts.sw.setAttribute('x2', sx); ts.sw.setAttribute('opacity', mid ? 1 : 0);
   const right = sx > ts.W - 90; ts.sy.setAttribute('x', right ? sx - 6 : sx + 6); ts.sy.setAttribute('text-anchor', right ? 'end' : 'start');
@@ -414,7 +452,7 @@ const genDraw = () => {
   for (let v = 1900; v <= 1980; v += narrow ? 20 : 10) g += `<text x="${X(v)}" y="${H - 8}" text-anchor="middle">${v}</text>`;
   const order = GP.slice().sort((a, b) => (a.g === 'f') - (b.g === 'f'));
   g += `<text class="pyear" id="gyr" x="${m.l + 10}" y="${m.t + 40}"></text>`;
-  g += order.map(p => `<circle class="gd${p.b > gs.y ? ' off' : ''}" data-b="${p.b}" cx="${X(p.b + .5).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="${p.g ? 4.6 : 4}" fill="${gcol(p)}" ${p.g ? 'stroke="var(--bg)" stroke-width="1.2"' : 'stroke="var(--men)" stroke-width="1.5"'}/>`).join('');
+  g += order.map(p => `<circle class="gd${p.b > gs.y ? ' off' : ''}" data-b="${p.b}" data-n="${p.n}" data-f="${p.g === 'f' ? 1 : 0}" cx="${X(p.b + .5).toFixed(1)}" cy="${Y(p.n).toFixed(1)}" r="${p.g ? 4.6 : 4}" fill="${gcol(p)}" ${p.g ? 'stroke="var(--bg)" stroke-width="1.2"' : 'stroke="var(--men)" stroke-width="1.5"'}/>`).join('');
   const boxes = [];
   const lab = [...new Set([...GP.slice().sort((a, b) => b.n - a.n).slice(0, narrow ? 4 : 9), ...GP.filter(p => p.g === 'f').sort((a, b) => b.n - a.n).slice(0, narrow ? 3 : 8)])];
   boxes.push({x: m.l + 6, y: m.t, w: 130, h: 46});
@@ -425,7 +463,11 @@ const genDraw = () => {
 const G0 = 1896, G1 = Math.max(1982, ...GP.map(p => p.b + 1));
 const gs = {y: ('IntersectionObserver' in window && !RM) ? G0 : G1, play: false, last: null};
 const gApply = () => { const y = gs.y, mid = gs.play || (y > G0 && y < G1);
-  gsv.querySelectorAll('[data-b]').forEach(el => el.classList.toggle('off', +el.dataset.b > y));
+  let best = null;
+  gsv.querySelectorAll('[data-b]').forEach(el => { const off = +el.dataset.b > y;
+    if (!off && gs.play && el.dataset.n && el.classList.contains('off') && (!best || +el.dataset.n > +best.dataset.n)) best = el;
+    el.classList.toggle('off', off); });
+  if (best) tone(Math.round(Math.log(+best.dataset.n) * 3.2 - 4), {vel: .3 + .5 * Math.sqrt(+best.dataset.n / C[0].n), type: best.dataset.f === '1' ? 'triangle' : 'sine'});
   document.querySelectorAll('#decs .dec').forEach(el => el.classList.toggle('off', +el.dataset.d > y));
   const t = gsv.querySelector('#gyr'); if (t) t.textContent = mid ? Math.floor(y) : ''; };
 const gbtn = () => { $('#gplay').innerHTML = gs.play ? ICON.pause + '<span>Pause</span>' : gs.y >= G1 ? ICON.replay + '<span>Replay by birth year</span>' : ICON.play + '<span>Play</span>'; };
@@ -471,7 +513,7 @@ const workDraw = () => {
   g += `<line class="wmed${wo}" data-b="${W1}" x1="${X(wmed)}" x2="${X(wmed)}" y1="${m.t}" y2="${H - m.b}" stroke="var(--mute)" stroke-dasharray="3 4"/><text class="wmed${wo}" data-b="${W1}" x="${mR ? X(wmed) + 6 : X(wmed) - 6}" y="${m.t + 10}" text-anchor="${mR ? 'start' : 'end'}">${mt}</text>`;
   g += `<text class="pyear" id="wyr" x="${m.l + 10}" y="${m.t + 40}"></text><text class="pyear sub" id="wyn" x="${m.l + 12}" y="${m.t + 60}"></text>`;
   const seen = {}, pts = W.map(w => { const k = w.yr + '|' + w.n, j = seen[k] = (seen[k] || 0) + 1; return {w, x: X(w.yr) + (j - 1) * 3.2, y: Y(w.n)}; });
-  g += pts.map(p => `<circle class="wd${p.w.yr > ws2.y ? ' off' : ''}" data-b="${p.w.yr}" cx="${p.x}" cy="${p.y}" r="4.5" fill="${p.w.o == null ? 'var(--f0)' : 'var(--acc)'}" stroke="var(--bg)" stroke-width="1.5"/>`).join('');
+  g += pts.map(p => `<circle class="wd${p.w.yr > ws2.y ? ' off' : ''}" data-b="${p.w.yr}" data-n="${p.w.n}" cx="${p.x}" cy="${p.y}" r="4.5" fill="${p.w.o == null ? 'var(--f0)' : 'var(--acc)'}" stroke="var(--bg)" stroke-width="1.5"/>`).join('');
   const boxes = [{x: mR ? X(wmed) + 2 : X(wmed) - 8 - mw, y: m.t - 4, w: mw + 6, h: 18}, {x: m.l + 6, y: m.t, w: 130, h: 66}], K = narrow ? 4 : Wd < 760 ? 7 : 12, cw = 6.9;
   [...pts].sort((a, b) => b.w.n - a.w.n).slice(0, K).forEach(p => { const s = short(p.w.t, narrow ? 20 : 30) + ' · ' + surOf(p.w), w = s.length * cw;
     for (const [tx, ty, an, bx] of [[p.x + 8, p.y + 4, 'start', p.x + 8], [p.x - 8, p.y + 4, 'end', p.x - 8 - w], [p.x + 7, p.y - 6, 'start', p.x + 7], [p.x - 7, p.y - 6, 'end', p.x - 7 - w], [p.x + 7, p.y + 15, 'start', p.x + 7], [p.x - 7, p.y + 15, 'end', p.x - 7 - w], [p.x, p.y - 10, 'middle', p.x - w / 2], [p.x, p.y + 18, 'middle', p.x - w / 2]]) {
@@ -484,7 +526,11 @@ const workDraw = () => {
 const W0 = 1899, W1 = 2027;
 const ws2 = {y: ('IntersectionObserver' in window && !RM) ? W0 : W1, play: false, last: null};
 const wApply = () => { const y = ws2.y, mid = ws2.play || (y > W0 && y < W1);
-  wsv.querySelectorAll('[data-b]').forEach(el => el.classList.toggle('off', +el.dataset.b > y));
+  let best = null;
+  wsv.querySelectorAll('[data-b]').forEach(el => { const off = +el.dataset.b > y;
+    if (!off && ws2.play && el.dataset.n && el.classList.contains('off') && (!best || +el.dataset.n > +best.dataset.n)) best = el;
+    el.classList.toggle('off', off); });
+  if (best) tone(Math.round(Math.log(+best.dataset.n) * 3.4 - 3), {vel: .3 + .5 * Math.sqrt(+best.dataset.n / W[0].n)});
   const t = wsv.querySelector('#wyr'), n = wsv.querySelector('#wyn');
   if (t) t.textContent = mid ? Math.min(2026, Math.floor(y)) : ''; if (n) n.textContent = mid ? `${W.filter(w => w.yr <= y).length} works` : ''; };
 const wbtn = () => { $('#wplay').innerHTML = ws2.play ? ICON.pause + '<span>Pause</span>' : ws2.y >= W1 ? ICON.replay + '<span>Replay by year</span>' : ICON.play + '<span>Play</span>'; };
@@ -599,8 +645,14 @@ const hDraw = () => {
   g += pts.map(p => `<circle class="hd2" style="--d:${dl(p)}ms" cx="${p.x.toFixed(1)}" cy="${(base + p.y).toFixed(1)}" r="${p.r.toFixed(2)}" fill="${p.d.f ? '#ffcf6b' : '#fff'}" fill-opacity="${p.d.f ? 1 : .82}"/>`).join('');
   const boxes = narrow ? [] : [{x: x19 - 190, y: padTop - 15, w: 380, h: 16}], K = narrow ? 7 : W < 1000 ? 13 : 20, cw = 6.9;
   // name the peaks like a mountain panorama: each label floats just above the local skyline, with a thin leader to its dot
-  let lead = '', labs = '';
-  hLabels.slice(0, K).forEach(d => { const p = pts.find(q => q.d === d); if (!p) return; const w = d.s.length * cw, x = p.x, dy = base + p.y - p.r;
+  let lead = '', labs = '', hume = '';
+  const hp = pts.find(q => q.d.h === 'h-david-hume');
+  if (hp) { const s = 'David Hume', w = s.length * 7.4 + 22, x = hp.x, cy = base + hp.y, dy = cy - hp.r;
+    let sky = dy; pts.forEach(q => { if (Math.abs(q.x - x) < w / 2 + q.r + 2) sky = Math.min(sky, base + q.y - q.r); });
+    const lx = Math.max(w / 2 + 2, Math.min(W - w / 2 - 2, x)), ty = Math.max(16, sky - 34);
+    boxes.push({x: lx - w / 2 - 4, y: ty - 14, w: w + 8, h: 28});
+    hume = `<g class="hume" style="--d:${dl(hp) + 200}ms"><line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${(ty + 11).toFixed(1)}" y2="${(dy - 3).toFixed(1)}" stroke="#fff" stroke-width="1.5"/><circle class="hume-pulse" cx="${x.toFixed(1)}" cy="${cy.toFixed(1)}" r="${(hp.r + 3).toFixed(1)}"/><circle cx="${x.toFixed(1)}" cy="${cy.toFixed(1)}" r="${(hp.r + 3).toFixed(1)}" fill="none" stroke="#fff" stroke-width="2"/><rect x="${(lx - w / 2).toFixed(1)}" y="${(ty - 11).toFixed(1)}" width="${w.toFixed(1)}" height="22" rx="11" fill="#fff"/><text class="hume-t" x="${lx.toFixed(1)}" y="${(ty + 4.5).toFixed(1)}" text-anchor="middle">${s}</text></g>`; }
+  hLabels.filter(d => d.h !== 'h-david-hume').slice(0, K).forEach(d => { const p = pts.find(q => q.d === d); if (!p) return; const w = d.s.length * cw, x = p.x, dy = base + p.y - p.r;
     let sky = dy; pts.forEach(q => { if (Math.abs(q.x - x) < w / 2 + q.r + 2) sky = Math.min(sky, base + q.y - q.r); });
     const lx = Math.max(w / 2 + 3, Math.min(W - w / 2 - 3, x));
     for (let lvl = 0; lvl < 3; lvl++) { const ty = sky - 7 - lvl * 16, bb = {x: lx - w / 2 - 3, y: ty - 12, w: w + 6, h: 15};
@@ -609,10 +661,13 @@ const hDraw = () => {
       boxes.push(bb);
       if (dy - (ty + 3) > 3) lead += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${(ty + 4).toFixed(1)}" y2="${(dy - 1).toFixed(1)}" stroke="rgba(255,255,255,.55)" style="--d:${dl(p) + 260}ms"/>`;
       labs += `<text x="${lx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" style="--d:${dl(p) + 260}ms">${esc(d.s)}</text>`; break; } });
-  g += lead + labs;
+  g += lead + labs + hume;
   g += pts.map(p => `<circle class="hit" data-h="${p.d.h}" cx="${p.x.toFixed(1)}" cy="${(base + p.y).toFixed(1)}" r="${Math.max(5, p.r + 1).toFixed(1)}" fill="transparent"/>`).join('');
   hsv.innerHTML = g;
-  if (intro) { hsv.classList.add('intro'); setTimeout(() => hsv.classList.remove('intro'), 3200); }
+  if (intro) { hsv.classList.add('intro'); setTimeout(() => hsv.classList.remove('intro'), 3200);
+    if (SND.on && SND.ctx && SND.ctx.state === 'running') { const slots = new Map();
+      pts.forEach(p => { const k = Math.floor(dl(p) / 90), o = slots.get(k); if (!o || p.d.n > o.d.n) slots.set(k, p); });
+      [...slots.entries()].forEach(([k, p]) => tone(Math.round(2 + p.x / W * 15), {vel: .2 + .6 * Math.sqrt(p.d.n / hMax), type: p.d.f ? 'triangle' : 'sine', at: k * .09, force: true, dur: .9})); } }
 };
 new ResizeObserver(hDraw).observe(hsv);
 const hByH = Object.fromEntries(HDOT.map(d => [d.h, d]));
@@ -632,7 +687,7 @@ const hClear = () => { hsv.querySelectorAll('.hring,.hhalo').forEach(n => n.remo
 const hStep = () => {
   if (!hs.on || hs.user || !hs.vis || !sheet.hidden || document.hidden || hsv.classList.contains('intro')) return;
   const d = hSpotList[hs.k++ % hSpotList.length], c = hsv.querySelector(`.hit[data-h="${d.h}"]`); if (!c) return;
-  hClear(); const x = +c.getAttribute('cx'), y = +c.getAttribute('cy'), r = Math.max(4, +c.getAttribute('r') - 1);
+  hClear(); bell(4 + hSeg(d.b) * 2, .3); const x = +c.getAttribute('cx'), y = +c.getAttribute('cy'), r = Math.max(4, +c.getAttribute('r') - 1);
   const ns = 'http://www.w3.org/2000/svg';
   [['hhalo', r + 3], ['hring', r + 2]].forEach(([cls, rr]) => { const e = document.createElementNS(ns, 'circle'); e.setAttribute('class', cls); e.setAttribute('cx', x); e.setAttribute('cy', y); e.setAttribute('r', rr); hsv.insertBefore(e, hsv.querySelector('.hit')); });
   placeTip(hTip, hfig, x, y, `<span style="display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--acc)">${d.old ? 'Before 1900' : 'Since 1900'}</span>${d.old ? htip(d.o) : ptip(d.o)}`); };

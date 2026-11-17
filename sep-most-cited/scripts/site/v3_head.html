@@ -47,6 +47,12 @@ h3{font-size:19px;letter-spacing:-.01em}
 .hbtn:hover{background:#fff;color:var(--card)}
 .hbtn svg{width:12px;height:12px}
 .hfoot .hcap{flex:1 1 380px}
+.hctl{flex-wrap:wrap}
+.sndbtn svg{width:16px;height:14px}
+#hsv text.hume-t{fill:var(--card);stroke:none;font:700 13.5px "Source Sans 3",system-ui,sans-serif;letter-spacing:.01em}
+.hume-pulse{fill:none;stroke:#ffcf6b;stroke-width:2.5;transform-box:fill-box;transform-origin:center;animation:ring 2.6s ease-out infinite;pointer-events:none}
+.hume rect{filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
+#hsv.intro .hume rect{animation:fade .6s both;animation-delay:var(--d,0ms)}
 .hring{fill:none;stroke:#fff;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ring 1.5s ease-out 2;pointer-events:none}
 .hhalo{fill:none;stroke:#fff;stroke-width:2;pointer-events:none;animation:fade .3s both}
 @keyframes ring{from{transform:scale(1);opacity:.95}to{transform:scale(3.4);opacity:0}}
@@ -294,7 +300,7 @@ details.ent a{color:var(--ink)}
   nav.jump a:first-child{margin-left:0}nav.jump{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}nav.jump::-webkit-scrollbar{display:none}}
 @media(max-width:600px){table{font-size:13px}td{padding:9px 4px}th{padding:6px 4px}td.nb{width:auto}.barbox,.bar.hide-s{display:none}.t{font-size:15px}.gain{grid-template-columns:minmax(0,1fr) 3em 5.8em}.gain .bar{display:none}tr.det td{padding-left:6px}.count{margin-left:0;width:100%}.controls>.chips{width:100%;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.chip{flex:none}.pnums b{font-size:22px}.fl{grid-template-columns:minmax(0,1fr)}.dec{grid-template-columns:3.6em minmax(0,1fr) 8.4em}
   .rbars{--rh:30px;--nw:6.6em}.rn{font-size:14px}.rn .full{display:none}.rn .short{display:inline}.rv{font-size:13px}.rctl{gap:10px}.rctl .pbtn span{display:none}.rlabs span{font-size:11px}.tr-tag{display:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
+@media(prefers-reduced-motion:reduce){.hume-pulse{display:none}html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
 </style>
 </head>
 <body>
@@ -305,7 +311,7 @@ details.ent a{color:var(--ink)}
     <p class="lead" id="lead"></p>
     <div class="fig" id="herofig"><svg id="hsv" role="img" aria-label="Every philosopher in this count, placed by year of birth"></svg><div class="tip" id="htip"></div></div>
     <div class="hfoot">
-      <div class="hctl"><button type="button" class="hbtn pbtn" id="hreplay"></button><button type="button" class="hbtn pbtn" id="hspot" aria-pressed="true"></button></div>
+      <div class="hctl"><button type="button" class="hbtn pbtn" id="hreplay"></button><button type="button" class="hbtn pbtn" id="hspot" aria-pressed="true"></button><button type="button" class="hbtn pbtn sndbtn" aria-pressed="false"></button></div>
       <p class="hcap" id="hcap"></p>
     </div>
     <dl class="stats" id="stats"></dl>
