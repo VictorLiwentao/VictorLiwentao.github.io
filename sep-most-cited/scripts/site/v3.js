@@ -74,7 +74,7 @@ const tick = () => { if (!SND.on || !SND.ctx || SND.ctx.state !== 'running') ret
   o.type = 'triangle'; o.frequency.value = 2200; g.gain.setValueAtTime(.025, t); g.gain.exponentialRampToValueAtTime(.0001, t + .035); o.connect(g); g.connect(SND.out); o.start(t); o.stop(t + .05); };
 const SICON = {on: '<svg viewBox="0 0 16 14" aria-hidden="true"><path d="M1 5h3l4-3.5v11L4 9H1z"/><path d="M10.5 4.4a3.6 3.6 0 0 1 0 5.2M12.7 2.4a6.6 6.6 0 0 1 0 9.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>',
   off: '<svg viewBox="0 0 16 14" aria-hidden="true"><path d="M1 5h3l4-3.5v11L4 9H1z"/><path d="M11 4.6l4 4.8M15 4.6l-4 4.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>'};
-document.querySelectorAll('.speed').forEach(el => el.insertAdjacentHTML('afterend', '<button type="button" class="pbtn sndbtn" aria-pressed="false"></button>'));
+document.querySelectorAll('.speed').forEach(el => { el.setAttribute('aria-label', 'Playback speed and sound'); el.insertAdjacentHTML('beforeend', '<i class="sep" aria-hidden="true"></i><button type="button" class="sndbtn" aria-pressed="false"></button>'); });
 const sndSync = () => document.querySelectorAll('.sndbtn').forEach(b => { b.innerHTML = (SND.on ? SICON.on : SICON.off) + `<span>Sound ${SND.on ? 'on' : 'off'}</span>`; b.setAttribute('aria-pressed', String(SND.on)); b.setAttribute('aria-label', SND.on ? 'Turn sound off' : 'Turn sound on'); });
 document.addEventListener('click', e => { const b = e.target.closest('.sndbtn'); if (!b) return; SND.on = !SND.on;
   try { localStorage.setItem('sepSound', SND.on ? '1' : '0'); } catch (err) {} sndSync();
@@ -119,6 +119,18 @@ $('#mrace').textContent = `For every year from 1900 to 2026, each philosopher bo
 $('#mlong').textContent = `The long canon covers the ${LC.length} philosophers born before 1900 who have an SEP entry of their own (found through Wikidata’s SEP identifiers and the SEP table of contents) and are named in the text of at least five other entries. Historical figures are usually cited by title rather than by author, so they are counted by mention instead: a name is matched in each entry’s main text, bibliographies excluded, with checks for namesakes cited in the same entry, surnames used as ordinary words, and later authors cited by surname and year. Expect these counts to be approximate, though usually within a few entries. “Linked from” counts entries that link to their article. Figures with no entry of their own, such as Thales or Chrysippus, are not included. Traditions are assigned from the field of their own entry and their Wikidata description.`;
 $('#mdata').innerHTML = `Data and code: <a href="https://victorliwentao.github.io/sep-most-cited/data/philosophers.csv">philosophers.csv</a>, <a href="https://victorliwentao.github.io/sep-most-cited/data/works.csv">works.csv</a>, <a href="https://victorliwentao.github.io/sep-most-cited/data/before1900.csv">before1900.csv</a>, and the <a href="https://github.com/VictorLiwentao/VictorLiwentao.github.io/tree/main/sep-most-cited">scripts that produced them</a>. Original analyses: <a href="https://schwitzsplinters.blogspot.com/2025/03/the-253-most-cited-works-in-stanford.html">most-cited works</a> and <a href="https://schwitzsplinters.blogspot.com/2024/08/the-378-most-cited-contemporary-authors.html">most-cited contemporary authors</a> by Eric Schwitzgebel. Not affiliated with the <a href="https://plato.stanford.edu/">Stanford Encyclopedia of Philosophy</a>.`;
 $('#foot').innerHTML = `Counts compiled ${nice(M.date)} from <a href="https://plato.stanford.edu/">plato.stanford.edu</a>, following the method of Eric Schwitzgebel and Jordan Jackson. Biographical data from <a href="https://www.wikidata.org/">Wikidata</a>.`;
+
+/* ---------- sticky section bar ---------- */
+const stick = $('#stick'), slinks = [...document.querySelectorAll('#sticklinks a')];
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(es => { stick.classList.toggle('on', !es[0].isIntersecting); }, {rootMargin: '-60px 0px 0px 0px'}).observe($('.hero nav.jump'));
+  const vis = new Map();
+  const cio = new IntersectionObserver(es => { es.forEach(e => vis.set(e.target.id, e.intersectionRatio));
+    let best = null, bv = 0; vis.forEach((v, id) => { if (v > bv) { bv = v; best = id; } });
+    slinks.forEach(a => { const on = a.getAttribute('href') === '#' + best; if (on && !a.classList.contains('cur')) { const box = a.parentElement; box.scrollTo({left: a.offsetLeft - 24, behavior: RM ? 'auto' : 'smooth'}); } a.classList.toggle('cur', on); }); },
+    {threshold: [0, .1, .2, .3, .5, .7, 1], rootMargin: '-52px 0px -35% 0px'});
+  document.querySelectorAll('section.band').forEach(s => cio.observe(s));
+}
 
 /* ---------- sections enter once ---------- */
 const sections = [...document.querySelectorAll('section.band')];
@@ -218,7 +230,7 @@ const renderA = () => {
   const base = pre ? [...P].sort((a, b) => b.n - a.n || a.a.localeCompare(b.a)) : C;
   const list = base.filter(p => (!q || fold(p.a + ' ' + p.w.map(w => w.t).join(' ')).includes(q)) && (f === '' || p.mf == f) && (!wo || p.g === 'f') && (!nw || (p.o == null && !p.p)));
   const filtered = q || f !== '' || wo || nw, shown = filtered || as.all ? list : list.slice(0, 50), mx = base[0].n;
-  $('#abody').innerHTML = shown.map((p, k) => `<tr class="row" data-id="${p.id}" tabindex="0" style="--k:${k}"><td class="r">${pre ? p.ra : p.r}</td><td><div class="t"><a href="#p-${p.id}">${esc(p.a)}</a>${p.p ? '<span class="old">born before 1900</span>' : ''}</div><div class="by">${[life(p), p.w[0] ? esc(p.w[0].t) : ''].filter(Boolean).join(' · ')}</div></td><td class="nb"><div class="nbw"><span class="num">${p.n}</span><span class="barbox"><span style="display:block;height:100%;width:${p.n / mx * 100}%">${fp(p)}</span></span></div></td><td class="d" title="${p.p ? 'Not ranked in 2024' : dTitle(p.o, p.or)}">${p.p ? '–' : delta(p.n, p.o)}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
+  $('#abody').innerHTML = shown.map((p, k) => `<tr class="row" data-id="${p.id}" tabindex="0" style="--k:${k}"><td class="r">${pre ? p.ra : p.r}</td><td><div class="t"><a href="#p-${p.id}">${esc(p.a)}</a>${p.p ? '<span class="old">born before 1900</span>' : ''}</div><div class="by">${[life(p), p.w[0] ? esc(p.w[0].t) : ''].filter(Boolean).join(' · ')}</div><div class="mob"><span class="num">${p.n}</span><span class="barbox"><span style="display:block;height:100%;width:${p.n / mx * 100}%">${fp(p)}</span></span></div></td><td class="nb"><div class="nbw"><span class="num">${p.n}</span><span class="barbox"><span style="display:block;height:100%;width:${p.n / mx * 100}%">${fp(p)}</span></span></div></td><td class="d" title="${p.p ? 'Not ranked in 2024' : dTitle(p.o, p.or)}">${p.p ? '–' : delta(p.n, p.o)}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
   $('#acount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : base.length}`;
   $('#amore').hidden = filtered || as.all;
 };
@@ -246,7 +258,7 @@ const rframe = dt => {
   order.forEach((k, rank) => { const r = RR[k], e = relem[k], vis = rank < N && vals[k] > 0, tgt = vis ? rank : N;
     r.pos = snap ? tgt : r.pos + (tgt - r.pos) * Math.min(1, dt * 8);
     r.op = snap ? +vis : r.op + (+vis - r.op) * Math.min(1, dt * 7);
-    e.el.style.transform = `translateY(${(r.pos * RH).toFixed(1)}px)`;
+    e.el.style.transform = `translateY(${(r.pos * RH).toFixed(1)}px)`; e.el.style.zIndex = String(r.pos > tgt + .05 ? 3 : 1);
     e.el.style.opacity = r.op.toFixed(3); e.el.style.visibility = r.op < .02 ? 'hidden' : 'visible';
     e.f.style.width = (Math.min(1, vals[k] / rs.xmax) * 86).toFixed(2) + '%';
     e.v.textContent = Math.round(vals[k]); });
@@ -385,7 +397,7 @@ const renderB = () => {
   const q = fold($('#bq').value.trim()), t = $('#bt').value, wo = $('#bw').checked;
   const list = LC.filter(h => (!q || fold(h.a + ' ' + h.wd).includes(q)) && (t === '' || h.tr == t) && (!wo || h.g === 'f'));
   const filtered = q || t !== '' || wo, shown = filtered || bs.all ? list : list.slice(0, 50), mx = LC[0].m;
-  $('#bbody').innerHTML = shown.map((h, k) => `<tr class="row" data-h="${h.id}" tabindex="0" style="--k:${k}"><td class="r">${h.r}</td><td><div class="t"><a href="#h-${h.id}">${esc(h.a)}</a>${h.tr ? `<span class="tr-tag"><i class="sw" style="background:${TC[h.tr]}"></i>${TRAD[h.tr]}</span>` : ''}</div><div class="by">${[hlife(h), esc(h.wd)].filter(Boolean).join(' · ')}</div></td><td class="nb"><div class="nbw"><span class="num">${h.m}</span><span class="bar hide-s"><i style="width:${h.m / mx * 100}%"></i></span></div></td><td class="d">${h.l}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
+  $('#bbody').innerHTML = shown.map((h, k) => `<tr class="row" data-h="${h.id}" tabindex="0" style="--k:${k}"><td class="r">${h.r}</td><td><div class="t"><a href="#h-${h.id}">${esc(h.a)}</a>${h.tr ? `<span class="tr-tag"><i class="sw" style="background:${TC[h.tr]}"></i>${TRAD[h.tr]}</span>` : ''}</div><div class="by">${[hlife(h), esc(h.wd)].filter(Boolean).join(' · ')}</div><div class="mob"><span class="num">${h.m}</span><span class="bar"><i style="width:${h.m / mx * 100}%"></i></span></div></td><td class="nb"><div class="nbw"><span class="num">${h.m}</span><span class="bar hide-s"><i style="width:${h.m / mx * 100}%"></i></span></div></td><td class="d">${h.l}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
   $('#bcount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : LC.length}`;
   $('#bmore').hidden = filtered || bs.all;
 };
@@ -575,7 +587,7 @@ const renderW = () => {
   const list = W.filter(w => (!q || fold(w.t + ' ' + w.a).includes(q)) && (!dec || Math.floor(w.yr / 10) * 10 == dec) && (!nw || w.o == null));
   const filtered = q || dec || nw, shown = filtered || ws.all ? list : list.slice(0, 50), mx = W[0].n;
   $('#wbody').innerHTML = shown.map((w, k) => { const op = ws.open.has(w.i);
-    return `<tr class="row" id="w${w.i}" data-i="${w.i}" tabindex="0" aria-expanded="${op}" style="--k:${k}"><td class="r">${w.r}</td><td class="nb"><div class="nbw"><span class="num">${w.n}</span><span class="bar hide-s"><i style="width:${w.n / mx * 100}%"></i></span></div></td><td><div class="t">${esc(w.t)}</div><div class="by">${wauthor(w)}, ${w.y}</div></td><td class="d" title="${dTitle(w.o, w.or)}">${delta(w.n, w.o)}</td></tr>`
+    return `<tr class="row" id="w${w.i}" data-i="${w.i}" tabindex="0" aria-expanded="${op}" style="--k:${k}"><td class="r">${w.r}</td><td class="nb"><div class="nbw"><span class="num">${w.n}</span><span class="bar hide-s"><i style="width:${w.n / mx * 100}%"></i></span></div></td><td><div class="t">${esc(w.t)}</div><div class="by">${wauthor(w)}, ${w.y}</div><div class="mob"><span class="num">${w.n}</span><span class="bar"><i style="width:${w.n / mx * 100}%"></i></span></div></td><td class="d" title="${dTitle(w.o, w.or)}">${delta(w.n, w.o)}</td></tr>`
       + (op ? `<tr class="det"><td colspan="4">Cited in ${w.n} entries: ${elinks(w.e)}</td></tr>` : ''); }).join('') || '<tr><td colspan="4">No works match.</td></tr>';
   $('#wcount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : W.length}`;
   $('#wmore').hidden = filtered || ws.all;

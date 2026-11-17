@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SEP Most-Cited 2026</title>
 <meta name="description" content="The philosophers and works cited most in the Stanford Encyclopedia of Philosophy, recounted from all 1,872 entries in November 2026: a map of the canon, a century of citations replayed, the long canon before 1900, and a profile for every philosopher.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238c1515'/%3E%3Ccircle cx='8' cy='24' r='3' fill='%23fff'/%3E%3Ccircle cx='15' cy='22' r='4.5' fill='%23fff'/%3E%3Ccircle cx='23.5' cy='18' r='6.5' fill='%23fff'/%3E%3Ccircle cx='15' cy='14' r='2.5' fill='%23ffcf6b'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The philosophers the Stanford Encyclopedia keeps coming back to">
+<meta property="og:description" content="All 1,872 SEP entries, read for the people they cite and name: 810 philosophers from Pythagoras to today, a century of citations replayed, and a profile for each.">
+<meta property="og:url" content="https://victorliwentao.github.io/sep-most-cited/">
+<meta property="og:image" content="https://victorliwentao.github.io/sep-most-cited/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#8c1515">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet">
@@ -59,6 +68,10 @@ h3{font-size:19px;letter-spacing:-.01em}
 .speed button{min-height:36px;min-width:42px;padding:0 10px;border:0;border-radius:18px;font-size:14px;background:none;color:var(--ink);transition:background .2s,color .2s}
 .speed button:hover{background:var(--soft)}
 .speed button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.speed .sep{width:1px;align-self:stretch;margin:6px 4px;background:var(--rule)}
+.speed .sndbtn{display:inline-flex;align-items:center;gap:6px;padding:0 12px 0 10px}
+.speed .sndbtn[aria-pressed=true]{background:var(--soft);color:var(--ink);box-shadow:inset 0 0 0 1px var(--rule)}
+.speed .sndbtn svg{fill:currentColor}
 /* playable generations and works */
 #gsv .gd,#wsv .wd{transform-box:fill-box;transform-origin:center;transition:transform .45s cubic-bezier(.2,.8,.3,1.3),opacity .3s}
 #gsv .off,#wsv .off{transform:scale(0);opacity:0}
@@ -91,6 +104,18 @@ nav.jump a:hover,nav.jump a:focus-visible{background:#fff;color:var(--card);outl
 nav.jump a{flex:none}
 nav.jump a:first-child{margin-left:-14px}
 section{border-top:1px solid var(--rule)}
+section.band,header.hero{scroll-margin-top:54px}
+.stick{position:fixed;top:0;left:0;right:0;z-index:15;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);transform:translateY(-102%);visibility:hidden;transition:transform .32s cubic-bezier(.2,.7,.2,1),visibility 0s .32s}
+.stick.on{transform:none;visibility:visible;transition:transform .32s cubic-bezier(.2,.7,.2,1)}
+.stick{padding:0 max(5vw,16px)}
+.stick .in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:10px;height:52px}
+.stick .brand{font:600 17px "Source Serif 4",Georgia,serif;letter-spacing:-.01em;color:var(--ink);text-decoration:none;white-space:nowrap;margin-right:10px}
+.stick .brand span{color:var(--acc)}
+.stick .links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.stick .links::-webkit-scrollbar{display:none}
+.stick .links a{flex:none;display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border-radius:18px;font-size:14px;font-weight:600;color:var(--mute);text-decoration:none;transition:background .2s,color .2s}
+.stick .links a:hover{color:var(--ink)}
+.stick .links a.cur{color:var(--ink);background:var(--soft);box-shadow:inset 0 0 0 1px var(--rule)}
 .shead{display:grid;gap:8px 40px;margin-bottom:18px}
 .shead p{margin:0;color:var(--mute);max-width:66ch}
 .kick{display:block;font:700 12px "Source Sans 3",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin-bottom:8px}
@@ -293,15 +318,18 @@ details.ent a{color:var(--ink)}
 .js .band:not(.seen) .fp,.js .band:not(.seen) .bar i,.js .band:not(.seen) .dec .bar{transform:scaleX(0)}
 .js #generations:not(.seen) #gsv circle,.js #works:not(.seen) #wsv circle{opacity:0}
 @media(min-width:900px){.shead{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}.gen{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
-@media(max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));border-top:0}.stats div,.stats div+div{padding:14px 12px 14px 0;border-left:0;border-top:1px solid rgba(255,255,255,.28)}
+@media(max-width:760px){.stick .brand{display:none}.stick .links{margin-left:-12px;-webkit-mask-image:linear-gradient(to right,#000 85%,transparent);mask-image:linear-gradient(to right,#000 85%,transparent)}.stats{grid-template-columns:repeat(2,minmax(0,1fr));border-top:0}.stats div,.stats div+div{padding:14px 12px 14px 0;border-left:0;border-top:1px solid rgba(255,255,255,.28)}
   nav.jump a:first-child{margin-left:0}nav.jump{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}nav.jump::-webkit-scrollbar{display:none}}
+.mob{display:none}
+@media(max-width:600px){.speed .sndbtn span{display:none}td.nb,th.nbh{display:none}.mob{display:flex;align-items:center;gap:8px;margin-top:6px}.mob .barbox,.mob .bar{display:block;flex:1;height:8px}.mob .num{flex:0 0 auto;font-size:13px}
+  td .by{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100vw - 150px)}th.d,td.d{width:3em;font-size:12px}th.r,td.r{width:2.2em}}
 @media(max-width:600px){table{font-size:13px}td{padding:9px 4px}th{padding:6px 4px}td.nb{width:auto}.barbox,.bar.hide-s{display:none}.t{font-size:15px}.gain{grid-template-columns:minmax(0,1fr) 3em 5.8em}.gain .bar{display:none}tr.det td{padding-left:6px}.count{margin-left:0;width:100%}.controls>.chips{width:100%;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.chip{flex:none}.pnums b{font-size:22px}.fl{grid-template-columns:minmax(0,1fr)}.dec{grid-template-columns:3.6em minmax(0,1fr) 8.4em}
   .rbars{--rh:30px;--nw:6.6em}.rn{font-size:14px}.rn .full{display:none}.rn .short{display:inline}.rv{font-size:13px}.rctl{gap:10px}.rctl .pbtn span{display:none}.rlabs span{font-size:11px}.tr-tag{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
 </style>
 </head>
 <body>
-<header class="band hero">
+<header class="band hero" id="top">
   <div class="wrap">
     <p class="hkick" id="hkick">Stanford Encyclopedia of Philosophy</p>
     <h1>The philosophers the Stanford Encyclopedia keeps coming back to</h1>
@@ -313,8 +341,10 @@ details.ent a{color:var(--ink)}
     </div>
     <dl class="stats" id="stats"></dl>
   </div>
-  <nav class="wrap jump" aria-label="Sections"><a href="#map">Map</a><a href="#philosophers">Rankings</a><a href="#race">Race</a><a href="#before">Before 1900</a><a href="#generations">Generations</a><a href="#fields">Fields</a><a href="#works">Works</a><a href="#changes">Since 2024</a><a href="#method">Method</a></nav>
+  <nav class="wrap jump" aria-label="Sections"><a href="#map">Map</a><a href="#race">Race</a><a href="#philosophers">Rankings</a><a href="#before">Before 1900</a><a href="#generations">Generations</a><a href="#fields">Fields</a><a href="#works">Works</a><a href="#changes">Since 2024</a><a href="#method">Method</a></nav>
 </header>
+
+<nav class="stick" id="stick" aria-label="Sections"><div class="in"><a class="brand" href="#top">SEP Most-Cited <span>2026</span></a><div class="links" id="sticklinks"><a href="#map">Map</a><a href="#race">Race</a><a href="#philosophers">Rankings</a><a href="#before">Before 1900</a><a href="#generations">Generations</a><a href="#fields">Fields</a><a href="#works">Works</a><a href="#changes">Since 2024</a><a href="#method">Method</a></div></div></nav>
 
 <section class="band" id="map" style="border-top:0">
   <div class="wrap">
@@ -331,26 +361,6 @@ details.ent a{color:var(--ink)}
     </div>
     <div class="fig" id="mapfig"><svg id="msv" role="img" aria-label="Map of philosophers placed by shared citations"></svg><div class="tip" id="mtip"></div><div class="mcap" id="mcap" aria-hidden="true"></div></div>
     <p class="note">Positions come from comparing which entries cite each philosopher (a UMAP projection of their citation profiles), so nearness means “cited together”, and the axes have no meaning. Lines join a philosopher to the six people most often cited in the same entries. Region names mark where philosophers whose main field is that one cluster.</p>
-  </div>
-</section>
-
-<section class="band" id="philosophers">
-  <div class="wrap">
-    <div class="shead">
-      <h2 id="atitle">The most-cited philosophers born since 1900</h2>
-      <p>An author scores one point for each entry that cites them as first, second or last author, or as an editor named before the date. The coloured bar splits their citing entries by field. Click a name for the full profile.</p>
-    </div>
-    <div class="controls">
-      <input type="search" id="aq" placeholder="Search names or works" aria-label="Search philosophers">
-      <select id="af" aria-label="Main field"><option value="">All fields</option></select>
-      <label class="chk"><input type="checkbox" id="aw"> Women only</label>
-      <label class="chk"><input type="checkbox" id="apre"> Include born before 1900</label>
-      <label class="chk"><input type="checkbox" id="anew"> New since 2024</label>
-      <button type="button" id="acopy">Copy as CSV</button>
-      <span class="count" id="acount" aria-live="polite"></span>
-    </div>
-    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th>Philosopher</th><th>Citing entries, by field</th><th class="d">vs 2024</th></tr></thead><tbody id="abody"></tbody></table></div>
-    <button type="button" class="more" id="amore">Show all philosophers</button>
   </div>
 </section>
 
@@ -376,6 +386,27 @@ details.ent a{color:var(--ink)}
   </div>
 </section>
 
+<section class="band" id="philosophers">
+  <div class="wrap">
+    <div class="shead">
+      <h2 id="atitle">The most-cited philosophers born since 1900</h2>
+      <p>An author scores one point for each entry that cites them as first, second or last author, or as an editor named before the date. The coloured bar splits their citing entries by field. Click a name for the full profile.</p>
+    </div>
+    <div class="controls">
+      <input type="search" id="aq" placeholder="Search names or works" aria-label="Search philosophers">
+      <select id="af" aria-label="Main field"><option value="">All fields</option></select>
+      <label class="chk"><input type="checkbox" id="aw"> Women only</label>
+      <label class="chk"><input type="checkbox" id="apre"> Include born before 1900</label>
+      <label class="chk"><input type="checkbox" id="anew"> New since 2024</label>
+      <button type="button" id="acopy">Copy as CSV</button>
+      <span class="count" id="acount" aria-live="polite"></span>
+    </div>
+    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th>Philosopher</th><th class="nbh">Citing entries, by field</th><th class="d">vs 2024</th></tr></thead><tbody id="abody"></tbody></table></div>
+    <button type="button" class="more" id="amore">Show all philosophers</button>
+  </div>
+</section>
+
+
 <section class="band" id="before">
   <div class="wrap">
     <div class="shead"><h2 id="btitle">Before 1900</h2><p id="bsub"></p></div>
@@ -396,7 +427,7 @@ details.ent a{color:var(--ink)}
       <button type="button" id="bcopy">Copy as CSV</button>
       <span class="count" id="bcount" aria-live="polite"></span>
     </div>
-    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th>Philosopher</th><th>Entries that name them</th><th class="d" title="Entries that link to their own SEP article">Linked from</th></tr></thead><tbody id="bbody"></tbody></table></div>
+    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th>Philosopher</th><th class="nbh">Entries that name them</th><th class="d" title="Entries that link to their own SEP article">Linked from</th></tr></thead><tbody id="bbody"></tbody></table></div>
     <button type="button" class="more" id="bmore">Show all</button>
   </div>
 </section>
@@ -444,7 +475,7 @@ details.ent a{color:var(--ink)}
       <button type="button" id="wcopy">Copy as CSV</button>
       <span class="count" id="wcount" aria-live="polite"></span>
     </div>
-    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th>Citing entries</th><th>Work</th><th class="d">vs 2024</th></tr></thead><tbody id="wbody"></tbody></table></div>
+    <div class="scroll"><table><thead><tr><th class="r">Rank</th><th class="nbh">Citing entries</th><th>Work</th><th class="d">vs 2024</th></tr></thead><tbody id="wbody"></tbody></table></div>
     <button type="button" class="more" id="wmore">Show all works</button>
   </div>
 </section>
