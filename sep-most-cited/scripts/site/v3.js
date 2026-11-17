@@ -208,9 +208,20 @@ msv.addEventListener('pointerout', e => { if (e.target.dataset && e.target.datas
 msv.addEventListener('click', e => { const id = e.target.dataset && e.target.dataset.id; if (id) location.hash = 'p-' + id; });
 $('#mchips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; const k = +b.dataset.k;
   ms.f = ms.f === k ? null : k; document.querySelectorAll('#mchips .chip').forEach(c => c.setAttribute('aria-pressed', String(+c.dataset.k === ms.f))); mapDraw(); });
-$('#mq').addEventListener('change', e => { const q = fold(e.target.value.trim()); if (!q) return;
-  const p = P.find(x => fold(x.a) === q) || P.find(x => fold(x.a).includes(q)); if (p) { location.hash = 'p-' + p.id; return; }
-  const h = LC.find(x => fold(x.a) === q) || LC.find(x => fold(x.a).includes(q)); if (h) location.hash = 'h-' + h.id; });
+// forgiving name search: any order, initials or full names, surname alone
+const findPerson = q => { const toks = fold(q).replace(/[.,]/g, ' ').split(/\s+/).filter(Boolean); if (!toks.length) return null;
+  const score = name => { const words = fold(name).replace(/[.,]/g, ' ').split(/\s+/).filter(Boolean), last = words[words.length - 1];
+    if (words.join(' ') === toks.join(' ')) return 4; if (toks.every(t => words.some(w => w.startsWith(t)))) return 3;
+    if (toks.includes(last)) return 2; if (toks.length === 1 && last.startsWith(toks[0]) && toks[0].length >= 4) return 1; return 0; };
+  let best = null, bs = 0;
+  P.forEach(p => { const s = score(p.a); if (s > bs) { bs = s; best = p.p && p.h != null ? 'h-' + LC[p.h].id : 'p-' + p.id; } });
+  LC.forEach(h => { if (h.pi != null) return; const s = score(h.a); if (s > bs) { bs = s; best = 'h-' + h.id; } });
+  return best; };
+let mmsgT = null;
+$('#mq').addEventListener('change', e => { const v = e.target.value.trim(); if (!v) return; const hit = findPerson(v);
+  clearTimeout(mmsgT);
+  if (hit) { $('#mmsg').textContent = ''; location.hash = hit; }
+  else { $('#mmsg').textContent = `No one called “${v}” in this count`; mmsgT = setTimeout(() => { $('#mmsg').textContent = ''; }, 4000); } });
 // spotlight: a slow tour of the most-cited philosophers' constellations while nobody is pointing at the map
 const tourList = (() => { const top = C.slice(0, 60), out = []; for (let k = 0; k < top.length; k++) out.push(top[(k * 17) % top.length]); return out; })();
 const tour = {on: !RM, user: false, vis: false, k: 0};
@@ -424,18 +435,19 @@ const fieldBlock = (p, verb) => `<div class="psec"><h3>Where they are ${verb}</h
   <p class="note">Most-${verb === 'cited' ? 'citing' : 'naming'} areas: ${p.fine.map(([f, c]) => `${esc(FINE[f])} (${c})`).join(', ')}.</p></div>`;
 const sbar = (prev, next, pre) => `<div class="sbar"><div class="nav">${prev ? `<button type="button" data-go="${pre}${prev.id}" aria-label="Previous: ${esc(prev.a)}">← Prev</button>` : ''}${next ? `<button type="button" data-go="${pre}${next.id}" aria-label="Next: ${esc(next.a)}">Next →</button>` : ''}</div><button type="button" id="pclose" aria-label="Close profile">Close ✕</button></div>`;
 const showSheet = () => { const was = !sheet.hidden; if (!was) lastFocus = document.activeElement;
-  sheet.hidden = false; scrim.hidden = false; document.body.style.overflow = 'hidden'; sheet.scrollTop = 0; $('#pclose').focus({preventScroll: true});
+  sheet.hidden = false; scrim.hidden = false; document.body.style.overflow = 'hidden'; sheet.scrollTop = 0; $('#pname').focus({preventScroll: true});
   sin.querySelectorAll('.pnums b').forEach(b => { const v = +b.textContent; if (Number.isFinite(v) && v > 0 && /^\d+$/.test(b.textContent)) { b.innerHTML = `<span class="cu" data-to="${v}" data-from="0">${v}</span>`; countUp(b.firstChild, 700); } });
   if (was && !RM) sin.animate([{opacity: 0, transform: 'translateY(8px)'}, {opacity: 1, transform: 'none'}], {duration: 260, easing: 'ease-out'}); };
+const PALL = [...P].sort((a, b) => a.ra - b.ra || a.a.localeCompare(b.a));
 const openProfile = id => {
   const p = byId[id]; if (!p) return;
   const rankLine = p.p ? `<b>${p.ra}</b><span>rank, all eras</span>` : `<b>${p.r}</b><span>rank of ${C.length}</span>`;
-  const prevNext = p.p ? [] : [C[p.i - 1], C[p.i + 1]];
+  const ai = PALL.indexOf(p), prevNext = p.p ? [PALL[ai - 1], PALL[ai + 1]] : [C[p.i - 1], C[p.i + 1]];
   const wmax = p.w.length ? p.w[0].n : 1;
   const h = p.h != null ? LC[p.h] : null;
   sin.innerHTML = `${sbar(prevNext[0], prevNext[1], 'p-')}
   <p class="pkick">${p.p ? 'Born before 1900 · cited as an author' : 'Most-cited philosophers born since 1900'}</p>
-  <h2 class="pname" id="pname">${esc(p.a)}</h2>
+  <h2 class="pname" id="pname" tabindex="-1">${esc(p.a)}</h2>
   <p class="plife">${[life(p), esc(p.wd)].filter(Boolean).join(' · ')}</p>
   <div class="plinks">${p.wp ? `<a href="${esc(p.wp)}">Wikipedia</a>` : ''}${p.q ? `<a href="https://www.wikidata.org/wiki/${p.q}">Wikidata</a>` : ''}<a href="https://plato.stanford.edu/search/searcher.py?query=${encodeURIComponent(p.a)}">Search the SEP</a></div>
   <div class="pnums"><div>${rankLine}</div><div><b>${p.n}</b><span>of ${fmt(M.entries)} entries cite them</span></div><div><b>${p.p ? '–' : p.o == null ? 'new' : (p.n >= p.o ? '+' : '−') + Math.abs(p.n - p.o)}</b><span>${p.p ? 'not ranked in 2024' : p.o == null ? 'not on the 2024 list' : 'since 2024 (' + p.o + ', rank ' + p.or + ')'}</span></div></div>
@@ -452,7 +464,7 @@ const openHist = id => {
   const own = h.oe.map(k => `<a href="https://plato.stanford.edu/entries/${E[k][0]}/">${esc(E[k][1])}</a>`).join(', ');
   sin.innerHTML = `${sbar(LC[h.i - 1], LC[h.i + 1], 'h-')}
   <p class="pkick">The long canon · born before 1900</p>
-  <h2 class="pname" id="pname">${esc(h.a)}</h2>
+  <h2 class="pname" id="pname" tabindex="-1">${esc(h.a)}</h2>
   <p class="plife">${[hlife(h), esc(h.wd)].filter(Boolean).join(' · ')}</p>
   <div class="plinks">${own ? '' : ''}${h.wp ? `<a href="${esc(h.wp)}">Wikipedia</a>` : ''}${h.q ? `<a href="https://www.wikidata.org/wiki/${h.q}">Wikidata</a>` : ''}<span style="color:var(--mute)"><i class="sw" style="background:${TC[h.tr]};margin-right:6px"></i>${TRAD[h.tr]}</span></div>
   <div class="pnums"><div><b>${h.r}</b><span>rank of ${LC.length} born before 1900</span></div><div><b>${h.m}</b><span>of ${fmt(M.entries)} entries name them</span></div><div><b>${h.l}</b><span>entries link to their article</span></div></div>
@@ -471,7 +483,7 @@ sheet.addEventListener('click', e => { if (e.target.closest('#pclose')) closePro
 scrim.addEventListener('click', closeProfile);
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) closeProfile(); });
 const route = () => { const h = decodeURIComponent(location.hash.slice(1));
-  if (h.startsWith('p-')) openProfile(h.slice(2)); else if (h.startsWith('h-')) openHist(h.slice(2));
+  if (h.startsWith('p-') && byId[h.slice(2)]) openProfile(h.slice(2)); else if (h.startsWith('h-') && hById[h.slice(2)]) openHist(h.slice(2));
   else if (!sheet.hidden) { sheet.hidden = true; scrim.hidden = true; document.body.style.overflow = ''; } };
 window.addEventListener('hashchange', route);
 
