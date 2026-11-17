@@ -85,8 +85,8 @@ svg text.pyear.sub{font:600 14px "Source Sans 3",sans-serif;opacity:.55;letter-s
 .dec.off{opacity:.25}
 .dec.off .bar{transform:scaleX(0)}
 /* fields arrive one by one */
-.field{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--fk,0) * 90ms)}
-.js #fields:not(.seen) .field{opacity:0;transform:translateY(16px)}
+.field{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--q,0),8) * 90ms)}
+.js .field:not(.in){opacity:0;transform:translateY(16px)}
 /* race: a new leader */
 .rlead em{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:10px;padding:2px 8px;margin-left:8px;vertical-align:3px;display:inline-block;animation:pulse 1s ease-in-out infinite alternate}
 @keyframes pulse{to{transform:scale(1.08)}}
@@ -313,10 +313,10 @@ details.ent p{margin:0 0 12px 1.6em;font-size:14px;line-height:1.6}
 details.ent a{color:var(--ink)}
 /* entrances: each section once, as it scrolls in */
 .shead{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
-.js .band:not(.seen) .shead{opacity:0;transform:translateY(18px)}
-.fp,.bar i,.dec .bar{transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--k,0),30) * 24ms)}
-.js .band:not(.seen) .fp,.js .band:not(.seen) .bar i,.js .band:not(.seen) .dec .bar{transform:scaleX(0)}
-.js #generations:not(.seen) #gsv circle,.js #works:not(.seen) #wsv circle{opacity:0}
+.js .shead:not(.in){opacity:0;transform:translateY(18px)}
+.fp,.bar i,.dec .bar{transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--q,0),12) * 45ms)}
+.js tr.row:not(.in) .fp,.js tr.row:not(.in) .bar i,.js .gain:not(.in) .bar i,.js .lrow:not(.in) .bar i{transform:scaleX(0)}
+.js #hsv:not(.shown) circle:not(.hit),.js #hsv:not(.shown) text:not(.era),.js #hsv:not(.shown) line[style]{opacity:0}
 @media(min-width:900px){.shead{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}.gen{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
 @media(max-width:760px){.stick .brand{display:none}.stick .links{margin-left:-12px;-webkit-mask-image:linear-gradient(to right,#000 85%,transparent);mask-image:linear-gradient(to right,#000 85%,transparent)}.stats{grid-template-columns:repeat(2,minmax(0,1fr));border-top:0}.stats div,.stats div+div{padding:14px 12px 14px 0;border-left:0;border-top:1px solid rgba(255,255,255,.28)}
   nav.jump a:first-child{margin-left:0}nav.jump{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}nav.jump::-webkit-scrollbar{display:none}}
@@ -619,6 +619,20 @@ const tryLab = (boxes, x, y, r, s, W, H, attrs = 'class="lab"', cw = 7, minX = 2
     boxes.push(b); return `<text ${attrs} x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="${an}">${esc(s)}</text>`; }
   return ''; };
 
+/* ---------- motion starts only where you are looking ---------- */
+const HAS_IO = 'IntersectionObserver' in window;
+// one-time entrances: an element animates in when it scrolls into view (several arriving together are staggered)
+const revIO = HAS_IO && !RM ? new IntersectionObserver(es => { let q = 0; es.forEach(e => { if (!e.isIntersecting) return;
+  e.target.style.setProperty('--q', q++); e.target.classList.add('in'); revIO.unobserve(e.target); }); }, {rootMargin: '0px 0px -8% 0px', threshold: .05}) : null;
+const reveal = root => (root || document).querySelectorAll('.shead, .field, .gain, .lrow, tr.row').forEach(el => { if (el.classList.contains('in')) return; if (revIO) revIO.observe(el); else el.classList.add('in'); });
+// players start only when mostly on screen, pause when scrolled away, and pick up again when you come back
+const autoPlay = (el, st, play, pause, ratio = .4) => { if (!HAS_IO || RM) return; let started = false, vis = false;
+  new IntersectionObserver(es => { const e = es[es.length - 1]; vis = e.intersectionRatio >= ratio;
+    if (vis && !started) { started = true; setTimeout(() => { if (vis) play(); else st.auto = true; }, 250); }
+    else if (!e.isIntersecting && st.play) { pause(); st.auto = true; }
+    else if (vis && st.auto) { st.auto = false; play(); } }, {threshold: [0, ratio]}).observe(el); };
+const onceVisible = (el, fn, ratio = .3) => { if (!HAS_IO) { fn(); return; } const o = new IntersectionObserver(es => { if (es[0].intersectionRatio >= ratio || (es[0].isIntersecting && ratio === 0)) { o.disconnect(); fn(); } }, {threshold: [0, ratio]}); o.observe(el); };
+
 /* ---------- race data (needed by the header) ---------- */
 const RC = D.RACE, RY0 = RC.y0, NY = RC.y1 - RC.y0;
 const RR = RC.R.map(r => ({p: P[r.i], c: r.c, pos: 0, op: 0}));
@@ -641,7 +655,7 @@ const countUp = (el, dur = 1500) => { const to = +el.dataset.to, from = +el.data
   if (RM) return; const t0 = performance.now();
   const step = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = f(Math.round(from + (to - from) * e)); if (k < 1) requestAnimationFrame(step); };
   el.textContent = f(from); requestAnimationFrame(step); };
-document.querySelectorAll('#stats .cu').forEach(countUp);
+onceVisible($('#stats'), () => document.querySelectorAll('#stats .cu').forEach(el => countUp(el)), .5);
 $('#atitle').textContent = `The ${C.length} most-cited philosophers born since 1900`;
 $('#wtitle').textContent = `The ${D.W.length} most-cited works since 1900`;
 $('#msrc').innerHTML = `All ${fmt(M.entries)} entries in the SEP table of contents were downloaded on ${nice(M.date)} and the bibliography of each main entry parsed (${fmt(M.lines)} lines). Supplementary documents are not included. A work or author counts once per entry.`;
@@ -665,9 +679,6 @@ if ('IntersectionObserver' in window) {
 
 /* ---------- sections enter once ---------- */
 const sections = [...document.querySelectorAll('section.band')];
-const markSeen = el => { if (el.classList.contains('seen')) return; el.classList.add('seen'); el.dispatchEvent(new Event('seen')); };
-if (RM || !('IntersectionObserver' in window)) sections.forEach(s => s.classList.add('seen'));
-const sio = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { markSeen(e.target); sio.unobserve(e.target); } }), {rootMargin: '0px 0px -12% 0px'}) : null;
 const introOn = (svg, ms) => { if (RM) return; svg.classList.add('intro'); setTimeout(() => svg.classList.remove('intro'), ms); };
 
 /* ---------- shared tooltip ---------- */
@@ -751,21 +762,21 @@ mfig.addEventListener('pointerleave', () => { tour.user = false; mtip.style.opac
 if ('IntersectionObserver' in window) new IntersectionObserver(es => { tour.vis = es[0].isIntersecting; if (!tour.vis) { mcap.classList.remove('on'); } }, {threshold: .35}).observe(mfig);
 const mapShow = () => { msv.classList.add('shown'); introOn(msv, 2700); setTimeout(tourStep, RM ? 0 : 2900); };
 if (RM) msv.classList.add('shown');
-$('#map').addEventListener('seen', mapShow);
+if (!RM) onceVisible(mfig, mapShow, .3);
 
 /* ---------- philosophers table ---------- */
 $('#af').innerHTML += MAC.map((m, k) => `<option value="${k}">${m}</option>`).join('');
 const as = {all: false};
-const renderA = () => {
+const renderA = first => {
   const q = fold($('#aq').value.trim()), f = $('#af').value, wo = $('#aw').checked, pre = $('#apre').checked, nw = $('#anew').checked;
   const base = pre ? [...P].sort((a, b) => b.n - a.n || a.a.localeCompare(b.a)) : C;
   const list = base.filter(p => (!q || fold(p.a + ' ' + p.w.map(w => w.t).join(' ')).includes(q)) && (f === '' || p.mf == f) && (!wo || p.g === 'f') && (!nw || (p.o == null && !p.p)));
   const filtered = q || f !== '' || wo || nw, shown = filtered || as.all ? list : list.slice(0, 50), mx = base[0].n;
-  $('#abody').innerHTML = shown.map((p, k) => `<tr class="row" data-id="${p.id}" tabindex="0" style="--k:${k}"><td class="r">${pre ? p.ra : p.r}</td><td><div class="t"><a href="#p-${p.id}">${esc(p.a)}</a>${p.p ? '<span class="old">born before 1900</span>' : ''}</div><div class="by">${[life(p), p.w[0] ? esc(p.w[0].t) : ''].filter(Boolean).join(' · ')}</div><div class="mob"><span class="num">${p.n}</span><span class="barbox"><span style="display:block;height:100%;width:${p.n / mx * 100}%">${fp(p)}</span></span></div></td><td class="nb"><div class="nbw"><span class="num">${p.n}</span><span class="barbox"><span style="display:block;height:100%;width:${p.n / mx * 100}%">${fp(p)}</span></span></div></td><td class="d" title="${p.p ? 'Not ranked in 2024' : dTitle(p.o, p.or)}">${p.p ? '–' : delta(p.n, p.o)}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
+  $('#abody').innerHTML = shown.map((p, k) => `<tr class="row${first === true ? '' : ' in'}" data-id="${p.id}" tabindex="0" style="--k:${k}"><td class="r">${pre ? p.ra : p.r}</td><td><div class="t"><a href="#p-${p.id}">${esc(p.a)}</a>${p.p ? '<span class="old">born before 1900</span>' : ''}</div><div class="by">${[life(p), p.w[0] ? esc(p.w[0].t) : ''].filter(Boolean).join(' · ')}</div><div class="mob"><span class="num">${p.n}</span><span class="barbox"><span style="display:block;height:100%;width:${p.n / mx * 100}%">${fp(p)}</span></span></div></td><td class="nb"><div class="nbw"><span class="num">${p.n}</span><span class="barbox"><span style="display:block;height:100%;width:${p.n / mx * 100}%">${fp(p)}</span></span></div></td><td class="d" title="${p.p ? 'Not ranked in 2024' : dTitle(p.o, p.or)}">${p.p ? '–' : delta(p.n, p.o)}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
   $('#acount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : base.length}`;
   $('#amore').hidden = filtered || as.all;
 };
-['#aq', '#af', '#aw', '#apre', '#anew'].forEach(s => $(s).addEventListener('input', renderA));
+['#aq', '#af', '#aw', '#apre', '#anew'].forEach(s => $(s).addEventListener('input', () => renderA()));
 $('#amore').addEventListener('click', () => { as.all = true; renderA(); });
 const rowGo = (e, attr, pre) => { if (e.target.closest('a')) return; const tr = e.target.closest('tr.row'); if (tr) location.hash = pre + tr.dataset[attr]; };
 $('#abody').addEventListener('click', e => rowGo(e, 'id', 'p-'));
@@ -843,10 +854,7 @@ const russellYears = prevSeg.y1 - prevSeg.y0 + 1;
 $('#rtitle').textContent = `${prevSeg.p.a} led for ${russellYears} years, until ${lastSeg.p.a} overtook him in ${lastSeg.y0}`;
 $('#rsub').textContent = `Each bar counts the entries in today’s SEP that cite work a philosopher had published by the year shown. Press play to watch the present-day canon assemble, one publication year at a time.`;
 $('#rnote').textContent = `Philosophers born since 1850; works first published from 1900 on. The strip under the bars shows who led in each year (${LSEG.map(s => `${s.p.sur} ${s.y0}${s.y1 > s.y0 ? '–' + (s.y1 >= RY0 + NY ? '' : s.y1) : ''}`).join(', ')}). Drag it, or use the arrow keys, to move through time.`;
-if ('IntersectionObserver' in window && !RM) new IntersectionObserver(es => { const e = es[es.length - 1];
-  if (e.intersectionRatio >= .45 && !rs.started) { rs.started = true; setTimeout(rplay, 350); }
-  else if (!e.isIntersecting && rs.play) { rs.play = false; rs.auto = true; rbtn(); }
-  else if (e.intersectionRatio >= .45 && rs.auto) { rs.auto = false; rplay(); } }, {threshold: [0, .45]}).observe($('#rbox'));
+autoPlay($('#rbox'), rs, rplay, () => { rs.play = false; rbtn(); }, .45);
 
 /* ---------- before 1900 ---------- */
 const tsv = $('#tsv'), ttip = $('#ttip'), tfig = $('#tlfig');
@@ -900,9 +908,9 @@ const tloop = now => { if (!ts.play) { voiceSync(ts, false); return; } const dt 
   ts.s = Math.min(1, ts.s + dt / TDUR * SPEED); tApply(); const tv = voiceSync(ts, true); if (tv) tv.glide(Math.round(ts.s * 15));
   if (ts.s >= 1) { ts.play = false; voiceSync(ts, false); tbtn(); return; } requestAnimationFrame(tloop); };
 const tplay = () => { if (ts.s >= 1) { ts.s = 0; tApply(); } ts.play = true; ts.last = null; tbtn(); requestAnimationFrame(tloop); };
-$('#bplay').addEventListener('click', () => { if (ts.play) { ts.play = false; tbtn(); } else tplay(); });
+$('#bplay').addEventListener('click', () => { ts.auto = false; if (ts.play) { ts.play = false; tbtn(); } else tplay(); });
 tbtn();
-if ('IntersectionObserver' in window && !RM) { const tio = new IntersectionObserver(es => { if (es[0].isIntersecting) { tio.disconnect(); setTimeout(tplay, 300); } }, {threshold: .4}); tio.observe(tfig); }
+if (HAS_IO && !RM) autoPlay(tfig, ts, tplay, () => { ts.play = false; tbtn(); });
 else { ts.s = 1; }
 const tcount = k => LC.filter(h => h.tr === k).length;
 const bLegend = () => { $('#blegend').innerHTML = ts.mode ? `<span><i class="sw" style="background:var(--acc)"></i>Women ${LC.filter(h => h.g === 'f').length}</span><span><i class="sw" style="background:var(--men)"></i>Men ${LC.filter(h => h.g !== 'f').length}</span>`
@@ -924,15 +932,15 @@ $('#bfacts').innerHTML = [[LC[0].m, `entries name ${LC[0].a}`], [c19, 'born in t
 $('#bth').textContent = `The long canon: all ${LC.length}`;
 $('#bt').innerHTML += TRAD.map((t, k) => tcount(k) ? `<option value="${k}">${t}</option>` : '').join('');
 const bs = {all: false};
-const renderB = () => {
+const renderB = first => {
   const q = fold($('#bq').value.trim()), t = $('#bt').value, wo = $('#bw').checked;
   const list = LC.filter(h => (!q || fold(h.a + ' ' + h.wd).includes(q)) && (t === '' || h.tr == t) && (!wo || h.g === 'f'));
   const filtered = q || t !== '' || wo, shown = filtered || bs.all ? list : list.slice(0, 50), mx = LC[0].m;
-  $('#bbody').innerHTML = shown.map((h, k) => `<tr class="row" data-h="${h.id}" tabindex="0" style="--k:${k}"><td class="r">${h.r}</td><td><div class="t"><a href="#h-${h.id}">${esc(h.a)}</a>${h.tr ? `<span class="tr-tag"><i class="sw" style="background:${TC[h.tr]}"></i>${TRAD[h.tr]}</span>` : ''}</div><div class="by">${[hlife(h), esc(h.wd)].filter(Boolean).join(' · ')}</div><div class="mob"><span class="num">${h.m}</span><span class="bar"><i style="width:${h.m / mx * 100}%"></i></span></div></td><td class="nb"><div class="nbw"><span class="num">${h.m}</span><span class="bar hide-s"><i style="width:${h.m / mx * 100}%"></i></span></div></td><td class="d">${h.l}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
+  $('#bbody').innerHTML = shown.map((h, k) => `<tr class="row${first === true ? '' : ' in'}" data-h="${h.id}" tabindex="0" style="--k:${k}"><td class="r">${h.r}</td><td><div class="t"><a href="#h-${h.id}">${esc(h.a)}</a>${h.tr ? `<span class="tr-tag"><i class="sw" style="background:${TC[h.tr]}"></i>${TRAD[h.tr]}</span>` : ''}</div><div class="by">${[hlife(h), esc(h.wd)].filter(Boolean).join(' · ')}</div><div class="mob"><span class="num">${h.m}</span><span class="bar"><i style="width:${h.m / mx * 100}%"></i></span></div></td><td class="nb"><div class="nbw"><span class="num">${h.m}</span><span class="bar hide-s"><i style="width:${h.m / mx * 100}%"></i></span></div></td><td class="d">${h.l}</td></tr>`).join('') || '<tr><td colspan="4">No philosophers match.</td></tr>';
   $('#bcount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : LC.length}`;
   $('#bmore').hidden = filtered || bs.all;
 };
-['#bq', '#bt', '#bw'].forEach(s => $(s).addEventListener('input', renderB));
+['#bq', '#bt', '#bw'].forEach(s => $(s).addEventListener('input', () => renderB()));
 $('#bmore').addEventListener('click', () => { bs.all = true; renderB(); });
 $('#bbody').addEventListener('click', e => rowGo(e, 'h', 'h-'));
 $('#bbody').addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.matches('tr.row')) rowGo(e, 'h', 'h-'); });
@@ -1035,9 +1043,9 @@ const gloop = now => { if (!gs.play) { voiceSync(gs, false); return; } const dt 
   gs.y = Math.min(G1, gs.y + dt / 1000 * 10 * SPEED); gApply(); const gv = voiceSync(gs, true); if (gv) gv.glide(Math.round((gs.y - G0) / (G1 - G0) * 15));
   if (gs.y >= G1) { gs.play = false; voiceSync(gs, false); $('#decs').classList.remove('live'); gbtn(); gApply(); return; } requestAnimationFrame(gloop); };
 const gplay = () => { if (gs.y >= G1) { gs.y = G0; gApply(); } $('#decs').classList.add('live'); gs.play = true; gs.last = null; gbtn(); requestAnimationFrame(gloop); };
-$('#gplay').addEventListener('click', () => { if (gs.play) { gs.play = false; gbtn(); } else gplay(); });
+$('#gplay').addEventListener('click', () => { gs.auto = false; if (gs.play) { gs.play = false; gbtn(); } else gplay(); });
 new ResizeObserver(genDraw).observe(gsv);
-if ('IntersectionObserver' in window && !RM) { const gio = new IntersectionObserver(es => { if (es[0].isIntersecting) { gio.disconnect(); setTimeout(gplay, 250); } }, {threshold: .4}); gio.observe(gfig); }
+autoPlay(gfig, gs, gplay, () => { gs.play = false; gbtn(); });
 gsv.addEventListener('pointerover', e => { const id = e.target.dataset && e.target.dataset.id; if (id) placeTip(gtip, gfig, +e.target.getAttribute('cx'), +e.target.getAttribute('cy'), ptip(byId[id])); });
 gsv.addEventListener('pointerout', e => { if (e.target.dataset && e.target.dataset.id) gtip.style.opacity = 0; });
 gsv.addEventListener('click', e => { const id = e.target.dataset && e.target.dataset.id; if (id) location.hash = 'p-' + id; });
@@ -1099,9 +1107,9 @@ const wloop = now => { if (!ws2.play) { voiceSync(ws2, false); return; } const d
   ws2.y = Math.min(W1, ws2.y + dt / 1000 * 13 * SPEED); wApply(); const wv = voiceSync(ws2, true); if (wv) wv.glide(Math.round((ws2.y - W0) / (W1 - W0) * 15));
   if (ws2.y >= W1) { ws2.play = false; voiceSync(ws2, false); wbtn(); wApply(); return; } requestAnimationFrame(wloop); };
 const wplay = () => { if (ws2.y >= W1) { ws2.y = W0; wApply(); } ws2.play = true; ws2.last = null; wbtn(); requestAnimationFrame(wloop); };
-$('#wplay').addEventListener('click', () => { if (ws2.play) { ws2.play = false; wbtn(); } else wplay(); });
+$('#wplay').addEventListener('click', () => { ws2.auto = false; if (ws2.play) { ws2.play = false; wbtn(); } else wplay(); });
 new ResizeObserver(workDraw).observe(wsv);
-if ('IntersectionObserver' in window && !RM) { const wio = new IntersectionObserver(es => { if (es[0].isIntersecting) { wio.disconnect(); setTimeout(wplay, 250); } }, {threshold: .4}); wio.observe(wfig); }
+autoPlay(wfig, ws2, wplay, () => { ws2.play = false; wbtn(); });
 wsv.addEventListener('pointerover', e => { const i = e.target.dataset && e.target.dataset.i; if (i == null) return; const w = W[+i];
   placeTip(wtip, wfig, +e.target.getAttribute('cx'), +e.target.getAttribute('cy'), `<b>${esc(w.t)}</b><br>${esc(w.a)}, ${w.y}<br>Cited in <b>${w.n}</b> entries · rank ${w.r}<br>${w.o == null ? 'New to the list' : '2024: ' + w.o + ' entries'}`); });
 wsv.addEventListener('pointerout', e => { if (e.target.dataset && e.target.dataset.i != null) wtip.style.opacity = 0; });
@@ -1113,17 +1121,17 @@ const decsW = [...new Set(W.map(w => Math.floor(w.yr / 10) * 10))].sort();
 $('#wdec').innerHTML += decsW.map(d => `<option value="${d}">${d}s</option>`).join('');
 const elinks = e => e.map(k => `<a href="https://plato.stanford.edu/entries/${E[k][0]}/">${esc(E[k][1])}</a>`).join(', ');
 const wauthor = w => w.pi != null ? `<a href="#p-${P[w.pi].id}">${esc(w.a)}</a>` : esc(w.a);
-const renderW = () => {
+const renderW = first => {
   const q = fold($('#wq').value.trim()), dec = $('#wdec').value, nw = $('#wnew').checked;
   const list = W.filter(w => (!q || fold(w.t + ' ' + w.a).includes(q)) && (!dec || Math.floor(w.yr / 10) * 10 == dec) && (!nw || w.o == null));
   const filtered = q || dec || nw, shown = filtered || ws.all ? list : list.slice(0, 50), mx = W[0].n;
   $('#wbody').innerHTML = shown.map((w, k) => { const op = ws.open.has(w.i);
-    return `<tr class="row" id="w${w.i}" data-i="${w.i}" tabindex="0" aria-expanded="${op}" style="--k:${k}"><td class="r">${w.r}</td><td class="nb"><div class="nbw"><span class="num">${w.n}</span><span class="bar hide-s"><i style="width:${w.n / mx * 100}%"></i></span></div></td><td><div class="t">${esc(w.t)}</div><div class="by">${wauthor(w)}, ${w.y}</div><div class="mob"><span class="num">${w.n}</span><span class="bar"><i style="width:${w.n / mx * 100}%"></i></span></div></td><td class="d" title="${dTitle(w.o, w.or)}">${delta(w.n, w.o)}</td></tr>`
+    return `<tr class="row${first === true ? '' : ' in'}" id="w${w.i}" data-i="${w.i}" tabindex="0" aria-expanded="${op}" style="--k:${k}"><td class="r">${w.r}</td><td class="nb"><div class="nbw"><span class="num">${w.n}</span><span class="bar hide-s"><i style="width:${w.n / mx * 100}%"></i></span></div></td><td><div class="t">${esc(w.t)}</div><div class="by">${wauthor(w)}, ${w.y}</div><div class="mob"><span class="num">${w.n}</span><span class="bar"><i style="width:${w.n / mx * 100}%"></i></span></div></td><td class="d" title="${dTitle(w.o, w.or)}">${delta(w.n, w.o)}</td></tr>`
       + (op ? `<tr class="det"><td colspan="4">Cited in ${w.n} entries: ${elinks(w.e)}</td></tr>` : ''); }).join('') || '<tr><td colspan="4">No works match.</td></tr>';
   $('#wcount').textContent = `Showing ${shown.length} of ${filtered ? list.length + ' matching' : W.length}`;
   $('#wmore').hidden = filtered || ws.all;
 };
-['#wq', '#wdec', '#wnew'].forEach(s => $(s).addEventListener('input', renderW));
+['#wq', '#wdec', '#wnew'].forEach(s => $(s).addEventListener('input', () => renderW()));
 $('#wmore').addEventListener('click', () => { ws.all = true; renderW(); });
 const wgo = e => { if (e.target.closest('a')) return; const tr = e.target.closest('tr.row'); if (!tr) return; const v = +tr.dataset.i;
   ws.open.has(v) ? ws.open.delete(v) : ws.open.add(v); renderW(); const again = document.getElementById('w' + v); if (again) again.focus({preventScroll: true}); };
@@ -1170,7 +1178,7 @@ const hLabels = (() => { const segs = HERA.map((_, k) => HDOT.filter(d => hSeg(d
   const wOld = HDOT.filter(d => d.f && d.old).sort((a, b) => b.n - a.n)[0], wNew = HDOT.filter(d => d.f && !d.old).sort((a, b) => b.n - a.n)[0];
   for (let r = 0; r < 16; r++) segs.forEach(s => { if (s[r]) out.push(s[r]); if (r === 1) { [wOld, wNew].forEach(w => { if (w && !out.includes(w)) out.push(w); }); } });
   return [...new Set(out)]; })();
-let hDrawn = false, hLastH = 0;
+let hIntro = false, hLastH = 0;
 const hDraw = () => {
   const W = hsv.clientWidth; if (!W) return;
   const narrow = W < 600, x0 = 4, x1 = W - 4, padTop = 58, padBot = 40, maxPile = narrow ? 210 : 250;
@@ -1194,7 +1202,7 @@ const hDraw = () => {
   }
   const H = Math.ceil(pile + padTop + padBot), base = H - padBot;
   if (Math.abs(H - hLastH) > 1) { hLastH = H; hfig.style.height = H + 'px'; }
-  const intro = !hDrawn && !RM; hDrawn = true;
+  const intro = (hIntro || hsv.classList.contains('intro')) && !RM; hIntro = false;
   const dl = p => Math.round(p.x / W * 1900 + (-p.y / pile) * 380);
   let g = '';
   for (let k = 0; k < 6; k++) { const a = hX(HBK[k], x0, x1), b = hX(HBK[k + 1] - .001, x0, x1);
@@ -1232,6 +1240,7 @@ const hDraw = () => {
       o.connect(f); f.connect(g); g.connect(SND.out); o.start(t0); o.stop(t0 + last + 1); } }
 };
 new ResizeObserver(hDraw).observe(hsv);
+if (RM || !HAS_IO) hsv.classList.add('shown'); else onceVisible(hfig, () => { hsv.classList.add('shown'); hIntro = true; hDraw(); }, .25);
 const hByH = Object.fromEntries(HDOT.map(d => [d.h, d]));
 hsv.addEventListener('pointerover', e => { const k = e.target.dataset && e.target.dataset.h; if (!k) return; const d = hByH[k], o = d.o;
   placeTip(hTip, hfig, +e.target.getAttribute('cx'), +e.target.getAttribute('cy'), d.old ? htip(o) : ptip(o)); });
@@ -1258,7 +1267,7 @@ setTimeout(hLoop, RM ? 0 : 3600);
 hspotBtn();
 $('#hspot').addEventListener('click', () => { hs.on = !hs.on; hspotBtn(); if (!hs.on) hClear(); else hStep(); });
 $('#hreplay').innerHTML = ICON.replay + '<span>Replay</span>';
-$('#hreplay').addEventListener('click', () => { hClear(); hDrawn = false; hsv.classList.remove('intro'); void hsv.getBoundingClientRect(); hDraw(); if (RM) return; });
+$('#hreplay').addEventListener('click', () => { hClear(); hIntro = true; hsv.classList.add('shown'); hsv.classList.remove('intro'); void hsv.getBoundingClientRect(); hDraw(); if (RM) return; });
 hfig.addEventListener('pointerenter', () => { hs.user = true; hClear(); });
 hfig.addEventListener('pointerleave', () => { hs.user = false; hTip.style.opacity = 0; });
 if ('IntersectionObserver' in window) new IntersectionObserver(es => { hs.vis = es[0].isIntersecting; if (!hs.vis) hClear(); }, {threshold: .3}).observe(hfig);
@@ -1267,8 +1276,8 @@ $('#hcap').textContent = `Each dot is a philosopher, placed by year of birth, so
 if ('IntersectionObserver' in window && !RM) { const fio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { fio.unobserve(e.target); e.target.querySelectorAll('.cu').forEach(el => countUp(el, 1300)); } }), {threshold: .6});
   document.querySelectorAll('.facts').forEach(f => fio.observe(f)); }
 gbtn(); wbtn();
-renderA(); renderB(); renderW(); route();
-if (sio) sections.forEach(s => sio.observe(s));
+renderA(true); renderB(true); renderW(true); route();
+reveal();
 }
 </script>
 </body>

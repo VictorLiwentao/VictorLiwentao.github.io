@@ -85,8 +85,8 @@ svg text.pyear.sub{font:600 14px "Source Sans 3",sans-serif;opacity:.55;letter-s
 .dec.off{opacity:.25}
 .dec.off .bar{transform:scaleX(0)}
 /* fields arrive one by one */
-.field{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--fk,0) * 90ms)}
-.js #fields:not(.seen) .field{opacity:0;transform:translateY(16px)}
+.field{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--q,0),8) * 90ms)}
+.js .field:not(.in){opacity:0;transform:translateY(16px)}
 /* race: a new leader */
 .rlead em{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:10px;padding:2px 8px;margin-left:8px;vertical-align:3px;display:inline-block;animation:pulse 1s ease-in-out infinite alternate}
 @keyframes pulse{to{transform:scale(1.08)}}
@@ -313,10 +313,10 @@ details.ent p{margin:0 0 12px 1.6em;font-size:14px;line-height:1.6}
 details.ent a{color:var(--ink)}
 /* entrances: each section once, as it scrolls in */
 .shead{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
-.js .band:not(.seen) .shead{opacity:0;transform:translateY(18px)}
-.fp,.bar i,.dec .bar{transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--k,0),30) * 24ms)}
-.js .band:not(.seen) .fp,.js .band:not(.seen) .bar i,.js .band:not(.seen) .dec .bar{transform:scaleX(0)}
-.js #generations:not(.seen) #gsv circle,.js #works:not(.seen) #wsv circle{opacity:0}
+.js .shead:not(.in){opacity:0;transform:translateY(18px)}
+.fp,.bar i,.dec .bar{transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(min(var(--q,0),12) * 45ms)}
+.js tr.row:not(.in) .fp,.js tr.row:not(.in) .bar i,.js .gain:not(.in) .bar i,.js .lrow:not(.in) .bar i{transform:scaleX(0)}
+.js #hsv:not(.shown) circle:not(.hit),.js #hsv:not(.shown) text:not(.era),.js #hsv:not(.shown) line[style]{opacity:0}
 @media(min-width:900px){.shead{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end}.gen{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
 @media(max-width:760px){.stick .brand{display:none}.stick .links{margin-left:-12px;-webkit-mask-image:linear-gradient(to right,#000 85%,transparent);mask-image:linear-gradient(to right,#000 85%,transparent)}.stats{grid-template-columns:repeat(2,minmax(0,1fr));border-top:0}.stats div,.stats div+div{padding:14px 12px 14px 0;border-left:0;border-top:1px solid rgba(255,255,255,.28)}
   nav.jump a:first-child{margin-left:0}nav.jump{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}nav.jump::-webkit-scrollbar{display:none}}
