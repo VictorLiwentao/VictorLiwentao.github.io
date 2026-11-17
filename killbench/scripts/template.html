@@ -10,195 +10,251 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://victorliwentao.github.io/killbench/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%2312151a'/%3E%3Ccircle cx='4' cy='11' r='1.6' fill='%238ea2ff'/%3E%3Ccircle cx='8' cy='8' r='1.6' fill='%23fff'/%3E%3Ccircle cx='12' cy='4.5' r='1.6' fill='%23fff'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#e3120b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23e3120b'/%3E%3Ccircle cx='6.5' cy='8' r='5' fill='%23fff'/%3E%3Ccircle cx='14' cy='8' r='1' fill='%23000'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:"IBM Plex Sans";font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"IBM Plex Sans";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/ibm-plex-sans-latin-400-italic.woff2) format("woff2")}
-@font-face{font-family:"IBM Plex Sans";font-weight:500;font-display:swap;src:url(fonts/ibm-plex-sans-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"IBM Plex Sans";font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:"IBM Plex Mono";font-weight:400;font-display:swap;src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2")}
-:root{
-  color-scheme:light dark;
-  --bg:light-dark(#ffffff,#0f1114);
-  --ink:light-dark(#12151a,#e9ebee);
-  --mute:light-dark(#5a636e,#9aa3ad);
-  --line:light-dark(#e2e5e9,#272c33);
-  --soft:light-dark(#f5f6f8,#171a1f);
-  --mark:light-dark(#4a535e,#b4bcc5);
-  --ai:light-dark(#2247e6,#8ea2ff);
-  --ai-soft:light-dark(#eef2ff,#1a2040);
-  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-}
+/* Design: a three-colour poster. Red is the field and every mark. Black means AI, wherever it appears. White is paper.
+   One typeface, Archivo: extra-condensed black for display, normal width for reading.
+   Motion: the to-scale figure builds once on load; after that only the live counts move. */
+@font-face{font-family:Archivo;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url(fonts/archivo-var.woff2) format("woff2")}
+:root{color-scheme:light;--red:#e3120b;--black:#000;--white:#fff;--mute:#595959;--line:#d9d9d9;--soft:#f3f3f1;--sans:Archivo,system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box;min-width:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans);font-variant-numeric:tabular-nums}
-a{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 40%,transparent);text-underline-offset:3px}
-a:hover{text-decoration-color:currentColor}
-:focus-visible{outline:2px solid var(--ai);outline-offset:2px;border-radius:2px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--black);font:16px/1.5 var(--sans);font-variant-numeric:tabular-nums}
+a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--black);outline-offset:2px}
+.hero :focus-visible,.dark :focus-visible{outline-color:var(--white)}
 p,h1,h2,h3{margin:0}
-.wrap{max-width:1220px;margin:0 auto;padding-inline:clamp(16px,3vw,32px)}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,3vw,36px)}
+.disp{font-stretch:62%;font-weight:900;text-transform:uppercase;letter-spacing:-.005em;line-height:.88}
 
-/* top bar */
-.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:8px 28px;min-height:52px;flex-wrap:wrap}
-.brand{font-weight:600;font-size:17px;letter-spacing:-.01em;text-decoration:none}
-.top nav{display:flex;gap:4px 22px;flex-wrap:wrap;margin-left:auto;font-size:14.5px}
-.top nav a{color:var(--mute);text-decoration:none;padding:4px 0}
-.top nav a:hover{color:var(--ink)}
+/* hero */
+.hero{background:var(--red);color:var(--white);padding-bottom:clamp(28px,4vw,48px)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;padding:16px 0;font-weight:600;font-size:15px}
+.nav a{text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.nav nav{display:flex;flex-wrap:wrap;gap:4px 22px;margin-left:auto;font-weight:500}
+h1{font-size:clamp(76px,21vw,280px);margin:clamp(4px,1vw,12px) 0 0 -.035em}
+.intro{margin-top:clamp(14px,2vw,24px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:14px clamp(24px,5vw,72px);align-items:start}
+.lede{font-size:clamp(22px,2.7vw,34px);font-weight:600;line-height:1.14;letter-spacing:-.015em;text-wrap:balance}
+.result{font-size:clamp(16px,1.35vw,18.5px);line-height:1.42;font-weight:500;max-width:36em}
+.scale{margin:clamp(26px,4vw,48px) 0 0}
+.fighead{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline;padding-top:12px;border-top:3px solid var(--white)}
+.fighead b{font-size:clamp(20px,2.3vw,30px)}
+.keys{display:flex;flex-wrap:wrap;gap:4px 20px;font-size:14.5px;font-weight:500;margin-left:auto}
+.keys span{display:inline-flex;align-items:center;gap:7px}
+.keys i{width:13px;height:13px;border-radius:50%;background:var(--white);display:inline-block}
+.keys i.h{background:none;border:2px solid var(--white)}
+.stage{position:relative;margin-top:clamp(16px,2vw,26px);display:flex;gap:clamp(18px,3vw,44px);align-items:center}
+#bubbles{flex:1 1 0;display:block;overflow:visible}
+.b{cursor:pointer}
+.b circle{fill:var(--white)}
+.b.hist circle{fill:none;stroke:var(--white);stroke-width:2.5}
+.b text{text-anchor:middle;fill:var(--black);pointer-events:none}
+.b.hist text{fill:var(--white)}
+.b .bn{font-weight:800;font-stretch:72%}
+.b .bv{font-weight:500;font-stretch:80%}
+.b:hover circle,.b:focus-visible circle{stroke:var(--black);stroke-width:3}
+.b:focus-visible{outline:none}
+.grow{transform-box:fill-box;transform-origin:center}
+.anim .grow{animation:grow .7s cubic-bezier(.2,.9,.25,1.15) both;animation-delay:calc(var(--i)*75ms)}
+@keyframes grow{from{transform:scale(0)}to{transform:scale(1)}}
+#smalls{flex:0 0 clamp(250px,25vw,310px);list-style:none;margin:0;padding:0;font-size:15.5px}
+#smalls li{display:grid;grid-template-columns:var(--g) minmax(0,1fr) auto;align-items:center;gap:10px;padding:5px 8px 5px 0;border-top:1px solid rgba(255,255,255,.45);cursor:pointer}
+#smalls li:last-child{border-bottom:1px solid rgba(255,255,255,.45)}
+#smalls li b{font-weight:700}
+#smalls li span{font-weight:500}
+#smalls svg{display:block;overflow:visible;margin:0 auto}
+#smalls li.ai{background:var(--black);border-color:var(--black);padding-left:0}
+#smalls li.ai+li{border-top-color:var(--black)}
+.anim #smalls li{animation:fade .5s both;animation-delay:calc(1s + var(--i)*70ms)}
+@keyframes fade{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+.ring{fill:none;stroke:var(--white);stroke-width:1.2}
+.anim .ai .ring{animation:ping 1.4s ease-out 2.2s 3}
+@keyframes ping{0%{stroke-width:1.2;r:7px}40%{stroke-width:3;r:11px}100%{stroke-width:1.2;r:7px}}
+.cap{margin-top:16px;font-size:14.5px;font-weight:500;max-width:74ch}
+.tip{position:absolute;z-index:5;pointer-events:none;background:var(--black);color:var(--white);padding:9px 12px;font-size:14px;line-height:1.35;max-width:270px;display:none}
+.tip b{display:block;font-size:15.5px}
+.tip i{font-style:normal;opacity:.8;display:block}
 
-/* header */
-.hero{padding:clamp(40px,7vw,84px) 0 clamp(28px,4vw,44px)}
-h1{font-size:clamp(40px,6.4vw,68px);font-weight:600;letter-spacing:-.035em;line-height:1}
-.lede{margin-top:18px;font-size:clamp(18px,2vw,21px);line-height:1.45;max-width:38em;text-wrap:pretty}
-.result{margin-top:18px;max-width:44em;font-size:17px}
-.result b{font-weight:600}
-.meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:4px 26px;font-size:14px;color:var(--mute);padding:0;list-style:none}
-
-section{padding:clamp(30px,4.5vw,52px) 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(22px,2.4vw,27px);font-weight:600;letter-spacing:-.02em;line-height:1.2}
-.sub{margin-top:8px;max-width:68ch;color:var(--mute)}
-
-/* controls */
-.bar{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between}
+/* sections */
+section{padding:clamp(40px,6vw,84px) 0}
+h2{font-size:clamp(44px,7.4vw,96px)}
+.sub{margin-top:12px;max-width:66ch;font-size:17px;color:var(--mute)}
+.dark .sub{color:#c9c9c9}
+.bar{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:space-between}
 .chips,.seg{display:flex;flex-wrap:wrap;gap:6px}
-.chips button,.seg button,.copy{appearance:none;font:500 14px/1 var(--sans);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px 11px;min-height:34px;cursor:pointer}
-.chips button span{color:var(--mute);font-weight:400;margin-left:6px}
+.chips button,.seg button,.copy{appearance:none;font:600 14px/1 var(--sans);color:var(--black);background:var(--white);border:1.5px solid var(--black);border-radius:0;padding:9px 12px;min-height:36px;cursor:pointer}
+.chips button span{font-weight:400;margin-left:7px}
 .chips button:hover,.seg button:hover,.copy:hover{background:var(--soft)}
-.chips button[aria-pressed=true],.seg button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.chips button[aria-pressed=true] span{color:inherit;opacity:.7}
-.seg{gap:0}
-.seg button{border-radius:0;margin-left:-1px}
-.seg button:first-child{border-radius:6px 0 0 6px;margin-left:0}
-.seg button:last-child{border-radius:0 6px 6px 0}
-.ctl{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--mute)}
+.chips button[aria-pressed=true],.seg button[aria-pressed=true]{background:var(--black);color:var(--white)}
+.seg{gap:0}.seg button+button{margin-left:-1.5px}
+.ctl{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500}
 
 /* leaderboard */
-.board{margin-top:14px;font-size:14.5px;--cols:2rem minmax(13rem,1.55fr) 5.4rem 6.8rem minmax(14rem,2.6fr) minmax(11.6rem,1.1fr) 1.2rem}
+.board{margin-top:16px;font-size:14.5px;--cols:2rem minmax(12.5rem,1.45fr) 7.6rem minmax(13rem,2.4fr) 9.4rem minmax(11.4rem,1.05fr) 1.2rem}
 .bhead,.row>summary{display:grid;grid-template-columns:var(--cols);column-gap:16px;align-items:center}
-.bhead{font-size:12.5px;font-weight:500;color:var(--mute);padding:0 8px 9px;border-bottom:1px solid var(--ink);align-items:end}
+.bhead{font-size:12.5px;font-weight:600;padding:0 8px 9px;border-bottom:3px solid var(--black);align-items:end}
+.bhead small{display:block;font-size:11.5px;font-weight:400;color:var(--mute)}
 .bhead .r{text-align:right}
-.sort{appearance:none;border:0;background:none;padding:0;font:inherit;color:var(--ink);cursor:pointer;text-align:right;display:block;width:100%}
-.sort small{display:block;font:400 11.5px/1.3 var(--sans);color:var(--mute)}
-.axis{position:relative;height:1.2em;margin:0 8px;font-size:11.5px;font-weight:400}
+.sort{appearance:none;border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:right;display:block;width:100%}
+.axis{position:relative;height:1.2em;margin:0 8px;font-size:11.5px;font-weight:500}
 .axis span{position:absolute;bottom:0;transform:translateX(-50%);white-space:nowrap}
 .row{border-bottom:1px solid var(--line)}
-.row>summary{list-style:none;cursor:pointer;padding:0 8px;min-height:54px}
+.row>summary{list-style:none;cursor:pointer;padding:0 8px;min-height:56px}
 .row>summary::-webkit-details-marker{display:none}
 .row>summary:hover{background:var(--soft)}
-.row.ai>summary,.row.ai>.more{background:var(--ai-soft)}
-.rk{color:var(--mute)}
+.rk{font-weight:500;color:var(--mute)}
 .nm{padding:9px 0;display:grid;gap:1px}
-.nm b{font-weight:600;font-size:15.5px;line-height:1.25}
+.nm b{font-weight:700;font-size:16.5px;line-height:1.2}
 .nm i{font-style:normal;font-size:13px;line-height:1.35;color:var(--mute)}
-.ty{font-size:13px;color:var(--mute)}
-.sc{text-align:right;display:grid;gap:1px}
-.sc b{font-weight:600;font-size:15.5px;white-space:nowrap}
+.sc{text-align:right;display:grid;gap:0}
+.sc b{font-weight:900;font-stretch:75%;font-size:23px;line-height:1.05;white-space:nowrap}
+.sc b.long{font-size:18px}
 .sc i{font-style:normal;font-size:12.5px;color:var(--mute);white-space:nowrap}
-.bs{display:grid;gap:1px;font-size:13px;line-height:1.35}
-.bs i{font-style:normal;color:var(--mute)}
-.tg{color:var(--mute);font-size:17px;line-height:1;text-align:center;transition:transform .15s}
+.lv,.bs{display:grid;gap:1px;font-size:13px;line-height:1.35}
+.lv>span{font-weight:600}
+.lv i,.bs i{font-style:normal;color:var(--mute)}
+.live b{font-weight:700;color:var(--black);display:inline-block;min-width:1ch}
+.live.tick b{animation:tick .9s ease-out}
+@keyframes tick{0%{color:var(--red);transform:scale(1.5)}100%{color:inherit;transform:none}}
+.tg{font-size:18px;line-height:1;text-align:center;transition:transform .15s}
 .row[open] .tg{transform:rotate(45deg)}
 .plot{align-self:stretch;display:block;padding:0 8px}
 .pin{position:relative;display:block;height:100%;min-height:24px;border-right:1px solid var(--line);background:linear-gradient(to right,var(--line) 1px,transparent 1px) 0 0/calc(100%/var(--n)) 100%}
-.rng,.pt{position:absolute;top:50%;height:8px;margin-top:-4px;border-radius:4px;transition:left .5s cubic-bezier(.3,.7,.2,1),width .5s cubic-bezier(.3,.7,.2,1),opacity .25s}
-.rng{background:color-mix(in srgb,var(--mk,var(--mark)) 38%,transparent)}
-.rng.solo{background:color-mix(in srgb,var(--mk,var(--mark)) 70%,transparent)}
-.pt{background:var(--mk,var(--mark))}
-.row.ai{--mk:var(--ai)}
-.lin .rng,.lin .pt{border-radius:0 4px 4px 0}
-.more{padding:4px 8px 16px calc(2rem + 24px);font-size:14px;line-height:1.5;display:grid;gap:6px}
+.rng,.pt{position:absolute;top:50%;height:11px;margin-top:-5.5px;border-radius:6px;transition:left .5s cubic-bezier(.3,.7,.2,1),width .5s cubic-bezier(.3,.7,.2,1),opacity .25s}
+.rng{background:color-mix(in srgb,var(--mk,var(--red)) 36%,transparent)}
+.rng.solo{background:color-mix(in srgb,var(--mk,var(--red)) 72%,transparent)}
+.pt{background:var(--mk,var(--red))}
+.lin .rng,.lin .pt{border-radius:0 6px 6px 0}
+.row.ai{border-color:var(--black)}
+.row.ai>summary,.row.ai>.more{background:var(--black);color:var(--white);--mk:var(--white)}
+.row.ai>summary:hover{background:#1c1c1c}
+.row.ai .rk,.row.ai .nm i,.row.ai .sc i,.row.ai .lv i,.row.ai .bs i,.row.ai .more .calc,.row.ai .more .refs{color:#d2d2d2}
+.row.ai .live b{color:var(--white)}
+.row.ai .pin{border-color:#4a4a4a;background-image:linear-gradient(to right,#4a4a4a 1px,transparent 1px)}
+.more{padding:4px 8px 16px calc(2rem + 24px);font-size:14.5px;line-height:1.5;display:grid;gap:6px}
 .more p{max-width:76ch}
-.more .calc,.more .refs{color:var(--mute)}
-.legend{margin-top:12px;font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px 22px}
+.more .calc{font-weight:600}
+.more .refs{color:var(--mute)}
+.legend{margin-top:14px;font-size:13.5px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px 24px}
 .legend span{display:inline-flex;align-items:center;gap:7px}
-.legend i{display:inline-block;height:8px;border-radius:4px;background:var(--mark)}
-.legend .k1{width:8px}.legend .k2{width:30px;background:color-mix(in srgb,var(--mark) 60%,transparent)}.legend .k3{width:8px;background:var(--ai)}
+.legend i{display:inline-block;height:11px;border-radius:6px;background:var(--red)}
+.legend .k1{width:11px}.legend .k2{width:34px;opacity:.6}.legend .k3{width:11px;background:var(--black)}
+#clock{font-weight:700;color:var(--black)}
 
-/* tables */
-.tw{margin-top:18px;overflow-x:auto}
+/* AI systems band */
+.dark{background:var(--black);color:var(--white)}
+.tw{margin-top:22px;overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:14.5px}
-th{font-size:12.5px;font-weight:500;color:var(--mute);text-align:left;padding:0 10px 9px;border-bottom:1px solid var(--ink);vertical-align:bottom;white-space:nowrap}
-td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;font-weight:600;text-align:left;padding:0 10px 9px;border-bottom:3px solid currentColor;vertical-align:bottom;white-space:nowrap}
+td{padding:12px 10px;border-bottom:1px solid #3a3a3a;vertical-align:middle}
 td.n,th.n{text-align:right;white-space:nowrap}
-td.n{font-weight:600;font-size:15.5px}
-td.n.z{font-weight:400;color:var(--mute)}
-td.s b{font-weight:600;font-size:15.5px}
-td.d,td.o{font-size:13.5px;color:var(--mute)}
-td .m{display:none;font-size:13px;color:var(--mute)}
-tfoot td{border-bottom:0;border-top:1px solid var(--ink);font-weight:600}
-#data .tw{max-width:860px}
-.fn{margin-top:14px;font-size:13.5px;color:var(--mute);max-width:80ch;display:grid;gap:6px}
+td.n{font-weight:900;font-stretch:75%;font-size:22px;line-height:1}
+td.n.z{font-weight:400;font-stretch:100%;font-size:15px;color:#9a9a9a}
+td.s b{font-weight:700;font-size:16.5px}
+td.d,td.o{font-size:13.5px;color:#c9c9c9}
+td.d,td.s{white-space:nowrap}
+td .m{display:none;font-size:13px;color:#c9c9c9}
+td.g{width:24%;min-width:120px}
+.bz{display:flex;gap:2px;height:14px}
+.bz i{display:block;height:100%}
+.bz .c{background:var(--white)}.bz .a{background:var(--red)}
+tfoot td{border-bottom:0;border-top:3px solid var(--white);font-weight:700}
+.tkey{margin-top:18px;display:flex;flex-wrap:wrap;gap:4px 22px;font-size:13.5px}
+.tkey span{display:inline-flex;align-items:center;gap:7px}
+.tkey i{width:22px;height:11px;display:inline-block}
+.fn{margin-top:14px;font-size:14px;color:#c9c9c9;max-width:84ch;display:grid;gap:6px}
 
-/* prose */
-.spec{margin:20px 0 0;display:grid;grid-template-columns:11.5rem minmax(0,1fr);gap:0;max-width:860px}
-.spec dt,.spec dd{margin:0;padding:13px 0;border-top:1px solid var(--line)}
-.spec dt{font-weight:600}
-.list{margin:20px 0 0;padding:0;list-style:none;max-width:860px}
-.list li{padding:13px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:11.5rem minmax(0,1fr)}
-.list b{font-weight:600}
-.files{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
-.files a{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:14px;font-weight:500;text-decoration:none}
-.files a:hover{background:var(--soft)}
-.files a span{color:var(--mute);font-weight:400;margin-left:8px}
-pre{margin:16px 0 0;padding:16px 18px;background:var(--soft);border:1px solid var(--line);border-radius:6px;font:13.5px/1.6 var(--mono);overflow-x:auto;max-width:860px}
+/* method, limits, data */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:clamp(36px,5vw,72px)}
+.spec{margin:22px 0 0;padding:0;list-style:none}
+.spec li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:4px 18px}
+.spec li:first-child{border-top:3px solid var(--black)}
+.spec b{font-weight:700}
+.files{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.files a{display:inline-block;border:1.5px solid var(--black);padding:10px 14px;font-size:15px;font-weight:700;text-decoration:none;background:var(--white)}
+.files a:hover{background:var(--black);color:var(--white)}
+.files a span{font-weight:400;margin-left:8px}
+pre{margin:20px 0 0;padding:16px 18px;background:var(--white);font:13.5px/1.6 ui-monospace,"SF Mono",Menlo,Consolas,monospace;overflow-x:auto}
 .copy{margin-top:10px}
-.refs-list{margin:18px 0 0;padding-left:1.6em;font-size:14px;color:var(--mute);columns:2 340px;column-gap:48px}
-.refs-list li{break-inside:avoid;padding:3px 0}
-footer{border-top:1px solid var(--line);padding:26px 0 48px;font-size:14px;color:var(--mute)}
-footer p{max-width:80ch}
+h3{font-size:clamp(32px,4vw,52px)}
+h3.next{margin-top:48px}
+.refs-list{margin:20px 0 0;padding-left:1.7em;font-size:14.5px}
+.refs-list li{padding:3px 0}
+.soft{background:var(--soft)}
+footer{background:var(--black);color:#d2d2d2;padding:28px 0 48px;font-size:14px}
+footer p{max-width:82ch}
 footer p+p{margin-top:8px}
 
-@media (max-width:900px){
+@media (max-width:980px){
+  .intro{grid-template-columns:1fr}
+  .stage{flex-direction:column;align-items:stretch}
+  #smalls{flex:none}
+  .keys{margin-left:0}
   .board{--cols:1.7rem minmax(0,1fr) auto 1.1rem}
   .bhead{grid-template-columns:minmax(0,1fr) auto;padding-inline:4px}
-  .bhead>.h-rk,.bhead>.h-ty,.bhead>.h-bs,.bhead>.h-tg{display:none}
+  .bhead>.hx{display:none}
   .bhead .axis{grid-column:1/-1;grid-row:2;margin:10px 6px 0}
-  .row>summary{padding:6px 4px 0;column-gap:10px}
-  .row .ty,.row .bs{display:none}
-  .row .plot{grid-column:1/-1;grid-row:2;height:26px;padding:0 6px}
+  .row>summary{padding:8px 4px 0;column-gap:10px}
+  .row .bs{display:none}
+  .row .lv{grid-column:2/-1;grid-row:3;display:flex;flex-wrap:wrap;gap:0 12px;padding:2px 0 9px}
+  .row .lv>span::before{content:"One death every ";font-weight:400}
+  .row .plot{grid-column:1/-1;grid-row:2;height:30px;padding:0 6px}
   .row .tg{grid-column:4;grid-row:1}
   .more{padding-left:calc(1.7rem + 14px)}
   .axis span:nth-child(even){display:none}
   .axis span:first-child{transform:none}
   .axis span:last-child{transform:translateX(-100%)}
   .lin .axis span:nth-child(even){display:block}
-  .spec,.list li{grid-template-columns:1fr}
-  .spec dt{padding-bottom:0}.spec dd{border-top:0;padding-top:4px}
-  .list li{gap:4px}
+  .spec li{grid-template-columns:1fr}
   th.d,td.d,th.o,td.o{display:none}
-  td .m{display:block}
-  .top nav{gap:2px 16px;font-size:14px;margin-left:0;padding-bottom:8px}
-  .top{position:static}
+  td .m{display:block;white-space:normal}
+  td.s{white-space:normal}
+  td.g{width:22%;min-width:64px}
 }
-@media (prefers-reduced-motion:reduce){.rng,.pt,.tg{transition:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap">
-  <a class="brand" href="#top">KillBench</a>
-  <nav aria-label="Sections">
-    <a href="#leaderboard">Leaderboard</a>
-    <a href="#systems">AI systems</a>
-    <a href="#method">Method</a>
-    <a href="#limitations">Limitations</a>
-    <a href="#data">Data</a>
-    <a href="#cite">Cite</a>
-    <a href="https://github.com/VictorLiwentao/VictorLiwentao.github.io/tree/main/killbench">GitHub</a>
-  </nav>
-</div></div>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="nav">
+      <a href="#top">KillBench</a>
+      <nav aria-label="Sections">
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#systems">AI systems</a>
+        <a href="#method">Method</a>
+        <a href="#data">Data</a>
+        <a href="https://github.com/VictorLiwentao/VictorLiwentao.github.io/tree/main/killbench">GitHub</a>
+      </nav>
+    </div>
+    <h1 class="disp">KillBench</h1>
+    <div class="intro">
+      <p class="lede">A benchmark of things that kill people. Lower is better.</p>
+      <p class="result" id="result"></p>
+    </div>
+    <figure class="scale">
+      <figcaption class="fighead">
+        <b class="disp">Deaths per year, drawn to scale</b>
+        <span class="keys"><span><i></i>Current annual estimate</span><span><i class="h"></i>Average over a past period</span></span>
+      </figcaption>
+      <div class="stage" id="stage">
+        <svg id="bubbles" role="group" aria-label="Circles with area proportional to deaths per year"></svg>
+        <ul id="smalls" aria-label="Entries too small to label inside a circle, drawn at the same scale"></ul>
+        <div class="tip" id="tip" role="status"></div>
+      </div>
+      <p class="cap" id="cap"></p>
+    </figure>
+  </div>
+</header>
 
-<main class="wrap" id="top">
-  <header class="hero">
-    <h1>KillBench</h1>
-    <p class="lede">A benchmark of things that kill people. Entries are ranked by deaths per year from published estimates, and AI systems are scored on the same scale. Lower is better.</p>
-    <p class="result" id="result"></p>
-    <ul class="meta" id="meta"></ul>
-  </header>
-
-  <section id="leaderboard">
-    <h2>Leaderboard</h2>
-    <p class="sub">Deaths per year, worldwide unless the entry says otherwise. Select a row for the calculation, notes and references.</p>
+<main>
+  <section id="leaderboard"><div class="wrap">
+    <h2 class="disp">Leaderboard</h2>
+    <p class="sub">Deaths per year, worldwide unless the entry says otherwise. The live counts are what each entry's rate implies for the <span id="clock">0 s</span> this page has been open. Select a row for the calculation, notes and references.</p>
     <div class="bar">
       <div class="chips" id="chips" role="group" aria-label="Filter by type"></div>
       <div class="ctl"><span id="scale-l">Scale</span>
@@ -211,96 +267,89 @@ footer p+p{margin-top:8px}
     <div class="board" id="board"></div>
     <p class="legend"><span><i class="k1"></i>Single estimate</span><span><i class="k2"></i>Range of published estimates</span><span><i class="k3"></i>AI systems</span></p>
     <noscript><p class="sub">The leaderboard needs JavaScript. The same data is in <a href="data/killbench.csv">killbench.csv</a>.</p></noscript>
-  </section>
+  </div></section>
 
-  <section id="systems">
-    <h2>AI systems</h2>
+  <section id="systems" class="dark"><div class="wrap">
+    <h2 class="disp">AI systems</h2>
     <p class="sub" id="sys-sub"></p>
     <div class="tw">
       <table>
-        <thead><tr><th>System</th><th class="d">Developer</th><th class="d">Type</th><th class="n">Confirmed</th><th class="n">Alleged</th><th class="n">Total</th><th class="n d">First death</th><th class="o">Other trackers</th></tr></thead>
+        <thead><tr><th>System</th><th class="d">Developer</th><th class="d">Type</th><th><span hidden>Share</span></th><th class="n">Confirmed</th><th class="n">Alleged</th><th class="n">Total</th><th class="n d">First death</th><th class="o">Other trackers</th></tr></thead>
         <tbody id="sys"></tbody>
         <tfoot id="sysfoot"></tfoot>
       </table>
     </div>
+    <p class="tkey"><span><i style="background:#fff"></i>Confirmed by an official finding</span><span><i style="background:#e3120b"></i>Alleged</span></p>
     <div class="fn">
       <p>The tracker names GPT-4o in 10 of the 22 deaths attributed to ChatGPT. Alleged cases include ones where a person did the killing and the system is accused of assisting. By definition none has an official finding; some have been settled.</p>
       <p>Meta AI and DeepSeek each appear once on Wikipedia's list of chatbot-linked deaths and are not on the primary tracker.</p>
     </div>
-  </section>
+  </div></section>
 
-  <section id="method">
-    <h2>Method</h2>
-    <dl class="spec">
-      <dt>Metric</dt>
-      <dd>Deaths per year, worldwide unless the entry says otherwise. Lower is better.</dd>
-      <dt>Scoring</dt>
-      <dd>If the source reports an annual estimate, that estimate is the score. If it reports a count over a period, the score is the count divided by the length of the period. The Basis column shows which, and each row's detail shows the arithmetic.</dd>
-      <dt>Sources</dt>
-      <dd>One primary source per entry, preferring WHO and UN statistics, then peer-reviewed estimates, then institutional estimates, then curated trackers. Every row names its source and links it in the row detail.</dd>
-      <dt>Uncertainty</dt>
-      <dd>Where the source gives an interval, or published estimates disagree, the row shows the range. An entry with a range and no central estimate is ranked by the geometric midpoint of the range.</dd>
-      <dt>AI attribution</dt>
-      <dd>A death is <em>confirmed</em> when a court, coroner, regulator or accident investigator has found that a machine-learning system caused or contributed to it. It is <em>alleged</em> when a named system is blamed in a lawsuit, an open investigation, or reporting by at least two news organisations. These are the primary tracker's definitions. The AI score counts both, for the latest complete year.</dd>
-      <dt>Comparison entries</dt>
-      <dd>Boeing MCAS and industrial robots are conventional automation, not machine learning. They are listed for comparison and do not count towards the AI score.</dd>
-    </dl>
-  </section>
+  <section id="method"><div class="wrap cols">
+    <div>
+      <h2 class="disp">Method</h2>
+      <ul class="spec">
+        <li><b>Metric</b><span>Deaths per year, worldwide unless the entry says otherwise. Lower is better.</span></li>
+        <li><b>Scoring</b><span>If the source reports an annual estimate, that estimate is the score. If it reports a count over a period, the score is the count divided by the length of the period. Each row's detail shows the arithmetic.</span></li>
+        <li><b>Sources</b><span>One primary source per entry, preferring WHO and UN statistics, then peer-reviewed estimates, then institutional estimates, then curated trackers.</span></li>
+        <li><b>Uncertainty</b><span>Where the source gives an interval, or published estimates disagree, the row shows the range. An entry with a range and no central estimate is ranked by the geometric midpoint.</span></li>
+        <li><b>AI attribution</b><span>A death is <em>confirmed</em> when a court, coroner, regulator or accident investigator has found that a machine-learning system caused or contributed to it. It is <em>alleged</em> when a named system is blamed in a lawsuit, an open investigation, or reporting by at least two news organisations. These are the primary tracker's definitions. The AI score counts both, for the latest complete year.</span></li>
+        <li><b>Comparison entries</b><span>Boeing MCAS and industrial robots are conventional automation, not machine learning. They do not count towards the AI score.</span></li>
+      </ul>
+    </div>
+    <div id="limitations">
+      <h2 class="disp">Limits</h2>
+      <ul class="spec">
+        <li><b>Retrospective</b><span>KillBench scores recorded deaths, not risk. Much of the concern about advanced AI is about future harm: in a 2023 survey of 2,778 AI researchers, the median respondent gave a 5% chance of outcomes as bad as human extinction. A low score here is not evidence about that.</span></li>
+        <li><b>Incomplete AI data</b><span>Trackers depend on lawsuits and news reports. Driver-assistance deaths in 2025 are missing, deaths nobody has linked to a system are not counted, and alleged cases may not hold up.</span></li>
+        <li><b>Military use</b><span>Not scored. Reporting says an AI system called Lavender marked up to 37,000 people in Gaza as targets. The Israeli military disputes the account, and no source attributes a number of deaths to the software.</span></li>
+        <li><b>Unequal scope</b><span>Knives counts homicides only, Malaria excludes other mosquito-borne diseases, and Industrial robots covers one country.</span></li>
+        <li><b>Attribution</b><span>Deaths attributed to a ruler depend on what is counted and whose estimate is used, which is why those ranges are wide.</span></li>
+        <li><b>Population</b><span>Rates are not adjusted for world population, which has more than tripled since 1950.</span></li>
+        <li><b>Benefit</b><span>Entries are scored on deaths caused, with no credit for deaths prevented.</span></li>
+      </ul>
+    </div>
+  </div></section>
 
-  <section id="limitations">
-    <h2>Limitations</h2>
-    <ul class="list">
-      <li><b>Retrospective</b><span>KillBench scores recorded deaths, not risk. Much of the concern about advanced AI is about future harm: in a 2023 survey of 2,778 AI researchers, the median respondent gave a 5% chance of outcomes as bad as human extinction. A low score here is not evidence about that.</span></li>
-      <li><b>Incomplete AI data</b><span>Trackers depend on lawsuits and news reports. Driver-assistance deaths in 2025 are missing, deaths nobody has linked to a system are not counted, and alleged cases may not hold up.</span></li>
-      <li><b>Military use not scored</b><span>Reporting says an AI system called Lavender marked up to 37,000 people in Gaza as targets. The Israeli military disputes the account, and no source attributes a number of deaths to the software.</span></li>
-      <li><b>Unequal scope</b><span>Knives counts homicides only, Malaria excludes other mosquito-borne diseases, and Industrial robots covers one country. Each row states its scope.</span></li>
-      <li><b>Contested attribution</b><span>Deaths attributed to a ruler depend on what is counted and whose estimate is used, which is why those ranges are wide.</span></li>
-      <li><b>No population adjustment</b><span>World population has more than tripled since 1950, so historical and current rates are not on equal terms.</span></li>
-      <li><b>Not net of benefit</b><span>Entries are scored on deaths caused, with no credit for deaths prevented.</span></li>
-    </ul>
-  </section>
-
-  <section id="data">
-    <h2>Data</h2>
-    <p class="sub">Every figure, range, note and reference on this page is in the files below. The page is generated from the JSON file. To report an error or propose an entry, <a href="https://github.com/VictorLiwentao/VictorLiwentao.github.io/issues">open an issue</a>.</p>
-    <p class="files"><a href="data/killbench.csv">killbench.csv<span>leaderboard</span></a><a href="data/killbench.json">killbench.json<span>full data</span></a><a href="https://github.com/VictorLiwentao/VictorLiwentao.github.io/tree/main/killbench/scripts">build script<span>GitHub</span></a></p>
-    <div class="tw"><table><thead><tr><th>Version</th><th>Date</th><th>Changes</th></tr></thead><tbody id="log"></tbody></table></div>
-  </section>
-
-  <section id="cite">
-    <h2>Cite</h2>
-    <pre id="bib">@misc{killbench2026,
+  <section id="data" class="soft"><div class="wrap cols">
+    <div>
+      <h3 class="disp">Data</h3>
+      <p class="sub">Every figure, range, note and reference on this page is in these files. To report an error or propose an entry, <a href="https://github.com/VictorLiwentao/VictorLiwentao.github.io/issues">open an issue</a>.</p>
+      <p class="files"><a href="data/killbench.csv">killbench.csv<span>leaderboard</span></a><a href="data/killbench.json">killbench.json<span>full data</span></a></p>
+      <h3 class="disp next">Cite</h3>
+      <pre id="bib">@misc{killbench2026,
   title  = {KillBench: A Benchmark of Things That Kill People},
   author = {VictorLiwentao},
   year   = {2026},
-  note   = {Version 1.1},
   url    = {https://victorliwentao.github.io/killbench/}
 }</pre>
-    <button type="button" class="copy" id="copy">Copy BibTeX</button>
-  </section>
-
-  <section id="references">
-    <h2>References</h2>
-    <ol class="refs-list" id="refs"></ol>
-  </section>
+      <button type="button" class="copy" id="copy">Copy BibTeX</button>
+    </div>
+    <div>
+      <h3 class="disp">References</h3>
+      <ol class="refs-list" id="refs"></ol>
+    </div>
+  </div></section>
 </main>
 
 <footer><div class="wrap">
-  <p>Compiled by <a href="https://github.com/VictorLiwentao">VictorLiwentao</a> with Claude, an AI system made by Anthropic. <a href="../">Other projects</a>.</p>
+  <p>Compiled by <a href="https://github.com/VictorLiwentao">VictorLiwentao</a> with Claude, an AI system made by Anthropic. Updated <span id="updated"></span>. <a href="../">Other projects</a>.</p>
   <p>Many deaths attributed to chatbots were suicides. If you are struggling, call or text 988 in the United States, or find a helpline in your country at <a href="https://findahelpline.com/">findahelpline.com</a>.</p>
 </div></footer>
 
 <script>
 const D=/*__DATA__*/;
 const $=s=>document.querySelector(s);
-const E=D.entries; // already ranked by the build script
+const E=D.entries; // ranked by the build script
+const BY=Object.fromEntries(E.map(e=>[e.id,e]));
 const state={type:"All",scale:"log",desc:true};
-const LOG_DECADES=8; // axis: 1 to 100M
-const LOG_TICKS=["1","10","100","1k","10k","100k","1M","10M","100M"];
+const YEAR_S=31557600, T0=performance.now();
+const LOG_DECADES=8, LOG_TICKS=["1","10","100","1k","10k","100k","1M","10M","100M"];
 const LIN={max:2e7,n:4,ticks:["0","5M","10M","15M","20M"]};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const full=n=>(n<100&&n%1?n.toFixed(1):Math.round(n).toLocaleString("en-US"));
-function compact(v){ // three significant figures
+function compact(v){
   const t=x=>String(parseFloat(x.toPrecision(3)));
   if(v>=1e6) return t(v/1e6)+"M";
   if(v>=1e3) return t(v/1e3)+"k";
@@ -314,82 +363,172 @@ function score(e){const r=e.rate;
   return {main:compact(r.lo)+"–"+compact(r.hi),sub:""};
 }
 function countText(c,f){return single(c)?f(c.lo):(c.pt!=null?f(c.pt)+" ("+f(c.lo)+"–"+f(c.hi)+")":f(c.lo)+"–"+f(c.hi));}
+const isYear=p=>/^\d{4}$/.test(p);
 function basis(e){
-  if(e.basis==="window") return countText({lo:e.count.lo,hi:e.count.hi,pt:e.count.pt},v=>compact(v)).replace(/ \(.*\)/,"")+" over "+e.period;
-  return /^\d{4}$/.test(e.period)?e.period+" data":e.period;
+  if(e.basis==="window"){const c=e.count;return (single(c)?compact(c.lo):c.pt!=null?compact(c.pt):compact(c.lo)+"–"+compact(c.hi))+" over "+e.period;}
+  return isYear(e.period)?e.period+" data":e.period;
 }
 function calc(e){
   if(e.basis==="window") return countText(e.count,full)+" deaths over "+e.years+" years ("+e.period+") = "+countText(e.rate,v=>full(parseFloat(v.toPrecision(3))))+" per year.";
-  return countText(e.count,full)+(e.floor?" or more":"")+" deaths per year ("+(/^\d{4}$/.test(e.period)?e.period+" data":"annual estimate")+").";
+  return countText(e.count,full)+(e.floor?" or more":"")+" deaths per year ("+(isYear(e.period)?e.period+" data":"annual estimate")+").";
 }
+function every(e){ // the same rate, read as an interval
+  const s=YEAR_S/e.sort,pre=(!single(e.rate)&&e.rate.pt==null)?"~":"";
+  if(s<10) return pre+s.toFixed(1)+" s";
+  if(s<90) return pre+Math.round(s)+" s";
+  if(s<5400) return pre+(s/60).toFixed(1)+" min";
+  if(s<172800) return pre+(s/3600).toFixed(1)+" hr";
+  if(s<YEAR_S) return pre+Math.round(s/86400)+" days";
+  return pre+(s/YEAR_S).toFixed(1)+" years";
+}
+const elapsed=()=>(performance.now()-T0)/1000;
+const expected=e=>Math.floor(e.sort/YEAR_S*elapsed());
+
+/* ---------- hero: circles drawn to scale ---------- */
+function relax(items,spread){ // unit radii; returns centres of a tight cluster ordered by rank
+  const n=items.map(e=>({e,r:Math.sqrt(e.sort)}));
+  let x=0;n.forEach((c,i)=>{c.tx=x+c.r;x+=c.r*2*spread;c.x=c.tx;c.y=(i%2?1:-1)*c.r*.4;});
+  const gap=n[0].r*.035;
+  for(let it=0;it<900;it++){
+    const pull=it<700?1:0;
+    n.forEach(c=>{c.x+=(c.tx-c.x)*.012*pull;c.y+=(0-c.y)*.03*pull;});
+    for(let a=0;a<n.length;a++)for(let b=a+1;b<n.length;b++){
+      const A=n[a],B=n[b],dx=B.x-A.x,dy=B.y-A.y,d=Math.hypot(dx,dy)||1e-6,min=A.r+B.r+gap;
+      if(d<min){const o=(min-d)/d,wa=B.r*B.r/(A.r*A.r+B.r*B.r),wb=1-wa;A.x-=dx*o*wa;A.y-=dy*o*wa;B.x+=dx*o*wb;B.y+=dy*o*wb;}
+    }
+  }
+  return n;
+}
+let textW={};
+function measure(svg){ // width of each name and score at 1px in the label style
+  const NS="http://www.w3.org/2000/svg",g=document.createElementNS(NS,"g");g.setAttribute("class","b");svg.appendChild(g);
+  E.forEach(e=>{["bn","bv"].forEach((cls,k)=>{const t=document.createElementNS(NS,"text");t.setAttribute("class",cls);t.setAttribute("font-size","10");
+    t.textContent=k?score(e).main:e.name;g.appendChild(t);textW[e.id+k]=t.getComputedTextLength()/10;});});
+  g.remove();
+}
+function drawScale(animate){
+  const svg=$("#bubbles"),stage=$("#stage"),list=$("#smalls");
+  svg.innerHTML="";svg.removeAttribute("height");
+  const stacked=window.innerWidth<=980;
+  const W=Math.floor(stacked?stage.clientWidth:stage.clientWidth-list.offsetWidth-parseFloat(getComputedStyle(stage).columnGap||0));
+  const Hmax=stacked?Math.min(W*1.2,560):Math.min(520,W*.66);
+  if(!Object.keys(textW).length) measure(svg);
+  let N=Math.min(13,E.length),nodes,s,bx,by,bh;
+  for(;N>=4;N--){ // the largest set whose labels all fit inside their circles
+    nodes=relax(E.slice(0,N),stacked&&W<560?.3:.4);
+    const x0=Math.min(...nodes.map(c=>c.x-c.r)),x1=Math.max(...nodes.map(c=>c.x+c.r)),y0=Math.min(...nodes.map(c=>c.y-c.r)),y1=Math.max(...nodes.map(c=>c.y+c.r));
+    s=Math.min(W/(x1-x0),Hmax/(y1-y0));bx=x0;by=y0;bh=(y1-y0)*s;
+    if(nodes.every(c=>{const d=2*c.r*s;c.fs=Math.min(d*.2,(d-12)/Math.max(textW[c.e.id+0],textW[c.e.id+1]*.84),44);return c.fs>=9.5;})) break;
+  }
+  const H=Math.ceil(bh)+4;
+  svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("height",H);
+  svg.innerHTML=nodes.map((c,i)=>{const e=c.e,r=c.r*s,cx=(c.x-bx)*s,cy=(c.y-by)*s+2,sc=score(e).main,hist=e.basis==="window";
+    return `<g transform="translate(${cx.toFixed(1)} ${cy.toFixed(1)})"><g class="b grow${hist?" hist":""}" style="--i:${i}" tabindex="0" role="button" data-id="${e.id}" aria-label="${esc(e.name)}: ${sc} deaths per year">`+
+      `<circle r="${(hist?r-1.25:r).toFixed(1)}"/><text class="bn" y="${(-c.fs*.12).toFixed(1)}" font-size="${c.fs.toFixed(1)}">${esc(e.name)}</text>`+
+      `<text class="bv" y="${(c.fs*.9).toFixed(1)}" font-size="${(c.fs*.84).toFixed(1)}">${sc}</text></g></g>`;}).join("");
+  const rest=E.slice(N),px=e=>2*s*Math.sqrt(e.sort),g=Math.max(26,Math.ceil(Math.max(...rest.map(px)))+8);
+  list.style.setProperty("--g",g+"px");
+  list.innerHTML=rest.map((e,i)=>{const d=px(e),h=Math.max(20,Math.ceil(d)+2),hollow=e.basis==="window"&&d>=7;
+    return `<li class="${e.type==="AI"?"ai":""}" style="--i:${i}" data-id="${e.id}" tabindex="0" role="button"><svg width="${g}" height="${h}" viewBox="${-g/2} ${-h/2} ${g} ${h}" aria-hidden="true">`+
+      (d<6?`<circle class="ring" r="7"/>`:"")+
+      `<circle r="${(d/2).toFixed(2)}" fill="${hollow?"none":"#fff"}"${hollow?' stroke="#fff" stroke-width="2"':""}/></svg>`+
+      `<b>${esc(e.name)}</b><span>${score(e).main}</span></li>`;}).join("");
+  const aipx=px(BY.ai);
+  $("#cap").textContent="Area is proportional to deaths per year. At this scale the dot for AI systems is "+(aipx<.1?"less than 0.1":aipx.toFixed(1))+" px wide, so every dot under 6 px is ringed to show where it is.";
+  stage.parentNode.classList.toggle("anim",!!animate);
+}
+function tipFor(el,ev){
+  const tip=$("#tip"),e=el&&BY[el.dataset.id];
+  if(!e){tip.style.display="none";return;}
+  tip.innerHTML=`<b>${esc(e.name)}: ${score(e).main} a year</b>${esc(e.measure)}<i>${esc(basis(e))}. One death every ${every(e)}.</i>`;
+  tip.style.display="block";
+  const st=$("#stage").getBoundingClientRect(),r=el.getBoundingClientRect();
+  let x=(ev&&ev.clientX?ev.clientX:r.left+r.width/2)-st.left+14,y=(ev&&ev.clientY?ev.clientY:r.top)-st.top+14;
+  x=Math.max(0,Math.min(x,st.width-tip.offsetWidth));tip.style.left=x+"px";tip.style.top=y+"px";
+}
+function openRow(id){
+  if(state.type!=="All"){state.type="All";renderChips();renderBoard();}
+  const d=document.querySelector('.row[data-id="'+id+'"]');if(!d)return;
+  d.open=true;d.scrollIntoView({block:"center"});d.querySelector("summary").focus({preventScroll:true});
+}
+const stage=$("#stage"),pick=ev=>ev.target.closest&&ev.target.closest("[data-id]");
+stage.addEventListener("pointermove",ev=>tipFor(pick(ev),ev));
+stage.addEventListener("pointerleave",()=>tipFor(null));
+stage.addEventListener("focusin",ev=>tipFor(pick(ev)));
+stage.addEventListener("focusout",()=>tipFor(null));
+stage.addEventListener("click",ev=>{const el=pick(ev);if(el)openRow(el.dataset.id);});
+stage.addEventListener("keydown",ev=>{const el=pick(ev);if(el&&(ev.key==="Enter"||ev.key===" ")){ev.preventDefault();openRow(el.dataset.id);}});
+
+/* ---------- leaderboard ---------- */
 const pos=v=>state.scale==="log"?Math.log10(Math.max(v,1))/LOG_DECADES*100:v/LIN.max*100;
 function geometry(e){
   const r=e.rate,lo=pos(r.lo),hi=pos(r.hi),hasPt=r.pt!=null||single(r),p=pos(r.pt??r.lo);
   if(state.scale==="log") return {
-    rng:single(r)?"left:"+lo+"%;width:0;opacity:0":"left:calc("+lo+"% - 4px);width:calc("+(hi-lo)+"% + 8px);opacity:1",
-    pt:"left:calc("+p+"% - 4px);width:8px;opacity:"+(hasPt?1:0)};
+    rng:single(r)?"left:"+lo+"%;width:0;opacity:0":"left:calc("+lo+"% - 5.5px);width:calc("+(hi-lo)+"% + 11px);opacity:1",
+    pt:"left:calc("+p+"% - 5.5px);width:11px;opacity:"+(hasPt?1:0)};
   return {rng:"left:0;width:"+hi+"%;opacity:"+(single(r)?0:1),pt:"left:0;width:max("+p+"%,2px);opacity:1"};
 }
-const axis=()=>state.scale==="log"
-  ?LOG_TICKS.map((t,i)=>'<span style="left:'+(i/LOG_DECADES*100)+'%">'+t+"</span>").join("")
-  :LIN.ticks.map((t,i)=>'<span style="left:'+(i/LIN.n*100)+'%">'+t+"</span>").join("");
+const axis=()=>(state.scale==="log"?LOG_TICKS.map((t,i)=>[t,i/LOG_DECADES]):LIN.ticks.map((t,i)=>[t,i/LIN.n])).map(([t,f])=>`<span style="left:${f*100}%">${t}</span>`).join("");
 const grid=()=>state.scale==="log"?LOG_DECADES:LIN.n;
-
 function renderBoard(){
   const el=$("#board"),open=new Set([...el.querySelectorAll("details[open]")].map(d=>d.dataset.id));
   let list=E.filter(e=>state.type==="All"||e.type===state.type);
   if(!state.desc) list=[...list].reverse();
   el.classList.toggle("lin",state.scale==="lin");
-  el.innerHTML='<div class="bhead"><span class="h-rk">#</span><span>Entry</span><span class="h-ty">Type</span>'+
-    '<button type="button" class="sort" id="sort" title="Reverse the order">Deaths per year '+(state.desc?"↓":"↑")+"<small>lower is better</small></button>"+
-    '<div class="axis" aria-hidden="true">'+axis()+'</div><span class="h-bs">Basis and source</span><span class="h-tg"></span></div>'+
-    list.map(e=>{const s=score(e),g=geometry(e),r=e.rate;
-      return '<details class="row'+(e.type==="AI"?" ai":"")+'" data-id="'+e.id+'"'+(open.has(e.id)?" open":"")+"><summary>"+
-        '<span class="rk">'+e.rank+"</span>"+
-        '<span class="nm"><b>'+esc(e.name)+"</b><i>"+esc(e.measure)+"</i></span>"+
-        '<span class="ty">'+esc(e.type)+"</span>"+
-        '<span class="sc"><b>'+s.main+"</b>"+(s.sub?"<i>"+s.sub+"</i>":"")+"</span>"+
-        '<span class="plot"><span class="pin" style="--n:'+grid()+'"><i class="rng'+(!single(r)&&r.pt==null?" solo":"")+'" style="'+g.rng+'"></i><i class="pt" style="'+g.pt+'"></i></span></span>'+
-        '<span class="bs"><span>'+esc(basis(e))+"</span><i>"+esc(e.source)+"</i></span>"+
-        '<span class="tg" aria-hidden="true">+</span></summary>'+
-        '<div class="more"><p class="calc">'+esc(calc(e))+"</p><p>"+esc(e.note)+"</p>"+
-        '<p class="refs">'+e.refs.map(x=>'<a href="'+esc(x.url)+'">'+esc(x.label)+"</a>").join("; ")+".</p></div></details>";
+  el.innerHTML=`<div class="bhead"><span class="hx">#</span><span>Entry</span>`+
+    `<button type="button" class="sort" id="sort" title="Reverse the order">Deaths per year ${state.desc?"↓":"↑"}<small>lower is better</small></button>`+
+    `<div class="axis" aria-hidden="true">${axis()}</div><span class="hx">One death every<small>live count since you arrived</small></span><span class="hx">Basis and source</span><span class="hx"></span></div>`+
+    list.map(e=>{const s=score(e),g=geometry(e),r=e.rate,n=expected(e),live=e.basis==="annual";
+      return `<details class="row${e.type==="AI"?" ai":""}" data-id="${e.id}"${open.has(e.id)?" open":""}><summary>`+
+        `<span class="rk">${e.rank}</span>`+
+        `<span class="nm"><b>${esc(e.name)}</b><i>${esc(e.measure)}</i></span>`+
+        `<span class="sc"><b${s.main.length>8?' class="long"':""}>${s.main}</b>${s.sub?`<i>${s.sub}</i>`:""}</span>`+
+        `<span class="plot"><span class="pin" style="--n:${grid()}"><i class="rng${!single(r)&&r.pt==null?" solo":""}" style="${g.rng}"></i><i class="pt" style="${g.pt}"></i></span></span>`+
+        `<span class="lv"><span>${every(e)}</span>${live?`<i class="live" data-id="${e.id}" data-c="${n}"><b>${n.toLocaleString("en-US")}</b> since you arrived</i>`:`<i>past period</i>`}</span>`+
+        `<span class="bs"><span>${esc(basis(e))}</span><i>${esc(e.source)}</i></span>`+
+        `<span class="tg" aria-hidden="true">+</span></summary>`+
+        `<div class="more"><p class="calc">${esc(calc(e))} One death every ${every(e)}.</p><p>${esc(e.note)}</p>`+
+        `<p class="refs">${e.refs.map(x=>`<a href="${esc(x.url)}">${esc(x.label)}</a>`).join("; ")}.</p></div></details>`;
     }).join("");
 }
-function updateMarks(){ // move marks in place so the scale change animates
-  const el=$("#board"),by=Object.fromEntries(E.map(e=>[e.id,e]));
-  el.classList.toggle("lin",state.scale==="lin");
+function updateMarks(){
+  const el=$("#board");el.classList.toggle("lin",state.scale==="lin");
   el.querySelector(".axis").innerHTML=axis();
-  el.querySelectorAll("details").forEach(d=>{const g=geometry(by[d.dataset.id]);
+  el.querySelectorAll("details").forEach(d=>{const g=geometry(BY[d.dataset.id]);
     d.querySelector(".pin").style.setProperty("--n",grid());
     d.querySelector(".rng").style.cssText=g.rng;d.querySelector(".pt").style.cssText=g.pt;});
 }
+function tick(){
+  const t=elapsed(),m=Math.floor(t/60),s=Math.floor(t%60);
+  $("#clock").textContent=(m?m+" min ":"")+s+" s";
+  document.querySelectorAll(".live").forEach(n=>{const c=expected(BY[n.dataset.id]);
+    if(+n.dataset.c!==c){n.dataset.c=c;n.firstChild.textContent=c.toLocaleString("en-US");n.classList.remove("tick");void n.offsetWidth;n.classList.add("tick");}});
+}
 function renderChips(){
-  const types=["All",...new Set(["Substance","Technology","Nature","Regime","AI"].filter(t=>E.some(e=>e.type===t)))];
-  $("#chips").innerHTML=types.map(t=>'<button type="button" data-v="'+t+'" aria-pressed="'+(t===state.type)+'">'+t+"<span>"+(t==="All"?E.length:E.filter(e=>e.type===t).length)+"</span></button>").join("");
+  const types=["All",...["Substance","Technology","Nature","Regime","AI"].filter(t=>E.some(e=>e.type===t))];
+  $("#chips").innerHTML=types.map(t=>`<button type="button" data-v="${t}" aria-pressed="${t===state.type}">${t}<span>${t==="All"?E.length:E.filter(e=>e.type===t).length}</span></button>`).join("");
 }
 function renderHeader(){
-  const ai=E.find(e=>e.id==="ai"),cars=E.find(e=>e.id==="cars"),mins=ai.sort/(cars.sort/525600);
+  const ai=BY.ai,cars=BY.cars,mins=ai.sort/(cars.sort/525600);
   const ord=n=>n+(["th","st","nd","rd"][(n%100>10&&n%100<14)?0:n%10]||"th");
-  const refs=new Set([...E.flatMap(e=>e.refs.map(r=>r.url)),...D.extra_refs.map(r=>r.url)]);
-  $("#result").innerHTML="<b>Result.</b> AI systems rank "+ord(ai.rank)+" of "+E.length+", with "+full(ai.sort)+" deaths attributed in "+ai.period+", all alleged and none confirmed by an official finding. Road traffic causes that many deaths every "+Math.round(mins)+" minutes.";
-  const d=new Date(D.updated+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"});
-  $("#meta").innerHTML=["Version "+D.version,"Updated "+d,E.length+" entries",refs.size+" references"].map(x=>"<li>"+x+"</li>").join("");
+  $("#result").textContent="Result: AI systems rank "+ord(ai.rank)+" of "+E.length+", with "+full(ai.sort)+" deaths attributed in "+ai.period+", all alleged and none confirmed by an official finding. Road traffic causes that many every "+Math.round(mins)+" minutes.";
+  $("#updated").textContent=new Date(D.updated+"T00:00:00Z").toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"});
 }
 function renderSystems(){
-  const S=D.systems,rows=[...S.rows].sort((a,b)=>(b.confirmed+b.alleged)-(a.confirmed+a.alleged));
-  const n=v=>'<td class="n'+(v?"":" z")+'">'+v+"</td>";
-  $("#sys-sub").textContent="Deaths attributed to individual AI systems, "+S.period+". Source: "+S.source+". Confirmed and alleged are defined under Method.";
-  $("#sys").innerHTML=rows.map(r=>'<tr><td class="s"><b>'+esc(r.system)+'</b><span class="m">'+esc(r.developer)+", "+esc(r.type.toLowerCase())+(r.other?". "+esc(r.other):"")+"</span></td>"+
-    '<td class="d">'+esc(r.developer)+'</td><td class="d">'+esc(r.type)+"</td>"+n(r.confirmed)+n(r.alleged)+n(r.confirmed+r.alleged)+'<td class="n d z">'+r.since+'</td><td class="o">'+esc(r.other)+"</td></tr>").join("");
+  const S=D.systems,rows=[...S.rows].sort((a,b)=>(b.confirmed+b.alleged)-(a.confirmed+a.alleged)),max=Math.max(...rows.map(r=>r.confirmed+r.alleged));
+  const n=v=>`<td class="n${v?"":" z"}">${v}</td>`;
+  $("#sys-sub").textContent="Deaths attributed to individual AI systems, "+S.period+". Source: "+S.source+".";
+  $("#sys").innerHTML=rows.map(r=>`<tr><td class="s"><b>${esc(r.system)}</b><span class="m">${esc(r.developer)}, ${esc(r.type.toLowerCase())}${r.other?". "+esc(r.other):""}</span></td>`+
+    `<td class="d">${esc(r.developer)}</td><td class="d">${esc(r.type)}</td>`+
+    `<td class="g"><span class="bz">${r.confirmed?`<i class="c" style="width:${r.confirmed/max*100}%"></i>`:""}${r.alleged?`<i class="a" style="width:${r.alleged/max*100}%"></i>`:""}</span></td>`+
+    n(r.confirmed)+n(r.alleged)+n(r.confirmed+r.alleged)+`<td class="n d z">${r.since}</td><td class="o">${esc(r.other)}</td></tr>`).join("");
   const sum=k=>rows.reduce((a,r)=>a+r[k],0);
-  $("#sysfoot").innerHTML='<tr><td>All systems</td><td class="d"></td><td class="d"></td><td class="n">'+sum("confirmed")+'</td><td class="n">'+sum("alleged")+'</td><td class="n">'+(sum("confirmed")+sum("alleged"))+'</td><td class="d"></td><td class="o"></td></tr>';
+  $("#sysfoot").innerHTML=`<tr><td>All systems</td><td class="d"></td><td class="d"></td><td></td><td class="n">${sum("confirmed")}</td><td class="n">${sum("alleged")}</td><td class="n">${sum("confirmed")+sum("alleged")}</td><td class="d"></td><td class="o"></td></tr>`;
 }
-function renderRest(){
-  $("#log").innerHTML=D.changelog.map(c=>"<tr><td>"+esc(c.version)+'</td><td style="white-space:nowrap">'+esc(c.date)+"</td><td>"+esc(c.text)+"</td></tr>").join("");
+function renderRefs(){
   const seen=new Map();
   [...E.flatMap(e=>e.refs),...D.extra_refs].forEach(r=>seen.has(r.url)||seen.set(r.url,r.label));
-  $("#refs").innerHTML=[...seen].sort((a,b)=>a[1].localeCompare(b[1])).map(([u,l])=>'<li><a href="'+esc(u)+'">'+esc(l)+"</a></li>").join("");
+  $("#refs").innerHTML=[...seen].sort((a,b)=>a[1].localeCompare(b[1])).map(([u,l])=>`<li><a href="${esc(u)}">${esc(l)}</a></li>`).join("");
 }
 $("#chips").addEventListener("click",ev=>{const b=ev.target.closest("button");if(!b)return;state.type=b.dataset.v;renderChips();renderBoard();});
 $("#scale").addEventListener("click",ev=>{const b=ev.target.closest("button");if(!b||b.dataset.v===state.scale)return;
@@ -399,7 +538,13 @@ $("#copy").addEventListener("click",async()=>{const b=$("#copy");
   try{await navigator.clipboard.writeText($("#bib").textContent);b.textContent="Copied";}
   catch(e){const r=document.createRange();r.selectNodeContents($("#bib"));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected: press Ctrl+C or Cmd+C";}
   setTimeout(()=>b.textContent="Copy BibTeX",2400);});
-renderHeader();renderChips();renderBoard();renderSystems();renderRest();
+renderHeader();renderChips();renderBoard();renderSystems();renderRefs();
+setInterval(tick,250);tick();
+let drawn=false,lastW=0;
+const first=()=>{if(drawn)return;drawn=true;lastW=window.innerWidth;drawScale(true);};
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(first);
+setTimeout(first,1800);
+let rz;window.addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(()=>{if(drawn&&window.innerWidth!==lastW){lastW=window.innerWidth;textW={};drawScale(false);}},150);});
 </script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 {
-  "version": "1.1",
   "updated": "2026-11-16",
   "metric": "Deaths per year. Annual estimates are used as reported; counts over a period are divided by the length of the period.",
   "entries": [
@@ -490,7 +489,7 @@
         "other": ""
       },
       {
-        "system": "ATG test vehicle",
+        "system": "Uber ATG test vehicle",
         "developer": "Uber",
         "type": "Automated driving",
         "since": 2018,
@@ -527,18 +526,6 @@
       }
     ]
   },
-  "changelog": [
-    {
-      "version": "1.1",
-      "date": "2026-11-16",
-      "text": "One metric for every entry: deaths per year. Basis and source shown on each row. CSV export. Forecast row and alternative AI counting rules removed in favour of one documented rule."
-    },
-    {
-      "version": "1.0",
-      "date": "2026-11-16",
-      "text": "First release."
-    }
-  ],
   "extra_refs": [
     {
       "label": "Autopilot Watch, Tesla crash reports to NHTSA",
