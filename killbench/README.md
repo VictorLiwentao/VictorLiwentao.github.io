@@ -1,28 +1,31 @@
 # KillBench
 
-A benchmark of things that kill people, with AI included for scale. Live at
-<https://victorliwentao.github.io/killbench/>.
+A benchmark of things that kill people. Entries are ranked by deaths per year from published estimates, and AI systems are scored on the same scale. Lower is better.
 
-Three tracks:
+Live at <https://victorliwentao.github.io/killbench/>.
 
-- **Deaths per year**: tobacco, alcohol, cars, falls, malaria, drowning, guns, snakes, knives, rabies, selfies, AI (2025) and sharks.
-- **All-time totals**: smallpox, tobacco, Mao, Hitler, Stalin, Pol Pot, the atomic bombs, Boeing MCAS, selfies, AI and industrial robots, plus AI's expected value under the median researcher forecast (a forecast, not a count).
-- **Results by system**: deaths linked to each AI system, confirmed and alleged.
+## Metric
 
-The page lets the reader switch between three AI counting rules (confirmed 5, confirmed or alleged 44, everything any list has 108) and between a log and a linear scale.
+Deaths per year, worldwide unless the entry says otherwise.
+
+- If the source reports an annual estimate, that estimate is the score.
+- If it reports a count over a period, the score is the count divided by the length of the period.
+- Entries with a range and no central estimate are ranked by the geometric midpoint of the range.
+- The AI score counts deaths, confirmed or alleged, that the primary tracker dates to the latest complete year.
 
 ## Files
 
-- `data/killbench.json`: every figure, range, note and source. Edit this to update the site.
-- `scripts/template.html`: the page (HTML, CSS, JS).
-- `scripts/build.py`: writes `index.html` from the two files above. Run `python3 scripts/build.py`.
-- `fonts/`: Doto and IBM Plex (SIL Open Font License 1.1), self-hosted.
+- `data/killbench.json`: every entry, figure, range, note and reference. Edit this to change the site.
+- `data/killbench.csv`: the leaderboard with computed rates, written by the build script.
+- `scripts/build.py`: computes rates and ranks, then writes `index.html` and the CSV. Run `python3 scripts/build.py`.
+- `scripts/template.html`: the page.
+- `fonts/`: IBM Plex Sans and Mono (SIL Open Font License 1.1), self-hosted.
 
-## Counting rules for AI
+## Adding an entry
 
-- **Confirmed**: a court, coroner, regulator or accident investigator found the system caused or contributed to the death.
-- **Alleged**: blamed on a named AI system in a lawsuit, an open investigation, or by at least two news organisations.
-- **Everything any list has**: Wikipedia's chatbot list (39) + tesladeaths.com Autopilot/FSD deaths (65) + Uber (1) + openpilot (2) + nH Predict (1).
+Add an object to `entries` in `data/killbench.json` with `basis` set to `annual` (and `count` as the annual estimate) or `window` (with `count` as the total and `years` as the length of the period), then run the build script.
 
-Counts are a snapshot from 15–16 November 2026 of hasaikilledanyone.com, Wikipedia's "Deaths linked to chatbots" and tesladeaths.com.
-AI-assisted military targeting is not scored because no death count can be attributed to the software.
+## Changelog
+
+- 1.1 (2026-11-16): one metric for every entry, basis and source on each row, CSV export.
+- 1.0 (2026-11-16): first release.
