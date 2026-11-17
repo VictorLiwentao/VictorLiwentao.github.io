@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KillBench</title>
+<meta name="description" content="A benchmark of things that kill people, with AI included for scale. Cars, guns, knives, mosquitoes, dictators and AI systems, ranked by sourced death counts.">
+<meta property="og:title" content="KillBench">
+<meta property="og:description" content="A benchmark of things that kill people, with AI included for scale. Lower is better.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://victorliwentao.github.io/killbench/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23e2efdd'/%3E%3Cg fill='%2318211c'%3E%3Ccircle cx='4' cy='3' r='1.3'/%3E%3Ccircle cx='4' cy='6.3' r='1.3'/%3E%3Ccircle cx='4' cy='9.6' r='1.3'/%3E%3Ccircle cx='4' cy='13' r='1.3'/%3E%3Ccircle cx='7.3' cy='8' r='1.3'/%3E%3Ccircle cx='10.2' cy='5.2' r='1.3'/%3E%3Ccircle cx='12.6' cy='3' r='1.3'/%3E%3Ccircle cx='10.2' cy='10.6' r='1.3'/%3E%3Ccircle cx='12.6' cy='13' r='1.3'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" href="fonts/doto-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Design notes
+   Subject: a mortality table printed as a benchmark leaderboard.
+   Picture: green-bar continuous-feed printer paper, sprocket holes down both edges, annotated by hand:
+            yellow highlighter over the AI rows, blue ballpoint for their marks.
+   Colour:  paper white, green bar, printer ink, highlighter yellow, ballpoint blue. Blue and yellow mean "AI" and nothing else.
+   Type:    Doto (dot matrix) for the wordmark and track titles; IBM Plex Mono for every figure; IBM Plex Sans for prose.
+   Motion:  only the marks move, and only when the reader changes the scale or the counting rule. */
+@font-face{font-family:Doto;font-weight:700;font-display:swap;src:url(fonts/doto-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Doto;font-weight:900;font-display:swap;src:url(fonts/doto-latin-900-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-weight:400;font-display:swap;src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-weight:600;font-display:swap;src:url(fonts/ibm-plex-mono-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/ibm-plex-sans-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2")}
+
+:root{
+  color-scheme:light dark;
+  --desk:light-dark(#c9d1c8,#090c0a);
+  --paper:light-dark(#fbfcf7,#121814);
+  --band:light-dark(#e2efdd,#1a251d);
+  --ink:light-dark(#18211c,#e2eae2);
+  --mute:light-dark(#4d5c55,#9aaa9f);
+  --rule:light-dark(#9fc2a5,#36503d);
+  --grid:light-dark(rgba(24,33,28,.13),rgba(226,234,226,.13));
+  --mark:light-dark(#2c3b33,#c5d2c7);
+  --hl:light-dark(#fff27a,#454010);
+  --ai:light-dark(#2038d0,#8ea2ff);
+  --link:light-dark(#1b34b8,#a8b6ff);
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --dot:Doto,"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--desk);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:var(--link);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ai);outline-offset:2px}
+p{margin:0}
+
+.sheet{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:38px minmax(0,1fr) 38px;background:var(--paper);min-height:100vh}
+.feed{background:radial-gradient(circle at 50% 50%,var(--desk) 0 6px,transparent 6.6px) 50% 6px/100% 32px repeat-y}
+.feed.l{border-right:1px dashed var(--rule)}
+.feed.r{border-left:1px dashed var(--rule)}
+main{padding:clamp(20px,3vw,40px) clamp(16px,3.4vw,44px) 56px}
+
+/* header */
+.runline{display:flex;flex-wrap:wrap;gap:4px 34px;font:400 13px/1.4 var(--mono);color:var(--mute)}
+h1{font:900 clamp(52px,13.2vw,172px)/.86 var(--dot);letter-spacing:-.01em;margin:clamp(14px,2.4vw,26px) 0 0 -.05em;text-wrap:nowrap}
+.tagline{font:400 clamp(19px,2.1vw,26px)/1.3 var(--sans);margin-top:clamp(12px,1.6vw,20px);max-width:34em}
+.finding{margin-top:clamp(26px,4vw,48px);padding-top:clamp(18px,2.4vw,26px);border-top:2px solid var(--ink);display:grid;gap:14px}
+.finding .big{font:400 clamp(22px,2.9vw,38px)/1.24 var(--sans);letter-spacing:-.01em;max-width:30em;text-wrap:pretty}
+.finding .big b{font:600 .94em/1 var(--mono);background:var(--hl);padding:.06em .22em;border-radius:3px;white-space:nowrap}
+.finding .small{max-width:64ch;color:var(--mute)}
+
+/* controls */
+.controls{position:sticky;top:0;z-index:5;margin:clamp(24px,3.4vw,40px) calc(-1*clamp(16px,3.4vw,44px)) 0;padding:10px clamp(16px,3.4vw,44px);background:var(--paper);border-block:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center}
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;border:0;margin:0;padding:0}
+.ctl legend{float:left;padding:0;margin-right:10px;font:400 14px/1.3 var(--sans);color:var(--mute)}
+.seg{display:inline-flex;border:1px solid var(--ink);border-radius:5px;overflow:hidden}
+.seg button{appearance:none;border:0;border-left:1px solid var(--ink);background:transparent;color:var(--ink);font:400 14px/1 var(--sans);padding:9px 12px;min-height:36px;cursor:pointer}
+.seg button:first-child{border-left:0}
+.seg button span{font:600 13px/1 var(--mono);margin-left:6px}
+.seg button:hover{background:var(--band)}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.seg.ai button[aria-pressed=true]{background:var(--ai);color:var(--paper)}
+.explain{flex:1 1 100%;font-size:14px;line-height:1.45;color:var(--mute);max-width:92ch}
+
+/* tracks */
+.track{margin-top:clamp(34px,5vw,60px)}
+h2{font:900 clamp(24px,3vw,35px)/1.08 var(--dot);margin:0;letter-spacing:.01em;text-transform:uppercase;text-wrap:balance}
+.lead{margin-top:8px;max-width:68ch;color:var(--mute)}
+.board{margin-top:18px;border-bottom:2px solid var(--ink);--cols:2.2rem minmax(12rem,1.35fr) 10.6rem minmax(0,2.1fr) 1.6rem}
+.board.annual{--cols:2.2rem minmax(12rem,1.35fr) 9.2rem minmax(0,2fr) 8.4rem 1.6rem}
+.bhead,.row>summary{display:grid;grid-template-columns:var(--cols);column-gap:14px;align-items:center}
+.bhead{font:400 13px/1.25 var(--sans);color:var(--mute);padding:0 10px 8px;border-bottom:2px solid var(--ink);align-items:end}
+.num{text-align:right}
+.axis{position:relative;height:1.3em;margin:0 12px;font:400 12px/1.3 var(--mono)}
+.axis span{position:absolute;bottom:0;transform:translateX(-50%);white-space:nowrap}
+.axis span:first-child{transform:none}
+.axis span:last-child{transform:translateX(-100%)}
+.row>summary{list-style:none;cursor:pointer;padding:0 10px;min-height:50px}
+.row>summary::-webkit-details-marker{display:none}
+.row:nth-of-type(even)>summary,.row:nth-of-type(even)>.more{background:var(--band)}
+.row.ai>summary,.row.ai>.more{background:var(--hl)}
+.row>summary:hover .nm b{text-decoration:underline;text-underline-offset:3px}
+.rk{font:400 14px/1 var(--mono);color:var(--mute)}
+.nm{padding:8px 0;display:grid;gap:1px}
+.nm b{font:600 16.5px/1.25 var(--sans)}
+.nm i{font:400 13.5px/1.3 var(--sans);font-style:normal;color:var(--mute)}
+.row.ai .nm i,.row.ai .rk,.row.ai .tm,.row.ai .tg{color:var(--ink)}
+.val{font:600 15.5px/1.2 var(--mono);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tm{font:400 14px/1.2 var(--mono);text-align:right;color:var(--mute);white-space:nowrap}
+.tg{font:400 18px/1 var(--mono);color:var(--mute);text-align:center;transition:transform .2s}
+.row[open] .tg{transform:rotate(45deg)}
+.plot{align-self:stretch;display:block;padding:0 12px}
+.pin{position:relative;display:block;height:100%;min-height:26px;border-right:1px solid var(--grid);background:linear-gradient(to right,var(--grid) 1px,transparent 1px) 0 0/calc(100%/var(--n)) 100%}
+.rng,.pt{position:absolute;top:50%;height:10px;margin-top:-5px;border-radius:5px;transition:left .55s cubic-bezier(.3,.7,.2,1),width .55s cubic-bezier(.3,.7,.2,1),opacity .3s,border-radius .3s}
+.rng{background:color-mix(in srgb,var(--mk,var(--mark)) 36%,transparent)}
+.rng.solo{background:color-mix(in srgb,var(--mk,var(--mark)) 62%,transparent)}
+.row.ai .rng{background:color-mix(in srgb,var(--ai) 42%,transparent)}
+.row.ai .rng.solo{background:var(--ai)}
+.pt{background:var(--mk,var(--mark))}
+.row.ai,.row.fc{--mk:var(--ai)}
+.row.fc .pt{background:transparent;border:2px solid var(--ai)}
+.row.fc .nm b{font-style:italic;font-weight:400}
+.lin .rng,.lin .pt{border-radius:0 5px 5px 0}
+.more{padding:2px 10px 16px calc(2.2rem + 24px);font-size:14.5px;line-height:1.5}
+.more p{max-width:72ch}
+.more .srcs{margin-top:6px;color:var(--mute)}
+.more .mt{display:none;margin-top:6px}
+.row.ai .more .srcs{color:var(--ink)}
+.key{margin-top:10px;font-size:13.5px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center}
+.key span{display:inline-flex;align-items:center;gap:7px}
+.key i{display:inline-block;height:10px;border-radius:5px;background:var(--mark)}
+.key .k1{width:10px}.key .k2{width:34px;background:color-mix(in srgb,var(--mark) 55%,transparent)}
+.key .k3{width:10px;background:var(--ai);box-shadow:0 0 0 4px var(--hl)}
+.key .k4{width:10px;background:transparent;border:2px solid var(--ai)}
+
+/* systems table */
+.tablewrap{margin-top:18px;overflow-x:auto;border-bottom:2px solid var(--ink)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{font:400 13px/1.25 var(--sans);color:var(--mute);text-align:left;padding:0 12px 8px;border-bottom:2px solid var(--ink);vertical-align:bottom}
+td{padding:9px 12px;vertical-align:top}
+tbody tr:nth-child(even){background:var(--band)}
+td.n,th.n{text-align:right;white-space:nowrap}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums}
+td.n{font-weight:600;font-size:15.5px}
+td.n.z{font-weight:400;color:var(--mute)}
+td .mk{display:block;font-size:13.5px;color:var(--mute)}
+td .mo{display:none}
+td.o{font-size:14px;color:var(--mute);min-width:12rem}
+tfoot td{border-top:1px solid var(--ink);font-weight:600}
+
+/* prose */
+.two{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px 44px}
+.two h3{font:600 18px/1.3 var(--sans);margin:0 0 6px}
+.two p{max-width:60ch}
+.after{margin-top:20px;max-width:68ch}
+.notes{margin:16px 0 0;padding:0;list-style:none;max-width:76ch;display:grid;gap:10px}
+.notes li{padding-left:1.3em;position:relative}
+.notes li::before{content:"";position:absolute;left:.15em;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+.srclist{margin:16px 0 0;padding:0;list-style:none;columns:2 320px;column-gap:44px;font-size:14.5px}
+.srclist li{break-inside:avoid;padding:3px 0}
+footer{margin-top:clamp(40px,5vw,64px);padding-top:18px;border-top:2px solid var(--ink);display:grid;gap:10px;font-size:14.5px;color:var(--mute);max-width:76ch}
+footer .person{font:400 clamp(18px,2vw,22px)/1.35 var(--sans);color:var(--ink)}
+
+@media (max-width:860px){
+  .sheet{display:block}
+  .feed{display:none}
+  .board,.board.annual{--cols:1.7rem minmax(0,1fr) auto 1.2rem}
+  .bhead{grid-template-columns:1fr auto;padding-inline:8px}
+  .bhead>:nth-child(1),.bhead .hm{display:none}
+  .bhead .axis{grid-column:1/-1;grid-row:2;margin:8px 10px 0}
+  .row>summary{padding:6px 8px 0;row-gap:0;column-gap:10px}
+  .row .plot{grid-column:1/-1;grid-row:2;height:30px;padding:0 10px}
+  .row .tm{display:none}
+  .row .tg{grid-column:4;grid-row:1}
+  .nm b{font-size:16px}.val{font-size:14.5px}
+  .more{padding-left:calc(1.7rem + 18px)}
+  .more .mt{display:block}
+  .controls{position:static}
+  td.o,th.o{display:none}
+  td .mo{display:block}
+  td,th{padding-inline:8px}
+  td:first-child{min-width:11.5rem}
+  .axis span:nth-child(even){display:none}
+  .lin .axis span:nth-child(even){display:block}
+}
+@media (max-width:560px){.ctl{width:100%}.ctl legend{float:none;margin:0 0 6px}.seg.ai{display:flex;flex-direction:column;width:100%}.seg.ai button{border-left:0;border-top:1px solid var(--ink);text-align:left;display:flex;justify-content:space-between}.seg.ai button:first-child{border-top:0}}
+@media (max-width:420px){.val{font-size:13px}}
+@media (prefers-reduced-motion:reduce){.rng,.pt,.tg{transition:none}html{scroll-behavior:auto}}
+@media print{.controls{position:static}.feed{display:none}.sheet{display:block}}
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="feed l" aria-hidden="true"></div>
+<main>
+  <header>
+    <p class="runline"><span>Version 1.0</span><span>Data to 16 November 2026</span><span>Scoring: lower is better</span></p>
+    <h1>KILLBENCH</h1>
+    <p class="tagline">A benchmark of things that kill people, with AI included for scale.</p>
+  </header>
+
+  <section class="finding" aria-live="polite">
+    <p class="big" id="finding"></p>
+    <p class="small" id="finding2"></p>
+  </section>
+
+  <div class="controls">
+    <fieldset class="ctl">
+      <legend>Count AI deaths as</legend>
+      <div class="seg ai" id="rule"></div>
+    </fieldset>
+    <fieldset class="ctl">
+      <legend>Scale</legend>
+      <div class="seg" id="scale">
+        <button type="button" data-v="log" aria-pressed="true">Log</button>
+        <button type="button" data-v="lin" aria-pressed="false">Linear</button>
+      </div>
+    </fieldset>
+    <p class="explain" id="explain"></p>
+  </div>
+
+  <section class="track" id="annual">
+    <h2>Track 1: deaths per year</h2>
+    <p class="lead">The latest worldwide estimate for each cause. AI's entry is its last full year. Select a row for the source and the caveats.</p>
+    <div class="board annual" id="b-annual"></div>
+    <p class="key"><span><i class="k1"></i>single estimate</span><span><i class="k2"></i>range of estimates</span><span><i class="k3"></i>AI</span></p>
+  </section>
+
+  <section class="track" id="alltime">
+    <h2>Track 2: all-time totals</h2>
+    <p class="lead">Career numbers, which is where the human baselines compete. Ordinary software and automation are listed next to AI, not inside it.</p>
+    <div class="board alltime" id="b-alltime"></div>
+    <p class="key"><span><i class="k1"></i>single estimate</span><span><i class="k2"></i>range of estimates</span><span><i class="k3"></i>AI, counted</span><span><i class="k4"></i>AI, forecast</span></p>
+  </section>
+
+  <section class="track" id="systems">
+    <h2>Track 3: results by system</h2>
+    <p class="lead">Deaths each AI system has been linked to, as tracked by hasaikilledanyone.com on 15 November 2026. Alleged means claimed in a lawsuit, an investigation or the press, and not established; it includes cases where a person did the killing and the system is accused of helping. No alleged case had been proven at this snapshot, and several were settled without an admission.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>System</th><th class="n">Confirmed</th><th class="n">Alleged</th><th class="o">On other lists</th></tr></thead>
+        <tbody id="t-systems"></tbody>
+        <tfoot id="f-systems"></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="track" id="forecast">
+    <h2>What a body count can't tell you</h2>
+    <div class="two">
+      <div>
+        <h3>The track record</h3>
+        <p>On last year's deaths, AI sits between selfies and sharks. A person choosing what to be afraid of this year should start at the top of Track 1, with cigarettes, drink and the drive home. Counting everything any tracker lists does not move AI a single place: 108 is still fewer deaths than the roads cause in an hour.</p>
+      </div>
+      <div>
+        <h3>The forecast</h3>
+        <p>The people most worried about AI are not claiming it has a body count. They are forecasting one. In a 2023 survey of 2,778 AI researchers, the median respondent gave a 5% chance of extinction-level outcomes, though critics question how representative the sample is. Nuclear weapons scored zero on this benchmark until 6 August 1945.</p>
+      </div>
+    </div>
+    <p class="after">KillBench measures the first and cannot measure the second. Both can be true at once: the record is tiny and the forecast is not. Past performance is not indicative of future results.</p>
+  </section>
+
+  <section class="track" id="method">
+    <h2>How the counting works</h2>
+    <ul class="notes">
+      <li><b>Each row is the latest figure its source publishes</b>, so data years run from 2016 to 2025. Where sources disagree the row shows the range, and it is ranked by the range's geometric midpoint.</li>
+      <li><b>Row names are shorthand.</b> Cars means all road traffic. Mosquitoes counts malaria only. Knives counts homicides only. Gravity is falls.</li>
+      <li><b>Human baselines depend on what you count.</b> Famine, war, camps and executions are attributed differently by different historians. Each row says what it includes.</li>
+      <li><b>AI has three counting rules.</b> Confirmed needs an official finding. Alleged adds lawsuits, investigations and press reports. The third rule adds up the longest list anyone keeps for each kind of system: 39 + 65 + 1 + 2 + 1 = 108.</li>
+      <li><b>Military targeting is not scored.</b> Reporting by +972 Magazine and Local Call, citing six Israeli intelligence officers, said an AI system called Lavender marked up to 37,000 people in Gaza as targets. The Israeli military called the account baseless and says analysts verify each target. Nobody can say how many deaths belong to the software, so the row is blank. If a number is ever attached, it could exceed the rest of AI's row combined.</li>
+      <li><b>Nothing here is net of lives saved.</b> Cars also carry ambulances, and driver assistance also prevents crashes. This is a count of deaths, not a verdict.</li>
+      <li><b>The data file is public.</b> <a href="data/killbench.json">killbench.json</a> has every figure, range, note and source on this page.</li>
+    </ul>
+  </section>
+
+  <section class="track" id="sources">
+    <h2>Sources</h2>
+    <ul class="srclist" id="srclist"></ul>
+  </section>
+
+  <footer>
+    <p class="person">Every unit on this page was a person.</p>
+    <p>Many of the deaths linked to chatbots were suicides. If you are struggling, you can call or text 988 in the United States, or find a line in your country at <a href="https://findahelpline.com/">findahelpline.com</a>.</p>
+    <p>Compiled by <a href="https://github.com/VictorLiwentao">VictorLiwentao</a> with Claude, an AI model, which has an obvious conflict of interest. Check the sources. <a href="../">More projects</a>.</p>
+  </footer>
+</main>
+<div class="feed r" aria-hidden="true"></div>
+</div>
+
+<script>
+const D={"version":"1.0","as_of":"2026-11-16","world_population":8200000000,"ai_rules":{"confirmed":{"label":"Confirmed","value":5,"explain":"A court, coroner, regulator or accident investigator found that the system caused or contributed to the death."},"alleged":{"label":"Confirmed or alleged","value":44,"explain":"Adds deaths blamed on a named AI system in a lawsuit, an open investigation, or reporting by at least two news organisations. Not established."},"listed":{"label":"Everything any list has","value":108,"explain":"The largest count this page could assemble: Wikipedia's chatbot list (39), every Autopilot or FSD death on tesladeaths.com (65), plus Uber (1), openpilot (2) and nH Predict (1)."}},"annual":[{"id":"tobacco","name":"Tobacco","sub":"smoking and second-hand smoke","lo":7000000,"hi":7000000,"disp":"7,000,000+","year":"2025 fact sheet","note":"WHO puts the toll at over seven million deaths a year. Older WHO material says eight million, counting 1.2 to 1.3 million non-smokers.","src":[{"label":"WHO tobacco fact sheet","url":"https://www.who.int/news-room/fact-sheets/detail/tobacco"}]},{"id":"alcohol","name":"Alcohol","sub":"disease and injury from drinking","lo":2600000,"hi":2600000,"disp":"2,600,000","year":"2019 data","note":"4.7% of all deaths that year. Two million of the dead were men.","src":[{"label":"WHO global status report on alcohol and health, 2024","url":"https://www.who.int/news/item/25-06-2024-over-3-million-annual-deaths-due-to-alcohol-and-drug-use-majority-among-men"}]},{"id":"cars","name":"Cars","sub":"road traffic deaths, all vehicles","lo":1190000,"hi":1190000,"disp":"1,190,000","year":"2021 data","note":"More than half the dead were not in a car: 23% were pedestrians, 21% riders of motorcycles and three-wheelers, 6% cyclists. Down 5% since 2010.","src":[{"label":"WHO global status report on road safety 2023","url":"https://www.who.int/teams/social-determinants-of-health/safety-and-mobility/global-status-report-on-road-safety-2023"}]},{"id":"gravity","name":"Gravity","sub":"fatal falls","lo":684000,"hi":684000,"disp":"684,000","year":"2021 fact sheet","note":"The second-largest cause of unintentional injury death, after road traffic. Excludes falls from animals, vehicles and burning buildings.","src":[{"label":"WHO falls fact sheet","url":"https://www.who.int/en/news-room/fact-sheets/detail/falls"}]},{"id":"mosquitoes","name":"Mosquitoes","sub":"malaria alone","lo":610000,"hi":610000,"disp":"610,000","year":"2024 data","note":"Malaria only; dengue and other mosquito-borne diseases would add to it. Most of the dead were young children in Africa.","src":[{"label":"WHO world malaria report 2025","url":"https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2025"}]},{"id":"water","name":"Water","sub":"drowning","lo":300000,"hi":300000,"disp":"300,000","year":"2021 data","note":"About 30 people an hour. The death rate has fallen 38% since 2000.","src":[{"label":"WHO global status report on drowning prevention 2024","url":"https://www.who.int/teams/social-determinants-of-health/safety-and-mobility/global-report-on-drowning-prevention"}]},{"id":"guns","name":"Guns","sub":"firearm homicide, suicide and accident","lo":195000,"hi":276000,"pt":251000,"disp":"251,000","year":"2016 data","note":"Uncertainty interval 195,000 to 276,000. 64% homicides, 27% suicides, 9% accidents. Six countries account for half.","src":[{"label":"Global Burden of Disease 2016 Injury Collaborators, JAMA 2018","url":"https://core.ac.uk/download/161124096.pdf"}]},{"id":"snakes","name":"Snakes","sub":"snakebite envenoming","lo":81000,"hi":138000,"disp":"81,000–138,000","year":"WHO estimate","note":"WHO says the data are fragmented and the true toll could be anywhere in this range.","src":[{"label":"WHO snakebite envenoming: prevalence","url":"https://www.who.int/teams/control-of-neglected-tropical-diseases/snakebite-envenoming/prevalence"}]},{"id":"knives","name":"Knives","sub":"homicides with knives and sharp objects","lo":97000,"hi":97000,"disp":"97,000","year":"2017 data","note":"About a fifth of the 464,000 homicides the UN counted that year. Homicides only, so this row is an undercount next to Guns, which includes suicides and accidents.","src":[{"label":"UNODC global study on homicide 2019","url":"https://www.unodc.org/unodc/en/data-and-analysis/global-study-on-homicide.html"}]},{"id":"dogs","name":"Dogs","sub":"rabies, 99% of it from dog bites","lo":59000,"hi":59000,"disp":"59,000","year":"WHO estimate","note":"WHO calls this figure a likely underestimate. Four in ten of the dead are children under 15.","src":[{"label":"WHO rabies fact sheet","url":"https://www.who.int/News-Room/Fact-Sheets/Detail/Rabies"}]},{"id":"selfies","name":"Selfies","sub":"deaths while taking one","lo":42,"hi":42,"disp":"42","year":"2011–2017 average","note":"259 deaths in news reports from October 2011 to November 2017, about 42 a year, peaking at 98 in 2016. The authors say it is an undercount.","src":[{"label":"Bansal et al., J Family Med Prim Care 2018, as reported by CBS","url":"https://www.cbsnews.com/sacramento/news/250-selfie-deaths-since-2011/"}]},{"id":"ai","kind":"ai","name":"AI","sub":"chatbot-linked deaths in 2025, all alleged","lo":14,"hi":20,"disp":"14–20","year":"2025","note":"Deaths dated 2025 that someone has blamed on a chatbot: 14 on hasaikilledanyone.com, 20 on Wikipedia's list. None is confirmed by an official finding. Driver-assist crashes are left out because no source gives a clean 2025 count; adding every Autopilot or FSD death any tracker has ever recorded (65) would bring this row to 85.","src":[{"label":"hasaikilledanyone.com","url":"https://hasaikilledanyone.com/"},{"label":"Wikipedia: Deaths linked to chatbots","url":"https://en.wikipedia.org/wiki/Deaths_linked_to_chatbots"}]},{"id":"sharks","name":"Sharks","sub":"fatal bites, 2025","lo":9,"hi":12,"disp":"9–12","year":"2025","note":"Twelve shark-related deaths in 2025, nine of them from unprovoked bites. The ten-year average for unprovoked deaths is six.","src":[{"label":"International Shark Attack File, 2025 report","url":"https://www.floridamuseum.ufl.edu/shark-attacks/yearly-worldwide-summary/"}]}],"alltime":[{"id":"ai_forecast","kind":"forecast","name":"AI, as forecast","sub":"5% chance × 8.2 billion people; not a count","lo":410000000,"hi":410000000,"disp":"410,000,000","year":"2023 survey","note":"In a 2023 survey of 2,778 AI researchers, the median respondent put a 5% chance on AI causing human extinction or similarly severe, permanent disempowerment. Multiply that by the world's population and the expected value tops this board. It is a forecast multiplied by a headcount. Nobody on this row has died.","src":[{"label":"AI Impacts: 2023 expert survey, methodology FAQ","url":"https://blog.aiimpacts.org/p/faq-expert-survey-on-progress-in"},{"label":"IEEE Spectrum on the survey and its critics","url":"https://spectrum.ieee.org/ai-existential-risk-survey"}]},{"id":"smallpox","name":"Smallpox","sub":"20th century only; deprecated 1980","lo":300000000,"hi":300000000,"disp":"300,000,000","year":"1900–1980","note":"State of the art. An estimated 300 million deaths in the 20th century alone. Declared eradicated in 1980 and no longer maintained.","src":[{"label":"Origins (Ohio State): WHO and the end of smallpox","url":"https://origins.osu.edu/watch/who-and-end-smallpox"}]},{"id":"tobacco20","name":"Tobacco","sub":"20th century","lo":100000000,"hi":100000000,"disp":"100,000,000","year":"1900–1999","note":"WHO's estimate for the last century. Its projection for this one, on current trends, is a billion.","src":[{"label":"WHO figures as reported by AFP/Rappler","url":"https://www.rappler.com/world/33462-smoking-deaths-who/"}]},{"id":"mao","kind":"human","name":"Mao Zedong","sub":"human baseline; Great Leap Forward famine","lo":15000000,"hi":55000000,"disp":"15–55 million","year":"1959–1961","note":"Estimates of famine deaths run from 15 to 55 million; Frank Dikötter's archival study argues for at least 45 million. Historians disagree on how to divide blame between policy and weather, though the Party's own 1981 verdict put it mainly on the Great Leap Forward. Other campaigns are not counted here.","src":[{"label":"Wikipedia: Great Chinese Famine (estimates table)","url":"https://en.wikipedia.org/wiki/Great_Chinese_Famine"}]},{"id":"hitler","kind":"human","name":"Adolf Hitler","sub":"human baseline; murdered by the Nazi regime","lo":17000000,"hi":17000000,"disp":"17,000,000","year":"1933–1945","note":"About 17 million people murdered by the Nazi regime and its collaborators, six million of them Jews. The total sums the US Holocaust Memorial Museum's estimates by group. It leaves out the rest of the 70 to 85 million who died in the Second World War.","src":[{"label":"USHMM: documenting numbers of victims","url":"https://encyclopedia.ushmm.org/content/en/article/documenting-numbers-of-victims-of-the-holocaust-and-nazi-persecution"},{"label":"Statista chart of the USHMM figures","url":"https://statista.com/chart/24024/number-of-victims-nazi-regime"}]},{"id":"stalin","kind":"human","name":"Joseph Stalin","sub":"human baseline; executions, camps, famine","lo":6000000,"hi":20000000,"disp":"6–20 million","year":"1924–1953","note":"Since the Soviet archives opened, estimates cluster at six to nine million including famine deaths (Timothy Snyder's count). Cold War estimates of 20 million or more are still cited. Soviet war dead are not included.","src":[{"label":"Wikipedia: Excess mortality under Joseph Stalin","url":"https://en.wikipedia.org/wiki/Excess_mortality_under_Joseph_Stalin"}]},{"id":"polpot","kind":"human","name":"Pol Pot","sub":"human baseline; Khmer Rouge rule, 1975–79","lo":1200000,"hi":2800000,"pt":1700000,"disp":"1,700,000","year":"1975–1979","note":"Ben Kiernan's widely used figure is about 1.7 million, more than a fifth of the country in under four years. Demographer Patrick Heuveline's range is 1.2 to 2.8 million.","src":[{"label":"UCLA: Heuveline's estimate","url":"https://newsroom.ucla.edu/releases/ucla-demographer-produces-best-estimate-yet-of-cambodias-death-toll-under-pol-pot"}]},{"id":"atomic","name":"Atomic bombs","sub":"two uses, August 1945","lo":110000,"hi":210000,"disp":"110,000–210,000","year":"1945","note":"The credible estimates cluster at a low of 110,000 and a high of 210,000 for Hiroshima and Nagasaki together. On 5 August 1945 this row read zero.","src":[{"label":"Alex Wellerstein, Bulletin of the Atomic Scientists","url":"https://thebulletin.org/2020/08/counting-the-dead-at-hiroshima-and-nagasaki/"}]},{"id":"mcas","name":"Boeing MCAS","sub":"ordinary software, not AI; two 737 MAX crashes","lo":346,"hi":346,"disp":"346","year":"2018–2019","note":"Lion Air 610 (189 dead) and Ethiopian Airlines 302 (157 dead). Rule-based software acting on one faulty sensor. Listed to show what plain automation has already done; it is not part of AI's total.","src":[{"label":"Wikipedia: Boeing 737 MAX groundings","url":"https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings"}]},{"id":"selfies_all","name":"Selfies","sub":"news-reported deaths, 2011–2017","lo":259,"hi":259,"disp":"259","year":"2011–2017","note":"137 incidents in six years of English-language news reports. Drowning, transport and falls lead.","src":[{"label":"Bansal et al. 2018, as reported by CBS","url":"https://www.cbsnews.com/sacramento/news/250-selfie-deaths-since-2011/"}]},{"id":"ai_all","kind":"ai","name":"AI","sub":"every machine-learning system since 2016","lo":5,"hi":108,"pt":44,"disp":"44","year":"2016–2026","note":"Five deaths confirmed by an official finding (four involving Tesla Autopilot, one an Uber test vehicle). Another 39 alleged in lawsuits, investigations or reporting. Counting everything any tracker lists gives 108. Use the control above the boards to switch rules.","src":[{"label":"hasaikilledanyone.com","url":"https://hasaikilledanyone.com/"},{"label":"Wikipedia: Deaths linked to chatbots","url":"https://en.wikipedia.org/wiki/Deaths_linked_to_chatbots"},{"label":"tesladeaths.com","url":"https://www.tesladeaths.com/"}]},{"id":"robots","name":"Industrial robots","sub":"ordinary automation, not AI; US only","lo":41,"hi":41,"disp":"41","year":"1992–2017","note":"A NIOSH search of US workplace fatality records. 78% involved a robot striking a worker, often during maintenance. One country only.","src":[{"label":"Layne, Am J Ind Med 2023 (CDC Stacks)","url":"https://stacks.cdc.gov/view/cdc/230667"}]}],"systems":[{"system":"ChatGPT","maker":"OpenAI","type":"Chatbot","confirmed":0,"alleged":22,"other":"33 on Wikipedia's list"},{"system":"Autopilot and FSD","maker":"Tesla","type":"Driver assist","confirmed":4,"alleged":10,"other":"57 in crash reports to NHTSA; 65 on tesladeaths.com"},{"system":"Character.AI","maker":"Character Technologies","type":"Chatbot","confirmed":0,"alleged":2,"other":"2 on Wikipedia's list"},{"system":"openpilot (FrogPilot fork)","maker":"comma.ai, third-party fork","type":"Driver assist","confirmed":0,"alleged":2,"other":""},{"system":"ATG self-driving test system","maker":"Uber","type":"Self-driving","confirmed":1,"alleged":0,"other":""},{"system":"Gemini 2.5 Pro","maker":"Google","type":"Chatbot","confirmed":0,"alleged":1,"other":"1 on Wikipedia's list"},{"system":"Eliza, on the Chai app","maker":"Chai Research","type":"Chatbot","confirmed":0,"alleged":1,"other":"1 on Wikipedia's list"},{"system":"nH Predict","maker":"UnitedHealth","type":"Insurance algorithm","confirmed":0,"alleged":1,"other":""},{"system":"Meta AI persona","maker":"Meta","type":"Chatbot","confirmed":null,"alleged":null,"other":"1 on Wikipedia's list","status":"not listed"},{"system":"DeepSeek","maker":"DeepSeek","type":"Chatbot","confirmed":null,"alleged":null,"other":"1 on Wikipedia's list","status":"not listed"},{"system":"Lavender, Gospel, Where's Daddy?","maker":"Israeli military","type":"Targeting","confirmed":null,"alleged":null,"other":"No death count can be attributed","status":"not scored"}]};
+const $=s=>document.querySelector(s);
+const state={rule:"alleged",scale:"log"};
+const MIN_PER_YEAR=525600;
+const LOG_MAX=9; // axis runs 1 to 1,000,000,000
+const LIN={annual:{max:8e6,n:4,ticks:["0","2M","4M","6M","8M"]},alltime:{max:5e8,n:5,ticks:["0","100M","200M","300M","400M","500M"]}};
+const LOG_TICKS=["1","10","100","1k","10k","100k","1M","10M","100M","1B"];
+const fmt=n=>Math.round(n).toLocaleString("en-US");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mid=r=>r.pt??(r.lo===r.hi?r.lo:Math.sqrt(r.lo*r.hi));
+const aiTotal=()=>D.ai_rules[state.rule].value;
+
+function rows(track){
+  return D[track].map(r=>{
+    if(r.id==="ai_all"){const v=aiTotal();return {...r,pt:v,disp:fmt(v)};}
+    return r;
+  }).sort((a,b)=>(b.kind==="forecast")-(a.kind==="forecast")||mid(b)-mid(a));
+}
+function span(mins,long){
+  const u=long?[" minutes"," hours"," days"," years"]:[" min"," hr"," days"," yr"];
+  if(mins<1.5) return Math.round(mins*60)+(long?" seconds":" sec");
+  if(mins<60) return Math.round(mins)+u[0];
+  const h=mins/60; if(h<48) return (h<10?h.toFixed(1):Math.round(h))+u[1];
+  const d=h/24; if(d<300) return Math.round(d)+u[2];
+  return (d/365).toFixed(1)+u[3];
+}
+function match(r){ // how long this cause takes to equal AI's all-time total
+  if(r.kind==="ai") return "";
+  return (r.lo!==r.hi&&!r.pt?"~":"")+span(aiTotal()/(mid(r)/MIN_PER_YEAR));
+}
+function pos(v,track){
+  return state.scale==="log"?Math.log10(Math.max(v,1))/LOG_MAX*100:v/LIN[track].max*100;
+}
+function geometry(r,track){
+  const lo=pos(r.lo,track),hi=pos(r.hi,track),hasPt=r.pt!=null||r.lo===r.hi,p=pos(r.pt??r.lo,track);
+  if(state.scale==="log") return {
+    rng:r.lo===r.hi?"left:"+lo+"%;width:0;opacity:0":"left:calc("+lo+"% - 5px);width:calc("+(hi-lo)+"% + 10px);opacity:1",
+    pt:"left:calc("+p+"% - 5px);width:10px;opacity:"+(hasPt?1:0)};
+  return {
+    rng:"left:0;width:"+hi+"%;opacity:"+(r.lo===r.hi?0:1),
+    pt:"left:0;width:max("+p+"%,2px);opacity:1"};
+}
+function axis(track){
+  if(state.scale==="log") return LOG_TICKS.map((t,i)=>'<span style="left:'+(i/9*100)+'%">'+t+"</span>").join("");
+  const L=LIN[track];return L.ticks.map((t,i)=>'<span style="left:'+(i/L.n*100)+'%">'+t+"</span>").join("");
+}
+function renderBoard(track){
+  const el=$("#b-"+track),annual=track==="annual",open=new Set([...el.querySelectorAll("details[open]")].map(d=>d.dataset.id));
+  const n=state.scale==="log"?9:LIN[track].n;
+  let rank=0;
+  const head='<div class="bhead"><span>#</span><span>'+(annual?"Cause":"Entry")+'</span><span class="num">'+(annual?"Deaths per year":"Deaths")+'</span><div class="axis" aria-hidden="true">'+axis(track)+"</div>"+(annual?'<span class="num hm">Time to match AI’s all-time total</span>':"")+'<span class="hm"></span></div>';
+  el.innerHTML=head+rows(track).map(r=>{
+    const g=geometry(r,track),fc=r.kind==="forecast",cls="row"+(r.kind==="ai"?" ai":"")+(fc?" fc":""),m=annual?match(r):"";
+    const solo=r.lo!==r.hi&&r.pt==null;
+    return '<details class="'+cls+'" data-id="'+r.id+'"'+(open.has(r.id)?" open":"")+'><summary>'+
+      '<span class="rk">'+(fc?"–":++rank)+"</span>"+
+      '<span class="nm"><b>'+esc(r.name)+"</b><i>"+esc(r.sub)+"</i></span>"+
+      '<span class="val">'+esc(r.disp)+"</span>"+
+      '<span class="plot"><span class="pin" style="--n:'+n+'"><i class="rng'+(solo?" solo":"")+'" style="'+g.rng+'"></i><i class="pt" style="'+g.pt+'"></i></span></span>'+
+      (annual?'<span class="tm">'+(m||"–")+"</span>":"")+
+      '<span class="tg" aria-hidden="true">+</span></summary>'+
+      '<div class="more"><p>'+esc(r.note)+"</p>"+
+      (m?'<p class="mt">Matches AI’s all-time total of '+fmt(aiTotal())+" in "+m+".</p>":"")+
+      '<p class="srcs">'+esc(r.year)+". "+r.src.map(s=>'<a href="'+esc(s.url)+'">'+esc(s.label)+"</a>").join("; ")+"</p></div></details>";
+  }).join("");
+  el.classList.toggle("lin",state.scale==="lin");
+}
+function updateMarks(track){ // move existing marks so the change animates
+  const el=$("#b-"+track),byId={};rows(track).forEach(r=>byId[r.id]=r);
+  el.classList.toggle("lin",state.scale==="lin");
+  el.querySelector(".axis").innerHTML=axis(track);
+  const n=state.scale==="log"?9:LIN[track].n;
+  el.querySelectorAll("details").forEach(d=>{const g=geometry(byId[d.dataset.id],track);
+    d.querySelector(".pin").style.setProperty("--n",n);
+    d.querySelector(".rng").style.cssText=g.rng;d.querySelector(".pt").style.cssText=g.pt;});
+}
+function renderFinding(){
+  const v=aiTotal(),cars=D.annual.find(r=>r.id==="cars"),t=span(v/(mid(cars)/MIN_PER_YEAR),true);
+  const lead={confirmed:"Official findings tie AI systems to <b>"+v+"</b> deaths so far.",
+    alleged:"AI systems are linked to <b>"+v+"</b> deaths so far, "+D.ai_rules.confirmed.value+" of them confirmed by an official finding.",
+    listed:"Count everything any tracker lists and AI systems are linked to <b>"+v+"</b> deaths so far."}[state.rule];
+  $("#finding").innerHTML=lead+" Road traffic kills that many people every <b>"+t+"</b>.";
+  const a=rows("annual"),i=a.findIndex(r=>r.kind==="ai"),ord=n=>n+(["th","st","nd","rd"][(n%100>10&&n%100<14)?0:n%10]||"th");
+  $("#finding2").innerHTML="On last year’s numbers AI ranks "+ord(i+1)+" of "+a.length+" causes below, between "+a[i-1].name.toLowerCase()+" and "+a[i+1].name.toLowerCase()+". The people most worried about AI are forecasting, not counting, and <a href=\"#forecast\">that argument is further down</a>.";
+  $("#explain").textContent=D.ai_rules[state.rule].explain;
+}
+function renderSystems(){
+  const c=(v,s)=>v==null?'<td class="n z">'+esc(s.status||"not listed")+'</td>':'<td class="n'+(v?"":" z")+'">'+v+"</td>";
+  $("#t-systems").innerHTML=D.systems.map(s=>"<tr><td>"+esc(s.system)+'<span class="mk">'+esc(s.maker)+", "+esc(s.type.toLowerCase())+"</span>"+(s.other?'<span class="mk mo">'+esc(s.other)+"</span>":"")+"</td>"+c(s.confirmed,s)+c(s.alleged,s)+'<td class="o">'+esc(s.other)+"</td></tr>").join("");
+  const sum=k=>D.systems.reduce((a,s)=>a+(s[k]||0),0);
+  $("#f-systems").innerHTML='<tr><td>Total</td><td class="n">'+sum("confirmed")+'</td><td class="n">'+sum("alleged")+'</td><td class="o"></td></tr>';
+}
+function renderSources(){
+  const seen=new Map();
+  [...D.annual,...D.alltime].forEach(r=>r.src.forEach(s=>seen.has(s.url)||seen.set(s.url,s.label)));
+  [["https://www.autopilotwatch.com/tesla-fsd-safety-2026","Autopilot Watch: Tesla crash reports to NHTSA"],
+   ["https://www.business-humanrights.org/en/latest-news/report-reveals-that-israel-used-ai-to-identify-thousands-of-targets-in-gaza/","Business & Human Rights Resource Centre: reporting on Lavender, with the military’s response"]
+  ].forEach(([u,l])=>seen.set(u,l));
+  $("#srclist").innerHTML=[...seen].map(([u,l])=>'<li><a href="'+esc(u)+'">'+esc(l)+"</a></li>").join("");
+}
+function renderRule(){
+  $("#rule").innerHTML=Object.entries(D.ai_rules).map(([k,r])=>'<button type="button" data-v="'+k+'" aria-pressed="'+(k===state.rule)+'">'+esc(r.label)+"<span>"+r.value+"</span></button>").join("");
+}
+$("#rule").addEventListener("click",e=>{const b=e.target.closest("button");if(!b||b.dataset.v===state.rule)return;
+  state.rule=b.dataset.v;renderRule();renderFinding();renderBoard("annual");renderBoard("alltime");});
+$("#scale").addEventListener("click",e=>{const b=e.target.closest("button");if(!b||b.dataset.v===state.scale)return;
+  state.scale=b.dataset.v;[...$("#scale").children].forEach(x=>x.setAttribute("aria-pressed",x===b));
+  updateMarks("annual");updateMarks("alltime");});
+renderRule();renderFinding();renderBoard("annual");renderBoard("alltime");renderSystems();renderSources();
+</script>
+</body>
+</html>

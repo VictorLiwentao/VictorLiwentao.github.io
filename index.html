@@ -25,6 +25,7 @@ a{color:var(--link);text-underline-offset:2px}
 .tops ol{margin:0;padding:0;list-style:none;font-size:15px}
 .tops li{display:flex;gap:10px;padding:5px 0;border-bottom:1px solid var(--rule)}
 .tops b{flex:0 0 2.6em;text-align:right;font-variant-numeric:tabular-nums}
+.tops.wide b{flex-basis:6.4em}
 .go{display:inline-block;margin-top:18px;font-weight:600;color:var(--link)}
 footer{margin-top:56px;font-size:14px;color:var(--mute)}
 </style>
@@ -32,7 +33,7 @@ footer{margin-top:56px;font-size:14px;color:var(--mute)}
 <body>
 <main>
   <h1>Projects</h1>
-  <p class="by">Data projects on analytic philosophy. Code on <a href="https://github.com/VictorLiwentao">GitHub</a>.</p>
+  <p class="by">Data projects on philosophy and AI. Code on <a href="https://github.com/VictorLiwentao">GitHub</a>.</p>
 
   <a class="card" href="sep-most-cited/">
     <h2>The most-cited works and philosophers in the Stanford Encyclopedia of Philosophy, 2026</h2>
@@ -48,6 +49,22 @@ footer{margin-top:56px;font-size:14px;color:var(--mute)}
         <li><b>195</b> <span>Hilary Putnam</span></li></ol></div>
     </div>
     <span class="go">Open the rankings →</span>
+  </a>
+
+  <a class="card" href="killbench/">
+    <h2>KillBench: a benchmark of things that kill people, with AI included for scale</h2>
+    <p>Cars, guns, knives, mosquitoes, dictators and AI systems ranked by sourced death counts, per year and all-time. Three ways of counting the deaths linked to AI, a linear scale for perspective, and the forecast argument a body count can’t settle.</p>
+    <div class="tops wide">
+      <div><h3>Deaths per year</h3><ol>
+        <li><b>1,190,000</b> <span>Cars</span></li>
+        <li><b>251,000</b> <span>Guns</span></li>
+        <li><b>14–20</b> <span>AI chatbots, 2025, alleged</span></li></ol></div>
+      <div><h3>All-time totals</h3><ol>
+        <li><b>300,000,000</b> <span>Smallpox, 20th century</span></li>
+        <li><b>17,000,000</b> <span>Adolf Hitler</span></li>
+        <li><b>44</b> <span>AI, confirmed or alleged</span></li></ol></div>
+    </div>
+    <span class="go">Open the leaderboard →</span>
   </a>
 
   <footer>Updated November 2026.</footer>

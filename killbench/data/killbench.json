@@ -1,0 +1,549 @@
+{
+  "version": "1.0",
+  "as_of": "2026-11-16",
+  "world_population": 8200000000,
+  "ai_rules": {
+    "confirmed": {
+      "label": "Confirmed",
+      "value": 5,
+      "explain": "A court, coroner, regulator or accident investigator found that the system caused or contributed to the death."
+    },
+    "alleged": {
+      "label": "Confirmed or alleged",
+      "value": 44,
+      "explain": "Adds deaths blamed on a named AI system in a lawsuit, an open investigation, or reporting by at least two news organisations. Not established."
+    },
+    "listed": {
+      "label": "Everything any list has",
+      "value": 108,
+      "explain": "The largest count this page could assemble: Wikipedia's chatbot list (39), every Autopilot or FSD death on tesladeaths.com (65), plus Uber (1), openpilot (2) and nH Predict (1)."
+    }
+  },
+  "annual": [
+    {
+      "id": "tobacco",
+      "name": "Tobacco",
+      "sub": "smoking and second-hand smoke",
+      "lo": 7000000,
+      "hi": 7000000,
+      "disp": "7,000,000+",
+      "year": "2025 fact sheet",
+      "note": "WHO puts the toll at over seven million deaths a year. Older WHO material says eight million, counting 1.2 to 1.3 million non-smokers.",
+      "src": [
+        {
+          "label": "WHO tobacco fact sheet",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco"
+        }
+      ]
+    },
+    {
+      "id": "alcohol",
+      "name": "Alcohol",
+      "sub": "disease and injury from drinking",
+      "lo": 2600000,
+      "hi": 2600000,
+      "disp": "2,600,000",
+      "year": "2019 data",
+      "note": "4.7% of all deaths that year. Two million of the dead were men.",
+      "src": [
+        {
+          "label": "WHO global status report on alcohol and health, 2024",
+          "url": "https://www.who.int/news/item/25-06-2024-over-3-million-annual-deaths-due-to-alcohol-and-drug-use-majority-among-men"
+        }
+      ]
+    },
+    {
+      "id": "cars",
+      "name": "Cars",
+      "sub": "road traffic deaths, all vehicles",
+      "lo": 1190000,
+      "hi": 1190000,
+      "disp": "1,190,000",
+      "year": "2021 data",
+      "note": "More than half the dead were not in a car: 23% were pedestrians, 21% riders of motorcycles and three-wheelers, 6% cyclists. Down 5% since 2010.",
+      "src": [
+        {
+          "label": "WHO global status report on road safety 2023",
+          "url": "https://www.who.int/teams/social-determinants-of-health/safety-and-mobility/global-status-report-on-road-safety-2023"
+        }
+      ]
+    },
+    {
+      "id": "gravity",
+      "name": "Gravity",
+      "sub": "fatal falls",
+      "lo": 684000,
+      "hi": 684000,
+      "disp": "684,000",
+      "year": "2021 fact sheet",
+      "note": "The second-largest cause of unintentional injury death, after road traffic. Excludes falls from animals, vehicles and burning buildings.",
+      "src": [
+        {
+          "label": "WHO falls fact sheet",
+          "url": "https://www.who.int/en/news-room/fact-sheets/detail/falls"
+        }
+      ]
+    },
+    {
+      "id": "mosquitoes",
+      "name": "Mosquitoes",
+      "sub": "malaria alone",
+      "lo": 610000,
+      "hi": 610000,
+      "disp": "610,000",
+      "year": "2024 data",
+      "note": "Malaria only; dengue and other mosquito-borne diseases would add to it. Most of the dead were young children in Africa.",
+      "src": [
+        {
+          "label": "WHO world malaria report 2025",
+          "url": "https://www.who.int/teams/global-malaria-programme/reports/world-malaria-report-2025"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "sub": "drowning",
+      "lo": 300000,
+      "hi": 300000,
+      "disp": "300,000",
+      "year": "2021 data",
+      "note": "About 30 people an hour. The death rate has fallen 38% since 2000.",
+      "src": [
+        {
+          "label": "WHO global status report on drowning prevention 2024",
+          "url": "https://www.who.int/teams/social-determinants-of-health/safety-and-mobility/global-report-on-drowning-prevention"
+        }
+      ]
+    },
+    {
+      "id": "guns",
+      "name": "Guns",
+      "sub": "firearm homicide, suicide and accident",
+      "lo": 195000,
+      "hi": 276000,
+      "pt": 251000,
+      "disp": "251,000",
+      "year": "2016 data",
+      "note": "Uncertainty interval 195,000 to 276,000. 64% homicides, 27% suicides, 9% accidents. Six countries account for half.",
+      "src": [
+        {
+          "label": "Global Burden of Disease 2016 Injury Collaborators, JAMA 2018",
+          "url": "https://core.ac.uk/download/161124096.pdf"
+        }
+      ]
+    },
+    {
+      "id": "snakes",
+      "name": "Snakes",
+      "sub": "snakebite envenoming",
+      "lo": 81000,
+      "hi": 138000,
+      "disp": "81,000–138,000",
+      "year": "WHO estimate",
+      "note": "WHO says the data are fragmented and the true toll could be anywhere in this range.",
+      "src": [
+        {
+          "label": "WHO snakebite envenoming: prevalence",
+          "url": "https://www.who.int/teams/control-of-neglected-tropical-diseases/snakebite-envenoming/prevalence"
+        }
+      ]
+    },
+    {
+      "id": "knives",
+      "name": "Knives",
+      "sub": "homicides with knives and sharp objects",
+      "lo": 97000,
+      "hi": 97000,
+      "disp": "97,000",
+      "year": "2017 data",
+      "note": "About a fifth of the 464,000 homicides the UN counted that year. Homicides only, so this row is an undercount next to Guns, which includes suicides and accidents.",
+      "src": [
+        {
+          "label": "UNODC global study on homicide 2019",
+          "url": "https://www.unodc.org/unodc/en/data-and-analysis/global-study-on-homicide.html"
+        }
+      ]
+    },
+    {
+      "id": "dogs",
+      "name": "Dogs",
+      "sub": "rabies, 99% of it from dog bites",
+      "lo": 59000,
+      "hi": 59000,
+      "disp": "59,000",
+      "year": "WHO estimate",
+      "note": "WHO calls this figure a likely underestimate. Four in ten of the dead are children under 15.",
+      "src": [
+        {
+          "label": "WHO rabies fact sheet",
+          "url": "https://www.who.int/News-Room/Fact-Sheets/Detail/Rabies"
+        }
+      ]
+    },
+    {
+      "id": "selfies",
+      "name": "Selfies",
+      "sub": "deaths while taking one",
+      "lo": 42,
+      "hi": 42,
+      "disp": "42",
+      "year": "2011–2017 average",
+      "note": "259 deaths in news reports from October 2011 to November 2017, about 42 a year, peaking at 98 in 2016. The authors say it is an undercount.",
+      "src": [
+        {
+          "label": "Bansal et al., J Family Med Prim Care 2018, as reported by CBS",
+          "url": "https://www.cbsnews.com/sacramento/news/250-selfie-deaths-since-2011/"
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "kind": "ai",
+      "name": "AI",
+      "sub": "chatbot-linked deaths in 2025, all alleged",
+      "lo": 14,
+      "hi": 20,
+      "disp": "14–20",
+      "year": "2025",
+      "note": "Deaths dated 2025 that someone has blamed on a chatbot: 14 on hasaikilledanyone.com, 20 on Wikipedia's list. None is confirmed by an official finding. Driver-assist crashes are left out because no source gives a clean 2025 count; adding every Autopilot or FSD death any tracker has ever recorded (65) would bring this row to 85.",
+      "src": [
+        {
+          "label": "hasaikilledanyone.com",
+          "url": "https://hasaikilledanyone.com/"
+        },
+        {
+          "label": "Wikipedia: Deaths linked to chatbots",
+          "url": "https://en.wikipedia.org/wiki/Deaths_linked_to_chatbots"
+        }
+      ]
+    },
+    {
+      "id": "sharks",
+      "name": "Sharks",
+      "sub": "fatal bites, 2025",
+      "lo": 9,
+      "hi": 12,
+      "disp": "9–12",
+      "year": "2025",
+      "note": "Twelve shark-related deaths in 2025, nine of them from unprovoked bites. The ten-year average for unprovoked deaths is six.",
+      "src": [
+        {
+          "label": "International Shark Attack File, 2025 report",
+          "url": "https://www.floridamuseum.ufl.edu/shark-attacks/yearly-worldwide-summary/"
+        }
+      ]
+    }
+  ],
+  "alltime": [
+    {
+      "id": "ai_forecast",
+      "kind": "forecast",
+      "name": "AI, as forecast",
+      "sub": "5% chance × 8.2 billion people; not a count",
+      "lo": 410000000,
+      "hi": 410000000,
+      "disp": "410,000,000",
+      "year": "2023 survey",
+      "note": "In a 2023 survey of 2,778 AI researchers, the median respondent put a 5% chance on AI causing human extinction or similarly severe, permanent disempowerment. Multiply that by the world's population and the expected value tops this board. It is a forecast multiplied by a headcount. Nobody on this row has died.",
+      "src": [
+        {
+          "label": "AI Impacts: 2023 expert survey, methodology FAQ",
+          "url": "https://blog.aiimpacts.org/p/faq-expert-survey-on-progress-in"
+        },
+        {
+          "label": "IEEE Spectrum on the survey and its critics",
+          "url": "https://spectrum.ieee.org/ai-existential-risk-survey"
+        }
+      ]
+    },
+    {
+      "id": "smallpox",
+      "name": "Smallpox",
+      "sub": "20th century only; deprecated 1980",
+      "lo": 300000000,
+      "hi": 300000000,
+      "disp": "300,000,000",
+      "year": "1900–1980",
+      "note": "State of the art. An estimated 300 million deaths in the 20th century alone. Declared eradicated in 1980 and no longer maintained.",
+      "src": [
+        {
+          "label": "Origins (Ohio State): WHO and the end of smallpox",
+          "url": "https://origins.osu.edu/watch/who-and-end-smallpox"
+        }
+      ]
+    },
+    {
+      "id": "tobacco20",
+      "name": "Tobacco",
+      "sub": "20th century",
+      "lo": 100000000,
+      "hi": 100000000,
+      "disp": "100,000,000",
+      "year": "1900–1999",
+      "note": "WHO's estimate for the last century. Its projection for this one, on current trends, is a billion.",
+      "src": [
+        {
+          "label": "WHO figures as reported by AFP/Rappler",
+          "url": "https://www.rappler.com/world/33462-smoking-deaths-who/"
+        }
+      ]
+    },
+    {
+      "id": "mao",
+      "kind": "human",
+      "name": "Mao Zedong",
+      "sub": "human baseline; Great Leap Forward famine",
+      "lo": 15000000,
+      "hi": 55000000,
+      "disp": "15–55 million",
+      "year": "1959–1961",
+      "note": "Estimates of famine deaths run from 15 to 55 million; Frank Dikötter's archival study argues for at least 45 million. Historians disagree on how to divide blame between policy and weather, though the Party's own 1981 verdict put it mainly on the Great Leap Forward. Other campaigns are not counted here.",
+      "src": [
+        {
+          "label": "Wikipedia: Great Chinese Famine (estimates table)",
+          "url": "https://en.wikipedia.org/wiki/Great_Chinese_Famine"
+        }
+      ]
+    },
+    {
+      "id": "hitler",
+      "kind": "human",
+      "name": "Adolf Hitler",
+      "sub": "human baseline; murdered by the Nazi regime",
+      "lo": 17000000,
+      "hi": 17000000,
+      "disp": "17,000,000",
+      "year": "1933–1945",
+      "note": "About 17 million people murdered by the Nazi regime and its collaborators, six million of them Jews. The total sums the US Holocaust Memorial Museum's estimates by group. It leaves out the rest of the 70 to 85 million who died in the Second World War.",
+      "src": [
+        {
+          "label": "USHMM: documenting numbers of victims",
+          "url": "https://encyclopedia.ushmm.org/content/en/article/documenting-numbers-of-victims-of-the-holocaust-and-nazi-persecution"
+        },
+        {
+          "label": "Statista chart of the USHMM figures",
+          "url": "https://statista.com/chart/24024/number-of-victims-nazi-regime"
+        }
+      ]
+    },
+    {
+      "id": "stalin",
+      "kind": "human",
+      "name": "Joseph Stalin",
+      "sub": "human baseline; executions, camps, famine",
+      "lo": 6000000,
+      "hi": 20000000,
+      "disp": "6–20 million",
+      "year": "1924–1953",
+      "note": "Since the Soviet archives opened, estimates cluster at six to nine million including famine deaths (Timothy Snyder's count). Cold War estimates of 20 million or more are still cited. Soviet war dead are not included.",
+      "src": [
+        {
+          "label": "Wikipedia: Excess mortality under Joseph Stalin",
+          "url": "https://en.wikipedia.org/wiki/Excess_mortality_under_Joseph_Stalin"
+        }
+      ]
+    },
+    {
+      "id": "polpot",
+      "kind": "human",
+      "name": "Pol Pot",
+      "sub": "human baseline; Khmer Rouge rule, 1975–79",
+      "lo": 1200000,
+      "hi": 2800000,
+      "pt": 1700000,
+      "disp": "1,700,000",
+      "year": "1975–1979",
+      "note": "Ben Kiernan's widely used figure is about 1.7 million, more than a fifth of the country in under four years. Demographer Patrick Heuveline's range is 1.2 to 2.8 million.",
+      "src": [
+        {
+          "label": "UCLA: Heuveline's estimate",
+          "url": "https://newsroom.ucla.edu/releases/ucla-demographer-produces-best-estimate-yet-of-cambodias-death-toll-under-pol-pot"
+        }
+      ]
+    },
+    {
+      "id": "atomic",
+      "name": "Atomic bombs",
+      "sub": "two uses, August 1945",
+      "lo": 110000,
+      "hi": 210000,
+      "disp": "110,000–210,000",
+      "year": "1945",
+      "note": "The credible estimates cluster at a low of 110,000 and a high of 210,000 for Hiroshima and Nagasaki together. On 5 August 1945 this row read zero.",
+      "src": [
+        {
+          "label": "Alex Wellerstein, Bulletin of the Atomic Scientists",
+          "url": "https://thebulletin.org/2020/08/counting-the-dead-at-hiroshima-and-nagasaki/"
+        }
+      ]
+    },
+    {
+      "id": "mcas",
+      "name": "Boeing MCAS",
+      "sub": "ordinary software, not AI; two 737 MAX crashes",
+      "lo": 346,
+      "hi": 346,
+      "disp": "346",
+      "year": "2018–2019",
+      "note": "Lion Air 610 (189 dead) and Ethiopian Airlines 302 (157 dead). Rule-based software acting on one faulty sensor. Listed to show what plain automation has already done; it is not part of AI's total.",
+      "src": [
+        {
+          "label": "Wikipedia: Boeing 737 MAX groundings",
+          "url": "https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings"
+        }
+      ]
+    },
+    {
+      "id": "selfies_all",
+      "name": "Selfies",
+      "sub": "news-reported deaths, 2011–2017",
+      "lo": 259,
+      "hi": 259,
+      "disp": "259",
+      "year": "2011–2017",
+      "note": "137 incidents in six years of English-language news reports. Drowning, transport and falls lead.",
+      "src": [
+        {
+          "label": "Bansal et al. 2018, as reported by CBS",
+          "url": "https://www.cbsnews.com/sacramento/news/250-selfie-deaths-since-2011/"
+        }
+      ]
+    },
+    {
+      "id": "ai_all",
+      "kind": "ai",
+      "name": "AI",
+      "sub": "every machine-learning system since 2016",
+      "lo": 5,
+      "hi": 108,
+      "pt": 44,
+      "disp": "44",
+      "year": "2016–2026",
+      "note": "Five deaths confirmed by an official finding (four involving Tesla Autopilot, one an Uber test vehicle). Another 39 alleged in lawsuits, investigations or reporting. Counting everything any tracker lists gives 108. Use the control above the boards to switch rules.",
+      "src": [
+        {
+          "label": "hasaikilledanyone.com",
+          "url": "https://hasaikilledanyone.com/"
+        },
+        {
+          "label": "Wikipedia: Deaths linked to chatbots",
+          "url": "https://en.wikipedia.org/wiki/Deaths_linked_to_chatbots"
+        },
+        {
+          "label": "tesladeaths.com",
+          "url": "https://www.tesladeaths.com/"
+        }
+      ]
+    },
+    {
+      "id": "robots",
+      "name": "Industrial robots",
+      "sub": "ordinary automation, not AI; US only",
+      "lo": 41,
+      "hi": 41,
+      "disp": "41",
+      "year": "1992–2017",
+      "note": "A NIOSH search of US workplace fatality records. 78% involved a robot striking a worker, often during maintenance. One country only.",
+      "src": [
+        {
+          "label": "Layne, Am J Ind Med 2023 (CDC Stacks)",
+          "url": "https://stacks.cdc.gov/view/cdc/230667"
+        }
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "system": "ChatGPT",
+      "maker": "OpenAI",
+      "type": "Chatbot",
+      "confirmed": 0,
+      "alleged": 22,
+      "other": "33 on Wikipedia's list"
+    },
+    {
+      "system": "Autopilot and FSD",
+      "maker": "Tesla",
+      "type": "Driver assist",
+      "confirmed": 4,
+      "alleged": 10,
+      "other": "57 in crash reports to NHTSA; 65 on tesladeaths.com"
+    },
+    {
+      "system": "Character.AI",
+      "maker": "Character Technologies",
+      "type": "Chatbot",
+      "confirmed": 0,
+      "alleged": 2,
+      "other": "2 on Wikipedia's list"
+    },
+    {
+      "system": "openpilot (FrogPilot fork)",
+      "maker": "comma.ai, third-party fork",
+      "type": "Driver assist",
+      "confirmed": 0,
+      "alleged": 2,
+      "other": ""
+    },
+    {
+      "system": "ATG self-driving test system",
+      "maker": "Uber",
+      "type": "Self-driving",
+      "confirmed": 1,
+      "alleged": 0,
+      "other": ""
+    },
+    {
+      "system": "Gemini 2.5 Pro",
+      "maker": "Google",
+      "type": "Chatbot",
+      "confirmed": 0,
+      "alleged": 1,
+      "other": "1 on Wikipedia's list"
+    },
+    {
+      "system": "Eliza, on the Chai app",
+      "maker": "Chai Research",
+      "type": "Chatbot",
+      "confirmed": 0,
+      "alleged": 1,
+      "other": "1 on Wikipedia's list"
+    },
+    {
+      "system": "nH Predict",
+      "maker": "UnitedHealth",
+      "type": "Insurance algorithm",
+      "confirmed": 0,
+      "alleged": 1,
+      "other": ""
+    },
+    {
+      "system": "Meta AI persona",
+      "maker": "Meta",
+      "type": "Chatbot",
+      "confirmed": null,
+      "alleged": null,
+      "other": "1 on Wikipedia's list",
+      "status": "not listed"
+    },
+    {
+      "system": "DeepSeek",
+      "maker": "DeepSeek",
+      "type": "Chatbot",
+      "confirmed": null,
+      "alleged": null,
+      "other": "1 on Wikipedia's list",
+      "status": "not listed"
+    },
+    {
+      "system": "Lavender, Gospel, Where's Daddy?",
+      "maker": "Israeli military",
+      "type": "Targeting",
+      "confirmed": null,
+      "alleged": null,
+      "other": "No death count can be attributed",
+      "status": "not scored"
+    }
+  ]
+}
